@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>US Vern Cyclisme</title>
+  <link rel="icon" type="image/png" href="logo/logo.webp">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Accueil</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <style>
+    .social-btn {
+      font-size: 1.2rem;
+      padding: 12px 20px;
+      border-radius: 50px;
+      transition: 0.3s;
+    }
+
+    .container-limitee {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="bg-white text-dark p-4">
+    <div class="d-flex justify-content-between align-items-center">
+      <!-- logo à gauche -->
+      <div>
+        <img src="logo/logo.webp" alt="logo du club" style="height:120px;">
+      </div>
+
+      <!-- Texte au centre -->
+      <div class="flex-grow-1 text-center">
+        <h1 class="mb-0 display-3 fw-bold">US VERN CYCLISME</h1>
+      </div>
+
+      <!-- Espace vide à droite pour équilibrer -->
+      <div style="width:70px;"></div>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+
+      <!-- Bouton burger pour mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="section.html">Section</a></li>
+          <li class="nav-item"><a class="nav-link" href="noussuiver.html">Nous Suivre</a></li>
+          <li class="nav-item"><a class="nav-link" href="nospartenaires.html">Nos Partenaires</a></li>
+          <li class="nav-item"><a class="nav-link" href="stadevelo.html">Stade de vélo</a></li>
+          <li class="nav-item"><a class="nav-link" href="nouscontacter.html">Nous Contacter</a></li>
+          <li class="nav-item"><a class="nav-link" href="albumphoto.html">Album Photo</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Script pour activer automatiquement le lien correspondant à la page -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const currentPage = window.location.pathname.split("/").pop(); // ex: "section.html"
+      document.querySelectorAll(".nav-link").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+  <section class="bg-light py-5 text-center">
+    <div class="container">
+      <h1 class="mb-3">Nous suivre</h1>
+      <p class="lead">Restez connectés avec l’US Vern Cyclisme sur nos réseaux sociaux pour découvrir nos dernières
+        actualités, résultats et photos.</p>
+    </div>
+
+
+    <!-- Boutons Réseaux sociaux -->
+    <section class="py-5 text-center">
+      <div class="container bg-white p-3 rounded shadow border" style="max-width: 800px; margin: 0 auto;">
+        <h2 class="mb-4">Nos réseaux</h2>
+        <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="btn btn-primary social-btn me-3">
+          <img src="logo/logofa.webp" alt="logo Facebook" style="height:30px;">
+          <i class="bi bi-facebook"></i> Facebook
+        </a>
+        <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" class="btn btn-danger social-btn">
+          <img src="logo/logoinsta.webp" alt="logo Instagram" style="height:30px;">
+          <i class="bi bi-instagram"></i> Instagram
+        </a>
+      </div>
+    </section>
+  </section>
+
+  <!-- Grille Photos -->
+  <section class="bg-light py-3">
+    <div class="container">
+      <h2 class="text-center mb-4">Aperçu de nos publications</h2>
+      <div class="row g-3 social-grid">
+        <div class="col-md-4"><img src="photo/images_apercu1.webp" alt="Publication 1"></div>
+        <div class="col-md-4"><img src="photo/images_apercu2.webp" alt="Publication 2"></div>
+        <div class="col-md-4"><img src="photo/images_apercu3.webp" alt="Publication 3"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center p-3 mt-4">
+    <p>&copy; 2025 US Vern Cyclisme - Tous droits réservés</p>
+    <p>
+      <a href="https://www.facebook.com/usverncyclisme35" class="text-white">
+        <img src="logo/logofa.webp" alt="logo Facebook" style="height:25px;">
+      </a>
+      <a href="https://www.instagram.com/usvern.cyclisme" class="text-white">
+        <img src="logo/logoinsta.webp" alt="logo Instagram" style="height:25px;">
+      </a>
+    </p>
+  </footer>
+</body>
+
+</html>

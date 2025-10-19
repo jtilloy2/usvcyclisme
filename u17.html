@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>US Vern Cyclisme - Section</title>
+    <link rel="icon" type="image/png" href="logo/logo.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Accueil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+</head>
+<style>
+    .carousel-control-prev-icon {
+        background-image: none;
+        width: 2rem;
+        height: 2rem;
+        background-color: black;
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+    }
+
+    .carousel-control-next-icon {
+        background-image: none;
+        width: 2rem;
+        height: 2rem;
+        background-color: black;
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        background-color: #000;
+        /* noir */
+    }
+
+    .carousel-indicators .active {
+        background-color: #bfbbbb;
+        /* gris foncé pour l’actif (tu peux mettre #000 aussi) */
+    }
+</style>
+
+<body>
+
+    <header class="bg-white text-dark p-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <!-- logo à gauche -->
+            <div>
+                <img src="logo/logo.webp" alt="logo du club" style="height:120px;">
+            </div>
+
+            <!-- Texte au centre -->
+            <div class="flex-grow-1 text-center">
+                <h1 class="mb-0 display-3 fw-bold">US VERN CYCLISME</h1>
+            </div>
+
+            <!-- Espace vide à droite pour équilibrer -->
+            <div style="width:70px;"></div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+
+            <!-- Bouton burger pour mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="section.html">Section</a></li>
+                    <li class="nav-item"><a class="nav-link" href="noussuiver.html">Nous Suivre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nospartenaires.html">Nos Partenaires</a></li>
+                    <li class="nav-item"><a class="nav-link" href="stadevelo.html">Stade de vélo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nouscontacter.html">Nous Contacter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="albumphoto.html">Album Photo</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Script pour activer automatiquement le lien correspondant à la page -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentPage = window.location.pathname.split("/").pop(); // ex: "section.html"
+            document.querySelectorAll(".nav-link").forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+    <nav class="navbarSection navbar-expand-lg navbar-dark">
+        <div class="container"> <!-- au lieu de container-fluid -->
+
+            <!-- Bouton burger pour mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav2">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="section.html">Nos section</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ecoledevelo.html">École de vélo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="u15.html">U15</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="u17.html">U17</a></li>
+                    <li class="nav-item"><a class="nav-link" href="u19.html">U19</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nationale_dames.html">Équipe nationale dames</a></li>
+                    <li class="nav-item"><a class="nav-link" href="régionale_homme.html">Régionale homme</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Script pour activer automatiquement le lien correspondant à la page -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentPage = window.location.pathname.split("/").pop(); // ex: "section.html"
+            document.querySelectorAll(".nav-link").forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+    <section class="container my-5">
+
+        <!-- Titre principal -->
+        <div class="text-center mb-5">
+            <h1 class="fw-bold">Catégorie U17</h1>
+            <p class="lead">Pour les jeunes de 15 à 16 ans – progression, stratégie et compétitions interrégionales</p>
+        </div>
+
+        <!-- Présentation + Image -->
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Présentation</h3>
+                <p>
+                    La catégorie U17 est une étape clé dans la formation des jeunes cyclistes.
+                    Elle permet de renforcer les bases techniques, d’améliorer l’endurance et
+                    d’acquérir une véritable expérience en compétition.
+                </p>
+                <ul>
+                    <li>Perfectionner la tactique de course</li>
+                    <li>Développer la puissance et l’endurance</li>
+                    <li>Participer à des compétitions interrégionales</li>
+                    <li>Préparer la transition vers les catégories supérieures</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="photo/section/U17.webp" class="img-fluid rounded shadow" alt="Catégorie U17">
+            </div>
+        </div>
+
+        <!-- Infos pratiques -->
+        <div class="row g-4 mb-5">
+            <div class="col-12 col-md-4">
+                <div class="card shadow-sm h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Âge</h5>
+                        <p class="card-text">15 – 16 ans</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card shadow-sm h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Horaires</h5>
+                        <p class="card-text">Mercredi – 14h à 16h</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card shadow-sm h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Encadrement</h5>
+                        <p class="card-text">Entraîneurs diplômés FFC</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galerie / Carrousel -->
+        <div class="mb-5">
+            <h3 class="text-center mb-4">Galerie U17</h3>
+            <div id="u17Carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="photo/imagesteste.webp" class="d-block w-100 rounded" alt="Entraînement U17">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                            <p>Entraînement intensif</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="photo/imagesteste.webp" class="d-block w-100 rounded" alt="Course U17">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                            <p>Course interrégionale</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="photo/imagesteste.webp" class="d-block w-100 rounded" alt="Stage U17">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                            <p>Stage de préparation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flèches -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#u17Carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#u17Carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+                <!-- Indicateurs -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#u17Carousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#u17Carousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#u17Carousel" data-bs-slide-to="2"></button>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        <p>&copy; 2025 US Vern Cyclisme - Tous droits réservés</p>
+        <p>
+            <a href="https://www.facebook.com/usverncyclisme35" class="text-white">
+                <img src="logo/logofa.webp" alt="logo Facebook" style="height:25px;">
+            </a>
+            <a href="https://www.instagram.com/usvern.cyclisme" class="text-white">
+                <img src="logo/logoinsta.webp" alt="logo Instagram" style="height:25px;">
+            </a>
+        </p>
+    </footer>
+</body>
+
+</html>

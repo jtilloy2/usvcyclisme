@@ -1,0 +1,470 @@
+/* === SLOGAN & ANIMATIONS === */
+#slogan {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#slogan.show {
+  opacity: 1;
+}
+
+#carouselText {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#carouselText.fade-out {
+  opacity: 0;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* === HERO BANNER === */
+.hero-banner {
+  background: url("photo/banniere.webp") center/cover no-repeat;
+  height: 55vh;
+  position: relative;
+}
+
+/* Ajout de l'overlay sombre pour améliorer la lisibilité du texte */
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  /* Overlay noir avec 45% d'opacité */
+  z-index: 1;
+}
+
+/* Assurer que le contenu (texte, etc.) est au-dessus de l'overlay */
+.hero-banner>* {
+  position: relative;
+  z-index: 2;
+}
+
+/* Règle essentielle : Rendre le texte du header blanc pour le contraste */
+.hero-banner h1,
+.hero-banner h2,
+.hero-banner div {
+  color: white !important;
+}
+
+
+/* === NAVBAR === */
+.navbar {
+  background-color: #9e1b1b;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+}
+
+/* === BOUTONS === */
+.btn-lg {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-lg:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-partner {
+  margin-top: 40px;
+  background-color: #9e1b1b;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-partner:hover {
+  background-color: #7a1414;
+  color: #fff;
+}
+
+/* === ALBUM PHOTO === */
+.album {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.album-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.album-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.album-item p {
+  margin: 5px 0 0 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.album-item.small {
+  width: 250px;
+}
+
+.album-item.medium {
+  width: 400px;
+}
+
+.album-item.large {
+  width: 550px;
+}
+
+/* Décalages visuels */
+.album-item:nth-child(2) {
+  margin-top: 30px;
+}
+
+.album-item:nth-child(3) {
+  margin-top: 20px;
+}
+
+.album-item:nth-child(5) {
+  margin-top: 40px;
+}
+
+/* === SECTION PARTENAIRES === */
+.card {
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+.card:hover {
+  background-color: transparent;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.03);
+}
+
+.visibilite-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.visibilite-section h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.visibilite-img {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.visibilite-img:hover {
+  transform: scale(1.05);
+}
+
+.caption {
+  font-weight: 600;
+  margin-top: 15px;
+  font-size: 1.1rem;
+}
+
+/* === AVANTAGES === */
+.advantages {
+  margin-top: 60px;
+}
+
+.advantages h4 {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.advantages p {
+  font-size: 0.95rem;
+}
+
+/* === SECTION SUIVI / SOCIAL === */
+.social-btn {
+  font-size: 1.2rem;
+  padding: 12px 20px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.social-btn:hover {
+  transform: scale(1.05);
+}
+
+.social-grid img {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* === STRUCTURE & CONTAINERS === */
+.container-limitee {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.navbarSection {
+  background-color: #2c88bc;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 5px 20px;
+}
+
+/* === CARROUSEL === */
+.carousel-item img {
+  height: 650px;
+  object-fit: contain;
+  width: 100%;
+  display: block;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 250px;
+  }
+}
+
+.card-img-top {
+  height: 220px;
+  /* même hauteur pour toutes les images */
+  object-fit: cover;
+  /* recadre l’image sans la déformer */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card {
+  border: none;
+  /* supprime la bordure par défaut */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* ombre douce */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  /* effet léger au survol */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-weight: 700;
+  color: #003366;
+  /* couleur club ou personnalisée */
+}
+
+.btn-primary {
+  background-color: #0066cc;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #004c99;
+}
+
+/* Fond sombre et image en grand */
+.modal-img {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-img-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.modal-img-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-img {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+
+.modal-img-content {
+  max-width: 80%;
+  max-height: 80%;
+  margin-top: 40px;
+  border-radius: 8px;
+}
+
+.modal-img-close,
+.modal-prev,
+.modal-next {
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.modal-img-close {
+  top: 20px;
+  right: 35px;
+  font-size: 45px;
+}
+
+.modal-prev {
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.modal-next {
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.modal-prev:hover,
+.modal-next:hover,
+.modal-img-close:hover {
+  color: #bbb;
+}
+
+.modal-caption {
+  margin-top: 15px;
+  color: #f1f1f1;
+  font-size: 18px;
+  text-align: center;
+}
+
+.reportage-tvr {
+  background-color: #f8f9fa;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 95vw;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container img {
+  object-fit: cover;
+  height: 60vh;
+}
+
+.video-wrapper {
+  max-width: 85vw;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+.folder-icon-container {
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  transition: all 0.2s;
+  cursor: pointer;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.folder-icon-container:hover {
+  background-color: #f8f9fa;
+  border-color: #2c88bc;
+  /* Utilisation du bleu de la navbarSection */
+  box-shadow: 0 0 10px rgba(44, 136, 188, 0.3);
+  /* Ombre bleue */
+}
+
+.folder-icon-container i {
+  font-size: 4rem;
+  color: #ffc107;
+  /* Garde la couleur jaune pour le dossier */
+  margin-bottom: 10px;
+}
+
+.folder-label {
+  font-weight: bold;
+  color: #333;
+}
+
+/* === FIL D'ARIANE (BREADCRUMB) === */
+.breadcrumb-item a {
+  color: #2c88bc;
+  /* Couleur bleue harmonisée */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb-item a:hover {
+  color: #1a6a9b;
+  /* Bleu légèrement plus foncé au survol */
+}
+
+.breadcrumb-item.active {
+  color: #6c757d;
+  /* Couleur du texte de l'étape actuelle */
+}

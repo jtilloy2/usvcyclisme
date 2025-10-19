@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>US Vern Cyclisme - Contact</title>
+    <link rel="icon" type="image/png" href="logo/logo.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* La navbar est gérée par style.css, mais gardons les styles de carte */
+        .contact-card {
+            /* Retrait de la bordure et de l'ombre au survol pour un look plus plat et moderne */
+            border-radius: 12px;
+            padding: 40px;
+            background-color: #f8f8f8; /* Légère couleur de fond pour distinguer la carte */
+        }
+
+        .contact-group-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333; /* Gris foncé pour les titres de section */
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-item {
+            padding: 10px 0;
+            border-bottom: 1px dashed #ddd; /* Ligne de séparation plus claire */
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        /* Assure la couleur rouge du club pour le lien */
+        .contact-item a {
+            font-weight: bold;
+            color: #9e1b1b; 
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-item a:hover {
+            color: #7a1414; /* Rouge foncé au survol */
+        }
+
+        .contact-icon {
+            font-size: 1.25rem;
+            width: 25px; /* Largeur fixe pour aligner les icônes */
+            color: #2c88bc; /* Couleur d'accent bleu */
+            text-align: center;
+        }
+
+        .responsable-nom {
+            font-size: 0.95rem;
+            color: #6c757d; /* Texte secondaire en gris */
+            text-transform: uppercase;
+        }
+        
+        /* Bouton HEADER stylisé (inspiré de votre image) */
+        .contact-red-header {
+            background-color: #9e1b1b;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="bg-white text-dark p-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <img src="logo/logo.webp" alt="logo du club" style="height:120px;">
+            </div>
+            <div class="flex-grow-1 text-center">
+                <h1 class="mb-0 display-3 fw-bold">US VERN CYCLISME</h1>
+            </div>
+            <div style="width:70px;"></div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="section.html">Section</a></li>
+                    <li class="nav-item"><a class="nav-link" href="noussuiver.html">Nous Suivre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nospartenaires.html">Nos Partenaires</a></li>
+                    <li class="nav-item"><a class="nav-link" href="stadevelo.html">Stade de vélo</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="nouscontacter.html">Nous Contacter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="albumphoto.html">Album Photo</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentPage = window.location.pathname.split("/").pop();
+            document.querySelectorAll(".nav-link").forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+    <section class="container my-5">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold">Nous Contacter</h1>
+            <p class="lead">
+                Pour toute question, adhésion ou demande de partenariat, veuillez contacter le responsable approprié ci-dessous.
+            </p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="contact-card">
+                    
+                    <div class="contact-red-header text-uppercase">
+                        Contact
+                    </div>
+
+                    <div class="contact-group-title mb-3">
+                        <i class="fas fa-phone contact-icon"></i>
+                        Par Téléphone
+                    </div>
+                    <ul class="list-unstyled">
+                        <li class="contact-item">
+                            <a href="tel:0767280119">07 67 28 01 19</a> 
+                            <span class="responsable-nom">NOAH BARRE</span>
+                        </li>
+                        <li class="contact-item">
+                            <a href="tel:0678320145">06 78 32 01 45</a> 
+                            <span class="responsable-nom">KRISTELL HELARY</span>
+                        </li>
+                        <li class="contact-item">
+                            <a href="tel:0681892083">06 81 89 20 83</a> 
+                            <span class="responsable-nom">MICKAËL GUILLARD</span>
+                        </li>
+                    </ul>
+
+                    <div class="contact-group-title mt-4 mb-3">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        Par Email
+                    </div>
+                    <ul class="list-unstyled">
+                        <li class="contact-item">
+                            <a href="mailto:NOAHUSVERN@GMAIL.COM">NOAHUSVERN@GMAIL.COM</a>
+                            <span class="responsable-nom"></span>
+                        </li>
+                        <li class="contact-item">
+                            <a href="mailto:USVERNCYCLISME35@GMAIL.COM">USVERNCYCLISME35@GMAIL.COM</a>
+                            <span class="responsable-nom"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5 text-center justify-content-center">
+             <div class="col-lg-8 col-md-10">
+                <h3 class="fw-bold mb-3"><i class="fas fa-map-marker-alt contact-icon"></i> Localisation</h3>
+                <p class="lead">
+                  Retrouvez-nous à l'adresse suivante :
+                </p>
+                <p class="fw-bold">
+                    7A Av. de la Chalotais, 35770 Vern-sur-Seiche (Union Sportive de Vern)
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        <p>&copy; 2025 US Vern Cyclisme - Tous droits réservés</p>
+        <p>
+            <a href="https://www.facebook.com/usverncyclisme35" class="text-white">
+                <img src="logo/logofa.webp" alt="logo Facebook" style="height:25px;">
+            </a>
+            <a href="https://www.instagram.com/usvern.cyclisme" class="text-white">
+                <img src="logo/logoinsta.webp" alt="logo Instagram" style="height:25px;">
+            </a>
+        </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
