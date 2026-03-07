@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -12,195 +11,174 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
-        /* La navbar est gérée par style.css, mais gardons les styles de carte */
         .contact-card {
-            /* Retrait de la bordure et de l'ombre au survol pour un look plus plat et moderne */
-            border-radius: 12px;
+            border-radius: 15px;
             padding: 40px;
-            background-color: #f8f8f8; /* Légère couleur de fond pour distinguer la carte */
+            background-color: var(--blanc);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
         .contact-group-title {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: bold;
-            color: #333; /* Gris foncé pour les titres de section */
-            margin-bottom: 5px;
+            color: var(--bleu-fonce);
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
         }
 
         .contact-item {
-            padding: 10px 0;
-            border-bottom: 1px dashed #ddd; /* Ligne de séparation plus claire */
-            font-size: 1rem;
+            padding: 12px 0;
+            border-bottom: 1px dashed #dee2e6;
+            font-size: 1.1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
-        /* Assure la couleur rouge du club pour le lien */
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+        
         .contact-item a {
             font-weight: bold;
-            color: #9e1b1b; 
+            color: var(--bordeaux); 
             text-decoration: none;
             transition: color 0.2s;
         }
 
         .contact-item a:hover {
-            color: #7a1414; /* Rouge foncé au survol */
+            color: var(--bordeaux-dark);
         }
 
         .contact-icon {
-            font-size: 1.25rem;
-            width: 25px; /* Largeur fixe pour aligner les icônes */
-            color: #2c88bc; /* Couleur d'accent bleu */
+            font-size: 1.5rem;
+            width: 35px;
+            color: var(--bleu-primaire);
             text-align: center;
         }
 
         .responsable-nom {
             font-size: 0.95rem;
-            color: #6c757d; /* Texte secondaire en gris */
+            color: #6c757d;
             text-transform: uppercase;
-        }
-        
-        /* Bouton HEADER stylisé (inspiré de votre image) */
-        .contact-red-header {
-            background-color: #9e1b1b;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 25px;
+            font-weight: 600;
         }
     </style>
 </head>
 
 <body>
 
-    <header class="bg-white text-dark p-4">
-        <div class="d-flex justify-content-between align-items-center">
+    <header class="bg-white p-3">
+        <div class="container d-flex justify-content-between align-items-center">
             <div>
-                <img src="logo/logo.webp" alt="logo du club" style="height:120px;">
+                <img src="logo/logo.webp" alt="Logo US Vern Cyclisme" style="height: 120px; object-fit: contain;">
             </div>
-            <div class="flex-grow-1 text-center">
-                <h1 class="mb-0 display-3 fw-bold">US VERN CYCLISME</h1>
+            <div class="text-center flex-grow-1">
+                <h1 class="mb-0 display-4 fw-bold text-dark">US VERN CYCLISME</h1>
             </div>
-            <div style="width:70px;"></div>
+            <div style="width: 120px;"></div>
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-2">
                     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="section.html">Section</a></li>
+                    <li class="nav-item"><a class="nav-link" href="section.html">Sections</a></li>
                     <li class="nav-item"><a class="nav-link" href="noussuiver.html">Nous Suivre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="nospartenaires.html">Nos Partenaires</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nospartenaires.html">Partenaires</a></li>
                     <li class="nav-item"><a class="nav-link" href="stadevelo.html">Stade de vélo</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="nouscontacter.html">Nous Contacter</a></li>
-                    <li class="nav-item"><a class="nav-link" href="albumphoto.html">Album Photo</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="nouscontacter.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="albumphoto.html">Photos</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const currentPage = window.location.pathname.split("/").pop();
-            document.querySelectorAll(".nav-link").forEach(link => {
-                if (link.getAttribute("href") === currentPage) {
-                    link.classList.add("active");
-                }
-            });
-        });
-    </script>
-
     <section class="container my-5">
         <div class="text-center mb-5">
-            <h1 class="fw-bold">Nous Contacter</h1>
-            <p class="lead">
-                Pour toute question, adhésion ou demande de partenariat, veuillez contacter le responsable approprié ci-dessous.
+            <h2 class="display-5 fw-bold text-dark">Nous Contacter</h2>
+            <p class="lead text-muted mt-2">
+                Pour toute question, adhésion ou demande de partenariat, n'hésitez pas à nous joindre.
             </p>
         </div>
 
-        <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10">
-                <div class="contact-card">
-                    
-                    <div class="contact-red-header text-uppercase">
-                        Contact
+        <div class="row justify-content-center g-5">
+            <div class="col-lg-6">
+                <div class="contact-card h-100">
+                    <div class="contact-group-title">
+                        <i class="fas fa-phone contact-icon"></i> Téléphone
                     </div>
-
-                    <div class="contact-group-title mb-3">
-                        <i class="fas fa-phone contact-icon"></i>
-                        Par Téléphone
-                    </div>
-                    <ul class="list-unstyled">
+                    <ul class="list-unstyled mb-4">
                         <li class="contact-item">
                             <a href="tel:0767280119">07 67 28 01 19</a> 
-                            <span class="responsable-nom">NOAH BARRE</span>
+                            <span class="responsable-nom">Noah Barre</span>
                         </li>
                         <li class="contact-item">
                             <a href="tel:0678320145">06 78 32 01 45</a> 
-                            <span class="responsable-nom">KRISTELL HELARY</span>
+                            <span class="responsable-nom">Kristell Helary</span>
                         </li>
                         <li class="contact-item">
                             <a href="tel:0681892083">06 81 89 20 83</a> 
-                            <span class="responsable-nom">MICKAËL GUILLARD</span>
+                            <span class="responsable-nom">Mickaël Guillard</span>
                         </li>
                     </ul>
 
-                    <div class="contact-group-title mt-4 mb-3">
-                        <i class="fas fa-envelope contact-icon"></i>
-                        Par Email
+                    <div class="contact-group-title mt-5">
+                        <i class="fas fa-envelope contact-icon"></i> Email
                     </div>
                     <ul class="list-unstyled">
                         <li class="contact-item">
-                            <a href="mailto:NOAHUSVERN@GMAIL.COM">NOAHUSVERN@GMAIL.COM</a>
-                            <span class="responsable-nom"></span>
+                            <a href="mailto:NOAHUSVERN@GMAIL.COM" style="text-transform: lowercase;">noahusvern@gmail.com</a>
                         </li>
                         <li class="contact-item">
-                            <a href="mailto:USVERNCYCLISME35@GMAIL.COM">USVERNCYCLISME35@GMAIL.COM</a>
-                            <span class="responsable-nom"></span>
+                            <a href="mailto:USVERNCYCLISME35@GMAIL.COM" style="text-transform: lowercase;">usverncyclisme35@gmail.com</a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </div>
-        
-        <div class="row mt-5 text-center justify-content-center">
-             <div class="col-lg-8 col-md-10">
-                <h3 class="fw-bold mb-3"><i class="fas fa-map-marker-alt contact-icon"></i> Localisation</h3>
-                <p class="lead">
-                  Retrouvez-nous à l'adresse suivante :
-                </p>
-                <p class="fw-bold">
-                    7A Av. de la Chalotais, 35770 Vern-sur-Seiche (Union Sportive de Vern)
-                </p>
+
+            <div class="col-lg-6">
+                <div class="contact-card h-100 text-center d-flex flex-column justify-content-center">
+                    <i class="fas fa-map-marker-alt mb-3" style="font-size: 3rem; color: var(--bordeaux);"></i>
+                    <h3 class="fw-bold mb-3" style="color: var(--bleu-fonce);">Notre Adresse</h3>
+                    <p class="fs-5 mb-4">
+                        Union Sportive de Vern<br>
+                        7A Av. de la Chalotais<br>
+                        35770 Vern-sur-Seiche
+                    </p>
+                    <div>
+                        <a href="https://www.google.com/maps/place/Union+Sportive+de+Vern/@48.0443885,-1.6061517,631m/data=!3m1!1e3!4m15!1m8!3m7!1s0x480f27337fde4f8b:0x1ed03b752c58a93!2s7A+Av.+de+la+Chalotais,+35770+Vern-sur-Seiche!3b1!8m2!3d48.0443885!4d-1.6035768!16s%2Fg%2F11s1bn97q7!3m5!1s0x480f27337fde4f8b:0x41815ff8f85825d6!8m2!3d48.044441!4d-1.6045709!16s%2Fg%2F11c6dmj4j2?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-outline-danger rounded-modern px-4">
+                            Ouvrir dans Google Maps
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
     </section>
 
-    <footer class="bg-dark text-white text-center p-3 mt-4">
-        <p>&copy; 2025 US Vern Cyclisme - Tous droits réservés</p>
-        <p>
-            <a href="https://www.facebook.com/usverncyclisme35" class="text-white">
-                <img src="logo/logofa.webp" alt="logo Facebook" style="height:25px;">
-            </a>
-            <a href="https://www.instagram.com/usvern.cyclisme" class="text-white">
-                <img src="logo/logoinsta.webp" alt="logo Instagram" style="height:25px;">
-            </a>
-        </p>
+    <footer class="text-white text-center p-4 mt-auto">
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center gap-4 mb-3">
+                <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="text-decoration-none">
+                    <img src="logo/logofa.webp" alt="Facebook US Vern" style="height:30px; border-radius: 5px;">
+                </a>
+                <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" class="text-decoration-none">
+                    <img src="logo/logoinsta.webp" alt="Instagram US Vern" style="height:30px; border-radius: 8px;">
+                </a>
+            </div>
+            <p class="mb-0 text-white-50">© 2025 US Vern Cyclisme - Tous droits réservés</p>
+        </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

@@ -2,264 +2,163 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>US Vern Cyclisme - Section</title>
-    <link rel="icon" type="image/png" href="logo/logo.webp">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Accueil</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>US Vern Cyclisme - Régionale Homme</title>
+  <link rel="icon" type="image/png" href="logo/logo.webp">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<style>
-    .carousel-control-prev-icon {
-        background-image: none;
-        width: 2rem;
-        height: 2rem;
-        background-color: black;
-        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
-        mask-repeat: no-repeat;
-        mask-position: center;
-        mask-size: contain;
-    }
-
-    .carousel-control-next-icon {
-        background-image: none;
-        width: 2rem;
-        height: 2rem;
-        background-color: black;
-        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
-        mask-repeat: no-repeat;
-        mask-position: center;
-        mask-size: contain;
-    }
-
-    .carousel-indicators [data-bs-target] {
-        background-color: #000;
-        /* noir */
-    }
-
-    .carousel-indicators .active {
-        background-color: #bfbbbb;
-        /* gris foncé pour l’actif (tu peux mettre #000 aussi) */
-    }
-</style>
 
 <body>
 
-    <header class="bg-white text-dark p-4">
-        <div class="d-flex justify-content-between align-items-center">
-            <!-- logo à gauche -->
-            <div>
-                <img src="logo/logo.webp" alt="logo du club" style="height:120px;">
-            </div>
+  <header class="bg-white p-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>
+        <img src="logo/logo.webp" alt="Logo US Vern Cyclisme" style="height: 120px; object-fit: contain;">
+      </div>
+      <div class="text-center flex-grow-1">
+        <h1 class="mb-0 display-4 fw-bold text-dark">US VERN CYCLISME</h1>
+      </div>
+      <div style="width: 120px;"></div>
+    </div>
+  </header>
 
-            <!-- Texte au centre -->
-            <div class="flex-grow-1 text-center">
-                <h1 class="mb-0 display-3 fw-bold">US VERN CYCLISME</h1>
-            </div>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <!-- Espace vide à droite pour équilibrer -->
-            <div style="width:70px;"></div>
-        </div>
-    </header>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link active" href="section.html">Sections</a></li>
+          <li class="nav-item"><a class="nav-link" href="noussuiver.html">Nous Suivre</a></li>
+          <li class="nav-item"><a class="nav-link" href="nospartenaires.html">Partenaires</a></li>
+          <li class="nav-item"><a class="nav-link" href="stadevelo.html">Stade de vélo</a></li>
+          <li class="nav-item"><a class="nav-link" href="nouscontacter.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="albumphoto.html">Photos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
+  <nav class="navbarSection navbar-expand-lg navbar-dark mt-4">
+    <div class="container">
+      <button class="navbar-toggler border-0 mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2">
+        <span class="navbar-toggler-icon"></span> Sous-menu Sections
+      </button>
 
-            <!-- Bouton burger pour mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav2">
+        <ul class="navbar-nav gap-2 text-center">
+          <li class="nav-item"><a class="nav-link text-white" href="section.html">Toutes nos sections</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="ecoledevelo.html">École de vélo</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="u15.html">U15</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="u17.html">U17</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="u19.html">U19</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="nationale_dames.html">Nationale Dames</a></li>
+          <li class="nav-item"><a class="nav-link active text-white fw-bold" href="régionale_homme.html">Régionale Homme</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-            <!-- Menu -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="section.html">Section</a></li>
-                    <li class="nav-item"><a class="nav-link" href="noussuiver.html">Nous Suivre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="nospartenaires.html">Nos Partenaires</a></li>
-                    <li class="nav-item"><a class="nav-link" href="stadevelo.html">Stade de vélo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="nouscontacter.html">Nous Contacter</a></li>
-                    <li class="nav-item"><a class="nav-link" href="albumphoto.html">Album Photo</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <section class="container my-5">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold text-dark">Régionale Homme</h2>
+      <p class="lead text-muted mt-2">L'équipe Senior qui défend les couleurs de Vern sur les courses bretonnes</p>
+    </div>
 
-    <!-- Script pour activer automatiquement le lien correspondant à la page -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const currentPage = window.location.pathname.split("/").pop(); // ex: "section.html"
-            document.querySelectorAll(".nav-link").forEach(link => {
-                if (link.getAttribute("href") === currentPage) {
-                    link.classList.add("active");
-                }
-            });
-        });
-    </script>
-
-    <nav class="navbarSection navbar-expand-lg navbar-dark">
-        <div class="container"> <!-- au lieu de container-fluid -->
-
-            <!-- Bouton burger pour mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Menu -->
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav2">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="section.html">Nos section</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ecoledevelo.html">École de vélo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="u15.html">U15</a></li>
-                    <li class="nav-item"><a class="nav-link" href="u17.html">U17</a></li>
-                    <li class="nav-item"><a class="nav-link" href="u19.html">U19</a></li>
-                    <li class="nav-item"><a class="nav-link" href="nationale_dames.html">Équipe nationale dames</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="régionale_homme.html">Régionale homme</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Script pour activer automatiquement le lien correspondant à la page -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const currentPage = window.location.pathname.split("/").pop(); // ex: "section.html"
-            document.querySelectorAll(".nav-link").forEach(link => {
-                if (link.getAttribute("href") === currentPage) {
-                    link.classList.add("active");
-                }
-            });
-        });
-    </script>
-
-    <section class="container my-5">
-
-        <!-- Titre principal -->
-        <div class="text-center mb-5">
-            <h1 class="fw-bold">Équipe régionale homme</h1>
-            <p class="lead">Compétitions régionales, esprit d’équipe et progression vers le haut niveau</p>
-        </div>
-
-        <!-- Présentation + Image -->
-        <div class="row align-items-center mb-5">
-            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Présentation</h3>
-                <p>
-                    L’équipe Régionale Homme regroupe des coureurs motivés qui participent aux compétitions
-                    de niveau régional. Elle constitue un tremplin vers les catégories nationales et permet
-                    de développer la stratégie de course, l’endurance et la cohésion de groupe.
-                </p>
-                <ul>
-                    <li>Participer aux compétitions régionales</li>
-                    <li>Développer la tactique et la puissance</li>
-                    <li>Renforcer l’esprit d’équipe</li>
-                    <li>Préparer la transition vers le niveau national</li>
-                </ul>
-            </div>
-            <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="photo/section/régionale_homme.webp" class="img-fluid rounded shadow"
-                    alt="Équipe Régionale Homme">
-            </div>
-        </div>
-
-        <!-- Infos pratiques -->
-        <div class="row g-4 mb-5">
-            <div class="col-12 col-md-4">
-                <div class="card shadow-sm h-100 text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Niveau</h5>
-                        <p class="card-text">Compétitions régionales</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4">
-                <div class="card shadow-sm h-100 text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Horaires</h5>
-                        <p class="card-text">Programme adapté selon calendrier des courses</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4">
-                <div class="card shadow-sm h-100 text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Encadrement</h5>
-                        <p class="card-text">Staff technique et entraîneurs diplômés</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Galerie / Carrousel -->
-        <div class="mb-5">
-            <h3 class="text-center mb-4">Galerie Régionale Homme</h3>
-            <div id="regionaleHommeCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="photo/imagesteste.webp" class="d-block w-100 rounded" alt="Course Régionale Homme">
-                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                            <p>Course régionale</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="photo/imagesteste.webp" class="d-block w-100 rounded"
-                            alt="Entraînement Régionale Homme">
-                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                            <p>Entraînement collectif</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="photo/imagesteste.webp" class="d-block w-100 rounded" alt="Podium Régionale Homme">
-                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                            <p>Podium et récompenses</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Flèches -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#regionaleHommeCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#regionaleHommeCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
-
-                <!-- Indicateurs -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#regionaleHommeCarousel" data-bs-slide-to="0"
-                        class="active"></button>
-                    <button type="button" data-bs-target="#regionaleHommeCarousel" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#regionaleHommeCarousel" data-bs-slide-to="2"></button>
-                </div>
-
-            </div>
-        </div>
-
-
-    </section>
-
-    <footer class="bg-dark text-white text-center p-3 mt-4">
-        <p>&copy; 2025 US Vern Cyclisme - Tous droits réservés</p>
-        <p>
-            <a href="https://www.facebook.com/usverncyclisme35" class="text-white">
-                <img src="logo/logofa.webp" alt="logo Facebook" style="height:25px;">
-            </a>
-            <a href="https://www.instagram.com/usvern.cyclisme" class="text-white">
-                <img src="logo/logoinsta.webp" alt="logo Instagram" style="height:25px;">
-            </a>
+    <div class="row align-items-center mb-5 g-5">
+      <div class="col-lg-6 order-2 order-lg-1">
+        <h3 class="fw-bold" style="color: var(--bordeaux);">Présentation</h3>
+        <p class="lh-lg">
+          L'équipe Régionale Homme rassemble nos coureurs Seniors et Espoirs les plus expérimentés. 
+          Elle représente un groupe soudé, alliant la fougue des jeunes montants et l'expérience des rouleurs confirmés.
         </p>
-    </footer>
-</body>
+        <ul class="lh-lg">
+          <li>Participation aux épreuves Régionales et Nationales</li>
+          <li>Un rôle de grand-frère pour nos coureurs U19</li>
+          <li>Forte présence sur le calendrier breton (Toutes Catégories, Access, Open)</li>
+          <li>Cohésion et esprit de camaraderie</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 text-center">
+        <img src="photo/section/régionale_homme.webp" class="img-fluid rounded-modern shadow-lg" alt="Régionale Homme">
+      </div>
+    </div>
 
+    <div class="row g-4 mb-5 justify-content-center">
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100 text-center rounded-modern border-0">
+          <div class="card-body py-4">
+            <h5 class="card-title fw-bold mb-3">Catégories</h5>
+            <p class="card-text fs-5">Seniors, Espoirs, Open & Access</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100 text-center rounded-modern border-0">
+          <div class="card-body py-4">
+            <h5 class="card-title fw-bold mb-3">Niveau</h5>
+            <p class="card-text fs-5">Régional & Inter-régional</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-5 mx-auto" style="max-width: 800px;">
+      <div id="regionaleHommeCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-modern shadow-lg">
+          <div class="carousel-item active">
+            <img src="photo/imagesteste.webp" class="d-block w-100" alt="Équipe Senior en peloton" style="height: 450px; object-fit: cover;">
+            <div class="carousel-caption bg-dark bg-opacity-50 rounded-3 mb-3 pb-2 pt-3 px-3">
+              <h5 class="fw-bold mb-0 text-white">Au cœur de la course</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="photo/imagesteste.webp" class="d-block w-100" alt="Échappée" style="height: 450px; object-fit: cover;">
+            <div class="carousel-caption bg-dark bg-opacity-50 rounded-3 mb-3 pb-2 pt-3 px-3">
+              <h5 class="fw-bold mb-0 text-white">Dans l'échappée</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="photo/imagesteste.webp" class="d-block w-100" alt="Victoire" style="height: 450px; object-fit: cover;">
+            <div class="carousel-caption bg-dark bg-opacity-50 rounded-3 mb-3 pb-2 pt-3 px-3">
+              <h5 class="fw-bold mb-0 text-white">L'esprit de victoire</h5>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#regionaleHommeCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#regionaleHommeCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#regionaleHommeCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#regionaleHommeCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#regionaleHommeCarousel" data-bs-slide-to="2"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-white text-center p-4 mt-auto">
+    <div class="container">
+      <div class="d-flex justify-content-center align-items-center gap-4 mb-3">
+        <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="text-decoration-none">
+          <img src="logo/logofa.webp" alt="Facebook US Vern" style="height:30px; border-radius: 5px;">
+        </a>
+        <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" class="text-decoration-none">
+          <img src="logo/logoinsta.webp" alt="Instagram US Vern" style="height:30px; border-radius: 8px;">
+        </a>
+      </div>
+      <p class="mb-0 text-white-50">&copy; 2025 US Vern Cyclisme - Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

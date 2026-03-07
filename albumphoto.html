@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Albums Photos - US Vern Cyclisme</title>
     <link rel="icon" type="image/png" href="logo/logo.webp">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
@@ -37,6 +36,7 @@
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 5px;
             transition: background-color 0.2s;
+            border: none;
         }
 
         .btn-close-custom:hover {
@@ -120,57 +120,54 @@
         #nextImageBtn:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
-
-        /* Style du bouton Télécharger l'album (ZIP) - Gardé pour référence, mais le HTML est retiré */
-        #downloadAlbumBtn {
-            font-size: 1.1rem;
-            padding: 10px 30px;
-            border-radius: 50px;
-            text-transform: uppercase;
+        
+        .clickable-photo {
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .clickable-photo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
         }
     </style>
 </head>
 
 <body>
 
-    <header class="bg-white text-dark p-4">
-        <div class="d-flex justify-content-between align-items-center">
+    <header class="bg-white p-3">
+        <div class="container d-flex justify-content-between align-items-center">
             <div>
-                <img src="logo/logo.webp" alt="logo du club" style="height:120px;">
+                <img src="logo/logo.webp" alt="logo du club" style="height:120px; object-fit: contain;">
             </div>
-
             <div class="flex-grow-1 text-center">
-                <h1 class="mb-0 display-3 fw-bold">US VERN CYCLISME</h1>
+                <h1 class="mb-0 display-4 fw-bold text-dark">US VERN CYCLISME</h1>
             </div>
-
-            <div style="width:70px;"></div>
+            <div style="width:120px;"></div>
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-        
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-2">
                     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="section.html">Section</a></li>
+                    <li class="nav-item"><a class="nav-link" href="section.html">Sections</a></li>
                     <li class="nav-item"><a class="nav-link" href="noussuiver.html">Nous Suivre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="nospartenaires.html">Nos Partenaires</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nospartenaires.html">Partenaires</a></li>
                     <li class="nav-item"><a class="nav-link" href="stadevelo.html">Stade de vélo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="nouscontacter.html">Nous Contacter</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="albumphoto.html">Album Photo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nouscontacter.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="albumphoto.html">Photos</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section class="container py-5">
-        <h2 class="fw-bold text-center mb-4">Nos Albums Photos</h2>
+    <section class="container my-5">
+        <h2 class="fw-bold text-center text-dark mb-4">Nos Albums Photos</h2>
 
         <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb" id="breadcrumbNav">
@@ -179,10 +176,7 @@
         </nav>
 
         <div id="dynamicContent" class="row g-4 justify-content-center">
-        </div>
-
-        <div class="text-center mt-5">
-        </div>
+            </div>
     </section>
 
     <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
@@ -207,128 +201,58 @@
                 </div>
 
                 <div class="modal-footer">
-                    <a id="modalDownloadBtn" href="#" download class="btn btn-success btn-lg">
-                        <i class="fas fa-download"></i>
+                    <a id="modalDownloadBtn" href="#" download class="btn btn-primary btn-lg border-0" style="background-color: var(--bleu-primaire);">
+                        <i class="fas fa-download"></i> Télécharger
                     </a>
 
-                    <h5 id="imageModalLabelFooter" class="mb-0"></h5>
+                    <h5 id="imageModalLabelFooter" class="mb-0 fw-bold"></h5>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <footer class="bg-dark text-white text-center p-3 mt-4">
-        <p>&copy; 2025 US Vern Cyclisme - Tous droits réservés</p>
-        <p>
-            <a href="https://www.facebook.com/usverncyclisme35" class="text-white">
-                <img src="logo/logofa.webp" alt="logo Facebook" style="height:25px;">
-            </a>
-            <a href="https://www.instagram.com/usvern.cyclisme" class="text-white">
-                <img src="logo/logoinsta.webp" alt="logo Instagram" style="height:25px;">
-            </a>
-        </p>
+    <footer class="text-white text-center p-4 mt-auto">
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center gap-4 mb-3">
+                <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="text-decoration-none">
+                    <img src="logo/logofa.webp" alt="Facebook US Vern" style="height:30px; border-radius: 5px;">
+                </a>
+                <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" class="text-decoration-none">
+                    <img src="logo/logoinsta.webp" alt="Instagram US Vern" style="height:30px; border-radius: 8px;">
+                </a>
+            </div>
+            <p class="mb-0 text-white-50">&copy; 2025 US Vern Cyclisme - Tous droits réservés</p>
+        </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        // 1. DÉCLARATION DES DONNÉES DE LA GALERIE
         const albumData = {
-
             "2025": {
-                // IMPORTANT: Seul le nom du fichier est utilisé ici
-                "route": ["route_2025_(1).webp", "route_2025_(2).webp", "route_2025_(3).webp",
-                    "route_2025_(4).webp", "route_2025_(5).webp", "route_2025_(6).webp",
-                    "route_2025_(7).webp", "route_2025_(8).webp", "route_2025_(9).webp",
-                    "route_2025_(10).webp", "route_2025_(11).webp", "route_2025_(12).webp",
-                    "route_2025_(13).webp", "route_2025_(14).webp", "route_2025_(15).webp",
-                    "route_2025_(16).webp", "route_2025_(17).webp", "route_2025_(18).webp",
-                    "route_2025_(19).webp", "route_2025_(20).webp", "route_2025_(21).webp",
-                    "route_2025_(22).webp", "route_2025_(23).webp", "route_2025_(24).webp",
-                    "route_2025_(25).webp", "route_2025_(26).webp", "route_2025_(27).webp",
-                    "route_2025_(28).webp", "route_2025_(29).webp", "route_2025_(30).webp",
-                    "route_2025_(31).webp", "route_2025_(32).webp", "route_2025_(33).webp",
-                    "route_2025_(34).webp", "route_2025_(35).webp", "route_2025_(36).webp",
-                    "route_2025_(37).webp", "route_2025_(38).webp", "route_2025_(39).webp",
-                    "route_2025_(40).webp", "route_2025_(41).webp", "route_2025_(42).webp",
-                    "route_2025_(43).webp", "route_2025_(44).webp", "route_2025_(45).webp",
-                    "route_2025_(46).webp", "route_2025_(47).webp", "route_2025_(48).webp",
-                    "route_2025_(49).webp", "route_2025_(50).webp", "route_2025_(51).webp",
-                    "route_2025_(52).webp", "route_2025_(53).webp", "route_2025_(54).webp",
-                    "route_2025_(55).webp", "route_2025_(56).webp", "route_2025_(57).webp",
-                    "route_2025_(58).webp", "route_2025_(59).webp", "route_2025_(60).webp",
-                    "route_2025_(61).webp", "route_2025_(62).webp", "route_2025_(63).webp",
-                    "route_2025_(64).webp", "route_2025_(65).webp", "route_2025_(66).webp",
-                    "route_2025_(67).webp", "route_2025_(68).webp", "route_2025_(69).webp",
-                    "route_2025_(70).webp", "route_2025_(71).webp", "route_2025_(72).webp",
-                    "route_2025_(73).webp", "route_2025_(74).webp", "route_2025_(75).webp",
-                    "route_2025_(76).webp", "route_2025_(77).webp", "route_2025_(78).webp",
-                    "route_2025_(79).webp", "route_2025_(80).webp", "route_2025_(81).webp",
-                    "route_2025_(82).webp", "route_2025_(83).webp", "route_2025_(84).webp",
-                    "route_2025_(85).webp", "route_2025_(86).webp", "route_2025_(87).webp",
-                    "route_2025_(88).webp", "route_2025_(89).webp", "route_2025_(90).webp",
-                    "route_2025_(91).webp", "route_2025_(92).webp", "route_2025_(93).webp",
-                    "route_2025_(94).webp", "route_2025_(95).webp", "route_2025_(96).webp",
-                    "route_2025_(97).webp", "route_2025_(98).webp", "route_2025_(99).webp",
-                    "route_2025_(100).webp", "route_2025_(101).webp", "route_2025_(102).webp",
-                    "route_2025_(103).webp", "route_2025_(104).webp", "route_2025_(105).webp",
-                    "route_2025_(106).webp", "route_2025_(107).webp", "route_2025_(108).webp",
-                    "route_2025_(109).webp", "route_2025_(110).webp", "route_2025_(111).webp",
-                    "route_2025_(112).webp"],
+                "route": ["route_2025_(1).webp", "route_2025_(2).webp", "route_2025_(3).webp", "route_2025_(4).webp", "route_2025_(5).webp", "route_2025_(6).webp", "route_2025_(7).webp", "route_2025_(8).webp", "route_2025_(9).webp", "route_2025_(10).webp", "route_2025_(11).webp", "route_2025_(12).webp", "route_2025_(13).webp", "route_2025_(14).webp", "route_2025_(15).webp", "route_2025_(16).webp", "route_2025_(17).webp", "route_2025_(18).webp", "route_2025_(19).webp", "route_2025_(20).webp", "route_2025_(21).webp", "route_2025_(22).webp", "route_2025_(23).webp", "route_2025_(24).webp", "route_2025_(25).webp", "route_2025_(26).webp", "route_2025_(27).webp", "route_2025_(28).webp", "route_2025_(29).webp", "route_2025_(30).webp", "route_2025_(31).webp", "route_2025_(32).webp", "route_2025_(33).webp", "route_2025_(34).webp", "route_2025_(35).webp", "route_2025_(36).webp", "route_2025_(37).webp", "route_2025_(38).webp", "route_2025_(39).webp", "route_2025_(40).webp", "route_2025_(41).webp", "route_2025_(42).webp", "route_2025_(43).webp", "route_2025_(44).webp", "route_2025_(45).webp", "route_2025_(46).webp", "route_2025_(47).webp", "route_2025_(48).webp", "route_2025_(49).webp", "route_2025_(50).webp", "route_2025_(51).webp", "route_2025_(52).webp", "route_2025_(53).webp", "route_2025_(54).webp", "route_2025_(55).webp", "route_2025_(56).webp", "route_2025_(57).webp", "route_2025_(58).webp", "route_2025_(59).webp", "route_2025_(60).webp", "route_2025_(61).webp", "route_2025_(62).webp", "route_2025_(63).webp", "route_2025_(64).webp", "route_2025_(65).webp", "route_2025_(66).webp", "route_2025_(67).webp", "route_2025_(68).webp", "route_2025_(69).webp", "route_2025_(70).webp", "route_2025_(71).webp", "route_2025_(72).webp", "route_2025_(73).webp", "route_2025_(74).webp", "route_2025_(75).webp", "route_2025_(76).webp", "route_2025_(77).webp", "route_2025_(78).webp", "route_2025_(79).webp", "route_2025_(80).webp", "route_2025_(81).webp", "route_2025_(82).webp", "route_2025_(83).webp", "route_2025_(84).webp", "route_2025_(85).webp", "route_2025_(86).webp", "route_2025_(87).webp", "route_2025_(88).webp", "route_2025_(89).webp", "route_2025_(90).webp", "route_2025_(91).webp", "route_2025_(92).webp", "route_2025_(93).webp", "route_2025_(94).webp", "route_2025_(95).webp", "route_2025_(96).webp", "route_2025_(97).webp", "route_2025_(98).webp", "route_2025_(99).webp", "route_2025_(100).webp", "route_2025_(101).webp", "route_2025_(102).webp", "route_2025_(103).webp", "route_2025_(104).webp", "route_2025_(105).webp", "route_2025_(106).webp", "route_2025_(107).webp", "route_2025_(108).webp", "route_2025_(109).webp", "route_2025_(110).webp", "route_2025_(111).webp", "route_2025_(112).webp"],
                 "cyclo-cross": ["cx_2025_1.webp", "cx_2025_2.webp", "cx_2025_3.webp", "cx_2025_4.webp"],
-
             },
-
             "2024": {
-                "route": ["route_2024_(1).webp", "route_2024_(2).webp", "route_2024_(3).webp",
-                    "route_2024_(4).webp", "route_2024_(5).webp", "route_2024_(6).webp",
-                    "route_2024_(7).webp", "route_2024_(8).webp", "route_2024_(9).webp",
-                    "route_2024_(10).webp", "route_2024_(11).webp", "route_2024_(12).webp",
-                    "route_2024_(13).webp", "route_2024_(14).webp", "route_2024_(15).webp",
-                    "route_2024_(16).webp", "route_2024_(17).webp"],
-                "cyclo-cross": ["cx_2024_(1).webp", "cx_2024_(2).webp", "cx_2024_(3).webp",
-                    "cx_2024_(4).webp", "cx_2024_(5).webp", "cx_2024_(6).webp",
-                    "cx_2024_(7).webp", "cx_2024_(8).webp", "cx_2024_(9).webp",
-                    "cx_2024_(10).webp", "cx_2024_(11).webp", "cx_2024_(12).webp",
-                    "cx_2024_(13).webp", "cx_2024_(14).webp", "cx_2024_(15).webp",
-                    "cx_2024_(16).webp", "cx_2024_(17).webp", "cx_2024_(18).webp",
-                    "cx_2024_(19).webp", "cx_2024_(20).webp", "cx_2024_(21).webp",
-                    "cx_2024_(22).webp", "cx_2024_(23).webp", "cx_2024_(24).webp",
-                    "cx_2024_(25).webp", "cx_2024_(26).webp", "cx_2024_(27).webp",
-                    "cx_2024_(28).webp", "cx_2024_(29).webp", "cx_2024_(30).webp",
-                    "cx_2024_(31).webp", "cx_2024_(32).webp"],
+                "route": ["route_2024_(1).webp", "route_2024_(2).webp", "route_2024_(3).webp", "route_2024_(4).webp", "route_2024_(5).webp", "route_2024_(6).webp", "route_2024_(7).webp", "route_2024_(8).webp", "route_2024_(9).webp", "route_2024_(10).webp", "route_2024_(11).webp", "route_2024_(12).webp", "route_2024_(13).webp", "route_2024_(14).webp", "route_2024_(15).webp", "route_2024_(16).webp", "route_2024_(17).webp"],
+                "cyclo-cross": ["cx_2024_(1).webp", "cx_2024_(2).webp", "cx_2024_(3).webp", "cx_2024_(4).webp", "cx_2024_(5).webp", "cx_2024_(6).webp", "cx_2024_(7).webp", "cx_2024_(8).webp", "cx_2024_(9).webp", "cx_2024_(10).webp", "cx_2024_(11).webp", "cx_2024_(12).webp", "cx_2024_(13).webp", "cx_2024_(14).webp", "cx_2024_(15).webp", "cx_2024_(16).webp", "cx_2024_(17).webp", "cx_2024_(18).webp", "cx_2024_(19).webp", "cx_2024_(20).webp", "cx_2024_(21).webp", "cx_2024_(22).webp", "cx_2024_(23).webp", "cx_2024_(24).webp", "cx_2024_(25).webp", "cx_2024_(26).webp", "cx_2024_(27).webp", "cx_2024_(28).webp", "cx_2024_(29).webp", "cx_2024_(30).webp", "cx_2024_(31).webp", "cx_2024_(32).webp"],
             },
-
         };
-        const disciplineNames = {
-            "route": "Route",
-            "cyclo-cross": "Cyclo-cross",
-        };
+        const disciplineNames = { "route": "Route", "cyclo-cross": "Cyclo-cross" };
 
-        // 2. SÉLECTION DES ÉLÉMENTS HTML
         const dynamicContent = document.getElementById("dynamicContent");
-        const downloadAlbumBtn = document.getElementById("downloadAlbumBtn"); // Gardé mais n'est plus utilisé
         const breadcrumbNav = document.getElementById("breadcrumbNav");
-
         const imageModal = document.getElementById('imageModal');
         const modalImage = document.getElementById('modalImage');
         const modalDownloadBtn = document.getElementById('modalDownloadBtn');
-
         const imageModalLabelFooter = document.getElementById('imageModalLabelFooter');
-
         const prevImageBtn = document.getElementById('prevImageBtn');
         const nextImageBtn = document.getElementById('nextImageBtn');
 
-        // Variables d'état
         let selectedYear = null;
         let selectedDiscipline = null;
         let currentAlbumImages = [];
         let currentImageIndex = 0;
-
-        // --- Fonctions de Navigation et d'Affichage ---
 
         function buildBreadcrumb() {
             let html = `<li class="breadcrumb-item"><a href="#" data-step="years">Albums</a></li>`;
@@ -342,8 +266,6 @@
                 html += `<li class="breadcrumb-item active" aria-current="page">${discName}</li>`;
             }
             breadcrumbNav.innerHTML = html;
-            // Retirer l'affichage du bouton ZIP, même si le HTML est commenté/retiré
-            if (downloadAlbumBtn) downloadAlbumBtn.style.display = 'none';
         }
 
         function renderYears() {
@@ -355,13 +277,13 @@
             const years = Object.keys(albumData).sort((a, b) => b - a);
 
             dynamicContent.innerHTML = years.map(year => `
-                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <div class="folder-icon-container" onclick="showDisciplines('${year}')">
-                                <i class="fas fa-folder-open"></i>
-                                <div class="folder-label">${year}</div>
-                            </div>
-                        </div>
-                    `).join('');
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="folder-icon-container shadow-sm" onclick="showDisciplines('${year}')">
+                        <i class="fas fa-folder-open"></i>
+                        <div class="folder-label">${year}</div>
+                    </div>
+                </div>
+            `).join('');
         }
 
         function showDisciplines(year) {
@@ -373,23 +295,20 @@
             const availableDisciplines = Object.keys(albumData[year]).filter(disc => albumData[year][disc].length > 0);
 
             if (availableDisciplines.length === 0) {
-                dynamicContent.innerHTML = `<div class="col-12 text-center text-muted py-5">
-                            <p class="h4">Aucun album de discipline trouvé pour ${year}.</p>
-                            <p>Veuillez choisir une autre année.</p>
-                        </div>`;
+                dynamicContent.innerHTML = `<div class="col-12 text-center text-muted py-5"><p class="h4">Aucun album trouvé pour ${year}.</p></div>`;
                 return;
             }
 
             dynamicContent.innerHTML = availableDisciplines.map(discipline => {
                 const discName = disciplineNames[discipline];
                 return `
-                            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                                <div class="folder-icon-container" onclick="loadGallery('${year}', '${discipline}')">
-                                    <i class="fas fa-folder"></i>
-                                    <div class="folder-label">${discName}</div>
-                                </div>
-                            </div>
-                        `;
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                        <div class="folder-icon-container shadow-sm" onclick="loadGallery('${year}', '${discipline}')">
+                            <i class="fas fa-folder"></i>
+                            <div class="folder-label">${discName}</div>
+                        </div>
+                    </div>
+                `;
             }).join('');
         }
 
@@ -407,88 +326,53 @@
                 title: `${disciplineName} ${year}`
             }));
 
-
-            dynamicContent.innerHTML = currentAlbumImages.map((img, index) => {
-                return `
-                            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                                <div class="card shadow-sm h-100 clickable-photo" 
-                                    data-bs-toggle="modal" 
-                                    data-bs-target="#imageModal"
-                                    data-index="${index}"> <img src="${img.fullPath}" class="card-img-top" alt="Photo ${img.title}" loading="lazy">
-                                    <div class="card-body p-2 text-center">
-                                        <small class="text-muted">${img.filename}</small>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-            }).join('');
-
-            // Suppression des lignes relatives au bouton ZIP
-            // const zipPath = `albums/${year}/${discipline}.zip`;
-            // downloadAlbumBtn.href = zipPath;
-            // downloadAlbumBtn.title = `Télécharger l'album ${year} ${disciplineName}`;
-            // downloadAlbumBtn.style.display = 'block'; 
+            dynamicContent.innerHTML = currentAlbumImages.map((img, index) => `
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card shadow-sm h-100 rounded-modern clickable-photo" data-bs-toggle="modal" data-bs-target="#imageModal" data-index="${index}"> 
+                        <img src="${img.fullPath}" class="card-img-top" alt="Photo ${img.title}" loading="lazy">
+                        <div class="card-body p-2 text-center">
+                            <small class="text-muted fw-bold">${img.filename}</small>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
         }
-
-
-        // --- Fonction d'Affichage dans la Modale (Carrousel) ---
 
         function updateModalContent(index) {
             if (currentAlbumImages.length === 0) return;
-
             currentImageIndex = (index + currentAlbumImages.length) % currentAlbumImages.length;
-
             const img = currentAlbumImages[currentImageIndex];
-
-            // Mise à jour du titre dans le footer
             imageModalLabelFooter.textContent = `${img.title} (${currentImageIndex + 1}/${currentAlbumImages.length}) - ${img.filename}`;
             modalImage.src = img.fullPath;
-
-            // Mise à jour du Bouton Télécharger
             modalDownloadBtn.href = img.fullPath;
             modalDownloadBtn.download = img.filename;
         }
 
-
-        // --- GESTION DES ÉVÉNEMENTS (Modale et Navigation) ---
-
-        // 1. Ouverture de la Lightbox
         imageModal.addEventListener('show.bs.modal', event => {
             const card = event.relatedTarget;
             currentImageIndex = parseInt(card.getAttribute('data-index'));
             updateModalContent(currentImageIndex);
         });
 
-        // 2. Navigation dans le Carrousel
         prevImageBtn.onclick = () => updateModalContent(currentImageIndex - 1);
         nextImageBtn.onclick = () => updateModalContent(currentImageIndex + 1);
 
-
-        // 3. Gère le clic sur le fil d'Ariane
         breadcrumbNav.addEventListener('click', (e) => {
             if (e.target.tagName === 'A') {
                 e.preventDefault();
                 const step = e.target.getAttribute('data-step');
                 const year = e.target.getAttribute('data-year');
-
-                if (step === 'years') {
-                    renderYears();
-                } else if (step === 'disciplines' && year) {
-                    showDisciplines(year);
-                }
+                if (step === 'years') renderYears();
+                else if (step === 'disciplines' && year) showDisciplines(year);
             }
         });
 
-        // 4. DÉMARRAGE DE LA PAGE
         document.addEventListener("DOMContentLoaded", function () {
-            document.querySelector('a[href="albumphoto.html"]').classList.add("active");
             renderYears();
         });
 
-        // Rendre les fonctions globales
         window.showDisciplines = showDisciplines;
         window.loadGallery = loadGallery;
     </script>
 </body>
-
 </html>

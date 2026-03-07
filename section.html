@@ -5,204 +5,138 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>US Vern Cyclisme - Section</title>
+  <title>US Vern Cyclisme - Nos Sections</title>
   <link rel="icon" type="image/png" href="logo/logo.webp">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-  <title>Accueil</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-
-
 </head>
 
 <body>
 
-  <header class="bg-white text-dark p-4">
-    <div class="d-flex justify-content-between align-items-center">
-      <!-- logo à gauche -->
+  <header class="bg-white p-3">
+    <div class="container d-flex justify-content-between align-items-center">
       <div>
-        <img src="logo/logo.webp" alt="logo du club" style="height:120px;">
+        <img src="logo/logo.webp" alt="Logo US Vern Cyclisme" style="height: 120px; object-fit: contain;">
       </div>
-
-      <!-- Texte au centre -->
-      <div class="flex-grow-1 text-center">
-        <h1 class="mb-0 display-3 fw-bold">US VERN CYCLISME</h1>
+      <div class="text-center flex-grow-1">
+        <h1 class="mb-0 display-4 fw-bold text-dark">US VERN CYCLISME</h1>
       </div>
-
-      <!-- Espace vide à droite pour équilibrer -->
-      <div style="width:70px;"></div>
+      <div style="width: 120px;"></div>
     </div>
   </header>
 
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
-
-      <!-- Bouton burger pour mobile -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Menu -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-2">
           <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-          <li class="nav-item"><a class="nav-link active" href="section.html">Section</a></li>
+          <li class="nav-item"><a class="nav-link active" href="section.html">Sections</a></li>
           <li class="nav-item"><a class="nav-link" href="noussuiver.html">Nous Suivre</a></li>
-          <li class="nav-item"><a class="nav-link" href="nospartenaires.html">Nos Partenaires</a></li>
+          <li class="nav-item"><a class="nav-link" href="nospartenaires.html">Partenaires</a></li>
           <li class="nav-item"><a class="nav-link" href="stadevelo.html">Stade de vélo</a></li>
-          <li class="nav-item"><a class="nav-link" href="nouscontacter.html">Nous Contacter</a></li>
-          <li class="nav-item"><a class="nav-link" href="albumphoto.html">Album Photo</a></li>
+          <li class="nav-item"><a class="nav-link" href="nouscontacter.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="albumphoto.html">Photos</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Script pour activer automatiquement le lien correspondant à la page -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const currentPage = window.location.pathname.split("/").pop(); // ex: "section.html"
-      document.querySelectorAll(".nav-link").forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
-          link.classList.add("active");
-        }
-      });
-    });
-  </script>
-
-  <nav class="navbarSection navbar-expand-lg navbar-dark">
-    <div class="container"> <!-- au lieu de container-fluid -->
-
-      <!-- Bouton burger pour mobile -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2">
-        <span class="navbar-toggler-icon"></span>
+  <nav class="navbarSection navbar-expand-lg navbar-dark mt-4">
+    <div class="container">
+      <button class="navbar-toggler border-0 mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2">
+        <span class="navbar-toggler-icon"></span> Sous-menu Sections
       </button>
 
-      <!-- Menu -->
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav2">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="section.html">Nos section</a></li>
-          <li class="nav-item"><a class="nav-link" href="ecoledevelo.html">École de vélo</a></li>
-          <li class="nav-item"><a class="nav-link" href="u15.html">U15</a></li>
-          <li class="nav-item"><a class="nav-link" href="u17.html">U17</a></li>
-          <li class="nav-item"><a class="nav-link" href="u19.html">U19</a></li>
-          <li class="nav-item"><a class="nav-link" href="nationale_dames.html">Équipe nationale dames</a></li>
-          <li class="nav-item"><a class="nav-link" href="régionale_homme.html">Régionale homme</a></li>
+        <ul class="navbar-nav gap-2 text-center">
+          <li class="nav-item"><a class="nav-link active text-white" href="section.html">Toutes nos sections</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="ecoledevelo.html">École de vélo</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="u15.html">U15</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="u17.html">U17</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="u19.html">U19</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="nationale_dames.html">Nationale Dames</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="régionale_homme.html">Régionale Homme</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- Script pour activer automatiquement le lien correspondant à la page -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const currentPage = window.location.pathname.split("/").pop(); // ex: "section.html"
-      document.querySelectorAll(".nav-link").forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
-          link.classList.add("active");
-        }
-      });
-    });
-  </script>
 
   <div class="container my-5">
-    <h2 class="text-center mb-4">Nos Sections</h2>
+    <h2 class="text-center mb-5 fw-bold text-dark">Découvrez nos différentes catégories</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
 
-      <!-- École de vélo -->
       <div class="col">
         <div class="card h-100">
-          <img src="photo/section/ecolecyclisme.webp" class="card-img-top" alt="École de vélo"
-            data-title="École de vélo">
-          <div class="card-body">
+          <img src="photo/section/ecolecyclisme.webp" class="card-img-top clickable-img" alt="École de vélo" data-title="École de vélo" style="cursor: pointer;">
+          <div class="card-body d-flex flex-column">
             <h5 class="card-title">École de vélo</h5>
-            <p class="card-text">Labellisée FFC, elle accueille les plus jeunes pour découvrir et apprendre le cyclisme.
-            </p>
-            <a href="ecoledevelo.html" class="btn btn-primary">En savoir plus</a>
+            <p class="card-text flex-grow-1">Labellisée FFC, elle accueille les plus jeunes pour découvrir et apprendre le cyclisme.</p>
+            <a href="ecoledevelo.html" class="btn btn-primary mt-3">En savoir plus</a>
           </div>
         </div>
       </div>
 
-      <!-- U15 -->
       <div class="col">
         <div class="card h-100">
-          <img src="photo/section/U15.webp" class="card-img-top" alt="U15" data-title="U15">
-          <div class="card-body">
+          <img src="photo/section/U15.webp" class="card-img-top clickable-img" alt="U15" data-title="U15" style="cursor: pointer;">
+          <div class="card-body d-flex flex-column">
             <h5 class="card-title">U15 (13-14 ans)</h5>
-            <p class="card-text">Anciennement Minimes, cette catégorie forme les jeunes à la compétition.</p>
-            <a href="u15.html" class="btn btn-primary">En savoir plus</a>
+            <p class="card-text flex-grow-1">Anciennement Minimes, cette catégorie forme les jeunes à la compétition.</p>
+            <a href="u15.html" class="btn btn-primary mt-3">En savoir plus</a>
           </div>
         </div>
       </div>
 
-      <!-- U17 -->
       <div class="col">
         <div class="card h-100">
-          <img src="photo/section/U17.webp" class="card-img-top" alt="U17" data-title="U17">
-          <div class="card-body">
+          <img src="photo/section/U17.webp" class="card-img-top clickable-img" alt="U17" data-title="U17" style="cursor: pointer;">
+          <div class="card-body d-flex flex-column">
             <h5 class="card-title">U17 (15-16 ans)</h5>
-            <p class="card-text">Anciennement Cadets, ils participent aux compétitions régionales et interclubs.</p>
-            <a href="u17.html" class="btn btn-primary">En savoir plus</a>
+            <p class="card-text flex-grow-1">Anciennement Cadets, ils participent aux compétitions régionales et interclubs.</p>
+            <a href="u17.html" class="btn btn-primary mt-3">En savoir plus</a>
           </div>
         </div>
       </div>
 
-      <!-- U19 -->
       <div class="col">
         <div class="card h-100">
-          <img src="photo/section/U19.webp" class="card-img-top" alt="U19" data-title="U19">
-          <div class="card-body">
+          <img src="photo/section/U19.webp" class="card-img-top clickable-img" alt="U19" data-title="U19" style="cursor: pointer;">
+          <div class="card-body d-flex flex-column">
             <h5 class="card-title">U19 (17–18 ans)</h5>
-            <p class="card-text">Anciennement Juniors, ils participent à des compétitions de niveau régional,
-              inter-régional et national.</p>
-            <a href="u19.html" class="btn btn-primary">En savoir plus</a>
+            <p class="card-text flex-grow-1">Anciennement Juniors, ils participent à des compétitions de niveau régional, inter-régional et national.</p>
+            <a href="u19.html" class="btn btn-primary mt-3">En savoir plus</a>
           </div>
         </div>
       </div>
 
-      <!-- Équipe Nationale Dames -->
       <div class="col">
         <div class="card h-100">
-          <img src="photo/section/Nationel_Dames.webp" class="card-img-top" alt="Équipe Nationale Dames"
-            data-title="Équipe Nationale Dames">
-          <div class="card-body">
+          <img src="photo/section/Nationel_Dames.webp" class="card-img-top clickable-img" alt="Équipe Nationale Dames" data-title="Équipe Nationale Dames" style="cursor: pointer;">
+          <div class="card-body d-flex flex-column">
             <h5 class="card-title">Équipe Nationale Dames</h5>
-            <p class="card-text">Première DN féminine créée en Bretagne, elles participent aux compétitions
-              régionales, inter-régionales et nationales.</p>
-            <a href="nationale_dames.html" class="btn btn-primary">En savoir plus</a>
+            <p class="card-text flex-grow-1">Première DN féminine créée en Bretagne, elles participent aux compétitions régionales, inter-régionales et nationales.</p>
+            <a href="nationale_dames.html" class="btn btn-primary mt-3">En savoir plus</a>
           </div>
         </div>
       </div>
 
-
-      <!-- Régionale Homme -->
       <div class="col">
         <div class="card h-100">
-          <img src="photo/section/régionale_homme.webp" class="card-img-top" alt="Régionale Homme"
-            data-title="Régionale Homme">
-          <div class="card-body">
+          <img src="photo/section/régionale_homme.webp" class="card-img-top clickable-img" alt="Régionale Homme" data-title="Régionale Homme" style="cursor: pointer;">
+          <div class="card-body d-flex flex-column">
             <h5 class="card-title">Régionale Homme</h5>
-            <p class="card-text">ils participent à des compétitions de niveau régionale,
-              inter-régionale et nationale</p>
-            <a href="régionale_homme.html" class="btn btn-primary">En savoir plus</a>
+            <p class="card-text flex-grow-1">Ils participent à des compétitions de niveau régional, inter-régional et national.</p>
+            <a href="régionale_homme.html" class="btn btn-primary mt-3">En savoir plus</a>
           </div>
         </div>
       </div>
-
 
     </div>
   </div>
 
-
-  <div id="imgModal" class="modal-img">
-    <span class="modal-img-close">&times;</span>
-    <span class="modal-prev">&#10094;</span>
-    <span class="modal-next">&#10095;</span>
-    <img class="modal-img-content" id="imgModalContent">
-    <div id="imgModalCaption" class="modal-caption"></div>
-  </div>
 
 
   <script>
@@ -213,7 +147,7 @@
     const prevBtn = document.querySelector(".modal-prev");
     const nextBtn = document.querySelector(".modal-next");
 
-    const images = Array.from(document.querySelectorAll(".card-img-top"));
+    const images = Array.from(document.querySelectorAll(".clickable-img"));
     let currentIndex = 0;
 
     // Ouvrir la modale
@@ -226,7 +160,7 @@
       });
     });
 
-    // Fermer
+    // Fermer la modale
     spanClose.onclick = () => modal.style.display = "none";
     modal.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
 
@@ -236,33 +170,32 @@
       caption.textContent = images[index].getAttribute("data-title") || images[index].alt;
     }
 
-    prevBtn.onclick = () => {
+    prevBtn.onclick = (e) => {
+      e.stopPropagation(); // Évite de fermer la modale en cliquant
       currentIndex = (currentIndex - 1 + images.length) % images.length;
       showImage(currentIndex);
     };
-    nextBtn.onclick = () => {
+    nextBtn.onclick = (e) => {
+      e.stopPropagation();
       currentIndex = (currentIndex + 1) % images.length;
       showImage(currentIndex);
     };
   </script>
 
-
-
-
-  <footer class="bg-dark text-white text-center p-3 mt-4">
-    <p>&copy; 2025 US Vern Cyclisme - Tous droits réservés</p>
-    <p>
-      <a href="https://www.facebook.com/usverncyclisme35" class="text-white">
-        <img src="logo/logofa.webp" alt="logo Facebook" style="height:25px;">
-      </a>
-      <a href="https://www.instagram.com/usvern.cyclisme" class="text-white">
-        <img src="logo/logoinsta.webp" alt="logo Instagram" style="height:25px;">
-      </a>
-    </p>
+  <footer class="text-white text-center p-4 mt-auto">
+    <div class="container">
+      <div class="d-flex justify-content-center align-items-center gap-4 mb-3">
+        <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="text-decoration-none">
+          <img src="logo/logofa.webp" alt="Facebook US Vern" style="height:30px; border-radius: 5px;">
+        </a>
+        <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" class="text-decoration-none">
+          <img src="logo/logoinsta.webp" alt="Instagram US Vern" style="height:30px; border-radius: 8px;">
+        </a>
+      </div>
+      <p class="mb-0 text-white-50">&copy; 2025 US Vern Cyclisme - Tous droits réservés</p>
+    </div>
   </footer>
 
-
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
