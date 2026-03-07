@@ -20,7 +20,8 @@
       <div class="text-center flex-grow-1">
         <h1 class="mb-0 display-4 fw-bold text-dark">US VERN CYCLISME</h1>
       </div>
-      <div style="width: 120px;"></div> </div>
+      <div style="width: 120px;"></div>
+    </div>
   </header>
 
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
@@ -37,6 +38,7 @@
           <li class="nav-item"><a class="nav-link" href="nospartenaires.html">Partenaires</a></li>
           <li class="nav-item"><a class="nav-link" href="stadevelo.html">Stade de vélo</a></li>
           <li class="nav-item"><a class="nav-link" href="nouscontacter.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="entente.html">L'Entente</a></li>
           <li class="nav-item"><a class="nav-link" href="albumphoto.html">Photos</a></li>
         </ul>
       </div>
@@ -80,7 +82,7 @@
         setTimeout(() => {
           sloganEl.textContent = text;
           sloganEl.classList.add("show");
-        }, 800); /* Temps de fondu */
+        }, 800);
       }
       showSlogan(slogans[i]);
       setInterval(() => {
@@ -90,7 +92,7 @@
     </script>
   </section>
 
-  <section class="container my-5 py-5">
+  <section class="container my-5 pt-4">
     <div class="row align-items-center g-5">
       <div class="col-lg-6 text-dark">
         <h2 class="fw-bold mb-4 text-dark">Présentation du club</h2>
@@ -109,7 +111,8 @@
     </div>
   </section>
 
-  <section class="bg-white py-5">
+
+  <section class="bg-light py-5">
     <div class="container">
       <div class="row g-5 align-items-center">
 
@@ -118,7 +121,7 @@
           <div class="video-container p-2 mb-4 mx-auto" style="max-width: 400px;">
             <iframe
               src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1560233841631234&show_text=false"
-              width="100%" height="670" style="border:none; overflow:hidden; border-radius:10px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+              width="100%" height="650" style="border:none; overflow:hidden; border-radius:10px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
             </iframe>
           </div>
           <a href="https://www.tvr.bzh/article/a7584e5-a-vern-sur-seiche-le-nouveau-stade-de-velo-est-ouvert" target="_blank" class="btn btn-danger">Voir le reportage complet</a>
@@ -173,6 +176,25 @@
         </div>
 
       </div>
+    </div>
+  </section>
+
+
+  <section class="bg-white py-5 border-top border-bottom">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-start">
+                <h2 class="fw-bold mb-4" style="color: var(--bleu-fonce);">Un projet ambitieux : L'ECPR</h2>
+                <p class="fs-5 text-muted mb-4">L'Entente Cycliste du Pays Rennais</p>
+                <p class="lh-lg">
+                  L'US Vern Cyclisme est membre de l'ECPR. Ce beau projet rassemble les forces de plusieurs clubs bretons pour permettre à nos coureurs de briller sur les plus grandes courses du calendrier, grâce à une logistique mutualisée et un fort esprit d'équipe interclubs.
+                </p>
+                <a href="entente.html" class="btn btn-outline-danger btn-lg mt-3 px-4">Découvrir l'Entente</a>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="photo/imagesteste.webp" alt="Entente ECPR" class="img-fluid rounded-modern shadow-sm" style="max-height: 350px; object-fit: cover;">
+            </div>
+        </div>
     </div>
   </section>
 
