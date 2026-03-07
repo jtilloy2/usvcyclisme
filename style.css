@@ -1,137 +1,172 @@
 /* =========================================
-   STYLE CSS - ENTENTE CYCLISTE PAYS DE RENNES (ECPR)
-   Couleurs principales : Rouge (#a90005) et Noir/Gris Foncé (#1a1a1a)
+   STYLE CSS - US VERN CYCLISME
+   Couleurs d'origine : Rouge/Bordeaux et Bleu
    ========================================= */
 
-/* === SLOGAN & ANIMATIONS === */
-#slogan {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  font-size: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  --bordeaux: #9e1b1b;           /* Rouge/Bordeaux d'origine */
+  --bordeaux-dark: #7a1414;      /* Rouge foncé au survol */
+  --bleu-fonce: #003366;         /* Bleu foncé d'origine (titres cartes) */
+  --bleu-primaire: #0066cc;      /* Bleu d'origine (boutons) */
+  --bleu-primaire-dark: #004c99; /* Bleu foncé au survol */
+  --bleu-clair: #2c88bc;         /* Bleu d'origine (menu secondaire) */
+  --blanc: #ffffff;
+  --gris-clair: #f8f9fa;
+  --texte-sombre: #212529;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--texte-sombre);
+  background-color: var(--gris-clair);
+  /* --- Ajouts pour forcer le footer en bas --- */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* La page prendra au minimum 100% de l'écran */
+}
+
+h1, h2, h3, h4, h5, .fw-bold {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* === HEADER & NAVBAR PRINCIPALE === */
+header {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 10;
+}
+
+.navbar {
+  background-color: var(--bordeaux);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--blanc);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--blanc);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+/* === CORRECTION DU SOUS-MENU (Sections) === */
+.navbarSection {
+  background-color: var(--bleu-clair);
+  border-radius: 10px;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 5px 20px;
+}
+
+/* On fige la taille et l'épaisseur du texte pour empêcher le menu de "sauter" */
+.navbarSection .nav-link {
+  font-size: 1rem !important;
+  font-weight: 600 !important; 
+  border-bottom: none !important; 
+  border-radius: 8px;
+  padding: 8px 15px !important;
+  margin: 0 2px;
+  transition: all 0.2s ease;
+}
+
+/* Indicateur de page active avec un fond élégant au lieu de grossir le texte */
+.navbarSection .nav-link:hover,
+.navbarSection .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.25) !important; 
+  transform: translateY(-2px);
+}
+
+/* === BOUTONS === */
+.btn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary { background-color: var(--bleu-primaire); color: var(--blanc); }
+.btn-primary:hover { background-color: var(--bleu-primaire-dark); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3); }
+
+.btn-danger { background-color: var(--bordeaux); color: var(--blanc); }
+.btn-danger:hover { background-color: var(--bordeaux-dark); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(158, 27, 27, 0.3); }
+
+/* Bouton spécifique Partenaire */
+.btn-partner {
+  background-color: var(--bordeaux);
+  color: #fff;
   font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 50px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-partner:hover {
+  background-color: var(--bordeaux-dark);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(158, 27, 27, 0.3);
 }
 
-#slogan.show {
-  opacity: 1;
+/* === HERO BANNER (Accueil) === */
+.hero-banner {
+  background: url("photo/banniere.webp") center/cover no-repeat;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#carouselText {
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.45); /* Opacité d'origine */
+  z-index: 1;
 }
 
-#carouselText.fade-out {
-  opacity: 0;
+.hero-banner > div {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--blanc);
 }
 
 .text-shadow {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
-/* === HERO BANNER (Accueil) === */
-.hero-banner {
-  background: url("photo/banniere.webp") center/cover no-repeat;
-  background-color: #1a1a1a; /* Fond noir par défaut si l'image ne charge pas */
-  height: 55vh;
-  position: relative;
+#slogan {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease;
+  transform: translateY(10px);
+}
+#slogan.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.hero-banner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Assombri un peu plus pour faire ressortir le texte blanc */
-  z-index: 1;
-}
-
-.hero-banner > * {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-banner h1,
-.hero-banner h2,
-.hero-banner div,
-.hero-banner p {
-  color: white !important;
-}
-
-/* === NAVBAR === */
-.nav-link.active {
-  font-weight: bold;
-  border-bottom: 2px solid #a90005; /* Soulignement rouge ECPR pour la page active */
-  color: #fff !important;
-}
-
-/* Menu secondaire (si utilisé plus tard) */
-.navbarSection {
-  background-color: #1a1a1a; /* Remplacement du bleu par du gris très foncé */
-  border-radius: 10px;
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 5px 20px;
-}
-
-/* === BOUTONS === */
-.btn-lg {
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-lg:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Remplacement du bouton primaire (anciennement bleu) par du Noir/Gris foncé */
-.btn-primary {
-  background-color: #1a1a1a;
-  border: none;
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: #333333;
-  color: white;
-}
-
-/* Bouton rouge ECPR */
-.btn-danger {
-  background-color: #a90005 !important;
-  border-color: #a90005 !important;
-}
-
-.btn-danger:hover {
-  background-color: #b71c1c !important; /* Rouge plus foncé au survol */
-  border-color: #b71c1c !important;
-}
-
-/* Bouton spécifique pour les partenaires */
-.btn-partner {
-  margin-top: 40px;
-  background-color: #a90005; /* Rouge ECPR */
-  color: #fff;
-  font-weight: bold;
-  padding: 12px 25px;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.btn-partner:hover {
-  background-color: #b71c1c; /* Rouge foncé */
-  color: #fff;
-}
-
-/* === CARTES (Sections, Sponsors, etc.) === */
+/* === CARTES ET IMAGES === */
 .card {
   border: none;
+  border-radius: 10px;
+  overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border-radius: 10px;
 }
 
 .card:hover {
@@ -142,163 +177,23 @@
 .card-img-top {
   height: 220px;
   object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 .card-title {
   font-weight: 700;
-  color: #1a1a1a; /* Texte des titres en sombre */
+  color: var(--bleu-fonce);
 }
 
-/* === ALBUM PHOTO === */
-.album {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+.rounded-modern {
+  border-radius: 10px !important;
 }
 
-.album-item {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.album-item img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  display: block;
-}
-
-.album-item p {
-  margin: 5px 0 0 0;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-.album-item.small { width: 250px; }
-.album-item.medium { width: 400px; }
-.album-item.large { width: 550px; }
-
-/* === SECTION SUIVI / SOCIAL === */
-.social-btn {
-  font-size: 1.2rem;
-  padding: 12px 20px;
-  border-radius: 50px;
-  transition: 0.3s;
-}
-
-.social-btn:hover {
-  transform: scale(1.05);
-}
-
-.social-grid img {
-  object-fit: cover;
-  height: 200px;
-  width: 100%;
-  border-radius: 12px;
-}
-
-/* === STRUCTURE & CONTAINERS === */
-.container-limitee {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* === CARROUSEL === */
-.carousel-item img {
-  height: 650px;
-  object-fit: contain;
-  width: 100%;
-  display: block;
-}
-
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
-  .carousel-item img {
-    height: 250px;
-  }
-}
-
-/* === LIGHTBOX / MODAL IMAGES === */
-.modal-img {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  text-align: center;
-}
-
-.modal-img-content {
-  max-width: 80%;
-  max-height: 80%;
-  margin: auto;
-  margin-top: 40px;
-  border-radius: 8px;
-  display: block;
-}
-
-.modal-img-close,
-.modal-prev,
-.modal-next {
-  position: absolute;
-  top: 50%;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-  user-select: none;
-  transition: 0.3s;
-}
-
-.modal-img-close {
-  top: 20px;
-  right: 35px;
-  font-size: 45px;
-}
-
-.modal-prev {
-  left: 20px;
-  transform: translateY(-50%);
-}
-
-.modal-next {
-  right: 20px;
-  transform: translateY(-50%);
-}
-
-.modal-prev:hover,
-.modal-next:hover,
-.modal-img-close:hover {
-  color: #a90005; /* Rouge au survol au lieu du gris */
-}
-
-.modal-caption {
-  margin-top: 15px;
-  color: #f1f1f1;
-  font-size: 18px;
-  text-align: center;
-}
-
-/* === DOSSIERS ALBUMS (breadcrumb & icônes) === */
+/* === PAGE ALBUM PHOTO === */
 .folder-icon-container {
   text-align: center;
   padding: 15px;
   border: 1px solid #dee2e6;
-  border-radius: 8px;
+  border-radius: 10px;
   transition: all 0.2s;
   cursor: pointer;
   min-height: 150px;
@@ -306,36 +201,79 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--blanc);
 }
-
 .folder-icon-container:hover {
   background-color: #f8f9fa;
-  border-color: #a90005; /* Bordure rouge ECPR au survol */
-  box-shadow: 0 0 10px rgba(211, 47, 47, 0.2); /* Ombre rouge légère */
+  border-color: var(--bleu-clair);
+  box-shadow: 0 5px 15px rgba(44, 136, 188, 0.2);
+  transform: translateY(-3px);
 }
-
 .folder-icon-container i {
   font-size: 4rem;
-  color: #1a1a1a; /* Icône de dossier noire */
+  color: #ffc107; /* Couleur jaune dossier classique */
   margin-bottom: 10px;
 }
+.folder-label { font-weight: bold; color: #333; }
 
-.folder-label {
-  font-weight: bold;
-  color: #333;
+.breadcrumb-item a { color: var(--bleu-clair); font-weight: bold; text-decoration: none; transition: color 0.2s; }
+.breadcrumb-item a:hover { color: #1a6a9b; }
+.breadcrumb-item.active { color: #6c757d; }
+
+.clickable-photo { cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.clickable-photo:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important; }
+
+/* === PAGE VISIBILITÉ / PARTENAIRES === */
+.visibilite-img {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
-
-.breadcrumb-item a {
-  color: #a90005; /* Liens du fil d'ariane en rouge ECPR */
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.2s;
+.visibilite-img:hover {
+  transform: scale(1.03);
 }
-
-.breadcrumb-item a:hover {
-  color: #1a1a1a; /* Devient noir au survol */
-}
-
-.breadcrumb-item.active {
+.caption {
+  font-weight: 600;
+  margin-top: 15px;
+  font-size: 1.1rem;
   color: #6c757d;
+}
+
+/* === VIDEO FACEBOOK & CARROUSEL === */
+.video-container {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  background-color: var(--blanc);
+}
+
+.carousel-inner {
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.carousel-control-prev-icon {
+  background-image: none;
+  width: 2rem; height: 2rem;
+  background-color: black;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+  mask-repeat: no-repeat; mask-position: center; mask-size: contain;
+}
+
+.carousel-control-next-icon {
+  background-image: none;
+  width: 2rem; height: 2rem;
+  background-color: black;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  mask-repeat: no-repeat; mask-position: center; mask-size: contain;
+}
+
+.carousel-indicators [data-bs-target] { background-color: #000; }
+.carousel-indicators .active { background-color: #bfbbbb; }
+
+/* === FOOTER === */
+footer {
+  background-color: var(--texte-sombre) !important;
+  border-top: 5px solid var(--bordeaux);
+  margin-top: auto !important; /* Pousse le footer tout en bas de la page */
 }
