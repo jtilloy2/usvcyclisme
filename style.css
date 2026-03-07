@@ -21,6 +21,10 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: var(--texte-sombre);
   background-color: var(--gris-clair);
+  /* --- Ajouts pour forcer le footer en bas --- */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* La page prendra au minimum 100% de l'écran */
 }
 
 h1, h2, h3, h4, h5, .fw-bold {
@@ -271,4 +275,5 @@ header {
 footer {
   background-color: var(--texte-sombre) !important;
   border-top: 5px solid var(--bordeaux);
+  margin-top: auto !important; /* Pousse le footer tout en bas de la page */
 }
