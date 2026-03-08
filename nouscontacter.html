@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez l'US Vern Cyclisme pour toute question, adhésion ou demande de partenariat. Retrouvez nos coordonnées et notre adresse.">
+    
+    <meta property="og:title" content="Contactez-nous - US Vern Cyclisme">
+    <meta property="og:description" content="Contactez l'US Vern Cyclisme pour toute question, adhésion ou demande de partenariat.">
+    <meta property="og:image" content="logo/logo.webp">
+    <meta property="og:url" content="https://jtilloy2.github.io/usvcyclisme/nouscontacter.html">
+    <meta property="og:type" content="website">
+
     <link rel="stylesheet" href="style.css"> 
     <title>US Vern Cyclisme - Contact</title>
     <link rel="icon" type="image/png" href="logo/logo.webp">
@@ -11,73 +18,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
-        .contact-card {
-            border-radius: 15px;
-            padding: 40px;
-            background-color: var(--blanc);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .contact-group-title {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: var(--bleu-fonce);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-
-        .contact-item {
-            padding: 12px 0;
-            border-bottom: 1px dashed #dee2e6;
-            font-size: 1.1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .contact-item:last-child {
-            border-bottom: none;
-        }
-        
-        .contact-item a {
-            font-weight: bold;
-            color: var(--bordeaux); 
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .contact-item a:hover {
-            color: var(--bordeaux-dark);
-        }
-
-        .contact-icon {
-            font-size: 1.5rem;
-            width: 35px;
-            color: var(--bleu-primaire);
-            text-align: center;
-        }
-
-        .responsable-nom {
-            font-size: 0.95rem;
-            color: #6c757d;
-            text-transform: uppercase;
-            font-weight: 600;
-        }
+        .contact-card { border-radius: 15px; padding: 40px; background-color: var(--blanc); box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05); }
+        .contact-group-title { font-size: 1.3rem; font-weight: bold; color: var(--bleu-fonce); margin-bottom: 15px; display: flex; align-items: center; }
+        .contact-item { padding: 12px 0; border-bottom: 1px dashed #dee2e6; font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center; }
+        .contact-item:last-child { border-bottom: none; }
+        .contact-item a { font-weight: bold; color: var(--bordeaux); text-decoration: none; transition: color 0.2s; }
+        .contact-item a:hover { color: var(--bordeaux-dark); }
+        .contact-icon { font-size: 1.5rem; width: 35px; color: var(--bleu-primaire); text-align: center; }
+        .responsable-nom { font-size: 0.95rem; color: #6c757d; text-transform: uppercase; font-weight: 600; }
     </style>
 </head>
-
 <body>
 
     <header class="bg-white p-3">
         <div class="container d-flex justify-content-between align-items-center">
-            <div>
-                <img src="logo/logo.webp" alt="Logo US Vern Cyclisme" style="height: 120px; object-fit: contain;">
-            </div>
-            <div class="text-center flex-grow-1">
-                <h1 class="mb-0 display-4 fw-bold text-dark">US VERN CYCLISME</h1>
-            </div>
+            <div><img src="logo/logo.webp" alt="Logo US Vern Cyclisme" style="height: 120px; object-fit: contain;"></div>
+            <div class="text-center flex-grow-1"><h1 class="mb-0 display-4 fw-bold text-dark">US VERN CYCLISME</h1></div>
             <div style="width: 120px;"></div>
         </div>
     </header>
@@ -87,7 +43,6 @@
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav gap-2">
                     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
@@ -106,42 +61,22 @@
     <section class="container my-5">
         <div class="text-center mb-5">
             <h2 class="display-5 fw-bold text-dark">Nous Contacter</h2>
-            <p class="lead text-muted mt-2">
-                Pour toute question, adhésion ou demande de partenariat, n'hésitez pas à nous joindre.
-            </p>
+            <p class="lead text-muted mt-2">Pour toute question, adhésion ou demande de partenariat, n'hésitez pas à nous joindre.</p>
         </div>
 
         <div class="row justify-content-center g-5">
             <div class="col-lg-6">
                 <div class="contact-card h-100">
-                    <div class="contact-group-title">
-                        <i class="fas fa-phone contact-icon"></i> Téléphone
-                    </div>
+                    <div class="contact-group-title"><i class="fas fa-phone contact-icon"></i> Téléphone</div>
                     <ul class="list-unstyled mb-4">
-                        <li class="contact-item">
-                            <a href="tel:0767280119">07 67 28 01 19</a> 
-                            <span class="responsable-nom">Noah Barre</span>
-                        </li>
-                        <li class="contact-item">
-                            <a href="tel:0678320145">06 78 32 01 45</a> 
-                            <span class="responsable-nom">Kristell Helary</span>
-                        </li>
-                        <li class="contact-item">
-                            <a href="tel:0681892083">06 81 89 20 83</a> 
-                            <span class="responsable-nom">Mickaël Guillard</span>
-                        </li>
+                        <li class="contact-item"><a href="tel:0767280119">07 67 28 01 19</a> <span class="responsable-nom">Noah Barre</span></li>
+                        <li class="contact-item"><a href="tel:0678320145">06 78 32 01 45</a> <span class="responsable-nom">Kristell Helary</span></li>
+                        <li class="contact-item"><a href="tel:0681892083">06 81 89 20 83</a> <span class="responsable-nom">Mickaël Guillard</span></li>
                     </ul>
-
-                    <div class="contact-group-title mt-5">
-                        <i class="fas fa-envelope contact-icon"></i> Email
-                    </div>
+                    <div class="contact-group-title mt-5"><i class="fas fa-envelope contact-icon"></i> Email</div>
                     <ul class="list-unstyled">
-                        <li class="contact-item">
-                            <a href="mailto:NOAHUSVERN@GMAIL.COM" style="text-transform: lowercase;">noahusvern@gmail.com</a>
-                        </li>
-                        <li class="contact-item">
-                            <a href="mailto:USVERNCYCLISME35@GMAIL.COM" style="text-transform: lowercase;">usverncyclisme35@gmail.com</a>
-                        </li>
+                        <li class="contact-item"><a href="mailto:NOAHUSVERN@GMAIL.COM" style="text-transform: lowercase;">noahusvern@gmail.com</a></li>
+                        <li class="contact-item"><a href="mailto:USVERNCYCLISME35@GMAIL.COM" style="text-transform: lowercase;">usverncyclisme35@gmail.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -150,11 +85,7 @@
                 <div class="contact-card h-100 text-center d-flex flex-column justify-content-center">
                     <i class="fas fa-map-marker-alt mb-3" style="font-size: 3rem; color: var(--bordeaux);"></i>
                     <h3 class="fw-bold mb-3" style="color: var(--bleu-fonce);">Notre Adresse</h3>
-                    <p class="fs-5 mb-4">
-                        Union Sportive de Vern<br>
-                        7A Av. de la Chalotais<br>
-                        35770 Vern-sur-Seiche
-                    </p>
+                    <p class="fs-5 mb-4">Union Sportive de Vern<br>7A Av. de la Chalotais<br>35770 Vern-sur-Seiche</p>
                     <div>
                         <a href="https://www.google.com/maps/place/Union+Sportive+de+Vern/@48.0443885,-1.6061517,631m/data=!3m1!1e3!4m15!1m8!3m7!1s0x480f27337fde4f8b:0x1ed03b752c58a93!2s7A+Av.+de+la+Chalotais,+35770+Vern-sur-Seiche!3b1!8m2!3d48.0443885!4d-1.6035768!16s%2Fg%2F11s1bn97q7!3m5!1s0x480f27337fde4f8b:0x41815ff8f85825d6!8m2!3d48.044441!4d-1.6045709!16s%2Fg%2F11c6dmj4j2?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-outline-danger rounded-modern px-4">
                             Ouvrir dans Google Maps
@@ -163,20 +94,15 @@
                 </div>
             </div>
         </div>
-
     </section>
 
     <footer class="text-white text-center p-4 mt-auto">
         <div class="container">
             <div class="d-flex justify-content-center align-items-center gap-4 mb-3">
-                <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="text-decoration-none">
-                    <img src="logo/logofa.webp" alt="Facebook US Vern" style="height:30px; border-radius: 5px;">
-                </a>
-                <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" class="text-decoration-none">
-                    <img src="logo/logoinsta.webp" alt="Instagram US Vern" style="height:30px; border-radius: 8px;">
-                </a>
+                <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="text-decoration-none"><img src="logo/logofa.webp" alt="Facebook US Vern" style="height:30px; border-radius: 5px;"></a>
+                <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" class="text-decoration-none"><img src="logo/logoinsta.webp" alt="Instagram US Vern" style="height:30px; border-radius: 8px;"></a>
             </div>
-            <p class="mb-0 text-white-50">© 2025 US Vern Cyclisme - Tous droits réservés</p>
+            <p class="mb-0 text-white-50">&copy; 2025 US Vern Cyclisme - Tous droits réservés | <a href="mentionslegales.html" class="text-white-50 text-decoration-none" style="transition: 0.3s;">Mentions Légales</a></p>
         </div>
     </footer>
 

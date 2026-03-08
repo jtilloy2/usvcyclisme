@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez les galeries et albums photos de l'US Vern Cyclisme. Retrouvez les images de nos courses, entraînements et événements cyclo-cross et route.">
+    
+    <meta property="og:title" content="Albums Photos - US Vern Cyclisme">
+    <meta property="og:description" content="Découvrez les galeries et albums photos de l'US Vern Cyclisme.">
+    <meta property="og:image" content="logo/logo.webp">
+    <meta property="og:url" content="https://jtilloy2.github.io/usvcyclisme/albumphoto.html">
+    <meta property="og:type" content="website">
+
     <link rel="stylesheet" href="style.css">
     <title>Albums Photos - US Vern Cyclisme</title>
     <link rel="icon" type="image/png" href="logo/logo.webp">
@@ -11,137 +18,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
-        /* Styles spécifiques pour la Lightbox (pour garantir l'immersion et l'accessibilité des boutons) */
-        #imageModal .modal-dialog {
-            max-width: 100vw;
-            margin: 0;
-        }
-
-        #imageModal .modal-content {
-            background-color: transparent;
-            border: none;
-            height: 100vh;
-        }
-
-        /* CROIX DE FERMETURE FIXE (TOUJOURS VISIBLE) */
-        .btn-close-custom {
-            position: fixed;
-            top: 15px;
-            right: 15px;
-            z-index: 1100;
-            opacity: 1;
-            font-size: 2rem;
-            color: white;
-            padding: 5px 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 5px;
-            transition: background-color 0.2s;
-            border: none;
-        }
-
-        .btn-close-custom:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #ccc;
-        }
-
-        #imageModal .modal-header {
-            display: none;
-        }
-
-        #imageModal .modal-body {
-            background-color: rgba(0, 0, 0, 0.9);
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            padding-top: 50px;
-            padding-bottom: 70px;
-            overflow: hidden;
-        }
-
-        #imageModal #modalImage {
-            max-width: 95%;
-            max-height: calc(100vh - 100px);
-            object-fit: contain;
-            display: block;
-        }
-
-        /* Le footer est fixé en bas de l'écran pour être toujours accessible */
-        #imageModal .modal-footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 1090;
-            background-color: rgba(0, 0, 0, 0.9);
-            border-top: none;
-            justify-content: space-between !important;
-            padding: 15px 30px;
-            flex-direction: row;
-            width: 100%;
-            gap: 20px;
-        }
-
-        /* Titre/Légende */
-        #imageModalLabelFooter {
-            color: #fff;
-            font-size: 1.1em;
-            margin: 0;
-            text-align: center;
-            flex-grow: 1;
-        }
-
-        /* Ajustement des flèches de navigation */
-        #prevImageBtn,
-        #nextImageBtn {
-            background-color: rgba(0, 0, 0, 0.5);
-            border: none;
-            color: white;
-            font-size: 2rem;
-            padding: 10px 15px;
-            transition: background-color 0.3s ease;
-            border-radius: 0.25rem !important;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        #prevImageBtn {
-            left: 15px;
-        }
-
-        #nextImageBtn {
-            right: 15px;
-        }
-
-        #prevImageBtn:hover,
-        #nextImageBtn:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-        
-        .clickable-photo {
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .clickable-photo:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
-        }
+        #imageModal .modal-dialog { max-width: 100vw; margin: 0; }
+        #imageModal .modal-content { background-color: transparent; border: none; height: 100vh; }
+        .btn-close-custom { position: fixed; top: 15px; right: 15px; z-index: 1100; opacity: 1; font-size: 2rem; color: white; padding: 5px 10px; background-color: rgba(0, 0, 0, 0.5); border-radius: 5px; transition: background-color 0.2s; border: none; }
+        .btn-close-custom:hover { background-color: rgba(0, 0, 0, 0.8); color: #ccc; }
+        #imageModal .modal-header { display: none; }
+        #imageModal .modal-body { background-color: rgba(0, 0, 0, 0.9); padding: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding-top: 50px; padding-bottom: 70px; overflow: hidden; }
+        #imageModal #modalImage { max-width: 95%; max-height: calc(100vh - 100px); object-fit: contain; display: block; }
+        #imageModal .modal-footer { position: fixed; bottom: 0; left: 0; right: 0; z-index: 1090; background-color: rgba(0, 0, 0, 0.9); border-top: none; justify-content: space-between !important; padding: 15px 30px; flex-direction: row; width: 100%; gap: 20px; }
+        #imageModalLabelFooter { color: #fff; font-size: 1.1em; margin: 0; text-align: center; flex-grow: 1; }
+        #prevImageBtn, #nextImageBtn { background-color: rgba(0, 0, 0, 0.5); border: none; color: white; font-size: 2rem; padding: 10px 15px; transition: background-color 0.3s ease; border-radius: 0.25rem !important; position: absolute; top: 50%; transform: translateY(-50%); }
+        #prevImageBtn { left: 15px; } #nextImageBtn { right: 15px; }
+        #prevImageBtn:hover, #nextImageBtn:hover { background-color: rgba(0, 0, 0, 0.8); }
+        .clickable-photo { cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .clickable-photo:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important; }
     </style>
 </head>
-
 <body>
 
     <header class="bg-white p-3">
         <div class="container d-flex justify-content-between align-items-center">
-            <div>
-                <img src="logo/logo.webp" alt="logo du club" style="height:120px; object-fit: contain;">
-            </div>
-            <div class="flex-grow-1 text-center">
-                <h1 class="mb-0 display-4 fw-bold text-dark">US VERN CYCLISME</h1>
-            </div>
+            <div><img src="logo/logo.webp" alt="logo du club" style="height:120px; object-fit: contain;"></div>
+            <div class="flex-grow-1 text-center"><h1 class="mb-0 display-4 fw-bold text-dark">US VERN CYCLISME</h1></div>
             <div style="width:120px;"></div>
         </div>
     </header>
@@ -151,7 +49,6 @@
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav gap-2">
                     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
@@ -169,43 +66,28 @@
 
     <section class="container my-5">
         <h2 class="fw-bold text-center text-dark mb-4">Nos Albums Photos</h2>
-
         <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb" id="breadcrumbNav">
                 <li class="breadcrumb-item"><a href="#" data-step="years">Albums</a></li>
             </ol>
         </nav>
-
-        <div id="dynamicContent" class="row g-4 justify-content-center">
-            </div>
+        <div id="dynamicContent" class="row g-4 justify-content-center"></div>
     </section>
 
     <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
-                <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Fermer">
-                    <i class="fas fa-times"></i>
-                </button>
-
+                <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Fermer"><i class="fas fa-times"></i></button>
                 <div class="modal-header"></div>
-
                 <div class="modal-body p-0 position-relative">
-                    <button id="prevImageBtn" class="btn btn-dark" style="z-index: 10;">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-
+                    <button id="prevImageBtn" class="btn btn-dark" style="z-index: 10;"><i class="fas fa-chevron-left"></i></button>
                     <img id="modalImage" src="" alt="Image en grand">
-
-                    <button id="nextImageBtn" class="btn btn-dark" style="z-index: 10;">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
+                    <button id="nextImageBtn" class="btn btn-dark" style="z-index: 10;"><i class="fas fa-chevron-right"></i></button>
                 </div>
-
                 <div class="modal-footer">
                     <a id="modalDownloadBtn" href="#" download class="btn btn-primary btn-lg border-0" style="background-color: var(--bleu-primaire);">
                         <i class="fas fa-download"></i> Télécharger
                     </a>
-
                     <h5 id="imageModalLabelFooter" class="mb-0 fw-bold"></h5>
                 </div>
             </div>
@@ -215,19 +97,14 @@
     <footer class="text-white text-center p-4 mt-auto">
         <div class="container">
             <div class="d-flex justify-content-center align-items-center gap-4 mb-3">
-                <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="text-decoration-none">
-                    <img src="logo/logofa.webp" alt="Facebook US Vern" style="height:30px; border-radius: 5px;">
-                </a>
-                <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" class="text-decoration-none">
-                    <img src="logo/logoinsta.webp" alt="Instagram US Vern" style="height:30px; border-radius: 8px;">
-                </a>
+                <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="text-decoration-none"><img src="logo/logofa.webp" alt="Facebook US Vern" style="height:30px; border-radius: 5px;"></a>
+                <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" class="text-decoration-none"><img src="logo/logoinsta.webp" alt="Instagram US Vern" style="height:30px; border-radius: 8px;"></a>
             </div>
-            <p class="mb-0 text-white-50">&copy; 2025 US Vern Cyclisme - Tous droits réservés</p>
+            <p class="mb-0 text-white-50">&copy; 2025 US Vern Cyclisme - Tous droits réservés | <a href="mentionslegales.html" class="text-white-50 text-decoration-none" style="transition: 0.3s;">Mentions Légales</a></p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
     <script>
         const albumData = {
             "2025": {
@@ -274,14 +151,11 @@
             selectedDiscipline = null;
             currentAlbumImages = [];
             buildBreadcrumb();
-
             const years = Object.keys(albumData).sort((a, b) => b - a);
-
             dynamicContent.innerHTML = years.map(year => `
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2">
                     <div class="folder-icon-container shadow-sm" onclick="showDisciplines('${year}')">
-                        <i class="fas fa-folder-open"></i>
-                        <div class="folder-label">${year}</div>
+                        <i class="fas fa-folder-open"></i><div class="folder-label">${year}</div>
                     </div>
                 </div>
             `).join('');
@@ -292,21 +166,17 @@
             selectedDiscipline = null;
             currentAlbumImages = [];
             buildBreadcrumb();
-
             const availableDisciplines = Object.keys(albumData[year]).filter(disc => albumData[year][disc].length > 0);
-
             if (availableDisciplines.length === 0) {
                 dynamicContent.innerHTML = `<div class="col-12 text-center text-muted py-5"><p class="h4">Aucun album trouvé pour ${year}.</p></div>`;
                 return;
             }
-
             dynamicContent.innerHTML = availableDisciplines.map(discipline => {
                 const discName = disciplineNames[discipline];
                 return `
                     <div class="col-6 col-sm-4 col-md-3 col-lg-2">
                         <div class="folder-icon-container shadow-sm" onclick="loadGallery('${year}', '${discipline}')">
-                            <i class="fas fa-folder"></i>
-                            <div class="folder-label">${discName}</div>
+                            <i class="fas fa-folder"></i><div class="folder-label">${discName}</div>
                         </div>
                     </div>
                 `;
@@ -317,23 +187,16 @@
             selectedYear = year;
             selectedDiscipline = discipline;
             buildBreadcrumb();
-
             const disciplineName = disciplineNames[discipline];
             const pathBase = `albums/${year}/${discipline}/`;
-
             currentAlbumImages = albumData[year][discipline].map(filename => ({
-                filename: filename,
-                fullPath: pathBase + filename,
-                title: `${disciplineName} ${year}`
+                filename: filename, fullPath: pathBase + filename, title: `${disciplineName} ${year}`
             }));
-
             dynamicContent.innerHTML = currentAlbumImages.map((img, index) => `
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2">
                     <div class="card shadow-sm h-100 rounded-modern clickable-photo" data-bs-toggle="modal" data-bs-target="#imageModal" data-index="${index}"> 
                         <img src="${img.fullPath}" class="card-img-top" alt="Photo ${img.title}" loading="lazy">
-                        <div class="card-body p-2 text-center">
-                            <small class="text-muted fw-bold">${img.filename}</small>
-                        </div>
+                        <div class="card-body p-2 text-center"><small class="text-muted fw-bold">${img.filename}</small></div>
                     </div>
                 </div>
             `).join('');
@@ -368,10 +231,7 @@
             }
         });
 
-        document.addEventListener("DOMContentLoaded", function () {
-            renderYears();
-        });
-
+        document.addEventListener("DOMContentLoaded", function () { renderYears(); });
         window.showDisciplines = showDisciplines;
         window.loadGallery = loadGallery;
     </script>
