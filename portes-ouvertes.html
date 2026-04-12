@@ -85,11 +85,11 @@
           <div class="card border-0 shadow-lg p-4 p-md-5 rounded-4 bg-light">
             <h3 class="fw-bold text-center mb-4" style="color: var(--bordeaux);">Formulaire d'inscription</h3>
             
-            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeVGyZq0Koo8a1GxGgo2i29_ZRn2LoJGbp2PO6CXjgM5zFgqQ/formResponse?embedded=true" method="POST" target="_blank">
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSeVGyZq0Koo8a1GxGgo2i29_ZRn2LoJGbp2PO6CXjgM5zFgqQ/formResponse" method="POST" target="_blank">
               
               <h5 class="fw-bold mt-4 text-dark border-bottom pb-2">Dates de portes ouvertes</h5>
               <div class="mb-4 text-start">
-                <label class="form-label fw-bold text-dark">À quelle(s) séance(s) de portes ouvertes souhaitez-vous inscrire votre enfant ? </label>
+                <label class="form-label fw-bold text-dark">À quelle(s) séance(s) de portes ouvertes souhaitez-vous inscrire votre enfant ?</label>
                 <div class="form-check mt-2">
                   <input class="form-check-input border-secondary" type="checkbox" name="entry.1211919812" value="Mercredi 17 Juin à partir de 13h55" id="date1">
                   <label class="form-check-label" for="date1">Mercredi 17 Juin à partir de 13h55</label>
@@ -133,18 +133,12 @@
                   <input type="text" class="form-control form-control-lg border-0 shadow-sm" name="entry.1631276392" required>
                 </div>
               </div>
+              
               <div class="mb-3 text-start">
-                <input type="date" class="form-control form-control-lg border-0 shadow-sm" required 
-                       onchange="
-                          let dates = this.value.split('-'); 
-                          document.getElementById('annee').value = dates[0];
-                          document.getElementById('mois').value = dates[1];
-                          document.getElementById('jour').value = dates[2];
-                       ">
-                <input type="hidden" name="entry.1666238122_year" id="annee">
-                <input type="hidden" name="entry.1666238122_month" id="mois">
-                <input type="hidden" name="entry.1666238122_day" id="jour">
+                <label class="form-label fw-bold text-dark">Date de naissance</label>
+                <input type="date" class="form-control form-control-lg border-0 shadow-sm" name="entry.1666238122" required>
               </div>
+
               <div class="mb-4 text-start">
                 <label class="form-label fw-bold text-dark">Avez vous quelque chose à ajouter ?</label>
                 <textarea class="form-control form-control-lg border-0 shadow-sm" name="entry.190964463" rows="3"></textarea>
