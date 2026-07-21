@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Espace B2B - Devenez partenaire du Championnat de Bretagne de Cyclo-Cross 2027.">
+  <title>Espace Partenaires - BZH CX 2027</title>
+  <link rel="icon" type="image/png" href=":/logo/logo.webp">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <style>
+    :root {
+      --gold-light: #fceabb; --gold-main: #f8b500; --gold-dark: #b38000;
+      --bg-darkest: #030405; --bg-surface: rgba(255, 255, 255, 0.03);
+      --bg-surface-hover: rgba(255, 255, 255, 0.06);
+      --text-main: #f8f9fa; --text-muted: #a1a1aa;
+      --glass-border: rgba(255, 255, 255, 0.08); --gold-glow: rgba(248, 181, 0, 0.3);
+    }
+    
+    body { background-color: var(--bg-darkest); color: var(--text-main); font-family: 'Open Sans', sans-serif; overflow-x: hidden; scroll-behavior: smooth; }
+    body::before {
+      content: ""; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.04"/%3E%3C/svg%3E');
+      pointer-events: none; z-index: 9999;
+    }
+    h1, h2, h3, h4, h5, .fw-bold, .title-font { font-family: 'Montserrat', sans-serif; }
+    .text-gold { color: var(--gold-main) !important; }
+    .text-gradient-gold { background: linear-gradient(135deg, var(--gold-light), var(--gold-main), var(--gold-dark)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    
+    .glass-card { background: var(--bg-surface); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--glass-border); border-radius: 24px; transition: all 0.4s ease; }
+    
+    .btn-gold-fx { background: linear-gradient(135deg, var(--gold-main), var(--gold-dark)); color: var(--bg-darkest) !important; font-weight: 800; border: none; border-radius: 50px; padding: 16px 40px; text-transform: uppercase; letter-spacing: 2px; position: relative; overflow: hidden; z-index: 1; transition: all 0.4s ease; box-shadow: 0 10px 30px var(--gold-glow); }
+    .btn-gold-fx::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); transition: all 0.6s ease; z-index: -1; }
+    .btn-gold-fx:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 15px 40px rgba(248, 181, 0, 0.5); }
+    .btn-gold-fx:hover::before { left: 100%; }
+
+    .nav-social-icon { color: #fff; font-size: 1.2rem; transition: color 0.3s, transform 0.3s; margin-left: 15px; }
+    .nav-social-icon:hover { color: var(--gold-main); transform: scale(1.1); }
+
+    .hero-b2b { background: radial-gradient(circle at center, rgba(248,181,0,0.1) 0%, var(--bg-darkest) 70%); min-height: 50vh; display: flex; align-items: center; justify-content: center; margin-top: 80px; }
+
+    /* PRICING CARDS */
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+    .pricing-card { background: var(--bg-surface); border: 1px solid var(--glass-border); border-radius: 20px; padding: 40px 30px; position: relative; transition: all 0.4s ease; display: flex; flex-direction: column; }
+    .pricing-card:hover { transform: translateY(-10px); border-color: var(--gold-main); box-shadow: 0 15px 30px rgba(0,0,0,0.5); }
+    .pricing-card ul { list-style: none; padding-left: 0; margin-bottom: 0; }
+    .pricing-card ul li { margin-bottom: 15px; display: flex; align-items: flex-start; color: var(--text-muted); font-size: 0.95rem; }
+    .pricing-card ul li i { color: var(--gold-main); margin-right: 12px; margin-top: 3px; font-size: 1.1rem; flex-shrink: 0; }
+    
+    .premium-tier { background: linear-gradient(180deg, rgba(248, 181, 0, 0.05) 0%, rgba(255,255,255,0.02) 100%); border: 2px solid var(--gold-dark); transform: scale(1.05); box-shadow: 0 20px 50px rgba(0,0,0,0.5), inset 0 0 20px rgba(248, 181, 0, 0.1); z-index: 2; }
+    .premium-tier::before { content: 'EXCLUSIF'; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--gold-main), var(--gold-dark)); color: var(--bg-darkest); font-weight: 900; font-size: 0.8rem; letter-spacing: 2px; padding: 6px 20px; border-radius: 20px; box-shadow: 0 5px 15px var(--gold-glow); }
+    .premium-tier:hover { transform: scale(1.05) translateY(-10px); box-shadow: 0 30px 60px rgba(248, 181, 0, 0.2); }
+    .premium-tier ul li { color: var(--text-main); }
+
+    .btn-expand { background: transparent; border: none; color: var(--gold-main); font-weight: 600; margin-top: 15px; padding: 0; text-align: left; display: inline-flex; align-items: center; transition: color 0.3s; }
+    .btn-expand:hover { color: var(--gold-light); }
+    .btn-expand i { transition: transform 0.3s; margin-left: 8px; }
+    .btn-expand[aria-expanded="true"] i { transform: rotate(180deg); }
+    .details-list { border-top: 1px solid var(--glass-border); margin-top: 20px; padding-top: 20px; }
+
+    .reveal { opacity: 0; transform: translateY(50px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    .delay-1 { transition-delay: 0.1s; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR B2B -->
+  <nav class="navbar fixed-top" style="background: rgba(3, 4, 5, 0.9); border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding: 15px 0;">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand d-flex align-items-center" href="championnat.html">
+        <img src="logo/logo.webp" alt="USV" height="40" class="bg-white rounded p-1">
+        <span class="ms-3 fs-6 fw-bold text-gold d-none d-md-block title-font" style="letter-spacing: 3px;">ESPACE PARTENAIRES</span>
+      </a>
+      <a href="championnat.html" class="btn btn-outline-light rounded-pill px-4 py-2" style="font-size: 0.85rem; font-weight: 600;">
+        <i class="fa-solid fa-arrow-left me-2"></i>Retour au site
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO B2B -->
+  <section class="hero-b2b text-center">
+    <div class="container reveal">
+      <p class="text-gold fw-bold mb-3" style="letter-spacing: 5px; text-transform: uppercase;">Un événement au service de votre collectif</p>
+      <h1 class="display-3 fw-bold text-white mb-4 title-font">LE CERCLE OR & TERRE</h1>
+      <p class="lead mx-auto text-muted mb-5" style="max-width: 800px;">Associez l'image de votre entreprise à l'excellence sportive bretonne. Le sport est un lieu de rencontre, une occasion unique d'élargir votre réseau B2B via nos espaces VIP.</p>
+      
+      <!-- Discours RSE -->
+      <div class="glass-card d-inline-block px-5 py-4 text-start mx-auto" style="border-left: 4px solid var(--gold-main); background: rgba(248, 181, 0, 0.05);">
+        <h5 class="text-white fw-bold mb-2"><i class="fa-solid fa-leaf text-gold me-2"></i>Politique RSE & RH</h5>
+        <p class="mb-0 text-muted">Récompensez vos équipes : offrez des entrées gratuites à vos collaborateurs et clients VIP.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING CARDS -->
+  <section class="py-5 mb-5">
+    <div class="container py-2">
+      <div class="pricing-grid reveal delay-1">
+        
+        <!-- Pack 100€ -->
+        <div class="pricing-card">
+          <h5 class="text-white fw-bold mb-1">Pack Découverte</h5>
+          <h2 class="display-5 fw-bold text-gradient-gold mb-4">100€</h2>
+          <ul class="flex-grow-1">
+            <li><i class="fa-solid fa-book-open"></i> Logo sur le programme distribué</li>
+            <li><i class="fa-solid fa-ticket"></i> 2 Entrées spectateurs offertes</li>
+          </ul>
+          <button class="btn-expand" data-bs-toggle="collapse" data-bs-target="#details100" aria-expanded="false">
+            Voir les détails <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="collapse" id="details100">
+            <ul class="details-list small">
+              <li><i class="fa-solid fa-check"></i> Mentions globales (Fin de posts)</li>
+            </ul>
+          </div>
+          <button class="btn btn-outline-light rounded-pill mt-4 w-100" data-bs-toggle="modal" data-bs-target="#contactB2BModal" data-pack="Découverte">Nous rejoindre</button>
+        </div>
+
+        <!-- Pack 250€ -->
+        <div class="pricing-card">
+          <h5 class="text-white fw-bold mb-1">Pack Soutien</h5>
+          <h2 class="display-5 fw-bold text-gradient-gold mb-4">250€</h2>
+          <ul class="flex-grow-1">
+            <li><i class="fa-solid fa-book-open"></i> Logo sur le programme distribué</li>
+            <li><i class="fa-solid fa-road-barrier"></i> Logo sur les barrières du circuit</li>
+            <li><i class="fa-solid fa-ticket"></i> 5 Entrées spectateurs offertes</li>
+          </ul>
+          <button class="btn-expand" data-bs-toggle="collapse" data-bs-target="#details250" aria-expanded="false">
+            Voir les détails <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="collapse" id="details250">
+            <ul class="details-list small">
+              <li><i class="fa-solid fa-check"></i> Mentions globales (Fin de posts)</li>
+            </ul>
+          </div>
+          <button class="btn btn-outline-light rounded-pill mt-4 w-100" data-bs-toggle="modal" data-bs-target="#contactB2BModal" data-pack="Soutien">Nous rejoindre</button>
+        </div>
+
+        <!-- Pack 500€ -->
+        <div class="pricing-card">
+          <h5 class="text-white fw-bold mb-1">Pack Visibilité</h5>
+          <h2 class="display-5 fw-bold text-gradient-gold mb-4">500€</h2>
+          <ul class="flex-grow-1">
+            <li><i class="fa-solid fa-eye"></i> Visibilité terrain (Obstacles/Arches)</li>
+            <li><i class="fa-solid fa-ticket"></i> 10 Entrées spectateurs offertes</li>
+            <li><i class="fa-solid fa-star"></i> 1 Accès privilégié à l'Espace VIP</li>
+          </ul>
+          <button class="btn-expand" data-bs-toggle="collapse" data-bs-target="#details500" aria-expanded="false">
+            Voir les détails <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="collapse" id="details500">
+            <ul class="details-list small">
+              <li><i class="fa-solid fa-check"></i> Logo dans le guide technique coureurs</li>
+              <li><i class="fa-solid fa-check"></i> Logo sur les obstacles (Escaliers/Planches)</li>
+              <li><i class="fa-solid fa-check"></i> Pose de bâches à l'arrivée</li>
+              <li><i class="fa-solid fa-check"></i> Logo sur l'arche de départ</li>
+              <li><i class="fa-solid fa-check"></i> Logo sur le programme distribué</li>
+            </ul>
+          </div>
+          <button class="btn btn-outline-light rounded-pill mt-4 w-100" data-bs-toggle="modal" data-bs-target="#contactB2BModal" data-pack="Visibilité">Nous rejoindre</button>
+        </div>
+
+        <!-- Pack 1000€ -->
+        <div class="pricing-card">
+          <h5 class="text-white fw-bold mb-1">Pack Action</h5>
+          <h2 class="display-5 fw-bold text-gradient-gold mb-4">1 000€</h2>
+          <ul class="flex-grow-1">
+            <li><i class="fa-solid fa-shirt"></i> Sponsoring de la Catégorie Jeunes</li>
+            <li><i class="fa-solid fa-medal"></i> Remise d'un maillot sur le podium</li>
+            <li><i class="fa-solid fa-ticket"></i> 20 Entrées spectateurs offertes</li>
+            <li><i class="fa-solid fa-star"></i> 2 Accès à l'Espace VIP</li>
+          </ul>
+          <button class="btn-expand" data-bs-toggle="collapse" data-bs-target="#details1000" aria-expanded="false">
+            Voir les détails <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="collapse" id="details1000">
+            <ul class="details-list small">
+              <li><i class="fa-solid fa-check"></i> Mentions globales (Fin de posts) et Post dédié</li>
+              <li><i class="fa-solid fa-check"></i> Logo sur les dossards d'une catégorie</li>
+              <li><i class="fa-solid fa-check"></i> Flocage sur les gilets jaunes des bénévoles</li>
+              <li><i class="fa-solid fa-check"></i> Logo (programme, barrières, guide, obstacles)</li>
+              <li><i class="fa-solid fa-check"></i> Pose de bâches et Logo arche de départ</li>
+            </ul>
+          </div>
+          <button class="btn btn-outline-light rounded-pill mt-4 w-100" data-bs-toggle="modal" data-bs-target="#contactB2BModal" data-pack="Action">Nous rejoindre</button>
+        </div>
+
+        <!-- Pack 1500€ -->
+        <div class="pricing-card">
+          <h5 class="text-white fw-bold mb-1">Pack Prestige</h5>
+          <h2 class="display-5 fw-bold text-gradient-gold mb-4">1 500€</h2>
+          <ul class="flex-grow-1">
+            <li><i class="fa-solid fa-shirt"></i> Sponsoring Élite Femme + U19 F</li>
+            <li><i class="fa-solid fa-store"></i> Stand entreprise sur le village</li>
+            <li><i class="fa-solid fa-ticket"></i> 30 Entrées spectateurs offertes</li>
+            <li><i class="fa-solid fa-star"></i> 3 Accès à l'Espace VIP</li>
+          </ul>
+          <button class="btn-expand" data-bs-toggle="collapse" data-bs-target="#details1500" aria-expanded="false">
+            Voir les détails <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="collapse" id="details1500">
+            <ul class="details-list small">
+              <li><i class="fa-solid fa-check"></i> Story dédiée et Post dédié sur nos réseaux</li>
+              <li><i class="fa-solid fa-check"></i> Logo sur l'arche d'arrivée et la bâche podium</li>
+              <li><i class="fa-solid fa-check"></i> Remise d'un maillot sur le podium</li>
+              <li><i class="fa-solid fa-check"></i> Flocage sur les gilets jaunes des bénévoles</li>
+              <li><i class="fa-solid fa-check"></i> Logo (programme, barrières, guide, obstacles)</li>
+            </ul>
+          </div>
+          <button class="btn btn-outline-light rounded-pill mt-4 w-100" data-bs-toggle="modal" data-bs-target="#contactB2BModal" data-pack="Prestige">Nous rejoindre</button>
+        </div>
+
+        <!-- Pack Premium 3000€ -->
+        <div class="pricing-card premium-tier">
+          <h5 class="text-gold fw-bold mb-1">Pack Élite</h5>
+          <h2 class="display-4 fw-bold text-white mb-4">3 000€</h2>
+          <ul class="flex-grow-1">
+            <li><i class="fa-solid fa-crown text-gold"></i> Naming exclusif de l'événement</li>
+            <li><i class="fa-solid fa-shirt text-gold"></i> Sponsoring de la catégorie Élite Homme</li>
+            <li><i class="fa-solid fa-ticket text-white"></i> 60 Entrées spectateurs offertes</li>
+            <li><i class="fa-solid fa-star text-white"></i> 6 Accès à l'Espace VIP</li>
+          </ul>
+          <button class="btn-expand" data-bs-toggle="collapse" data-bs-target="#details3000" aria-expanded="false" style="color: var(--text-main);">
+            Voir les détails <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="collapse" id="details3000">
+            <ul class="details-list small">
+              <li><i class="fa-solid fa-video text-gold"></i> Vidéo dédiée de votre entreprise</li>
+              <li><i class="fa-solid fa-check text-gold"></i> Remise d'un maillot sur le podium</li>
+              <li><i class="fa-solid fa-check text-gold"></i> Story dédiée et Mentions globales</li>
+              <li><i class="fa-solid fa-check text-gold"></i> Stand entreprise sur le village</li>
+              <li><i class="fa-solid fa-check text-gold"></i> Tous avantages visibilité terrain inclus</li>
+            </ul>
+          </div>
+          <button class="btn btn-gold-fx mt-4 text-center w-100" style="padding: 12px; font-size: 0.9rem;" data-bs-toggle="modal" data-bs-target="#contactB2BModal" data-pack="Élite / Naming">Prendre le Naming</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER B2B COMPLET -->
+  <footer class="text-center p-5" style="background-color: #010102; border-top: 1px solid var(--glass-border);">
+    <div class="container">
+      <div class="row justify-content-center mb-4 g-4">
+        <div class="col-md-4">
+          <p class="text-gold small fw-bold text-uppercase mb-1">Partenariats</p>
+          <p class="text-muted small">Franck (Margot & Mickaël) <br>partenariat@usverncyclisme.fr</p>
+        </div>
+        <div class="col-md-4">
+          <p class="text-gold small fw-bold text-uppercase mb-1">Communication</p>
+          <p class="text-muted small">Frann (Yves & Julien) <br>com@usverncyclisme.fr</p>
+        </div>
+      </div>
+      
+      <div class="mb-4">
+        <a href="https://www.instagram.com/usvern.cyclis" target="_blank" class="nav-social-icon mx-2"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="nav-social-icon mx-2"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://linkedin.com" target="_blank" class="nav-social-icon mx-2"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+      
+      <p class="mb-0 text-white-50 small">&copy; 2026 Espace B2B - Championnat BZH Cyclo-Cross<br>Propulsé par <a href="championnat.html" class="text-gold text-decoration-none fw-bold">l'US Vern Cyclisme</a></p>
+    </div>
+  </footer>
+
+  <!-- MODAL CONTACT B2B PREMIUM (Fond Noir Inclus) -->
+  <div class="modal fade" id="contactB2BModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content text-white" style="background: #0a0c10; border: 1px solid var(--gold-main); border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.8);">
+        <div class="modal-header border-bottom-0 pb-0 pt-4 px-4">
+          <h4 class="modal-title fw-bold title-font text-white"><i class="fa-solid fa-briefcase text-gold me-2"></i> Demande de Partenariat</h4>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted mb-4">Laissez-nous vos coordonnées et Franck reviendra vers vous sous 48h pour construire notre collaboration.</p>
+          
+          <form id="b2bForm" action="#" method="POST">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label small text-gold">Nom de l'entreprise</label>
+                <input type="text" name="entreprise" class="form-control bg-transparent text-white border-secondary" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small text-gold">Votre Nom & Prénom</label>
+                <input type="text" name="nom" class="form-control bg-transparent text-white border-secondary" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small text-gold">Adresse E-mail pro</label>
+                <input type="email" name="email" class="form-control bg-transparent text-white border-secondary" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small text-gold">Numéro de téléphone</label>
+                <input type="tel" name="telephone" class="form-control bg-transparent text-white border-secondary">
+              </div>
+              <div class="col-12">
+                <label class="form-label small text-gold">Pack qui vous intéresse</label>
+                <select name="pack_choisi" class="form-select bg-transparent text-white border-secondary">
+                  <option value="Découverte" class="text-dark">Pack Découverte (100€)</option>
+                  <option value="Soutien" class="text-dark">Pack Soutien (250€)</option>
+                  <option value="Visibilité" class="text-dark">Pack Visibilité (500€)</option>
+                  <option value="Action" class="text-dark">Pack Action (1 000€)</option>
+                  <option value="Prestige" class="text-dark">Pack Prestige (1 500€)</option>
+                  <option value="Elite" class="text-dark">Pack Élite / Naming (3 000€)</option>
+                  <option value="Sur-mesure" class="text-dark">Proposition Sur-Mesure</option>
+                </select>
+              </div>
+              <div class="col-12 mt-4">
+                <button type="submit" class="btn btn-gold-fx w-100">Envoyer ma demande à Franck</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      
+      const b2bModal = document.getElementById('contactB2BModal');
+      b2bModal.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget;
+        const packName = button.getAttribute('data-pack');
+        const select = b2bModal.querySelector('select');
+        if(packName) {
+          for (let option of select.options) {
+            if (option.value === packName || option.text.includes(packName)) {
+              option.selected = true; break;
+            }
+          }
+        }
+      });
+
+      document.getElementById('b2bForm').addEventListener('submit', function(e) {
+        e.preventDefault(); 
+        alert("C'est un succès ! Les informations ont été envoyées (Simulation). Il ne restera plus qu'à lier ceci à Formspree !");
+        var modal = bootstrap.Modal.getInstance(b2bModal);
+        modal.hide();
+      });
+    });
+  </script>
+
+</body>
+</html>
