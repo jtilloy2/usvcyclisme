@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
 
   <link rel="stylesheet" href="style.css">
-  <title>US Vern Cyclisme</title>
+  <title>US Vern Cyclisme | Club de vélo en Ille-et-Vilaine</title>
   <link rel="icon" type="image/png" href="logo/logo.webp">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -41,7 +41,6 @@
           <li class="nav-item"><a class="nav-link" href="evenements.html">Événements</a></li>
           <li class="nav-item"><a class="nav-link" href="nouscontacter.html">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="entente.html">L'Entente</a></li>
-          <li class="nav-item"><a class="nav-link" href="albumphoto.html">Photos</a></li>
           <li class="nav-item"><a class="nav-link" href="presse.html">Presse</a></li>
         </ul>
       </div>
@@ -64,8 +63,8 @@
       <p id="slogan" class="lead fw-bold fs-2 mb-5 text-shadow"></p>
 
       <div class="d-flex justify-content-center gap-4 flex-wrap mt-4">
-        <a href="nouscontacter.html" class="btn btn-danger btn-lg px-5 py-3">Nous Rejoindre</a>
-        <a href="section.html" class="btn btn-primary btn-lg px-5 py-3">Découvrir nos Sections</a>
+        <a href="nouscontacter.html" class="btn btn-danger btn-lg rounded-pill shadow-sm px-5 py-3">Nous Rejoindre</a>
+        <a href="section.html" class="btn btn-primary btn-lg rounded-pill shadow-sm px-5 py-3">Découvrir nos Sections</a>
       </div>
     </div>
 
@@ -99,52 +98,26 @@
   <section class="bg-light py-5">
     <div class="container">
       <div class="row g-5 align-items-center">
+        <!-- Colonne Gauche : Reportage TVR épuré -->
         <div class="col-lg-6 text-center">
           <h3 class="fw-bold mb-4 text-dark">Reportage TVR</h3>
-          <div class="video-container p-2 mb-4 mx-auto" style="max-width: 400px;">
+          <div class="video-container bg-white rounded-3 shadow-sm p-2 mb-0 mx-auto" style="max-width: 400px;">
             <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1560233841631234&show_text=false" width="100%" height="650" style="border:none; overflow:hidden; border-radius:10px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
           </div>
-          <a href="https://www.tvr.bzh/article/a7584e5-a-vern-sur-seiche-le-nouveau-stade-de-velo-est-ouvert" target="_blank" class="btn btn-danger">Voir le reportage complet</a>
         </div>
 
-        <div class="col-lg-6">
-          <h3 class="fw-bold mb-4 text-center text-dark">Moments du club</h3>
-          <div id="miniCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="photo/course.webp" class="d-block w-100" alt="Course US Vern" style="height: 400px; object-fit: cover;">
-                <div class="carousel-caption bg-dark bg-opacity-50 rounded-3 mb-3 pb-2 pt-3 px-3">
-                  <h5 class="fw-bold">La Compétition</h5><p class="mb-0">Au cœur de notre ADN</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="photo/sortie.webp" class="d-block w-100" alt="Sortie du club" style="height: 400px; object-fit: cover;">
-                <div class="carousel-caption bg-dark bg-opacity-50 rounded-3 mb-3 pb-2 pt-3 px-3">
-                  <h5 class="fw-bold">Sortie Collective</h5><p class="mb-0">Des moments conviviaux</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="photo/Stade.webp" class="d-block w-100" alt="Stade Vélo" style="height: 400px; object-fit: cover;">
-                <div class="carousel-caption bg-dark bg-opacity-50 rounded-3 mb-3 pb-2 pt-3 px-3">
-                  <h5 class="fw-bold">Notre Stade Vélo</h5><p class="mb-0">S'entraîner en toute sécurité</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="photo/ecolecyclisme.webp" class="d-block w-100" alt="École de Vélo" style="height: 400px; object-fit: cover;">
-                <div class="carousel-caption bg-dark bg-opacity-50 rounded-3 mb-3 pb-2 pt-3 px-3">
-                  <h5 class="fw-bold">L'École de Vélo</h5><p class="mb-0">Former la relève de demain</p>
-                </div>
-              </div>
+        <!-- Colonne Droite : Le Championnat BZH -->
+        <div class="col-lg-6 text-center">
+          <h3 class="fw-bold mb-4 text-dark">L'Événement de l'Année</h3>
+          
+          <!-- Card de l'événement -->
+          <div class="card shadow-sm border-0 mb-4 overflow-hidden" style="border-radius: 15px;">
+            <img src="affiche/cyclo-cross.jpg" alt="Affiche Cyclo-Cross 2027" class="card-img-top" style="height: 250px; object-fit: cover;">
+            <div class="card-body p-4 text-white" style="background-color: #030405;">
+              <h4 class="fw-bold mb-3" style="color: #f8b500;">CHAMPIONNAT DE BRETAGNE 2027</h4>
+              <p class="mb-4">Vern-sur-Seiche accueille l'élite du cyclo-cross breton les 5 & 6 Décembre 2026. Découvrez le circuit, les infos pratiques et notre cercle de partenaires !</p>
+              <a href="championnat.html" class="btn fw-bold px-4 py-2 rounded-pill shadow-sm" style="background-color: #f8b500; color: #030405;">Accéder au site de l'événement</a>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#miniCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: drop-shadow(1px 1px 2px rgba(255,255,255,0.8));"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#miniCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true" style="filter: drop-shadow(1px 1px 2px rgba(255,255,255,0.8));"></span>
-            </button>
-          </div>
-          <div class="text-center mt-4">
-            <a href="albumphoto.html" class="btn btn-primary">Voir toute la galerie photo</a>
           </div>
         </div>
       </div>
@@ -158,7 +131,7 @@
                 <h2 class="fw-bold mb-4" style="color: var(--bleu-fonce);">Un projet ambitieux : L'ECPR</h2>
                 <p class="fs-5 text-muted mb-4">L'Entente Cycliste du Pays Rennais</p>
                 <p class="lh-lg">L'US Vern Cyclisme est membre de l'ECPR. Ce beau projet rassemble les forces de plusieurs clubs bretons pour permettre à nos coureurs de briller sur les plus grandes courses du calendrier, grâce à une logistique mutualisée et un fort esprit d'équipe interclubs.</p>
-                <a href="entente.html" class="btn btn-outline-danger btn-lg mt-3 px-4">Découvrir l'Entente</a>
+                <a href="entente.html" class="btn btn-outline-danger btn-lg rounded-pill mt-3 px-4 shadow-sm">Découvrir l'Entente</a>
             </div>
             <div class="col-lg-6 order-1 order-lg-2 text-center">
                 <img src="photo/photo_equipe.webp" alt="Entente ECPR" class="img-fluid rounded-modern shadow-sm" style="max-height: 350px; object-fit: cover;">
@@ -167,13 +140,13 @@
     </div>
   </section>
 
-  <footer class="text-white text-center p-4 mt-auto">
+  <footer class="text-white text-center p-4 mt-auto" style="background-color: #030405;">
     <div class="container">
       <div class="d-flex justify-content-center align-items-center gap-4 mb-3">
         <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="text-decoration-none"><img src="logo/logofa.webp" alt="Facebook US Vern" style="height:30px; border-radius: 5px;"></a>
         <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" class="text-decoration-none"><img src="logo/logoinsta.webp" alt="Instagram US Vern" style="height:30px; border-radius: 8px;"></a>
       </div>
-      <p class="mb-0 text-white-50">&copy; 2026 US Vern Cyclisme - Tous droits réservés | <a href="mentionslegales.html" class="text-white-50 text-decoration-none" style="transition: 0.3s;">Mentions Légales</a></p>
+      <p class="mb-0 text-white-50">&copy; 2026 US Vern Cyclisme - Tous droits réservés | <a href="mentionslegales.html" class="text-white text-decoration-underline" style="transition: 0.3s;">Mentions Légales</a></p>
     </div>
   </footer>
 
