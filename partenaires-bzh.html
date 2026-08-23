@@ -3,231 +3,262 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Espace Partenaire- Devenez partenaire du Championnat de Bretagne de Cyclo-Cross 2026.">
-  <title>Espace Partenaires - BZH CX 2026</title>
+  <meta name="description" content="Rejoignez le Club des 20 - Championnat de Bretagne de Cyclo-Cross 2026.">
+  <title>Le Club des 20 - BZH CX 2026</title>
   <link rel="icon" type="image/png" href="logo/logo.webp">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   
   <style>
+    /* =========================================
+       THÈME PRO : NOIR PROFOND / BLANC PUR / ROUGE USV
+       ========================================= */
     :root {
-      --gold-light: #fceabb; --gold-main: #f8b500; --gold-dark: #b38000;
-      --bg-darkest: #030405; --bg-surface: rgba(255, 255, 255, 0.03);
-      --bg-surface-hover: rgba(255, 255, 255, 0.06);
-      --text-main: #f8f9fa; --text-muted: #a1a1aa;
-      --glass-border: rgba(255, 255, 255, 0.08); --gold-glow: rgba(248, 181, 0, 0.3);
+      --bg-darkest: #050505;          
+      --bg-surface: #121212;
+      --bg-surface-hover: #1a1a1a;
+      --text-main: #ffffff;           
+      --text-muted: #a1a1aa;
+      --usv-bordeaux: #9e1b1b;        
+      --usv-bordeaux-dark: #7a1414;   
+      --glass-border: rgba(255, 255, 255, 0.08); 
     }
     
     body { background-color: var(--bg-darkest); color: var(--text-main); font-family: 'Open Sans', sans-serif; overflow-x: hidden; scroll-behavior: smooth; }
     body::before {
       content: ""; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-      background: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.04"/%3E%3C/svg%3E');
+      background: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.03"/%3E%3C/svg%3E');
       pointer-events: none; z-index: 9999;
     }
-    h1, h2, h3, h4, h5, .fw-bold, .title-font { font-family: 'Montserrat', sans-serif; }
-    .text-gold { color: var(--gold-main) !important; }
-    .text-gradient-gold { background: linear-gradient(135deg, var(--gold-light), var(--gold-main), var(--gold-dark)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+    h1, h2, h3, h4, h5, .title-font { font-family: 'Montserrat', sans-serif; text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px; }
+    .text-usv { color: var(--usv-bordeaux) !important; }
     
-    .glass-card { background: var(--bg-surface); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--glass-border); border-radius: 24px; transition: all 0.4s ease; }
+    .glass-card { background: var(--bg-surface); backdrop-filter: blur(16px); border: 1px solid var(--glass-border); border-radius: 8px; }
     
-    .btn-gold-fx { background: linear-gradient(135deg, var(--gold-main), var(--gold-dark)); color: var(--bg-darkest) !important; font-weight: 800; border: none; border-radius: 50px; padding: 16px 40px; text-transform: uppercase; letter-spacing: 2px; position: relative; overflow: hidden; z-index: 1; transition: all 0.4s ease; box-shadow: 0 10px 30px var(--gold-glow); }
-    .btn-gold-fx::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); transition: all 0.6s ease; z-index: -1; }
-    .btn-gold-fx:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 15px 40px rgba(248, 181, 0, 0.5); }
-    .btn-gold-fx:hover::before { left: 100%; }
+    .btn-action { background-color: var(--usv-bordeaux); color: #ffffff !important; font-weight: 700; border: none; border-radius: 4px; padding: 14px 30px; letter-spacing: 1px; text-transform: uppercase; transition: all 0.3s ease; }
+    .btn-action:hover { background-color: var(--usv-bordeaux-dark); transform: translateY(-2px); box-shadow: 0 8px 15px rgba(158, 27, 27, 0.3); }
 
-    .nav-social-icon { color: #fff; font-size: 1.2rem; transition: color 0.3s, transform 0.3s; margin-left: 15px; }
-    .nav-social-icon:hover { color: var(--gold-main); transform: scale(1.1); }
+    .nav-social-icon { color: #ffffff; font-size: 1.3rem; transition: color 0.3s; margin-left: 15px; }
+    .nav-social-icon:hover { color: var(--usv-bordeaux); }
 
-    .hero-b2b { background: radial-gradient(circle at center, rgba(248,181,0,0.1) 0%, var(--bg-darkest) 70%); min-height: 50vh; display: flex; align-items: center; justify-content: center; margin-top: 80px; }
+    .hero-b2b { background: radial-gradient(circle at center, rgba(158, 27, 27, 0.15) 0%, var(--bg-darkest) 70%); min-height: 50vh; display: flex; align-items: center; justify-content: center; margin-top: 80px; }
 
-    /* PRICING CARDS */
-    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-    .pricing-card { background: var(--bg-surface); border: 1px solid var(--glass-border); border-radius: 20px; padding: 40px 30px; position: relative; transition: all 0.4s ease; display: flex; flex-direction: column; }
-    .pricing-card:hover { transform: translateY(-10px); border-color: var(--gold-main); box-shadow: 0 15px 30px rgba(0,0,0,0.5); }
+    /* COMPTEUR CLUB DES 20 */
+    .club-tracker { display: flex; justify-content: center; gap: 8px; margin-top: 25px; flex-wrap: wrap; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .spot { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--text-muted); opacity: 0.3; transition: all 0.3s; }
+    .spot.filled { background-color: var(--usv-bordeaux); border-color: var(--usv-bordeaux); opacity: 1; box-shadow: 0 0 12px rgba(158, 27, 27, 0.7); }
+
+    /* PRICING CARDS - GRILLE PARFAITE */
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .pricing-card { background: var(--bg-surface); border: 1px solid var(--glass-border); border-radius: 8px; padding: 40px 30px; position: relative; transition: all 0.3s ease; display: flex; flex-direction: column; }
+    .pricing-card:hover { transform: translateY(-5px); border-color: var(--usv-bordeaux); box-shadow: 0 15px 30px rgba(0,0,0,0.6); background: var(--bg-surface-hover); }
     .pricing-card ul { list-style: none; padding-left: 0; margin-bottom: 0; }
     .pricing-card ul li { margin-bottom: 15px; display: flex; align-items: flex-start; color: var(--text-muted); font-size: 0.95rem; }
-    .pricing-card ul li i { color: var(--gold-main); margin-right: 12px; margin-top: 3px; font-size: 1.1rem; flex-shrink: 0; }
+    .pricing-card ul li i { color: var(--usv-bordeaux); margin-right: 12px; margin-top: 3px; font-size: 1.1rem; flex-shrink: 0; }
     
-    .premium-tier { background: linear-gradient(180deg, rgba(248, 181, 0, 0.05) 0%, rgba(255,255,255,0.02) 100%); border: 2px solid var(--gold-dark); transform: scale(1.05); box-shadow: 0 20px 50px rgba(0,0,0,0.5), inset 0 0 20px rgba(248, 181, 0, 0.1); z-index: 2; }
-    .premium-tier::before { content: 'EXCLUSIF'; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--gold-main), var(--gold-dark)); color: var(--bg-darkest); font-weight: 900; font-size: 0.8rem; letter-spacing: 2px; padding: 6px 20px; border-radius: 20px; box-shadow: 0 5px 15px var(--gold-glow); }
-    .premium-tier:hover { transform: scale(1.05) translateY(-10px); box-shadow: 0 30px 60px rgba(248, 181, 0, 0.2); }
-    .premium-tier ul li { color: var(--text-main); }
+    /* MISE EN AVANT MEMBRE OFFICIEL */
+    .premium-tier { background: linear-gradient(180deg, rgba(158, 27, 27, 0.08) 0%, transparent 100%); border: 2px solid var(--usv-bordeaux); transform: scale(1.03); z-index: 2; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+    .premium-tier::before { content: 'LE CLUB'; position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--usv-bordeaux); color: #fff; font-weight: 800; font-size: 0.75rem; letter-spacing: 2px; padding: 6px 20px; border-radius: 4px; }
+    .premium-tier:hover { transform: scale(1.03) translateY(-5px); box-shadow: 0 20px 40px rgba(158, 27, 27, 0.3); }
 
-    .btn-expand { background: transparent; border: none; color: var(--gold-main); font-weight: 600; margin-top: 15px; padding: 0; text-align: left; display: inline-flex; align-items: center; transition: color 0.3s; }
-    .btn-expand:hover { color: var(--gold-light); }
-    .btn-expand i { transition: transform 0.3s; margin-left: 8px; }
+    .btn-expand { background: transparent; border: none; color: #fff; font-weight: 600; margin-top: 15px; padding: 0; text-align: left; display: inline-flex; align-items: center; transition: color 0.3s; text-decoration: underline; text-decoration-color: var(--usv-bordeaux); text-underline-offset: 4px; }
+    .btn-expand:hover { color: var(--usv-bordeaux); }
+    .btn-expand i { transition: transform 0.3s; margin-left: 8px; text-decoration: none; }
     .btn-expand[aria-expanded="true"] i { transform: rotate(180deg); }
     .details-list { border-top: 1px solid var(--glass-border); margin-top: 20px; padding-top: 20px; }
 
-    .reveal { opacity: 0; transform: translateY(50px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+    .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s cubic-bezier(0.5, 0, 0, 1); }
     .reveal.active { opacity: 1; transform: translateY(0); }
-    .delay-1 { transition-delay: 0.1s; }
+    .delay-1 { transition-delay: 0.1s; } .delay-2 { transition-delay: 0.2s; }
   </style>
 </head>
 <body>
 
   <!-- NAVBAR B2B -->
-  <nav class="navbar fixed-top" style="background: rgba(3, 4, 5, 0.9); border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding: 15px 0;">
+  <nav class="navbar fixed-top" style="background: rgba(5, 5, 5, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding: 12px 0;">
     <div class="container d-flex justify-content-between align-items-center">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="logo/logo.webp" alt="USV" height="40" class="bg-white rounded p-1">
-        <span class="ms-3 fs-6 fw-bold text-gold d-none d-md-block title-font" style="letter-spacing: 3px;">ESPACE PARTENAIRES</span>
+        <span class="ms-3 fs-6 title-font text-white d-none d-md-block" style="letter-spacing: 2px;">LE CLUB DES 20</span>
       </a>
-      <a href="championnat-bzh.html" class="btn btn-outline-light rounded-pill px-4 py-2" style="font-size: 0.85rem; font-weight: 600;">
-        <i class="fa-solid fa-arrow-left me-2"></i>Infos Pratiques
+      <a href="championnat-bzh.html" class="btn btn-outline-light d-none d-md-block" style="border-radius: 4px; font-size: 0.8rem; padding: 10px 20px; font-weight: 700; text-transform: uppercase;">
+        <i class="fa-solid fa-arrow-left me-2"></i>Retour au Infos Pratiques
       </a>
     </div>
   </nav>
 
-  <!-- HERO B2B -->
+  <!-- HERO B2B & COMPTEUR -->
   <section class="hero-b2b text-center">
     <div class="container reveal">
-      <p class="text-gold fw-bold mb-3" style="letter-spacing: 5px; text-transform: uppercase;">Un événement au service de votre collectif</p>
-      <h1 class="display-3 fw-bold text-white mb-4 title-font">LE CERCLE OR & TERRE</h1>
-      <p class="lead mx-auto text-muted mb-5" style="max-width: 800px;">Associez l'image de votre entreprise à l'excellence sportive bretonne. Le sport est un lieu de rencontre, une occasion unique d'élargir votre réseau via nos espaces VIP.</p>
+      <p class="text-usv fw-bold mb-3 title-font" style="letter-spacing: 2px; font-size: 0.95rem;">20 Entreprises. 1 Championnat. 1 Territoire.</p>
+      <h1 class="display-3 text-white mb-4 title-font">LE CLUB DES 20</h1>
+      <p class="lead mx-auto mb-4 text-muted" style="max-width: 800px; font-style: italic;">
+        "Nous ne cherchons pas de simples sponsors. Nous recherchons 20 dirigeants bretons qui souhaitent être acteurs de ce grand événement et écrire l'histoire du cyclisme régional à nos côtés."
+      </p>
+      
+      <!-- LE COMPTEUR VISUEL (Ajusté à 4/20) -->
+      <div class="mt-5 pro-card p-4 mx-auto" style="max-width: 500px; background: rgba(0,0,0,0.6); border-color: var(--usv-bordeaux);">
+        <h2 class="display-4 fw-bold text-white mb-0 title-font">04 <span class="text-usv fs-2">/ 20</span></h2>
+        <p class="text-white fw-bold text-uppercase mb-3" style="letter-spacing: 1px; font-size: 0.85rem;">16 places disponibles</p>
+        <div class="club-tracker">
+          <!-- 4 ronds remplis -->
+          <div class="spot filled"></div><div class="spot filled"></div><div class="spot filled"></div><div class="spot filled"></div>
+          <!-- 16 ronds vides -->
+          <div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div>
+        </div>
+      </div>
+
+    </div>
   </section>
 
-  <!-- PRICING CARDS -->
+  <!-- OFFRES PARTENAIRES (GRILLE 3x2) -->
   <section class="py-5 mb-5">
     <div class="container py-2">
-      <div class="pricing-grid reveal delay-1">
+      <div class="row g-4 reveal delay-1">
         
-        <!-- Pack 100€ -->
-        <div class="pricing-card">
-          <h5 class="text-white fw-bold mb-1">Pack Découverte</h5>
-          <h2 class="display-5 fw-bold text-gradient-gold mb-4">100€</h2>
-          <ul class="flex-grow-1">
-            <li><i class="fa-solid fa-book-open"></i> Logo sur le programme distribué</li>
-            <li><i class="fa-solid fa-ticket"></i> 2 Entrées spectateurs offertes</li>
-          </ul>
-          <button class="btn-expand" data-bs-toggle="collapse" data-bs-target="#details100" aria-expanded="false">
-            Voir les détails <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <div class="collapse" id="details100">
-            <ul class="details-list small">
-              <li><i class="fa-solid fa-check"></i> Mentions globales (Fin de posts)</li>
+        <!-- Engagement 100€ -->
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="pricing-card w-100">
+            <h5 class="text-white title-font fs-5 mb-1">Découverte</h5>
+            <h2 class="display-5 fw-bold text-white mb-4">100€</h2>
+            <ul class="flex-grow-1">
+              <li><i class="fa-solid fa-book-open"></i> Logo sur le programme officiel</li>
+              <li><i class="fa-solid fa-ticket"></i> 2 Entrées spectateurs offertes</li>
             </ul>
+            <button class="btn-expand" data-bs-toggle="collapse" data-bs-target="#details100" aria-expanded="false">
+              Voir le détail <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="collapse" id="details100">
+              <ul class="details-list small">
+                <li><i class="fa-solid fa-check"></i> Mentions globales (Fin de posts réseaux sociaux)</li>
+              </ul>
+            </div>
+            <button class="btn btn-outline-light mt-4 w-100" data-bs-toggle="modal" data-bs-target="#contactB2BModal" data-pack="Decouverte">Rejoindre</button>
           </div>
-          <button class="btn btn-outline-light rounded-pill mt-4 w-100" data-bs-toggle="modal" data-bs-target="#contactB2BModal" data-pack="Découverte">Nous rejoindre</button>
         </div>
 
-        <!-- Pack 250€ -->
-        <div class="pricing-card">
-          <h5 class="text-white fw-bold mb-1">Pack Soutien</h5>
-          <h2 class="display-5 fw-bold text-gradient-gold mb-4">250€</h2>
-          <ul class="flex-grow-1">
-            <li><i class="fa-solid fa-book-open"></i> Logo sur le programme distribué</li>
-            <li><i class="fa-solid fa-road-barrier"></i> Logo sur les barrières du circuit</li>
-            <li><i class="fa-solid fa-ticket"></i> 5 Entrées spectateurs offertes</li>
-          </ul>
-          <button class="btn-expand" data-bs-toggle="collapse" data-bs-target="#details250" aria-expanded="false">
-            Voir les détails <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <div class="collapse" id="details250">
-            <ul class="details-list small">
-              <li><i class="fa-solid fa-check"></i> Mentions globales (Fin de posts)</li>
+        <!-- Engagement 250€ -->
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="pricing-card w-100">
+            <h5 class="text-white title-font fs-5 mb-1">Soutien</h5>
+            <h2 class="display-5 fw-bold text-white mb-4">250€</h2>
+            <ul class="flex-grow-1">
+              <li><i class="fa-solid fa-book-open"></i> Logo sur le programme distribué</li>
+              <li><i class="fa-solid fa-road-barrier"></i> Logo sur les barrières du circuit</li>
+              <li><i class="fa-solid fa-ticket"></i> 5 Entrées spectateurs offertes</li>
             </ul>
+            <button class="btn-expand" data-bs-toggle="collapse" data-bs-target="#details250" aria-expanded="false">
+              Voir le détail <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="collapse" id="details250">
+              <ul class="details-list small">
+                <li><i class="fa-solid fa-check"></i> Mentions globales réseaux sociaux</li>
+              </ul>
+            </div>
+            <button class="btn btn-outline-light mt-4 w-100" data-bs-toggle="modal" data-bs-target="#contactB2BModal" data-pack="Soutien">Soutenir le projet</button>
           </div>
-          <button class="btn btn-outline-light rounded-pill mt-4 w-100" data-bs-toggle="modal" data-bs-target="#contactB2BModal" data-pack="Soutien">Nous rejoindre</button>
         </div>
 
-        <!-- Pack 500€ -->
-        <div class="pricing-card">
-          <h5 class="text-white fw-bold mb-1">Pack Visibilité</h5>
-          <h2 class="display-5 fw-bold text-gradient-gold mb-4">500€</h2>
-          <ul class="flex-grow-1">
-            <li><i class="fa-solid fa-eye"></i> Visibilité terrain (Obstacles/Arches)</li>
-            <li><i class="fa-solid fa-ticket"></i> 10 Entrées spectateurs offertes</li>
-            <li><i class="fa-solid fa-star"></i> 1 Accès privilégié à l'Espace VIP</li>
-          </ul>
-          <button class="btn-expand" data-bs-toggle="collapse" data-bs-target="#details500" aria-expanded="false">
-            Voir les détails <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <div class="collapse" id="details500">
-            <ul class="details-list small">
-              <li><i class="fa-solid fa-check"></i> Logo dans le guide technique coureurs</li>
-              <li><i class="fa-solid fa-check"></i> Logo sur les obstacles (Escaliers/Planches)</li>
-              <li><i class="fa-solid fa-check"></i> Pose de bâches à l'arrivée</li>
-              <li><i class="fa-solid fa-check"></i> Logo sur l'arche de départ</li>
-              <li><i class="fa-solid fa-check"></i> Logo sur le programme distribué</li>
+        <!-- Engagement 500€ -->
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="pricing-card w-100">
+            <h5 class="text-white title-font fs-5 mb-1">Visibilité Terrain</h5>
+            <h2 class="display-5 fw-bold text-white mb-4">500€</h2>
+            <ul class="flex-grow-1">
+              <li><i class="fa-solid fa-eye"></i> Visibilité (Obstacles / Arches)</li>
+              <li><i class="fa-solid fa-ticket"></i> 10 Entrées spectateurs offertes</li>
+              <li><i class="fa-solid fa-star"></i> 1 Accès à l'Espace VIP</li>
             </ul>
+            <button class="btn-expand" data-bs-toggle="collapse" data-bs-target="#details500" aria-expanded="false">
+              Voir le détail <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="collapse" id="details500">
+              <ul class="details-list small">
+                <li><i class="fa-solid fa-check"></i> Logo dans le guide technique coureurs</li>
+                <li><i class="fa-solid fa-check"></i> Logo sur les obstacles (Escaliers/Planches)</li>
+                <li><i class="fa-solid fa-check"></i> Pose de bâches à l'arrivée</li>
+                <li><i class="fa-solid fa-check"></i> Logo sur l'arche de départ</li>
+              </ul>
+            </div>
+            <button class="btn btn-outline-light mt-4 w-100" data-bs-toggle="modal" data-bs-target="#contactB2BModal" data-pack="Visibilite">S'engager</button>
           </div>
-          <button class="btn btn-outline-light rounded-pill mt-4 w-100" data-bs-toggle="modal" data-bs-target="#contactB2BModal" data-pack="Visibilité">Nous rejoindre</button>
         </div>
 
-        <!-- Pack 1000€ -->
-        <div class="pricing-card">
-          <h5 class="text-white fw-bold mb-1">Pack Action</h5>
-          <h2 class="display-5 fw-bold text-gradient-gold mb-4">1 000€</h2>
-          <ul class="flex-grow-1">
-            <li><i class="fa-solid fa-shirt"></i> Sponsoring de la Catégorie Jeunes</li>
-            <li><i class="fa-solid fa-medal"></i> Remise d'un maillot sur le podium</li>
-            <li><i class="fa-solid fa-ticket"></i> 20 Entrées spectateurs offertes</li>
-            <li><i class="fa-solid fa-star"></i> 2 Accès à l'Espace VIP</li>
-          </ul>
-          <button class="btn-expand" data-bs-toggle="collapse" data-bs-target="#details1000" aria-expanded="false">
-            Voir les détails <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <div class="collapse" id="details1000">
-            <ul class="details-list small">
-              <li><i class="fa-solid fa-check"></i> Mentions globales (Fin de posts) et Post dédié</li>
-              <li><i class="fa-solid fa-check"></i> Logo sur les dossards d'une catégorie</li>
-              <li><i class="fa-solid fa-check"></i> Flocage sur les gilets jaunes des bénévoles</li>
-              <li><i class="fa-solid fa-check"></i> Logo (programme, barrières, guide, obstacles)</li>
-              <li><i class="fa-solid fa-check"></i> Pose de bâches et Logo arche de départ</li>
+        <!-- Membre Officiel 1000€ -->
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="pricing-card premium-tier w-100">
+            <h5 class="text-usv title-font fs-5 mb-1">Membre Officiel</h5>
+            <h2 class="display-4 fw-bold text-white mb-4">1 000€</h2>
+            <ul class="flex-grow-1">
+              <li><i class="fa-solid fa-shirt text-usv"></i> Sponsoring d'une Catégorie</li>
+              <li><i class="fa-solid fa-medal text-usv"></i> Remise d'un maillot sur le podium</li>
+              <li><i class="fa-solid fa-users text-usv"></i> Flocage Gilets Bénévoles</li>
+              <li><i class="fa-solid fa-star text-usv"></i> 2 Accès à l'Espace VIP</li>
             </ul>
+            <button class="btn-expand" data-bs-toggle="collapse" data-bs-target="#details1000" aria-expanded="false">
+              Voir le détail <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="collapse" id="details1000">
+              <ul class="details-list small">
+                <li><i class="fa-solid fa-check text-usv"></i> Post dédié sur nos réseaux sociaux</li>
+                <li><i class="fa-solid fa-check text-usv"></i> Logo sur les dossards d'une catégorie</li>
+                <li><i class="fa-solid fa-check text-usv"></i> 20 Entrées spectateurs offertes</li>
+                <li><i class="fa-solid fa-check text-usv"></i> Pose de bâches et Logo arche de départ</li>
+              </ul>
+            </div>
+            <button class="btn btn-action mt-4 text-center w-100" data-bs-toggle="modal" data-bs-target="#contactB2BModal" data-pack="Action">Devenir Membre (1000€)</button>
           </div>
-          <button class="btn btn-outline-light rounded-pill mt-4 w-100" data-bs-toggle="modal" data-bs-target="#contactB2BModal" data-pack="Action">Nous rejoindre</button>
         </div>
 
-        <!-- Pack 1500€ -->
-        <div class="pricing-card">
-          <h5 class="text-white fw-bold mb-1">Pack Prestige</h5>
-          <h2 class="display-5 fw-bold text-gradient-gold mb-4">1 500€</h2>
-          <ul class="flex-grow-1">
-            <li><i class="fa-solid fa-shirt"></i> Sponsoring Élite Femme + U19 F</li>
-            <li><i class="fa-solid fa-store"></i> Stand entreprise sur le village</li>
-            <li><i class="fa-solid fa-ticket"></i> 30 Entrées spectateurs offertes</li>
-            <li><i class="fa-solid fa-star"></i> 3 Accès à l'Espace VIP</li>
-          </ul>
-          <button class="btn-expand" data-bs-toggle="collapse" data-bs-target="#details1500" aria-expanded="false">
-            Voir les détails <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <div class="collapse" id="details1500">
-            <ul class="details-list small">
-              <li><i class="fa-solid fa-check"></i> Story dédiée et Post dédié sur nos réseaux</li>
-              <li><i class="fa-solid fa-check"></i> Logo sur l'arche d'arrivée et la bâche podium</li>
-              <li><i class="fa-solid fa-check"></i> Remise d'un maillot sur le podium</li>
-              <li><i class="fa-solid fa-check"></i> Flocage sur les gilets jaunes des bénévoles</li>
-              <li><i class="fa-solid fa-check"></i> Logo (programme, barrières, guide, obstacles)</li>
+        <!-- Engagement 1500€ -->
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="pricing-card w-100">
+            <h5 class="text-white title-font fs-5 mb-1">Prestige</h5>
+            <h2 class="display-5 fw-bold text-white mb-4">1 500€</h2>
+            <ul class="flex-grow-1">
+              <li><i class="fa-solid fa-shirt"></i> Sponsoring Élite Femme / U19</li>
+              <li><i class="fa-solid fa-store"></i> Stand entreprise sur le village</li>
+              <li><i class="fa-solid fa-ticket"></i> 30 Entrées spectateurs offertes</li>
+              <li><i class="fa-solid fa-star"></i> 3 Accès à l'Espace VIP</li>
             </ul>
+            <button class="btn-expand" data-bs-toggle="collapse" data-bs-target="#details1500" aria-expanded="false">
+              Voir le détail <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="collapse" id="details1500">
+              <ul class="details-list small">
+                <li><i class="fa-solid fa-check"></i> Story dédiée et Post dédié sur nos réseaux</li>
+                <li><i class="fa-solid fa-check"></i> Logo sur l'arche d'arrivée et la bâche podium</li>
+                <li><i class="fa-solid fa-check"></i> Flocage sur les gilets jaunes des bénévoles</li>
+              </ul>
+            </div>
+            <button class="btn btn-outline-light mt-4 w-100" data-bs-toggle="modal" data-bs-target="#contactB2BModal" data-pack="Prestige">S'engager</button>
           </div>
-          <button class="btn btn-outline-light rounded-pill mt-4 w-100" data-bs-toggle="modal" data-bs-target="#contactB2BModal" data-pack="Prestige">Nous rejoindre</button>
         </div>
 
-        <!-- Pack Premium 3000€ -->
-        <div class="pricing-card premium-tier">
-          <h5 class="text-gold fw-bold mb-1">Pack Élite</h5>
-          <h2 class="display-4 fw-bold text-white mb-4">3 000€</h2>
-          <ul class="flex-grow-1">
-            <li><i class="fa-solid fa-crown text-gold"></i> Naming exclusif de l'événement</li>
-            <li><i class="fa-solid fa-shirt text-gold"></i> Sponsoring de la catégorie Élite Homme</li>
-            <li><i class="fa-solid fa-ticket text-white"></i> 60 Entrées spectateurs offertes</li>
-            <li><i class="fa-solid fa-star text-white"></i> 6 Accès à l'Espace VIP</li>
-          </ul>
-          <button class="btn-expand" data-bs-toggle="collapse" data-bs-target="#details3000" aria-expanded="false" style="color: var(--text-main);">
-            Voir les détails <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <div class="collapse" id="details3000">
-            <ul class="details-list small">
-              <li><i class="fa-solid fa-video text-gold"></i> Vidéo dédiée de votre entreprise</li>
-              <li><i class="fa-solid fa-check text-gold"></i> Remise d'un maillot sur le podium</li>
-              <li><i class="fa-solid fa-check text-gold"></i> Story dédiée et Mentions globales</li>
-              <li><i class="fa-solid fa-check text-gold"></i> Stand entreprise sur le village</li>
-              <li><i class="fa-solid fa-check text-gold"></i> Tous avantages visibilité terrain inclus</li>
+        <!-- Pack Élite / Naming -->
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="pricing-card w-100" style="border-color: rgba(255,255,255,0.2);">
+            <h5 class="text-white title-font fs-5 mb-1">Élite & Naming</h5>
+            <h2 class="display-5 fw-bold text-usv mb-4">3 000€</h2>
+            <ul class="flex-grow-1">
+              <li><i class="fa-solid fa-crown text-white"></i> Naming exclusif de l'événement</li>
+              <li><i class="fa-solid fa-video text-white"></i> Vidéo dédiée de votre entreprise</li>
+              <li><i class="fa-solid fa-store text-white"></i> Stand VIP sur le village</li>
+              <li><i class="fa-solid fa-star text-white"></i> 6 Accès à l'Espace VIP</li>
             </ul>
+            <button class="btn-expand" data-bs-toggle="collapse" data-bs-target="#details3000" aria-expanded="false">
+              Voir le détail <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="collapse" id="details3000">
+              <ul class="details-list small">
+                <li><i class="fa-solid fa-check"></i> Sponsoring de la catégorie Élite Homme</li>
+                <li><i class="fa-solid fa-check"></i> 60 Entrées spectateurs offertes</li>
+                <li><i class="fa-solid fa-check"></i> Tous les avantages visibilité terrain inclus</li>
+              </ul>
+            </div>
+            <button class="btn btn-outline-light mt-4 w-100" data-bs-toggle="modal" data-bs-target="#contactB2BModal" data-pack="Elite" style="border-color: var(--usv-bordeaux); color: var(--usv-bordeaux);">Prendre le Naming</button>
           </div>
-          <button class="btn btn-gold-fx mt-4 text-center w-100" style="padding: 12px; font-size: 0.9rem;" data-bs-toggle="modal" data-bs-target="#contactB2BModal" data-pack="Élite / Naming">Prendre le Naming</button>
         </div>
 
       </div>
@@ -235,71 +266,64 @@
   </section>
 
   <!-- FOOTER B2B COMPLET -->
-  <footer class="text-center p-5" style="background-color: #010102; border-top: 1px solid var(--glass-border);">
+  <footer class="text-center p-5" style="background-color: #000000; border-top: 1px solid var(--glass-border);">
     <div class="container">
       <div class="row justify-content-center mb-4 g-4">
         <div class="col-md-4">
-          <p class="text-gold small fw-bold text-uppercase mb-1">Partenariats</p>
-          <p class="text-muted small"><br>partenariat@usverncyclisme.fr</p>
+          <p class="text-white small fw-bold text-uppercase mb-1">Pôle Partenariats</p>
+          <p class="small text-muted mb-0">partenariat@usverncyclisme.fr</p>
         </div>
         <div class="col-md-4">
-          <p class="text-gold small fw-bold text-uppercase mb-1">Communication</p>
-          <p class="text-muted small"><br>com@usverncyclisme.fr</p>
+          <p class="text-white small fw-bold text-uppercase mb-1">Pôle Communication</p>
+          <p class="small text-muted mb-0">com@usverncyclisme.fr</p>
         </div>
       </div>
-      
-      <div class="mb-4">
-        <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" class="nav-social-icon mx-2"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="nav-social-icon mx-2"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://linkedin.com" target="_blank" class="nav-social-icon mx-2"><i class="fa-brands fa-linkedin-in"></i></a>
-      </div>
-      
-      <p class="mb-0 text-white-50 small">&copy; 2026 Espace Partenaire- Championnat BZH Cyclo-Cross<br>Propulsé par <a href="index.html" class="text-gold text-decoration-none fw-bold">l'US Vern Cyclisme</a></p>
+      <p class="mb-0 small text-muted">&copy; 2026 Le Club des 20 - Championnat BZH Cyclo-Cross<br>Propulsé par <a href="index.html" class="text-white text-decoration-none fw-bold">l'US Vern Cyclisme</a></p>
     </div>
   </footer>
 
-  <!-- MODAL CONTACT B2B PREMIUM (Fond Noir Inclus) -->
+  <!-- MODAL CONTACT B2B -->
   <div class="modal fade" id="contactB2BModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content text-white" style="background: #0a0c10; border: 1px solid var(--gold-main); border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.8);">
+      <div class="modal-content" style="background: var(--bg-surface); border: 1px solid var(--glass-border); border-radius: 8px; box-shadow: 0 20px 50px rgba(0,0,0,0.8);">
         <div class="modal-header border-bottom-0 pb-0 pt-4 px-4">
-          <h4 class="modal-title fw-bold title-font text-white"><i class="fa-solid fa-briefcase text-gold me-2"></i> Demande de Partenariat</h4>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h4 class="modal-title fw-bold title-font text-white fs-5"><i class="fa-solid fa-briefcase text-usv me-2"></i> Rejoindre Le Club</h4>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
         </div>
         <div class="modal-body p-4">
           
           <form id="b2bForm" action="#" method="POST">
             <div class="row g-3">
               <div class="col-md-6">
-                <label class="form-label small text-gold">Nom de l'entreprise</label>
-                <input type="text" name="entreprise" class="form-control bg-transparent text-white border-secondary" required>
+                <label class="form-label small text-white">Nom de l'entreprise</label>
+                <input type="text" name="entreprise" class="form-control bg-transparent text-white border-secondary" style="border-radius: 4px;" required>
               </div>
               <div class="col-md-6">
-                <label class="form-label small text-gold">Votre Nom & Prénom</label>
-                <input type="text" name="nom" class="form-control bg-transparent text-white border-secondary" required>
+                <label class="form-label small text-white">Votre Nom & Prénom</label>
+                <input type="text" name="nom" class="form-control bg-transparent text-white border-secondary" style="border-radius: 4px;" required>
               </div>
               <div class="col-md-6">
-                <label class="form-label small text-gold">Adresse E-mail pro</label>
-                <input type="email" name="email" class="form-control bg-transparent text-white border-secondary" required>
+                <label class="form-label small text-white">Adresse E-mail pro</label>
+                <input type="email" name="email" class="form-control bg-transparent text-white border-secondary" style="border-radius: 4px;" required>
               </div>
               <div class="col-md-6">
-                <label class="form-label small text-gold">Numéro de téléphone</label>
-                <input type="tel" name="telephone" class="form-control bg-transparent text-white border-secondary">
+                <label class="form-label small text-white">Numéro de téléphone</label>
+                <input type="tel" name="telephone" class="form-control bg-transparent text-white border-secondary" style="border-radius: 4px;">
               </div>
               <div class="col-12">
-                <label class="form-label small text-gold">Pack qui vous intéresse</label>
-                <select name="pack_choisi" class="form-select bg-transparent text-white border-secondary">
-                  <option value="Découverte" class="text-dark">Pack Découverte (100€)</option>
-                  <option value="Soutien" class="text-dark">Pack Soutien (250€)</option>
-                  <option value="Visibilité" class="text-dark">Pack Visibilité (500€)</option>
-                  <option value="Action" class="text-dark">Pack Action (1 000€)</option>
-                  <option value="Prestige" class="text-dark">Pack Prestige (1 500€)</option>
-                  <option value="Elite" class="text-dark">Pack Élite / Naming (3 000€)</option>
+                <label class="form-label small text-white">Niveau d'engagement souhaité</label>
+                <select name="pack_choisi" class="form-select bg-transparent text-white border-secondary" style="border-radius: 4px;">
+                  <option value="Decouverte" class="text-dark">Découverte (100€)</option>
+                  <option value="Soutien" class="text-dark">Soutien (250€)</option>
+                  <option value="Visibilite" class="text-dark">Visibilité Terrain (500€)</option>
+                  <option value="Membre" class="text-dark">Membre Officiel du Club (1 000€)</option>
+                  <option value="Prestige" class="text-dark">Prestige (1 500€)</option>
+                  <option value="Elite" class="text-dark">Élite / Naming (3 000€)</option>
                   <option value="Sur-mesure" class="text-dark">Proposition Sur-Mesure</option>
                 </select>
               </div>
               <div class="col-12 mt-4">
-                <button type="submit" class="btn btn-gold-fx w-100">Envoyer</button>
+                <button type="submit" class="btn btn-action w-100">Envoyer ma demande</button>
               </div>
             </div>
           </form>
@@ -312,11 +336,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
+      // Animations
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
       }, { threshold: 0.15 });
       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
       
+      // Auto-sélection du pack dans la modale
       const b2bModal = document.getElementById('contactB2BModal');
       b2bModal.addEventListener('show.bs.modal', function (event) {
         const button = event.relatedTarget;
@@ -324,16 +350,17 @@
         const select = b2bModal.querySelector('select');
         if(packName) {
           for (let option of select.options) {
-            if (option.value === packName || option.text.includes(packName)) {
+            if (option.value === packName) {
               option.selected = true; break;
             }
           }
         }
       });
 
+      // Simulation envoi formulaire
       document.getElementById('b2bForm').addEventListener('submit', function(e) {
         e.preventDefault(); 
-        alert("C'est un succès ! Les informations ont été envoyées (Simulation). Il ne restera plus qu'à lier ceci à Formspree !");
+        alert("Demande envoyée ! Le Pôle Partenariats reviendra vers vous très vite.");
         var modal = bootstrap.Modal.getInstance(b2bModal);
         modal.hide();
       });
