@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <!-- Balises Meta pour le partage -->
+  <meta property="og:title" content="Le Club des 20 - Devenez Partenaire">
+  <meta property="og:description" content="Rejoignez les 20 entreprises bretonnes partenaires du Championnat de Bretagne de Cyclo-Cross 2026 à Vern-sur-Seiche.">
+  <meta property="og:image" content="https://jtilloy2.github.io/usvcyclisme/affiche/cyclo-cross.jpg">
+  <meta property="og:url" content="https://jtilloy2.github.io/usvcyclisme/partenaires-bzh.html">
+  <meta property="og:type" content="website">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Rejoignez le Club des 20 - Championnat de Bretagne de Cyclo-Cross 2026.">
@@ -44,10 +50,31 @@
 
     .hero-b2b { background: radial-gradient(circle at center, rgba(158, 27, 27, 0.15) 0%, var(--bg-darkest) 70%); min-height: 50vh; display: flex; align-items: center; justify-content: center; margin-top: 80px; }
 
-    /* COMPTEUR CLUB DES 20 */
-    .club-tracker { display: flex; justify-content: center; gap: 8px; margin-top: 25px; flex-wrap: wrap; max-width: 600px; margin-left: auto; margin-right: auto; }
-    .spot { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--text-muted); opacity: 0.3; transition: all 0.3s; }
-    .spot.filled { background-color: var(--usv-bordeaux); border-color: var(--usv-bordeaux); opacity: 1; box-shadow: 0 0 12px rgba(158, 27, 27, 0.7); }
+    /* COMPTEUR CLUB DES 20 - 2 LIGNES DE 10 */
+    .club-tracker { 
+      display: grid; 
+      grid-template-columns: repeat(10, 1fr); /* Force exactement 10 colonnes (donc 2 lignes) */
+      gap: 12px; 
+      margin-top: 25px; 
+      max-width: 450px; /* Largeur idéale pour 10 ronds */
+      margin-left: auto; 
+      margin-right: auto; 
+    }
+    .spot { 
+      width: 26px; /* Taille ajustée pour tenir à 10 sur une ligne */
+      height: 26px; 
+      border-radius: 50%; 
+      border: 2px solid var(--text-muted); 
+      opacity: 0.3; 
+      transition: all 0.3s; 
+      margin: 0 auto; /* Centre bien chaque rond dans sa case */
+    }
+    .spot.filled { 
+      background-color: var(--usv-bordeaux); 
+      border-color: var(--usv-bordeaux); 
+      opacity: 1; 
+      box-shadow: 0 0 12px rgba(158, 27, 27, 0.7); 
+    }
 
     /* PRICING CARDS - GRILLE PARFAITE */
     .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
@@ -97,18 +124,22 @@
         "Nous ne cherchons pas de simples sponsors. Nous recherchons 20 dirigeants bretons qui souhaitent être acteurs de ce grand événement et écrire l'histoire du cyclisme régional à nos côtés."
       </p>
       
-      <!-- LE COMPTEUR VISUEL (Ajusté à 4/20) -->
-      <div class="mt-5 pro-card p-4 mx-auto" style="max-width: 500px; background: rgba(0,0,0,0.6); border-color: var(--usv-bordeaux);">
-        <h2 class="display-4 fw-bold text-white mb-0 title-font">04 <span class="text-usv fs-2">/ 20</span></h2>
-        <p class="text-white fw-bold text-uppercase mb-3" style="letter-spacing: 1px; font-size: 0.85rem;">16 places disponibles</p>
+      
+      <!-- LE COMPTEUR VISUEL (Intégré sans fond) -->
+      <div class="mt-5 mx-auto pb-4" style="max-width: 500px;">
+        <h2 class="display-4 fw-bold text-white mb-0 title-font">00 <span class="text-usv fs-2">/ 20</span></h2>
+        <p class="text-white fw-bold text-uppercase mb-3" style="letter-spacing: 1px; font-size: 0.85rem;">20 places disponibles</p>
+        
         <div class="club-tracker">
-          <!-- 4 ronds remplis -->
-          <div class="spot filled"></div><div class="spot filled"></div><div class="spot filled"></div><div class="spot filled"></div>
-          <!-- 16 ronds vides -->
-          <div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div>
+          <!-- Ligne 1 : 10 ronds vides -->
+          <div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div>
+          <!-- Ligne 2 : 10 ronds vides -->
+          <div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div>
         </div>
       </div>
-
+         
+      <!-- ronds remplis <div class="spot filled"></div> -->
+      
     </div>
   </section>
 
