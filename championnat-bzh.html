@@ -175,6 +175,38 @@
       max-width: 100%; 
       object-fit: contain; /* Empêche le logo de se déformer */
     }
+
+    /* =========================================
+       CORRECTIONS SPÉCIALES MOBILE (TÉLÉPHONE)
+       ========================================= */
+    @media (max-width: 768px) {
+      /* 1. Rend les points rouges de la carte beaucoup plus petits */
+      .hotspot { width: 14px; height: 14px; border-width: 2px; }
+      .hotspot-info { font-size: 0.7rem; padding: 4px 8px; }
+
+      /* 2. Transforme le carrousel en mode "Glisser avec le doigt" (Swipe) */
+      .partners-carousel-container { 
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch; 
+        scrollbar-width: none; /* Cache la barre de défilement disgracieuse */
+      }
+      .partners-carousel-container::-webkit-scrollbar { display: none; }
+      
+      .partners-carousel-track { 
+        animation: none; /* Stoppe l'animation automatique qui bloque le doigt */
+        gap: 15px; 
+        padding: 0 15px; 
+      }
+      
+      /* Enlève le dégradé noir sur les bords qui empêchait de toucher/glisser l'écran */
+      .partners-carousel-container::before, 
+      .partners-carousel-container::after { 
+        display: none; 
+      }
+      
+      /* Réduit un peu les boîtes des partenaires pour qu'on devine qu'il y en a d'autres à côté */
+      .partner-logo-box { width: 160px; height: 75px; padding: 10px; }
+    }
   </style>
 </head>
 <body>
@@ -191,7 +223,7 @@
         <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" class="nav-social-icon"><i class="fa-brands fa-instagram"></i></a>
         <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="nav-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="https://linkedin.com" target="_blank" class="nav-social-icon me-4"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="partenaires-bzh.html" class="btn btn-outline-light d-none d-md-block" style="font-size: 0.8rem; padding: 10px 20px;"><i class="fa-solid fa-briefcase me-2"></i>Espace Partenaires</a>
+        <a href="partenaires-bzh.html" class="btn btn-outline-light ms-2" style="font-size: 0.75rem; padding: 8px 12px; white-space: nowrap;"><i class="fa-solid fa-briefcase me-1"></i><span class="d-none d-sm-inline"> Espace</span> Partenaires</a>
       </div>
     </div>
   </nav>
@@ -222,10 +254,10 @@
         <div class="pro-card p-5" style="border-left: 4px solid var(--usv-bordeaux);">
           <h4 class="title-font text-white mb-4 fs-4">L'événement en chiffres</h4>
           <ul class="list-unstyled mb-0 fs-5">
-            <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-flag-checkered text-usv me-4 fs-4"></i> <span><strong class="text-white">6 courses</strong> réparties sur 2 jours.</span></li>
-            <li class="mb-4 d-flex align-items-center"><i class="fa-solid fa-medal text-usv me-4 fs-4"></i> <span class="text-white fw-bold me-2">14 Titres</span> décernés (de U15 à Élite)</li>
-            <li class="mb-4 d-flex align-items-center"><i class="fa-solid fa-person-biking text-usv me-4 fs-4"></i> <span class="text-white fw-bold me-2">300 Coureurs</span> attendus</li>
-            <li class="d-flex align-items-center"><i class="fa-solid fa-users text-usv me-4 fs-4"></i> <span class="text-white fw-bold me-2">3 000 Spectateurs</span> sur le week-end</li>
+            <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-flag-checkered text-usv me-4 fs-4"></i> <div><strong class="text-white">6 courses</strong> réparties sur 2 jours.</div></li>
+            <li class="mb-4 d-flex align-items-center"><i class="fa-solid fa-medal text-usv me-4 fs-4"></i> <div><span class="text-white fw-bold">14 Titres</span> décernés (de U15 à Élite)</div></li>
+            <li class="mb-4 d-flex align-items-center"><i class="fa-solid fa-person-biking text-usv me-4 fs-4"></i> <div><span class="text-white fw-bold">300 Coureurs</span> attendus</div></li>
+            <li class="d-flex align-items-center"><i class="fa-solid fa-users text-usv me-4 fs-4"></i> <div><span class="text-white fw-bold">3 000 Spectateurs</span> sur le week-end</div></li>
           </ul>
         </div>
       </div>
