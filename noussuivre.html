@@ -41,8 +41,6 @@
           <li class="nav-item"><a class="nav-link" href="evenements.html">Événements</a></li>
           <li class="nav-item"><a class="nav-link" href="nouscontacter.html">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="entente.html">L'Entente</a></li>
-          
-          <!-- <li class="nav-item"><a class="nav-link" href="presse.html">Presse</a></li> -->
         </ul>
       </div>
     </div>
@@ -72,8 +70,11 @@
       <h3 class="text-center mb-5 fw-bold text-dark">Aperçu de nos publications</h3>
       <div class="row justify-content-center">
         <div class="col-lg-10 text-center">
-          <!-- Remplace TON_LIEN_CURATOR_IO_ICI par le lien fourni par Curator.io -->
-          <iframe src="TON_LIEN_CURATOR_IO_ICI" width="100%" height="600" style="border:none; overflow:hidden; border-radius: 10px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+          
+          <!-- DÉBUT DE L'INTÉGRATION CURATOR.IO -->
+          <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
+          <!-- FIN DE L'INTÉGRATION CURATOR.IO -->
+
         </div>
       </div>
     </div>
@@ -91,5 +92,16 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- LE SCRIPT CURATOR.IO EST PLACÉ ICI, JUSTE AVANT LA FIN DU BODY -->
+  <script type="text/javascript">
+  /* curator-feed-default-feed-layout */
+  (function(){
+  var i,e,d=document,s="script";i=d.createElement("script");i.async=1;i.charset="UTF-8";
+  i.src="https://cdn.curator.io/published/c25170fa-d1eb-446e-9d68-70d7c949dae4.js";
+  e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+  })();
+  </script>
+
 </body>
 </html>
