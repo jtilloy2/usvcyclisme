@@ -323,7 +323,7 @@
         </div>
         <div class="modal-body p-4">
           
-          <form id="b2bForm" action="#" method="POST">
+          <form id="b2bForm" action="https://formspree.io/f/mqpkkagv" method="POST">
             <div class="row g-3">
               <div class="col-md-6">
                 <label class="form-label small text-white">Nom de l'entreprise</label>
@@ -386,14 +386,6 @@
             }
           }
         }
-      });
-
-      // Simulation envoi formulaire
-      document.getElementById('b2bForm').addEventListener('submit', function(e) {
-        e.preventDefault(); 
-        alert("Demande envoyée ! Le Pôle Partenariats reviendra vers vous très vite.");
-        var modal = bootstrap.Modal.getInstance(b2bModal);
-        modal.hide();
       });
     });
   </script>
