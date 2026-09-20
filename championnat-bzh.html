@@ -397,20 +397,18 @@
           </div>
         </div>
         
-        <!-- CARTE GOOGLE (Stade de vélo - Vue Satellite) -->
+       <!-- CARTE GOOGLE (Stade de vélo - Vue Satellite) AVEC CONSENTEMENT -->
         <div class="col-lg-7">
-          <div class="pro-card p-0 overflow-hidden" style="height: 420px; border-color: #333;">
-            <iframe 
-              src="https://maps.google.com/maps?q=Stade+de+v%C3%A9lo,+Vern-sur-Seiche&t=h&z=17&ie=UTF8&output=embed" 
-              title="Plan d'accès - Stade de vélo Vern-sur-Seiche"
-              width="100%" 
-              height="100%" 
-              style="border:0; filter: contrast(1.1) brightness(0.9);" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+          <div id="maps-consent-container" class="pro-card p-0 overflow-hidden text-center d-flex flex-column justify-content-center align-items-center" style="height: 420px; border-color: #333; background-color: #111;">
+            <i class="fa-solid fa-map-location-dot fs-1 mb-3 text-usv"></i>
+            <p class="text-muted small px-4">Pour afficher la carte interactive, vous devez accepter le chargement de Google Maps, ce qui implique le dépôt de traceurs (cookies).</p>
+            <button onclick="loadGoogleMaps()" class="btn btn-outline-light mt-2 btn-sm">Accepter et voir la carte</button>
           </div>
+          <script>
+            function loadGoogleMaps() {
+              document.getElementById('maps-consent-container').outerHTML = '<div class="pro-card p-0 overflow-hidden" style="height: 420px; border-color: #333;"><iframe src="https://maps.google.com/maps?q=Stade+de+v%C3%A9lo,+Vern-sur-Seiche&t=h&z=17&ie=UTF8&output=embed" title="Plan d\'accès - Stade de vélo Vern-sur-Seiche" width="100%" height="100%" style="border:0; filter: contrast(1.1) brightness(0.9);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>';
+            }
+          </script>
         </div>
       </div>
     </div>
@@ -435,7 +433,10 @@
         <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="nav-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="https://www.linkedin.com/in/us-vern-cyclisme-270074350/" target="_blank" class="nav-social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
-      <p class="mb-0 small text-muted">&copy; 2026 Championnat BZH Cyclo-Cross<br>Organisation : <a href="index.html" class="text-white text-decoration-none fw-bold">US Vern Cyclisme</a></p>
+      <p class="mb-0 small text-muted">&copy; 2026 Championnat BZH Cyclo-Cross<br>Organisation : <a href="index.html" class="text-white text-decoration-none fw-bold">US Vern Cyclisme</a><br>
+        <a href="mentionslegales.html" class="text-muted text-decoration-underline mt-2 d-inline-block me-3">Mentions Légales</a>
+        <a href="politique-confidentialite.html" class="text-muted text-decoration-underline mt-2 d-inline-block">Politique de Confidentialité</a>
+      </p>
     </div>
   </footer>
 
