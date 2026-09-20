@@ -1,0 +1,12 @@
+# US Vern Cyclisme
+Site officiel de l'Union Sportive de Vern Cyclisme (Ille-et-Vilaine, Bretagne, France).
+Club de vélo comprenant une école de vélo (8-14 ans), des sections U15, U17, U19, une équipe de Cyclisme Féminin (encadrement dédié) et une Régionale Homme.
+Le club possède un "Stade Vélo" sécurisé inauguré en 2025 à la Vallée de la Seiche.
+Contact email : usverncyclisme35@gmail.com
+Président : Mickaël Guillard.
+
+## Structure du site
+- Accueil : /index.html
+- Sections sportives : /section.html
+- Contact : /nouscontacter.html
+- Stade de Vélo : /stadevelo.html

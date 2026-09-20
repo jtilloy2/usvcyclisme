@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+# Ce site autorise expressément les agents IA (LLM) à crawler ses pages publiques.

@@ -109,9 +109,16 @@
         <!-- Colonne Gauche : Reportage TVR épuré -->
         <div class="col-lg-6 text-center">
           <h3 class="fw-bold mb-4 text-dark">Reportage TVR</h3>
-          <div class="video-container bg-white rounded-3 shadow-sm p-2 mb-0 mx-auto" style="max-width: 400px;">
-            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1560233841631234&show_text=false" width="100%" height="650" style="border:none; overflow:hidden; border-radius:10px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+          <div id="fb-consent-container" class="video-container bg-light rounded-3 shadow-sm p-4 mb-0 mx-auto d-flex flex-column justify-content-center align-items-center" style="max-width: 400px; height: 650px; border: 2px dashed #ccc;">
+            <i class="fa-brands fa-facebook fs-1 mb-3" style="color: #1877F2;"></i>
+            <p class="text-muted small px-3">Pour lire cette vidéo, vous devez accepter le chargement de contenus depuis Facebook, ce qui implique le dépôt de traceurs (cookies) de leur part.</p>
+            <button onclick="loadFacebookVideo()" class="btn btn-primary rounded-pill mt-2">Accepter et voir la vidéo</button>
           </div>
+          <script>
+            function loadFacebookVideo() {
+              document.getElementById('fb-consent-container').outerHTML = '<div class="video-container bg-white rounded-3 shadow-sm p-2 mb-0 mx-auto" style="max-width: 400px;"><iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1560233841631234&show_text=false" width="100%" height="650" style="border:none; overflow:hidden; border-radius:10px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>';
+            }
+          </script>
         </div>
 
         <!-- Colonne Droite : Le Championnat BZH -->
@@ -153,9 +160,11 @@
       <div class="d-flex justify-content-center align-items-center gap-4 mb-3">
         <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="text-decoration-none"><img src="logo/logofa.webp" alt="Facebook US Vern" style="height:30px; border-radius: 5px;"></a>
         <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" class="text-decoration-none"><img src="logo/logoinsta.webp" alt="Instagram US Vern" style="height:30px; border-radius: 8px;"></a>
-        <a href="https://www.linkedin.com/in/us-vern-cyclisme-270074350/" target="_blank" class="text-decoration-none"><img src="logo/LinkedIn_logo.png" alt="LinkedIn US Vern" style="height:30px; border-radius: 8px;"></a>
       </div>
-      <p class="mb-0 text-white-50">&copy; 2026 US Vern Cyclisme - Tous droits réservés | <a href="mentionslegales.html" class="text-white text-decoration-underline" style="transition: 0.3s;">Mentions Légales</a></p>
+      <p class="mb-0 text-white-50">&copy; 2026 US Vern Cyclisme - Tous droits réservés<br>
+        <a href="mentionslegales.html" class="text-white-50 text-decoration-underline" style="transition: 0.3s;">Mentions Légales</a> | 
+        <a href="politique-confidentialite.html" class="text-white-50 text-decoration-underline" style="transition: 0.3s;">Politique de Confidentialité</a>
+      </p>
     </div>
   </footer>
 
