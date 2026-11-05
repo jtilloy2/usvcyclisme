@@ -1,0 +1,1641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1190.55 841.89">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Acier-25);
+      }
+
+      .cls-2 {
+        fill: url(#Acier-131);
+      }
+
+      .cls-3 {
+        fill: url(#Acier-30);
+      }
+
+      .cls-4 {
+        fill: url(#Acier-112);
+      }
+
+      .cls-5 {
+        fill: url(#Acier-81);
+      }
+
+      .cls-6 {
+        fill: url(#Acier-27);
+      }
+
+      .cls-7 {
+        fill: url(#Acier-176);
+      }
+
+      .cls-8 {
+        fill: url(#Acier-154);
+      }
+
+      .cls-9 {
+        fill: url(#Acier-47);
+      }
+
+      .cls-10 {
+        fill: url(#Acier-125);
+      }
+
+      .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-28, .cls-29, .cls-30, .cls-31, .cls-32, .cls-33, .cls-34, .cls-35, .cls-36, .cls-37, .cls-38, .cls-39, .cls-40, .cls-41, .cls-42, .cls-43, .cls-44, .cls-45, .cls-46, .cls-47, .cls-48, .cls-49, .cls-50, .cls-51, .cls-52, .cls-53, .cls-54, .cls-55 {
+        stroke: #000;
+      }
+
+      .cls-10, .cls-11, .cls-13, .cls-14, .cls-15, .cls-17, .cls-19, .cls-20, .cls-22, .cls-24, .cls-27, .cls-28, .cls-29, .cls-30, .cls-32, .cls-33, .cls-34, .cls-36, .cls-37, .cls-40, .cls-42, .cls-43, .cls-44, .cls-45, .cls-47, .cls-48, .cls-49, .cls-51, .cls-52, .cls-53 {
+        stroke-width: .3px;
+      }
+
+      .cls-56 {
+        fill: url(#Acier-170);
+      }
+
+      .cls-11 {
+        fill: url(#Acier-117);
+      }
+
+      .cls-57 {
+        fill: url(#Acier-171);
+      }
+
+      .cls-58 {
+        fill: url(#Acier-151);
+      }
+
+      .cls-59 {
+        fill: url(#Acier-166);
+      }
+
+      .cls-60 {
+        fill: url(#Acier-74);
+      }
+
+      .cls-61 {
+        fill: url(#Acier-133);
+      }
+
+      .cls-62 {
+        fill: url(#Acier-114);
+      }
+
+      .cls-63 {
+        fill: url(#Acier-96);
+      }
+
+      .cls-64 {
+        fill: url(#Acier-158);
+      }
+
+      .cls-65 {
+        fill: url(#Acier-69);
+      }
+
+      .cls-66 {
+        stroke-width: 3.03px;
+      }
+
+      .cls-66, .cls-12, .cls-21, .cls-67, .cls-25, .cls-68, .cls-69, .cls-70, .cls-35, .cls-39, .cls-71, .cls-72 {
+        fill: none;
+      }
+
+      .cls-66, .cls-12, .cls-35, .cls-39 {
+        stroke-linecap: round;
+      }
+
+      .cls-66, .cls-73, .cls-74, .cls-75, .cls-76, .cls-77, .cls-78, .cls-68, .cls-69, .cls-79, .cls-71, .cls-72, .cls-80 {
+        stroke: #fff;
+      }
+
+      .cls-66, .cls-39 {
+        stroke-linejoin: round;
+      }
+
+      .cls-81 {
+        fill: url(#Acier-108);
+      }
+
+      .cls-12 {
+        stroke-width: 1.4px;
+      }
+
+      .cls-82 {
+        fill: url(#Acier-174);
+      }
+
+      .cls-83 {
+        fill: url(#Acier-152);
+      }
+
+      .cls-84 {
+        fill: url(#Acier-38);
+      }
+
+      .cls-85 {
+        fill: url(#Acier-155);
+      }
+
+      .cls-86 {
+        fill: url(#Acier-11);
+      }
+
+      .cls-13 {
+        fill: url(#Acier-119);
+      }
+
+      .cls-14 {
+        fill: url(#Acier-198);
+      }
+
+      .cls-87 {
+        fill: url(#Acier-173);
+      }
+
+      .cls-88 {
+        fill: url(#Acier-83);
+      }
+
+      .cls-89 {
+        fill: url(#Acier-180);
+      }
+
+      .cls-15 {
+        fill: url(#Acier-123);
+      }
+
+      .cls-90 {
+        fill: url(#Acier-137);
+      }
+
+      .cls-73 {
+        fill: url(#Dégradé_sans_nom_6);
+      }
+
+      .cls-73, .cls-16, .cls-75, .cls-77, .cls-80 {
+        stroke-width: .47px;
+      }
+
+      .cls-91 {
+        fill: url(#Acier-49);
+      }
+
+      .cls-92 {
+        fill: url(#Acier-167);
+      }
+
+      .cls-17 {
+        fill: url(#Acier-192);
+      }
+
+      .cls-93 {
+        fill: url(#Acier-94);
+      }
+
+      .cls-94 {
+        fill: url(#Acier-163);
+      }
+
+      .cls-95 {
+        fill: url(#Acier-104);
+      }
+
+      .cls-18, .cls-23, .cls-26 {
+        stroke-width: .68px;
+      }
+
+      .cls-74 {
+        fill: #2a2070;
+        stroke-width: .28px;
+      }
+
+      .cls-96 {
+        fill: url(#Acier-64);
+      }
+
+      .cls-97 {
+        fill: url(#Acier-165);
+      }
+
+      .cls-75 {
+        fill: url(#Dégradé_sans_nom_5);
+      }
+
+      .cls-98 {
+        fill: url(#Acier-159);
+      }
+
+      .cls-99 {
+        fill: url(#Acier-28);
+      }
+
+      .cls-100 {
+        fill: url(#Acier-54);
+      }
+
+      .cls-101 {
+        fill: url(#Acier-88);
+      }
+
+      .cls-102 {
+        fill: url(#Acier-56);
+      }
+
+      .cls-103 {
+        fill: url(#Acier-106);
+      }
+
+      .cls-104 {
+        fill: url(#Acier-115);
+      }
+
+      .cls-19 {
+        fill: url(#Acier-191);
+      }
+
+      .cls-105 {
+        fill: url(#Acier-10);
+      }
+
+      .cls-106 {
+        fill: url(#Acier-22);
+      }
+
+      .cls-107 {
+        fill: url(#Acier-99);
+      }
+
+      .cls-108 {
+        fill: url(#Acier-67);
+      }
+
+      .cls-20 {
+        fill: url(#Acier-4);
+      }
+
+      .cls-109 {
+        fill: url(#Acier-89);
+      }
+
+      .cls-110 {
+        fill: url(#Acier-48);
+      }
+
+      .cls-111 {
+        fill: url(#Acier-73);
+      }
+
+      .cls-112, .cls-78 {
+        fill: #fff;
+      }
+
+      .cls-113 {
+        fill: url(#Acier-101);
+      }
+
+      .cls-114 {
+        fill: url(#Acier-116);
+      }
+
+      .cls-115 {
+        fill: url(#Acier-107);
+      }
+
+      .cls-21 {
+        stroke-width: .96px;
+      }
+
+      .cls-116 {
+        fill: url(#Acier-79);
+      }
+
+      .cls-117 {
+        fill: url(#Acier-65);
+      }
+
+      .cls-118 {
+        fill: url(#Acier-15);
+      }
+
+      .cls-119 {
+        fill: url(#Acier-62);
+      }
+
+      .cls-76, .cls-70, .cls-120, .cls-39 {
+        stroke-width: .71px;
+      }
+
+      .cls-76, .cls-121, .cls-122, .cls-120 {
+        fill: #404040;
+      }
+
+      .cls-123 {
+        fill: url(#Acier-29);
+      }
+
+      .cls-124 {
+        fill: url(#Acier-162);
+      }
+
+      .cls-125 {
+        fill: url(#Acier-93);
+      }
+
+      .cls-22 {
+        fill: url(#Acier-122);
+      }
+
+      .cls-126 {
+        fill: url(#Acier-178);
+      }
+
+      .cls-127 {
+        fill: url(#Acier-157);
+      }
+
+      .cls-23 {
+        fill: url(#HARD_TOP_-BLANC_-_copie);
+      }
+
+      .cls-128 {
+        fill: url(#Acier-182);
+      }
+
+      .cls-129 {
+        fill: url(#Acier-50);
+      }
+
+      .cls-130 {
+        fill: url(#Acier-58);
+      }
+
+      .cls-131 {
+        fill: url(#Acier-160);
+      }
+
+      .cls-132 {
+        fill: url(#Acier-153);
+      }
+
+      .cls-133 {
+        fill: url(#Acier-140);
+      }
+
+      .cls-134 {
+        fill: url(#Acier-134);
+      }
+
+      .cls-24 {
+        fill: url(#Acier-199);
+      }
+
+      .cls-135 {
+        fill: url(#Acier-20);
+      }
+
+      .cls-25 {
+        stroke-width: .66px;
+      }
+
+      .cls-136 {
+        fill: url(#Acier-42);
+      }
+
+      .cls-26 {
+        fill: url(#HARD_TOP_-BLANC_-_copie-2);
+      }
+
+      .cls-137 {
+        fill: url(#Acier-77);
+      }
+
+      .cls-138 {
+        fill: url(#Acier-51);
+      }
+
+      .cls-139 {
+        fill: url(#Acier-39);
+      }
+
+      .cls-140 {
+        fill: url(#Acier-98);
+      }
+
+      .cls-141 {
+        fill: url(#Acier-45);
+      }
+
+      .cls-27 {
+        fill: url(#Acier-118);
+      }
+
+      .cls-77 {
+        fill: url(#HARD_TOP_-_ROUGE);
+      }
+
+      .cls-142 {
+        fill: url(#Acier-57);
+      }
+
+      .cls-143 {
+        fill: url(#Acier-12);
+      }
+
+      .cls-144 {
+        fill: url(#Acier-109);
+      }
+
+      .cls-78 {
+        stroke-width: 6.05px;
+      }
+
+      .cls-145 {
+        fill: url(#Acier-14);
+      }
+
+      .cls-146 {
+        fill: url(#Acier-34);
+      }
+
+      .cls-147 {
+        fill: url(#Acier-53);
+      }
+
+      .cls-68 {
+        stroke-width: .41px;
+      }
+
+      .cls-148 {
+        fill: url(#Acier-59);
+      }
+
+      .cls-149 {
+        fill: url(#Acier-13);
+      }
+
+      .cls-150 {
+        fill: url(#Acier-136);
+      }
+
+      .cls-69, .cls-50 {
+        stroke-width: .36px;
+      }
+
+      .cls-151 {
+        fill: url(#Acier-146);
+      }
+
+      .cls-152 {
+        fill: url(#Acier-44);
+      }
+
+      .cls-153 {
+        fill: url(#Acier-156);
+      }
+
+      .cls-28 {
+        fill: url(#Acier-194);
+      }
+
+      .cls-154 {
+        fill: url(#Acier-61);
+      }
+
+      .cls-29 {
+        fill: url(#Acier-7);
+      }
+
+      .cls-155 {
+        fill: url(#Acier-183);
+      }
+
+      .cls-30 {
+        fill: url(#Acier-195);
+      }
+
+      .cls-156 {
+        fill: url(#Acier-97);
+      }
+
+      .cls-157 {
+        fill: url(#Acier-43);
+      }
+
+      .cls-70, .cls-122, .cls-120 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-158 {
+        fill: url(#Acier-172);
+      }
+
+      .cls-159 {
+        fill: url(#Acier-26);
+      }
+
+      .cls-160 {
+        fill: url(#Acier-149);
+      }
+
+      .cls-161 {
+        fill: url(#Acier-91);
+      }
+
+      .cls-162 {
+        fill: url(#Acier-32);
+      }
+
+      .cls-163 {
+        fill: url(#Acier-144);
+      }
+
+      .cls-164 {
+        fill: url(#Acier-35);
+      }
+
+      .cls-79 {
+        fill: #b61615;
+      }
+
+      .cls-165 {
+        fill: url(#Acier-72);
+      }
+
+      .cls-166 {
+        fill: url(#Acier-60);
+      }
+
+      .cls-31 {
+        fill: url(#Acier-124);
+      }
+
+      .cls-31, .cls-54 {
+        stroke-width: .32px;
+      }
+
+      .cls-167 {
+        fill: url(#Acier-52);
+      }
+
+      .cls-168 {
+        fill: url(#Acier-33);
+      }
+
+      .cls-169 {
+        fill: url(#Acier-68);
+      }
+
+      .cls-170 {
+        fill: url(#Acier-55);
+      }
+
+      .cls-32 {
+        fill: url(#Acier-128);
+      }
+
+      .cls-33 {
+        fill: url(#Acier-121);
+      }
+
+      .cls-34 {
+        fill: url(#Acier-3);
+      }
+
+      .cls-171 {
+        fill: url(#Acier-105);
+      }
+
+      .cls-35 {
+        stroke-width: 2.04px;
+      }
+
+      .cls-172 {
+        fill: url(#Acier-2);
+      }
+
+      .cls-172, .cls-173, .cls-174 {
+        stroke: #454545;
+        stroke-width: .42px;
+      }
+
+      .cls-122 {
+        stroke-width: .88px;
+      }
+
+      .cls-36 {
+        fill: url(#Acier-190);
+      }
+
+      .cls-175 {
+        fill: url(#Acier-31);
+      }
+
+      .cls-176 {
+        fill: url(#Acier-16);
+      }
+
+      .cls-177 {
+        fill: url(#Acier-139);
+      }
+
+      .cls-178 {
+        fill: url(#Acier-164);
+      }
+
+      .cls-37 {
+        fill: url(#Acier-188);
+      }
+
+      .cls-173 {
+        fill: url(#Acier-186);
+      }
+
+      .cls-179 {
+        fill: url(#Acier-95);
+      }
+
+      .cls-180 {
+        fill: url(#Acier-132);
+      }
+
+      .cls-181 {
+        fill: url(#Acier-87);
+      }
+
+      .cls-182 {
+        fill: url(#Acier-143);
+      }
+
+      .cls-183 {
+        fill: url(#Acier-40);
+      }
+
+      .cls-184 {
+        fill: url(#Acier-63);
+      }
+
+      .cls-185 {
+        fill: url(#Acier-103);
+      }
+
+      .cls-38 {
+        fill: url(#Acier-185);
+        stroke-width: .47px;
+      }
+
+      .cls-186 {
+        fill: url(#Acier-36);
+      }
+
+      .cls-187 {
+        fill: url(#Acier-85);
+      }
+
+      .cls-188 {
+        fill: url(#Acier-66);
+      }
+
+      .cls-189 {
+        fill: url(#Acier-24);
+      }
+
+      .cls-190 {
+        fill: url(#Acier-19);
+      }
+
+      .cls-191 {
+        fill: url(#Acier-169);
+      }
+
+      .cls-40 {
+        fill: url(#Acier-127);
+      }
+
+      .cls-71, .cls-46 {
+        stroke-width: .53px;
+      }
+
+      .cls-192 {
+        fill: url(#Acier-168);
+      }
+
+      .cls-193 {
+        fill: url(#Acier-75);
+      }
+
+      .cls-194 {
+        fill: url(#Acier-70);
+      }
+
+      .cls-195 {
+        fill: url(#Acier-129);
+      }
+
+      .cls-196 {
+        fill: url(#Acier-175);
+      }
+
+      .cls-174 {
+        fill: url(#Acier-8);
+      }
+
+      .cls-41 {
+        fill: #ebebeb;
+        stroke-width: .53px;
+      }
+
+      .cls-42 {
+        fill: url(#Acier-196);
+      }
+
+      .cls-197 {
+        fill: url(#Acier-110);
+      }
+
+      .cls-198 {
+        fill: url(#Acier-90);
+      }
+
+      .cls-43 {
+        fill: url(#Acier-120);
+      }
+
+      .cls-44 {
+        fill: url(#Acier-197);
+      }
+
+      .cls-45 {
+        fill: url(#Acier-6);
+      }
+
+      .cls-199 {
+        fill: url(#Acier-111);
+      }
+
+      .cls-200 {
+        fill: url(#Acier-138);
+      }
+
+      .cls-201 {
+        fill: url(#Acier-100);
+      }
+
+      .cls-202 {
+        fill: url(#Acier-17);
+      }
+
+      .cls-203 {
+        fill: url(#Acier-21);
+      }
+
+      .cls-204 {
+        fill: url(#Acier-41);
+      }
+
+      .cls-72 {
+        stroke-width: .28px;
+      }
+
+      .cls-205 {
+        fill: url(#Acier-78);
+      }
+
+      .cls-206 {
+        fill: url(#Acier-92);
+      }
+
+      .cls-207 {
+        fill: url(#Acier-141);
+      }
+
+      .cls-208 {
+        fill: url(#Acier-145);
+      }
+
+      .cls-209 {
+        fill: url(#Acier-37);
+      }
+
+      .cls-210 {
+        fill: url(#Acier-9);
+      }
+
+      .cls-211 {
+        fill: url(#Acier-135);
+      }
+
+      .cls-47 {
+        fill: url(#Acier-200);
+      }
+
+      .cls-48 {
+        fill: url(#Acier-5);
+      }
+
+      .cls-212 {
+        fill: url(#Acier-161);
+      }
+
+      .cls-213 {
+        fill: url(#Acier-71);
+      }
+
+      .cls-214 {
+        fill: url(#Acier-82);
+      }
+
+      .cls-49 {
+        fill: url(#Acier-189);
+      }
+
+      .cls-215 {
+        fill: url(#Acier-113);
+      }
+
+      .cls-216 {
+        fill: url(#Acier-46);
+      }
+
+      .cls-80 {
+        fill: url(#HARD_TOP_-_ROUGE-2);
+      }
+
+      .cls-217 {
+        fill: url(#Acier-147);
+      }
+
+      .cls-51 {
+        fill: url(#Acier-193);
+      }
+
+      .cls-218 {
+        fill: url(#Acier-23);
+      }
+
+      .cls-219 {
+        fill: url(#Acier-184);
+      }
+
+      .cls-220 {
+        fill: url(#Acier-84);
+      }
+
+      .cls-221 {
+        fill: url(#Acier-177);
+      }
+
+      .cls-52 {
+        fill: url(#Acier-201);
+      }
+
+      .cls-53 {
+        fill: url(#Acier-126);
+      }
+
+      .cls-54 {
+        fill: url(#Acier-187);
+      }
+
+      .cls-222 {
+        fill: url(#Acier-181);
+      }
+
+      .cls-223 {
+        fill: url(#Acier-179);
+      }
+
+      .cls-224 {
+        fill: url(#Acier-150);
+      }
+
+      .cls-225 {
+        fill: url(#Acier-80);
+      }
+
+      .cls-226 {
+        fill: #f6a200;
+      }
+
+      .cls-227 {
+        fill: url(#Acier-148);
+      }
+
+      .cls-228 {
+        fill: url(#Acier-130);
+      }
+
+      .cls-229 {
+        fill: url(#Acier-76);
+      }
+
+      .cls-230 {
+        fill: url(#Acier-102);
+      }
+
+      .cls-231 {
+        fill: url(#Acier-142);
+      }
+
+      .cls-55 {
+        fill: url(#Acier);
+        stroke-width: .44px;
+      }
+
+      .cls-232 {
+        fill: url(#Acier-86);
+      }
+
+      .cls-233 {
+        fill: url(#Acier-18);
+      }
+    </style>
+    <linearGradient id="HARD_TOP_-BLANC_-_copie" data-name="HARD TOP -BLANC - copie" x1="-3733.02" y1="11180.8" x2="-3731" y2="11263.53" gradientTransform="translate(2300.8127 -4893.9026) scale(.4574)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#000"/>
+      <stop offset=".2" stop-color="#ababab"/>
+      <stop offset=".35" stop-color="#b3b3b3"/>
+      <stop offset=".6" stop-color="#ccc"/>
+      <stop offset=".92" stop-color="#f3f3f3"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="HARD_TOP_-BLANC_-_copie-2" data-name="HARD TOP -BLANC - copie" x1="-2989.39" y1="16437.13" x2="-2989.39" y2="16329.48" gradientTransform="translate(1602.5646 -5116.583) scale(.3372)" xlink:href="#HARD_TOP_-BLANC_-_copie"/>
+    <linearGradient id="Acier" x1="-2894.82" y1="16135.18" x2="-3099.65" y2="16492.39" gradientTransform="translate(1602.5646 -5116.583) scale(.3372)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".23" stop-color="#fff"/>
+      <stop offset="1" stop-color="#7d7d7d"/>
+    </linearGradient>
+    <linearGradient id="Acier-2" data-name="Acier" x1="-4111.96" y1="30362.2" x2="-3214.15" y2="30362.2" gradientTransform="translate(1340.7419 -5754.9953) scale(.2039)" xlink:href="#Acier"/>
+    <linearGradient id="Dégradé_sans_nom_6" data-name="Dégradé sans nom 6" x1="412.51" y1="305.06" x2="412.51" y2="319.69" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6ab2e3"/>
+      <stop offset=".49" stop-color="#0079c2"/>
+      <stop offset="1" stop-color="#2a2070"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_5" data-name="Dégradé sans nom 5" x1="-3877.39" y1="25721.34" x2="-3877.39" y2="25613.72" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6ab2e3"/>
+      <stop offset=".56" stop-color="#0079c2"/>
+      <stop offset="1" stop-color="#2a2070"/>
+    </linearGradient>
+    <linearGradient id="Acier-3" data-name="Acier" x1="-3782.7" y1="25420.09" x2="-3987.53" y2="25777.29" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-4" data-name="Acier" x1="-4089.55" y1="25502.42" x2="-4033.45" y2="25500.32" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-5" data-name="Acier" x1="-4142.97" y1="25557.19" x2="-4083.13" y2="25554.95" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-6" data-name="Acier" x1="-4129.1" y1="25516.43" x2="-4097.87" y2="25515.26" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-7" data-name="Acier" x1="-4140.33" y1="25501.55" x2="-4088.6" y2="25499.61" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-8" data-name="Acier" x1="-5578.58" y1="45694.42" x2="-4681.02" y2="45694.42" gradientTransform="translate(1128.2963 -5933.9192) scale(.1395)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-9" data-name="Acier" x1="-3880.33" y1="25329.75" x2="-4001.92" y2="25416.03" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-10" data-name="Acier" x1="-3754.75" y1="25327.02" x2="-3880.37" y2="25421.87" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-11" data-name="Acier" x1="-3101.53" y1="16096.62" x2="-3052.54" y2="16096.62" gradientTransform="translate(1606.3497 -5108.8834) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-12" data-name="Acier" x1="-3070.35" y1="16096.62" x2="-3021.38" y2="16096.62" gradientTransform="translate(1616.7413 -5108.8834) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-13" data-name="Acier" x1="-3038.89" y1="16096.62" x2="-2989.92" y2="16096.62" gradientTransform="translate(1627.2232 -5108.8834) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-14" data-name="Acier" x1="-3007.45" y1="16096.62" x2="-2958.47" y2="16096.62" gradientTransform="translate(1637.7056 -5108.8834) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-15" data-name="Acier" x1="-3101.53" y1="16104.35" x2="-3052.54" y2="16104.35" gradientTransform="translate(1606.3497 -5106.3087) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-16" data-name="Acier" x1="-3070.35" y1="16104.35" x2="-3021.38" y2="16104.35" gradientTransform="translate(1616.7413 -5106.3087) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-17" data-name="Acier" x1="-3038.89" y1="16104.35" x2="-2989.92" y2="16104.35" gradientTransform="translate(1627.2232 -5106.3087) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-18" data-name="Acier" x1="-3007.45" y1="16104.35" x2="-2958.47" y2="16104.35" gradientTransform="translate(1637.7056 -5106.3087) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-19" data-name="Acier" x1="-3101.53" y1="16112.07" x2="-3052.54" y2="16112.07" gradientTransform="translate(1606.3497 -5103.734) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-20" data-name="Acier" x1="-3070.35" y1="16112.07" x2="-3021.38" y2="16112.07" gradientTransform="translate(1616.7413 -5103.734) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-21" data-name="Acier" x1="-3038.89" y1="16112.07" x2="-2989.92" y2="16112.07" gradientTransform="translate(1627.2232 -5103.734) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-22" data-name="Acier" x1="-3007.45" y1="16112.07" x2="-2958.47" y2="16112.07" gradientTransform="translate(1637.7056 -5103.734) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-23" data-name="Acier" x1="-3101.53" y1="16119.8" x2="-3052.54" y2="16119.8" gradientTransform="translate(1606.3497 -5101.1595) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-24" data-name="Acier" x1="-3070.35" y1="16119.8" x2="-3021.38" y2="16119.8" gradientTransform="translate(1616.7413 -5101.1595) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-25" data-name="Acier" x1="-3038.89" y1="16119.8" x2="-2989.92" y2="16119.8" gradientTransform="translate(1627.2232 -5101.1595) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-26" data-name="Acier" x1="-3007.45" y1="16119.8" x2="-2958.47" y2="16119.8" gradientTransform="translate(1637.7056 -5101.1595) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-27" data-name="Acier" x1="-3101.53" y1="16127.52" x2="-3052.54" y2="16127.52" gradientTransform="translate(1606.3497 -5098.5848) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-28" data-name="Acier" x1="-3070.35" y1="16127.52" x2="-3021.38" y2="16127.52" gradientTransform="translate(1616.7413 -5098.5848) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-29" data-name="Acier" x1="-3038.89" y1="16127.52" x2="-2989.92" y2="16127.52" gradientTransform="translate(1627.2232 -5098.5848) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-30" data-name="Acier" x1="-3007.45" y1="16127.52" x2="-2958.47" y2="16127.52" gradientTransform="translate(1637.7066 -5098.5848) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-31" data-name="Acier" x1="-3101.53" y1="16135.24" x2="-3052.54" y2="16135.24" gradientTransform="translate(1606.3497 -5096.0098) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-32" data-name="Acier" x1="-3070.35" y1="16135.24" x2="-3021.38" y2="16135.24" gradientTransform="translate(1616.7413 -5096.0098) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-33" data-name="Acier" x1="-3038.89" y1="16135.24" x2="-2989.92" y2="16135.24" gradientTransform="translate(1627.2232 -5096.0098) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-34" data-name="Acier" x1="-3007.45" y1="16135.24" x2="-2958.47" y2="16135.24" gradientTransform="translate(1637.7066 -5096.0098) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-35" data-name="Acier" x1="-3101.53" y1="16142.97" x2="-3052.54" y2="16142.97" gradientTransform="translate(1606.3497 -5093.4354) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-36" data-name="Acier" x1="-3070.35" y1="16142.97" x2="-3021.38" y2="16142.97" gradientTransform="translate(1616.7413 -5093.4354) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-37" data-name="Acier" x1="-3038.89" y1="16142.97" x2="-2989.92" y2="16142.97" gradientTransform="translate(1627.2232 -5093.4354) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-38" data-name="Acier" x1="-3007.45" y1="16142.97" x2="-2958.47" y2="16142.97" gradientTransform="translate(1637.7066 -5093.4354) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-39" data-name="Acier" x1="-3101.53" y1="16150.69" x2="-3052.54" y2="16150.69" gradientTransform="translate(1606.3497 -5090.8607) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-40" data-name="Acier" x1="-3070.35" y1="16150.69" x2="-3021.38" y2="16150.69" gradientTransform="translate(1616.7413 -5090.8607) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-41" data-name="Acier" x1="-3038.89" y1="16150.69" x2="-2989.92" y2="16150.69" gradientTransform="translate(1627.2232 -5090.8607) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-42" data-name="Acier" x1="-3007.45" y1="16150.69" x2="-2958.47" y2="16150.69" gradientTransform="translate(1637.7066 -5090.8607) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-43" data-name="Acier" x1="-3101.53" y1="16158.42" x2="-3052.54" y2="16158.42" gradientTransform="translate(1606.3497 -5088.286) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-44" data-name="Acier" x1="-3070.35" y1="16158.42" x2="-3021.38" y2="16158.42" gradientTransform="translate(1616.7413 -5088.286) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-45" data-name="Acier" x1="-3038.89" y1="16158.42" x2="-2989.92" y2="16158.42" gradientTransform="translate(1627.2232 -5088.286) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-46" data-name="Acier" x1="-3007.45" y1="16158.42" x2="-2958.47" y2="16158.42" gradientTransform="translate(1637.7066 -5088.286) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-47" data-name="Acier" x1="-3101.53" y1="16166.14" x2="-3052.54" y2="16166.14" gradientTransform="translate(1606.3497 -5085.7115) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-48" data-name="Acier" x1="-3070.35" y1="16166.14" x2="-3021.38" y2="16166.14" gradientTransform="translate(1616.7413 -5085.7115) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-49" data-name="Acier" x1="-3038.89" y1="16166.14" x2="-2989.92" y2="16166.14" gradientTransform="translate(1627.2232 -5085.7115) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-50" data-name="Acier" x1="-3007.45" y1="16166.14" x2="-2958.47" y2="16166.14" gradientTransform="translate(1637.7066 -5085.7115) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-51" data-name="Acier" x1="-3101.53" y1="16173.87" x2="-3052.54" y2="16173.87" gradientTransform="translate(1606.3497 -5083.1366) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-52" data-name="Acier" x1="-3070.35" y1="16173.87" x2="-3021.38" y2="16173.87" gradientTransform="translate(1616.7413 -5083.1366) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-53" data-name="Acier" x1="-3038.89" y1="16173.87" x2="-2989.92" y2="16173.87" gradientTransform="translate(1627.2232 -5083.1366) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-54" data-name="Acier" x1="-3007.45" y1="16173.87" x2="-2958.47" y2="16173.87" gradientTransform="translate(1637.7066 -5083.1366) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-55" data-name="Acier" x1="-3101.53" y1="16181.59" x2="-3052.54" y2="16181.59" gradientTransform="translate(1606.3497 -5080.5619) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-56" data-name="Acier" x1="-3070.35" y1="16181.59" x2="-3021.38" y2="16181.59" gradientTransform="translate(1616.7413 -5080.5619) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-57" data-name="Acier" x1="-3038.89" y1="16181.59" x2="-2989.92" y2="16181.59" gradientTransform="translate(1627.2232 -5080.5619) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-58" data-name="Acier" x1="-3007.45" y1="16181.59" x2="-2958.47" y2="16181.59" gradientTransform="translate(1637.7066 -5080.5619) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-59" data-name="Acier" x1="-3101.53" y1="16189.32" x2="-3052.54" y2="16189.32" gradientTransform="translate(1606.3497 -5077.9874) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-60" data-name="Acier" x1="-3070.35" y1="16189.32" x2="-3021.38" y2="16189.32" gradientTransform="translate(1616.7413 -5077.9874) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-61" data-name="Acier" x1="-3038.89" y1="16189.32" x2="-2989.92" y2="16189.32" gradientTransform="translate(1627.2232 -5077.9874) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-62" data-name="Acier" x1="-3007.45" y1="16189.32" x2="-2958.47" y2="16189.32" gradientTransform="translate(1637.7066 -5077.9874) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-63" data-name="Acier" x1="-3596.53" y1="16188.81" x2="-3564.11" y2="16188.81" gradientTransform="translate(1606.3497 -5108.8834) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-64" data-name="Acier" x1="-3586.25" y1="16188.81" x2="-3553.83" y2="16188.81" gradientTransform="translate(1616.7413 -5108.8834) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-65" data-name="Acier" x1="-3575.87" y1="16188.81" x2="-3543.45" y2="16188.81" gradientTransform="translate(1627.2232 -5108.8834) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-66" data-name="Acier" x1="-3565.5" y1="16188.81" x2="-3533.08" y2="16188.81" gradientTransform="translate(1637.7056 -5108.8834) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-67" data-name="Acier" x1="-3596.53" y1="16191.36" x2="-3564.11" y2="16191.36" gradientTransform="translate(1606.3497 -5106.3087) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-68" data-name="Acier" x1="-3586.25" y1="16191.36" x2="-3553.83" y2="16191.36" gradientTransform="translate(1616.7413 -5106.3087) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-69" data-name="Acier" x1="-3575.87" y1="16191.36" x2="-3543.45" y2="16191.36" gradientTransform="translate(1627.2232 -5106.3087) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-70" data-name="Acier" x1="-3565.5" y1="16191.36" x2="-3533.08" y2="16191.36" gradientTransform="translate(1637.7056 -5106.3087) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-71" data-name="Acier" x1="-3596.53" y1="16193.9" x2="-3564.11" y2="16193.9" gradientTransform="translate(1606.3497 -5103.734) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-72" data-name="Acier" x1="-3586.25" y1="16193.9" x2="-3553.83" y2="16193.9" gradientTransform="translate(1616.7413 -5103.734) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-73" data-name="Acier" x1="-3575.87" y1="16193.9" x2="-3543.45" y2="16193.9" gradientTransform="translate(1627.2232 -5103.734) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-74" data-name="Acier" x1="-3565.5" y1="16193.9" x2="-3533.08" y2="16193.9" gradientTransform="translate(1637.7056 -5103.734) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-75" data-name="Acier" x1="-3596.53" y1="16196.45" x2="-3564.11" y2="16196.45" gradientTransform="translate(1606.3497 -5101.1595) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-76" data-name="Acier" x1="-3586.25" y1="16196.45" x2="-3553.83" y2="16196.45" gradientTransform="translate(1616.7413 -5101.1595) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-77" data-name="Acier" x1="-3575.87" y1="16196.45" x2="-3543.45" y2="16196.45" gradientTransform="translate(1627.2232 -5101.1595) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-78" data-name="Acier" x1="-3565.5" y1="16196.45" x2="-3533.08" y2="16196.45" gradientTransform="translate(1637.7056 -5101.1595) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-79" data-name="Acier" x1="-3596.53" y1="16199" x2="-3564.11" y2="16199" gradientTransform="translate(1606.3497 -5098.5848) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-80" data-name="Acier" x1="-3586.25" y1="16199" x2="-3553.83" y2="16199" gradientTransform="translate(1616.7413 -5098.5848) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-81" data-name="Acier" x1="-3575.87" y1="16199" x2="-3543.45" y2="16199" gradientTransform="translate(1627.2232 -5098.5848) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-82" data-name="Acier" x1="-3565.5" y1="16199" x2="-3533.08" y2="16199" gradientTransform="translate(1637.7066 -5098.5848) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-83" data-name="Acier" x1="-3596.53" y1="16201.54" x2="-3564.11" y2="16201.54" gradientTransform="translate(1606.3497 -5096.0098) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-84" data-name="Acier" x1="-3586.25" y1="16201.54" x2="-3553.83" y2="16201.54" gradientTransform="translate(1616.7413 -5096.0098) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-85" data-name="Acier" x1="-3575.87" y1="16201.54" x2="-3543.45" y2="16201.54" gradientTransform="translate(1627.2232 -5096.0098) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-86" data-name="Acier" x1="-3565.5" y1="16201.54" x2="-3533.08" y2="16201.54" gradientTransform="translate(1637.7066 -5096.0098) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-87" data-name="Acier" x1="-3596.53" y1="16204.09" x2="-3564.11" y2="16204.09" gradientTransform="translate(1606.3497 -5093.4354) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-88" data-name="Acier" x1="-3586.25" y1="16204.09" x2="-3553.83" y2="16204.09" gradientTransform="translate(1616.7413 -5093.4354) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-89" data-name="Acier" x1="-3575.87" y1="16204.09" x2="-3543.45" y2="16204.09" gradientTransform="translate(1627.2232 -5093.4354) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-90" data-name="Acier" x1="-3565.5" y1="16204.09" x2="-3533.08" y2="16204.09" gradientTransform="translate(1637.7066 -5093.4354) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-91" data-name="Acier" x1="-3596.53" y1="16206.64" x2="-3564.11" y2="16206.64" gradientTransform="translate(1606.3497 -5090.8607) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-92" data-name="Acier" x1="-3586.25" y1="16206.64" x2="-3553.83" y2="16206.64" gradientTransform="translate(1616.7413 -5090.8607) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-93" data-name="Acier" x1="-3575.87" y1="16206.64" x2="-3543.45" y2="16206.64" gradientTransform="translate(1627.2232 -5090.8607) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-94" data-name="Acier" x1="-3565.5" y1="16206.64" x2="-3533.08" y2="16206.64" gradientTransform="translate(1637.7066 -5090.8607) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-95" data-name="Acier" x1="-3596.53" y1="16209.19" x2="-3564.11" y2="16209.19" gradientTransform="translate(1606.3497 -5088.286) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-96" data-name="Acier" x1="-3586.25" y1="16209.19" x2="-3553.83" y2="16209.19" gradientTransform="translate(1616.7413 -5088.286) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-97" data-name="Acier" x1="-3575.87" y1="16209.19" x2="-3543.45" y2="16209.19" gradientTransform="translate(1627.2232 -5088.286) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-98" data-name="Acier" x1="-3565.5" y1="16209.19" x2="-3533.08" y2="16209.19" gradientTransform="translate(1637.7066 -5088.286) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-99" data-name="Acier" x1="-3596.53" y1="16211.74" x2="-3564.11" y2="16211.74" gradientTransform="translate(1606.3497 -5085.7115) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-100" data-name="Acier" x1="-3586.25" y1="16211.74" x2="-3553.83" y2="16211.74" gradientTransform="translate(1616.7413 -5085.7115) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-101" data-name="Acier" x1="-3575.87" y1="16211.74" x2="-3543.45" y2="16211.74" gradientTransform="translate(1627.2232 -5085.7115) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-102" data-name="Acier" x1="-3565.5" y1="16211.74" x2="-3533.08" y2="16211.74" gradientTransform="translate(1637.7066 -5085.7115) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-103" data-name="Acier" x1="-3596.53" y1="16214.29" x2="-3564.11" y2="16214.29" gradientTransform="translate(1606.3497 -5083.1366) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-104" data-name="Acier" x1="-3586.25" y1="16214.29" x2="-3553.83" y2="16214.29" gradientTransform="translate(1616.7413 -5083.1366) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-105" data-name="Acier" x1="-3575.87" y1="16214.29" x2="-3543.45" y2="16214.29" gradientTransform="translate(1627.2232 -5083.1366) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-106" data-name="Acier" x1="-3565.5" y1="16214.29" x2="-3533.08" y2="16214.29" gradientTransform="translate(1637.7066 -5083.1366) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-107" data-name="Acier" x1="-3596.53" y1="16216.83" x2="-3564.11" y2="16216.83" gradientTransform="translate(1606.3497 -5080.5619) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-108" data-name="Acier" x1="-3586.25" y1="16216.83" x2="-3553.83" y2="16216.83" gradientTransform="translate(1616.7413 -5080.5619) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-109" data-name="Acier" x1="-3575.87" y1="16216.83" x2="-3543.45" y2="16216.83" gradientTransform="translate(1627.2232 -5080.5619) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-110" data-name="Acier" x1="-3565.5" y1="16216.83" x2="-3533.08" y2="16216.83" gradientTransform="translate(1637.7066 -5080.5619) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-111" data-name="Acier" x1="-3596.53" y1="16219.38" x2="-3564.11" y2="16219.38" gradientTransform="translate(1606.3497 -5077.9874) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-112" data-name="Acier" x1="-3586.25" y1="16219.38" x2="-3553.83" y2="16219.38" gradientTransform="translate(1616.7413 -5077.9874) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-113" data-name="Acier" x1="-3575.87" y1="16219.38" x2="-3543.45" y2="16219.38" gradientTransform="translate(1627.2232 -5077.9874) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-114" data-name="Acier" x1="-3565.5" y1="16219.38" x2="-3533.08" y2="16219.38" gradientTransform="translate(1637.7066 -5077.9874) scale(.3393)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-115" data-name="Acier" x1="-3893.63" y1="25230.59" x2="-4025.48" y2="25332.85" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-116" data-name="Acier" x1="-3736.35" y1="25219.61" x2="-3873.57" y2="25332.62" gradientTransform="translate(1307.3041 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-117" data-name="Acier" x1="-4091.2" y1="25255.3" x2="-4037.39" y2="25253.28" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-118" data-name="Acier" x1="-4078.61" y1="25369.28" x2="-4043.33" y2="25367.96" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-119" data-name="Acier" x1="-4085.29" y1="25395.43" x2="-4036.66" y2="25393.61" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-120" data-name="Acier" x1="-3482.7" y1="25501.77" x2="-3426.61" y2="25499.67" gradientTransform="translate(-341.3231 -5497.8352) scale(-.2306 .2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-121" data-name="Acier" x1="-3484.36" y1="25254.65" x2="-3430.54" y2="25252.63" gradientTransform="translate(-341.3231 -5497.8352) scale(-.2306 .2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-122" data-name="Acier" x1="-3471.77" y1="25368.63" x2="-3436.48" y2="25367.31" gradientTransform="translate(-341.3231 -5497.8352) scale(-.2306 .2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-123" data-name="Acier" x1="-3478.44" y1="25394.78" x2="-3429.81" y2="25392.96" gradientTransform="translate(-341.3231 -5497.8352) scale(-.2306 .2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-124" data-name="Acier" x1="-3848.46" y1="25424.22" x2="-3918.07" y2="25475.67" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-125" data-name="Acier" x1="-3675.56" y1="25556.92" x2="-3615.72" y2="25554.67" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-126" data-name="Acier" x1="-3661.69" y1="25516.16" x2="-3630.46" y2="25514.99" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-127" data-name="Acier" x1="-3672.92" y1="25501.28" x2="-3621.19" y2="25499.34" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="HARD_TOP_-_ROUGE" data-name="HARD TOP - ROUGE" x1="-3085.34" y1="25721.34" x2="-3085.34" y2="25613.72" gradientTransform="translate(1486.227 -5497.8352) scale(.2306)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f08300"/>
+      <stop offset=".55" stop-color="#e4032f"/>
+      <stop offset="1" stop-color="#a3140f"/>
+    </linearGradient>
+    <linearGradient id="Acier-128" data-name="Acier" x1="-2990.65" y1="25420.09" x2="-3195.49" y2="25777.29" gradientTransform="translate(1486.227 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-129" data-name="Acier" x1="-3088.29" y1="25329.76" x2="-3209.88" y2="25416.04" gradientTransform="translate(1486.227 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-130" data-name="Acier" x1="-2962.71" y1="25327.02" x2="-3088.33" y2="25421.87" gradientTransform="translate(1486.227 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-131" data-name="Acier" x1="-3101.59" y1="25230.59" x2="-3233.43" y2="25332.84" gradientTransform="translate(1486.227 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-132" data-name="Acier" x1="-2944.3" y1="25219.61" x2="-3081.53" y2="25332.62" gradientTransform="translate(1486.7157 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="HARD_TOP_-_ROUGE-2" data-name="HARD TOP - ROUGE" x1="-3086.12" y1="25163.02" x2="-3086.12" y2="25227.6" xlink:href="#HARD_TOP_-_ROUGE"/>
+    <linearGradient id="Acier-133" data-name="Acier" x1="-3205.05" y1="25504.95" x2="-3156.08" y2="25504.95" gradientTransform="translate(1486.2318 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-134" data-name="Acier" x1="-3173.87" y1="25504.95" x2="-3124.9" y2="25504.95" gradientTransform="translate(1493.2948 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-135" data-name="Acier" x1="-3142.42" y1="25504.95" x2="-3093.45" y2="25504.95" gradientTransform="translate(1500.4198 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-136" data-name="Acier" x1="-3110.97" y1="25504.95" x2="-3061.99" y2="25504.95" gradientTransform="translate(1507.5448 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-137" data-name="Acier" x1="-3205.05" y1="25512.68" x2="-3156.08" y2="25512.68" gradientTransform="translate(1486.2318 -5496.0852) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-138" data-name="Acier" x1="-3173.87" y1="25512.68" x2="-3124.9" y2="25512.68" gradientTransform="translate(1493.2948 -5496.0852) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-139" data-name="Acier" x1="-3142.42" y1="25512.68" x2="-3093.45" y2="25512.68" gradientTransform="translate(1500.4198 -5496.0852) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-140" data-name="Acier" x1="-3110.97" y1="25512.68" x2="-3061.99" y2="25512.68" gradientTransform="translate(1507.5448 -5496.0852) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-141" data-name="Acier" x1="-3205.05" y1="25520.41" x2="-3156.08" y2="25520.41" gradientTransform="translate(1486.2318 -5494.3352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-142" data-name="Acier" x1="-3173.87" y1="25520.41" x2="-3124.9" y2="25520.41" gradientTransform="translate(1493.2948 -5494.3352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-143" data-name="Acier" x1="-3142.42" y1="25520.41" x2="-3093.45" y2="25520.41" gradientTransform="translate(1500.4198 -5494.3352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-144" data-name="Acier" x1="-3110.97" y1="25520.41" x2="-3061.99" y2="25520.41" gradientTransform="translate(1507.5448 -5494.3352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-145" data-name="Acier" x1="-3205.05" y1="25528.13" x2="-3156.08" y2="25528.13" gradientTransform="translate(1486.2318 -5492.5852) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-146" data-name="Acier" x1="-3173.87" y1="25528.13" x2="-3124.9" y2="25528.13" gradientTransform="translate(1493.2948 -5492.5852) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-147" data-name="Acier" x1="-3142.42" y1="25528.13" x2="-3093.45" y2="25528.13" gradientTransform="translate(1500.4198 -5492.5852) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-148" data-name="Acier" x1="-3110.97" y1="25528.13" x2="-3061.99" y2="25528.13" gradientTransform="translate(1507.5448 -5492.5852) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-149" data-name="Acier" x1="-3205.05" y1="25535.85" x2="-3156.08" y2="25535.85" gradientTransform="translate(1486.2318 -5490.8349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-150" data-name="Acier" x1="-3173.87" y1="25535.85" x2="-3124.9" y2="25535.85" gradientTransform="translate(1493.2948 -5490.8349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-151" data-name="Acier" x1="-3142.42" y1="25535.85" x2="-3093.45" y2="25535.85" gradientTransform="translate(1500.4198 -5490.8349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-152" data-name="Acier" x1="-3110.97" y1="25535.85" x2="-3061.99" y2="25535.85" gradientTransform="translate(1507.5448 -5490.8349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-153" data-name="Acier" x1="-3205.05" y1="25543.58" x2="-3156.08" y2="25543.58" gradientTransform="translate(1486.2318 -5489.0849) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-154" data-name="Acier" x1="-3173.87" y1="25543.58" x2="-3124.9" y2="25543.58" gradientTransform="translate(1493.2948 -5489.0849) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-155" data-name="Acier" x1="-3142.42" y1="25543.58" x2="-3093.45" y2="25543.58" gradientTransform="translate(1500.4198 -5489.0849) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-156" data-name="Acier" x1="-3110.97" y1="25543.58" x2="-3061.99" y2="25543.58" gradientTransform="translate(1507.5448 -5489.0849) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-157" data-name="Acier" x1="-3205.05" y1="25551.3" x2="-3156.08" y2="25551.3" gradientTransform="translate(1486.2318 -5487.3349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-158" data-name="Acier" x1="-3173.87" y1="25551.3" x2="-3124.9" y2="25551.3" gradientTransform="translate(1493.2948 -5487.3349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-159" data-name="Acier" x1="-3142.42" y1="25551.3" x2="-3093.45" y2="25551.3" gradientTransform="translate(1500.4198 -5487.3349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-160" data-name="Acier" x1="-3110.97" y1="25551.3" x2="-3061.99" y2="25551.3" gradientTransform="translate(1507.5448 -5487.3349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-161" data-name="Acier" x1="-3205.05" y1="25559.04" x2="-3156.08" y2="25559.04" gradientTransform="translate(1486.2318 -5485.5849) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-162" data-name="Acier" x1="-3173.87" y1="25559.04" x2="-3124.9" y2="25559.04" gradientTransform="translate(1493.2948 -5485.5849) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-163" data-name="Acier" x1="-3142.42" y1="25559.04" x2="-3093.45" y2="25559.04" gradientTransform="translate(1500.4198 -5485.5849) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-164" data-name="Acier" x1="-3110.97" y1="25559.04" x2="-3061.99" y2="25559.04" gradientTransform="translate(1507.5448 -5485.5849) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-165" data-name="Acier" x1="-3205.05" y1="25566.76" x2="-3156.08" y2="25566.76" gradientTransform="translate(1486.2318 -5483.8349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-166" data-name="Acier" x1="-3173.87" y1="25566.76" x2="-3124.9" y2="25566.76" gradientTransform="translate(1493.2948 -5483.8349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-167" data-name="Acier" x1="-3142.42" y1="25566.76" x2="-3093.45" y2="25566.76" gradientTransform="translate(1500.4198 -5483.8349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-168" data-name="Acier" x1="-3110.97" y1="25566.76" x2="-3061.99" y2="25566.76" gradientTransform="translate(1507.5448 -5483.8349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-169" data-name="Acier" x1="-3205.05" y1="25574.48" x2="-3156.08" y2="25574.48" gradientTransform="translate(1486.2318 -5482.0849) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-170" data-name="Acier" x1="-3173.87" y1="25574.48" x2="-3124.9" y2="25574.48" gradientTransform="translate(1493.2948 -5482.0849) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-171" data-name="Acier" x1="-3142.42" y1="25574.48" x2="-3093.45" y2="25574.48" gradientTransform="translate(1500.4198 -5482.0849) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-172" data-name="Acier" x1="-3110.97" y1="25574.48" x2="-3061.99" y2="25574.48" gradientTransform="translate(1507.5448 -5482.0849) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-173" data-name="Acier" x1="-3205.05" y1="25582.21" x2="-3156.08" y2="25582.21" gradientTransform="translate(1486.2318 -5480.3349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-174" data-name="Acier" x1="-3173.87" y1="25582.21" x2="-3124.9" y2="25582.21" gradientTransform="translate(1493.2948 -5480.3349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-175" data-name="Acier" x1="-3142.42" y1="25582.21" x2="-3093.45" y2="25582.21" gradientTransform="translate(1500.4198 -5480.3349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-176" data-name="Acier" x1="-3110.97" y1="25582.21" x2="-3061.99" y2="25582.21" gradientTransform="translate(1507.5448 -5480.3349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-177" data-name="Acier" x1="-3205.05" y1="25589.94" x2="-3156.08" y2="25589.94" gradientTransform="translate(1486.2318 -5478.5849) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-178" data-name="Acier" x1="-3173.87" y1="25589.94" x2="-3124.9" y2="25589.94" gradientTransform="translate(1493.2948 -5478.5849) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-179" data-name="Acier" x1="-3142.42" y1="25589.94" x2="-3093.45" y2="25589.94" gradientTransform="translate(1500.4198 -5478.5849) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-180" data-name="Acier" x1="-3110.97" y1="25589.94" x2="-3061.99" y2="25589.94" gradientTransform="translate(1507.5448 -5478.5849) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-181" data-name="Acier" x1="-3205.05" y1="25597.66" x2="-3156.08" y2="25597.66" gradientTransform="translate(1486.2318 -5476.8349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-182" data-name="Acier" x1="-3173.87" y1="25597.66" x2="-3124.9" y2="25597.66" gradientTransform="translate(1493.2948 -5476.8349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-183" data-name="Acier" x1="-3142.42" y1="25597.66" x2="-3093.45" y2="25597.66" gradientTransform="translate(1500.4198 -5476.8349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-184" data-name="Acier" x1="-3110.97" y1="25597.66" x2="-3061.99" y2="25597.66" gradientTransform="translate(1507.5448 -5476.8349) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-185" data-name="Acier" x1="-2959.9" y1="16138.7" x2="-3029.53" y2="16190.16" xlink:href="#Acier"/>
+    <linearGradient id="Acier-186" data-name="Acier" x1="-2982.94" y1="45715" x2="-2085.39" y2="45715" gradientTransform="translate(1128.2963 -5933.9192) scale(.1395)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-187" data-name="Acier" x1="-3056.42" y1="25424.21" x2="-3126.03" y2="25475.67" gradientTransform="translate(1486.227 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-188" data-name="Acier" x1="-2517.71" y1="25501" x2="-2461.62" y2="25498.9" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-189" data-name="Acier" x1="-2571.13" y1="25555.77" x2="-2511.29" y2="25553.52" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-190" data-name="Acier" x1="-2557.26" y1="25515.01" x2="-2526.03" y2="25513.84" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-191" data-name="Acier" x1="-2568.49" y1="25500.13" x2="-2516.76" y2="25498.19" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-192" data-name="Acier" x1="-2519.36" y1="25253.87" x2="-2465.55" y2="25251.86" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-193" data-name="Acier" x1="-2506.77" y1="25367.86" x2="-2471.49" y2="25366.53" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-194" data-name="Acier" x1="-2513.45" y1="25394.01" x2="-2464.82" y2="25392.19" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-195" data-name="Acier" x1="-5054.54" y1="25500.35" x2="-4998.45" y2="25498.25" gradientTransform="translate(-341.3231 -5497.8352) scale(-.2306 .2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-196" data-name="Acier" x1="-5056.19" y1="25253.22" x2="-5002.38" y2="25251.21" gradientTransform="translate(-341.3231 -5497.8352) scale(-.2306 .2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-197" data-name="Acier" x1="-5043.6" y1="25367.21" x2="-5008.32" y2="25365.88" gradientTransform="translate(-341.3231 -5497.8352) scale(-.2306 .2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-198" data-name="Acier" x1="-5050.28" y1="25393.36" x2="-5001.65" y2="25391.54" gradientTransform="translate(-341.3231 -5497.8352) scale(-.2306 .2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-199" data-name="Acier" x1="-2103.73" y1="25555.49" x2="-2043.88" y2="25553.25" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-200" data-name="Acier" x1="-2089.85" y1="25514.74" x2="-2058.62" y2="25513.57" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+    <linearGradient id="Acier-201" data-name="Acier" x1="-2101.08" y1="25499.86" x2="-2049.35" y2="25497.92" gradientTransform="translate(1306.8158 -5497.8352) scale(.2306)" xlink:href="#Acier"/>
+  </defs>
+  <path class="cls-78" d="M499.77,365.16v-70.26c0-8.32,7.42-20.4,21.8-21.16l-.1-28.12h-4.37v-22.21l7.37-.2c1.42-.04,8.79.04,14.1,5.21,2.18,2.12,3.63,4.77,4.33,7.78,1.74-3.03,3.38-3.73,4.63-4.27,1.51-.65,4.65-1.91,43.36-1.44h7.14c38.71-.47,41.85.96,43.36,1.6,1.25.54,2.89,1.24,4.63,4.27.7-3.01,2.15-5.66,4.33-7.78,5.31-5.17,12.68-5.25,14.1-5.21l7.37.19v22.22h-4.37l-.1,28.12c14.38.76,21.8,12.83,21.8,21.16v69.25l.12.45,18.22,1.51.05-6.32v-16.02c0-4.04,5.44-7.57,5.44-7.57l10.83-9-.29-14.54-3.26.04v-19.82l6.69-.2c1.14-.03,7.05.03,11.38,4.24l.31.56s38.46,0,38.37,0h34.95l.32-.81c4.32-4.21,10.23-4.27,11.37-4.24l6.7.19v19.82l-3.26-.04-.29,14.54,10.83,9s5.43,3.53,5.43,7.57v23.59h0v9.47h0l.08,9.18c55.07,12.64,120.78,35.57,120.78,72.49,0,34.72-59.31,57.05-109.13,69.59l-2.08.34.13,5.3s.38,6.18-9.46,6.05l-1.81.05h-23.01l-24.7.1c-59.16,9.52-127.52,14.53-198.78,14.53s-140.06-5.13-198.92-14.57l-9.79-.07h-16.24l-20.87-.03-3.03-.03c-9.84.13-9.46-6.05-9.46-6.05l.13-5.3-.09-.41-1.84-.38c-4.5-1.14-9.11-2.39-13.68-3.68-62.02-17.36-94.8-40.02-94.8-65.53,0-36.05,65.72-58.58,118.84-71.11v-10.48h0v-9.47h0v-23.59c0-4.03,5.43-7.57,5.43-7.57l10.68-9v-14.54l-3.41.04v-19.82l6.7-.19c1.14-.03,7.05.03,11.38,4.24l.31.81h34.95c-.09,0,38.36,0,38.36,0l.31-.56c4.32-4.21,10.23-4.27,11.37-4.24l6.7.2v19.82l-3.27-.04-.29,14.54,10.83,9s5.43,3.53,5.43,7.57v22.46l.51.04c4.71-.36,15.27-1.07,15.28-1.07,0,0,1.48-.1,1.47-.1l1.72-.12"/>
+  <path class="cls-23" d="M643.96,259.3s-2.72-19.05-5.9-20.41c-3.18-1.36-40.38-.91-40.38-.91h-6.81s-37.2-.45-40.38.91c-3.18,1.36-5.9,20.41-5.9,20.41"/>
+  <path class="cls-226" d="M852.58,484.03c14.07-9.8,21.54-20.57,21.54-31.88,0-45.24-124.51-81.91-278.1-81.91s-278.1,36.67-278.1,81.91c0,10.55,6.54,20.64,18.88,29.9v38.17c-62.88-15.99-101.82-37.79-101.82-61.81,0-49.07,161.48-88.85,360.67-88.85s360.67,39.78,360.67,88.85c0,24.25-39.77,46.24-103.73,62.27v-36.66Z"/>
+  <path class="cls-41" d="M594.54,389.9h85.88l-.88-76.63-11.01.44v-28.18s-2.2-3.97-3.96-4.85c-1.76-.88-11.01-.88-12.33-3.52-1.32-2.64-5.73-15.85-5.73-15.85,0,0-1.76-2.2-4.84-2.2h-94.25c-3.08,0-4.84,2.2-4.84,2.2,0,0-4.4,13.21-5.72,15.85-1.32,2.64-10.57,2.64-12.33,3.52-1.76.88-3.96,4.85-3.96,4.85v28.18l-11.01-.44-.88,76.63h85.88Z"/>
+  <path class="cls-26" d="M594.54,426.02h90.28s.88-38.46,0-41.1c-.88-2.64-2.35-2.35-2.35-2.35h-34.2c-2.35,0-3.23-1.47-3.23-1.47,0,0-.3-28.19,0-37.87,0,0-.59-10.87-2.35-12.63-1.76-1.76-2.64-38.46-2.64-38.46,0,0,.88-1.47-2.64-1.47s-42.87-.29-42.87-.29c0,0-39.34.29-42.87.29s-2.64,1.47-2.64,1.47c0,0-.88,36.7-2.64,38.46-1.76,1.76-2.35,12.63-2.35,12.63.29,9.69,0,37.87,0,37.87,0,0-.88,1.47-3.23,1.47h-34.2s-1.47-.29-2.35,2.35c-.88,2.64,0,41.1,0,41.1h90.28Z"/>
+  <path class="cls-55" d="M594.3,326.49l42.52,7.93s3.08,2.2,3.52,4.41c.44,2.2,0,82.36,0,82.36h-91.6s-.44-80.16,0-82.36c.44-2.2,3.52-4.41,3.52-4.41l42.52-7.93"/>
+  <rect class="cls-122" x="526.13" y="321.64" width="14.09" height="59.16"/>
+  <rect class="cls-112" x="528.28" y="323" width="1.76" height="56.45"/>
+  <g>
+    <rect class="cls-122" x="507.4" y="360.86" width="16.74" height="19.96"/>
+    <rect class="cls-122" x="511.51" y="354.18" width="7.63" height="4.99"/>
+    <path class="cls-122" d="M515.04,352.66h7.34v-1.76s-2.94-1.76-7.34-2.06c-4.41.29-7.34,2.06-7.34,2.06v1.76h7.34Z"/>
+    <rect class="cls-112" x="512.61" y="355.34" width=".55" height="2.67"/>
+    <rect class="cls-112" x="509.26" y="362.25" width="1.54" height="17.19"/>
+    <rect class="cls-112" x="670.97" y="355.48" width=".55" height="2.51"/>
+  </g>
+  <polygon class="cls-172" points="594.54 421.03 686.07 421.03 686.07 450.68 594.54 450.68 503.01 450.68 503.01 421.03 594.54 421.03"/>
+  <path d="M592.95,293.31h-40.07c-.34,0-.62.28-.62.63v28.99c0,.35.28.62.62.62h39.95"/>
+  <path d="M593.86,323.55h42.34c.34,0,.62-.28.62-.62v-28.99c0-.35-.28-.63-.62-.63h-42.34"/>
+  <path class="cls-35" d="M553.57,347.76v-8.17s0-1.02,5.1-2.04c5.1-1.02,29.94-5.78,29.94-5.78"/>
+  <path class="cls-35" d="M634.89,347.76v-8.17s0-1.02-5.11-2.04c-5.1-1.02-30.96-5.78-30.96-5.78"/>
+  <path d="M583.96,287.65c2.13,0,3.86-1.73,3.86-3.86v-15.42c0-2.13-1.73-3.86-3.86-3.86h-30.62c-2.13,0-3.86,1.73-3.86,3.86v15.42c0,2.13,1.73,3.86,3.86,3.86h30.62Z"/>
+  <path d="M603.78,264.51h30.62c2.13,0,3.86,1.73,3.86,3.86v15.42c0,2.13-1.73,3.86-3.86,3.86h-30.62c-2.13,0-3.86-1.73-3.86-3.86v-15.42c0-2.13,1.73-3.86,3.86-3.86Z"/>
+  <g>
+    <rect class="cls-122" x="664.95" y="359.86" width="16.74" height="19.96"/>
+    <rect class="cls-122" x="669.94" y="353.18" width="7.63" height="4.99"/>
+    <path class="cls-122" d="M674.05,351.66h-7.34v-1.76s2.93-1.76,7.34-2.06c4.41.29,7.34,2.06,7.34,2.06v1.76h-7.34Z"/>
+  </g>
+  <g>
+    <path class="cls-122" d="M529.65,302.24v-59.6s-.59-1.42-2.35-2.28l-2.64-.28v-7.68s11.16-.28,11.16,9.39v60.45h-6.17Z"/>
+    <g>
+      <rect class="cls-122" x="528.48" y="303.74" width="9.1" height="2.28"/>
+      <rect class="cls-122" x="526.42" y="307.55" width="13.21" height="12.52"/>
+    </g>
+    <g>
+      <rect class="cls-122" x="651.85" y="305.12" width="9.1" height="2.28"/>
+      <rect class="cls-122" x="649.79" y="308.92" width="13.21" height="12.52"/>
+    </g>
+  </g>
+  <rect class="cls-122" x="648.91" y="323.11" width="14.09" height="56.81"/>
+  <rect class="cls-112" x="651.09" y="324.46" width="1.76" height="54.22"/>
+  <path class="cls-122" d="M659.48,303.87v-62.43s.59-1.49,2.35-2.38l2.64-.3v-8.05s-11.16-.3-11.16,9.84v63.32h6.16Z"/>
+  <rect class="cls-18" x="508.25" y="294.39" width="12.31" height="23.42"/>
+  <rect class="cls-121" x="592.77" y="293.26" width="1.32" height="30.62"/>
+  <g>
+    <path class="cls-120" d="M543.22,402.52c1.02,0,1.84-.58,1.84-1.29v-10.3c0-.71-.82-1.29-1.84-1.29h-30.2c-1.02,0-1.84.58-1.84,1.29v10.3c0,.71.82,1.29,1.84,1.29h30.2Z"/>
+    <line class="cls-70" x1="527.35" y1="402.48" x2="527.35" y2="391.32"/>
+  </g>
+  <g>
+    <path class="cls-120" d="M678.1,403.33c1.02,0,1.84-.58,1.84-1.29v-10.3c0-.71-.82-1.29-1.84-1.29h-30.2c-1.02,0-1.84.58-1.84,1.29v10.3c0,.71.82,1.29,1.84,1.29h30.2Z"/>
+    <line class="cls-70" x1="662.23" y1="403.29" x2="662.23" y2="392.13"/>
+  </g>
+  <path class="cls-120" d="M516.84,439.27h12.84c.34,0,.62.28.62.62v6.68c0,.34-.28.62-.62.62h-12.84c-.34,0-.62-.28-.62-.62v-6.68c0-.34.28-.62.62-.62Z"/>
+  <path class="cls-120" d="M660.86,439.27h12.84c.34,0,.62.28.62.62v6.68c0,.34-.28.62-.62.62h-12.84c-.34,0-.62-.28-.62-.62v-6.68c0-.34.28-.62.62-.62Z"/>
+  <rect class="cls-18" x="668.53" y="293.93" width="12.07" height="23.42"/>
+  <rect class="cls-112" x="666.46" y="361.72" width=".55" height="16.62"/>
+  <rect class="cls-112" x="671.25" y="354.25" width=".54" height="2.84"/>
+  <line class="cls-68" x1="517.91" y1="295.76" x2="517.91" y2="316.89"/>
+  <line class="cls-68" x1="670.79" y1="295.76" x2="670.79" y2="316.56"/>
+  <line class="cls-68" x1="504.46" y1="422.81" x2="504.46" y2="449.43"/>
+  <line class="cls-68" x1="683.64" y1="422.81" x2="683.64" y2="449.43"/>
+  <path class="cls-73" d="M446.49,319.69s-1.86-13.03-4.03-13.96c-2.17-.93-27.62-.62-27.62-.62h-4.66s-25.44-.31-27.62.62c-2.17.93-4.03,13.96-4.03,13.96"/>
+  <path class="cls-74" d="M412.69,409.02h58.74l-.6-52.41-7.53.3v-19.28s-1.51-2.71-2.71-3.31c-1.2-.6-7.53-.6-8.44-2.41-.9-1.81-3.91-10.84-3.91-10.84,0,0-1.21-1.51-3.31-1.51h-64.46c-2.11,0-3.31,1.51-3.31,1.51,0,0-3.01,9.04-3.92,10.84-.9,1.81-7.23,1.81-8.43,2.41-1.21.6-2.71,3.31-2.71,3.31v19.28l-7.53-.3-.6,52.41h58.74Z"/>
+  <path class="cls-75" d="M412.69,433.72h61.75s.6-26.31,0-28.11c-.6-1.8-1.61-1.61-1.61-1.61h-23.4c-1.61,0-2.21-1-2.21-1,0,0-.2-19.28,0-25.91,0,0-.4-7.43-1.6-8.64-1.21-1.2-1.81-26.31-1.81-26.31,0,0,.6-1.01-1.81-1.01s-29.32-.2-29.32-.2c0,0-26.91.2-29.32.2s-1.81,1.01-1.81,1.01c0,0-.6,25.1-1.81,26.31-1.21,1.21-1.61,8.64-1.61,8.64.2,6.63,0,25.91,0,25.91,0,0-.6,1-2.21,1h-23.4s-1-.2-1.61,1.61c-.6,1.81,0,28.11,0,28.11h61.75Z"/>
+  <path class="cls-34" d="M412.52,365.64l29.08,5.42s2.11,1.51,2.41,3.02c.3,1.51,0,56.33,0,56.33h-62.66s-.3-54.82,0-56.33c.3-1.51,2.41-3.02,2.41-3.02l29.08-5.42"/>
+  <g>
+    <rect class="cls-20" x="365.9" y="363.34" width="9.64" height="38.86"/>
+    <rect x="366.91" y="364.15" width="1.2" height="37.23"/>
+  </g>
+  <g>
+    <rect class="cls-48" x="353.1" y="388.55" width="11.45" height="13.65"/>
+    <rect class="cls-45" x="356.12" y="384.39" width="5.22" height="3.41"/>
+    <path class="cls-29" d="M358.53,383.79h5.02v-1.2s-2.01-1.21-5.02-1.41c-3.01.2-5.02,1.41-5.02,1.41v1.2h5.02Z"/>
+    <rect x="356.68" y="384.8" width=".75" height="2.56"/>
+    <rect x="354.37" y="389.3" width="1.05" height="12.11"/>
+  </g>
+  <polygon class="cls-174" points="412.69 430.31 475.29 430.31 475.29 450.59 412.69 450.59 350.09 450.59 350.09 430.31 412.69 430.31"/>
+  <path class="cls-210" d="M411.6,342.95h-27.41c-.23,0-.43.19-.43.43v19.83c0,.24.19.43.43.43h27.33"/>
+  <path class="cls-105" d="M412.22,363.64h28.96c.24,0,.43-.19.43-.43v-19.83c0-.24-.19-.43-.43-.43h-28.96"/>
+  <path class="cls-12" d="M384.66,380.2v-5.58s0-.7,3.49-1.4c3.49-.7,20.48-3.96,20.48-3.96"/>
+  <path class="cls-12" d="M440.28,380.2v-5.58s0-.7-3.49-1.4c-3.49-.7-21.18-3.96-21.18-3.96"/>
+  <g>
+    <polygon points="574.03 417.01 574.03 347.01 573 344.27 573 417.01 574.03 417.01"/>
+    <rect class="cls-86" x="554.37" y="351.53" width="16.62" height="2.33"/>
+    <rect class="cls-143" x="575.34" y="351.53" width="16.62" height="2.33"/>
+    <rect class="cls-149" x="596.49" y="351.53" width="16.62" height="2.33"/>
+    <rect class="cls-145" x="617.64" y="351.53" width="16.62" height="2.33"/>
+    <rect class="cls-118" x="554.37" y="356.73" width="16.62" height="2.34"/>
+    <rect class="cls-176" x="575.34" y="356.73" width="16.62" height="2.34"/>
+    <rect class="cls-202" x="596.49" y="356.73" width="16.62" height="2.34"/>
+    <rect class="cls-233" x="617.64" y="356.73" width="16.62" height="2.34"/>
+    <rect class="cls-190" x="554.37" y="361.93" width="16.62" height="2.33"/>
+    <rect class="cls-135" x="575.34" y="361.93" width="16.62" height="2.33"/>
+    <rect class="cls-203" x="596.49" y="361.93" width="16.62" height="2.33"/>
+    <rect class="cls-106" x="617.64" y="361.93" width="16.62" height="2.33"/>
+    <rect class="cls-218" x="554.37" y="367.12" width="16.62" height="2.33"/>
+    <rect class="cls-189" x="575.34" y="367.12" width="16.62" height="2.33"/>
+    <rect class="cls-1" x="596.49" y="367.12" width="16.62" height="2.33"/>
+    <rect class="cls-159" x="617.64" y="367.12" width="16.62" height="2.33"/>
+    <rect class="cls-6" x="554.37" y="372.32" width="16.62" height="2.33"/>
+    <rect class="cls-99" x="575.34" y="372.32" width="16.62" height="2.33"/>
+    <rect class="cls-123" x="596.49" y="372.32" width="16.62" height="2.33"/>
+    <rect class="cls-3" x="617.64" y="372.32" width="16.62" height="2.33"/>
+    <rect class="cls-175" x="554.37" y="377.51" width="16.62" height="2.34"/>
+    <rect class="cls-162" x="575.34" y="377.51" width="16.62" height="2.34"/>
+    <rect class="cls-168" x="596.49" y="377.51" width="16.62" height="2.34"/>
+    <rect class="cls-146" x="617.64" y="377.51" width="16.62" height="2.34"/>
+    <rect class="cls-164" x="554.37" y="382.71" width="16.62" height="2.34"/>
+    <rect class="cls-186" x="575.34" y="382.71" width="16.62" height="2.34"/>
+    <rect class="cls-209" x="596.49" y="382.71" width="16.62" height="2.34"/>
+    <rect class="cls-84" x="617.64" y="382.71" width="16.62" height="2.34"/>
+    <rect class="cls-139" x="554.37" y="387.9" width="16.62" height="2.34"/>
+    <rect class="cls-183" x="575.34" y="387.9" width="16.62" height="2.34"/>
+    <rect class="cls-204" x="596.49" y="387.9" width="16.62" height="2.34"/>
+    <rect class="cls-136" x="617.64" y="387.9" width="16.62" height="2.34"/>
+    <rect class="cls-157" x="554.37" y="393.1" width="16.62" height="2.33"/>
+    <rect class="cls-152" x="575.34" y="393.1" width="16.62" height="2.33"/>
+    <rect class="cls-141" x="596.49" y="393.1" width="16.62" height="2.33"/>
+    <rect class="cls-216" x="617.64" y="393.1" width="16.62" height="2.33"/>
+    <rect class="cls-9" x="554.37" y="398.29" width="16.62" height="2.34"/>
+    <rect class="cls-110" x="575.34" y="398.29" width="16.62" height="2.34"/>
+    <rect class="cls-91" x="596.49" y="398.29" width="16.62" height="2.34"/>
+    <rect class="cls-129" x="617.64" y="398.29" width="16.62" height="2.34"/>
+    <rect class="cls-138" x="554.37" y="403.49" width="16.62" height="2.34"/>
+    <rect class="cls-167" x="575.34" y="403.49" width="16.62" height="2.34"/>
+    <rect class="cls-147" x="596.49" y="403.49" width="16.62" height="2.34"/>
+    <rect class="cls-100" x="617.64" y="403.49" width="16.62" height="2.34"/>
+    <rect class="cls-170" x="554.37" y="408.69" width="16.62" height="2.33"/>
+    <rect class="cls-102" x="575.34" y="408.69" width="16.62" height="2.33"/>
+    <rect class="cls-142" x="596.49" y="408.69" width="16.62" height="2.33"/>
+    <rect class="cls-130" x="617.64" y="408.69" width="16.62" height="2.33"/>
+    <rect class="cls-148" x="554.37" y="413.88" width="16.62" height="2.34"/>
+    <rect class="cls-166" x="575.34" y="413.88" width="16.62" height="2.34"/>
+    <rect class="cls-154" x="596.49" y="413.88" width="16.62" height="2.34"/>
+    <rect class="cls-119" x="617.64" y="413.88" width="16.62" height="2.34"/>
+    <polygon points="594.75 417.01 594.75 347.01 593.71 344.27 593.71 417.01 594.75 417.01"/>
+    <polygon points="616.14 417.01 616.14 347.01 615.11 344.27 615.11 417.01 616.14 417.01"/>
+    <g>
+      <polygon class="cls-112" points="573.57 417.12 573.57 347.12 572.54 344.38 572.54 417.12 573.57 417.12"/>
+      <polygon class="cls-112" points="594.29 417.12 594.29 347.12 593.25 344.38 593.25 417.12 594.29 417.12"/>
+      <polygon class="cls-112" points="615.69 417.12 615.69 347.12 614.65 344.38 614.65 417.12 615.69 417.12"/>
+    </g>
+  </g>
+  <g>
+    <polygon points="399.3 426.55 399.3 380.21 398.62 378.4 398.62 426.55 399.3 426.55"/>
+    <rect class="cls-184" x="386.29" y="383.21" width="11" height="1.54"/>
+    <rect class="cls-96" x="400.17" y="383.21" width="11" height="1.54"/>
+    <rect class="cls-117" x="414.17" y="383.21" width="11" height="1.54"/>
+    <rect class="cls-188" x="428.17" y="383.21" width="11" height="1.54"/>
+    <rect class="cls-108" x="386.29" y="386.65" width="11" height="1.55"/>
+    <rect class="cls-169" x="400.17" y="386.65" width="11" height="1.55"/>
+    <rect class="cls-65" x="414.17" y="386.65" width="11" height="1.55"/>
+    <rect class="cls-194" x="428.17" y="386.65" width="11" height="1.55"/>
+    <rect class="cls-213" x="386.29" y="390.09" width="11" height="1.54"/>
+    <rect class="cls-165" x="400.17" y="390.09" width="11" height="1.54"/>
+    <rect class="cls-111" x="414.17" y="390.09" width="11" height="1.54"/>
+    <rect class="cls-60" x="428.17" y="390.09" width="11" height="1.54"/>
+    <rect class="cls-193" x="386.29" y="393.52" width="11" height="1.54"/>
+    <rect class="cls-229" x="400.17" y="393.52" width="11" height="1.54"/>
+    <rect class="cls-137" x="414.17" y="393.52" width="11" height="1.54"/>
+    <rect class="cls-205" x="428.17" y="393.52" width="11" height="1.54"/>
+    <rect class="cls-116" x="386.29" y="396.96" width="11" height="1.54"/>
+    <rect class="cls-225" x="400.17" y="396.96" width="11" height="1.54"/>
+    <rect class="cls-5" x="414.17" y="396.96" width="11" height="1.54"/>
+    <rect class="cls-214" x="428.17" y="396.96" width="11" height="1.54"/>
+    <rect class="cls-88" x="386.29" y="400.4" width="11" height="1.55"/>
+    <rect class="cls-220" x="400.17" y="400.4" width="11" height="1.55"/>
+    <rect class="cls-187" x="414.17" y="400.4" width="11" height="1.55"/>
+    <rect class="cls-232" x="428.17" y="400.4" width="11" height="1.55"/>
+    <rect class="cls-181" x="386.29" y="403.84" width="11" height="1.55"/>
+    <rect class="cls-101" x="400.17" y="403.84" width="11" height="1.55"/>
+    <rect class="cls-109" x="414.17" y="403.84" width="11" height="1.55"/>
+    <rect class="cls-198" x="428.17" y="403.84" width="11" height="1.55"/>
+    <rect class="cls-161" x="386.29" y="407.28" width="11" height="1.55"/>
+    <rect class="cls-206" x="400.17" y="407.28" width="11" height="1.55"/>
+    <rect class="cls-125" x="414.17" y="407.28" width="11" height="1.55"/>
+    <rect class="cls-93" x="428.17" y="407.28" width="11" height="1.55"/>
+    <rect class="cls-179" x="386.29" y="410.72" width="11" height="1.54"/>
+    <rect class="cls-63" x="400.17" y="410.72" width="11" height="1.54"/>
+    <rect class="cls-156" x="414.17" y="410.72" width="11" height="1.54"/>
+    <rect class="cls-140" x="428.17" y="410.72" width="11" height="1.54"/>
+    <rect class="cls-107" x="386.29" y="414.16" width="11" height="1.55"/>
+    <rect class="cls-201" x="400.17" y="414.16" width="11" height="1.55"/>
+    <rect class="cls-113" x="414.17" y="414.16" width="11" height="1.55"/>
+    <rect class="cls-230" x="428.17" y="414.16" width="11" height="1.55"/>
+    <rect class="cls-185" x="386.29" y="417.6" width="11" height="1.55"/>
+    <rect class="cls-95" x="400.17" y="417.6" width="11" height="1.55"/>
+    <rect class="cls-171" x="414.17" y="417.6" width="11" height="1.55"/>
+    <rect class="cls-103" x="428.17" y="417.6" width="11" height="1.55"/>
+    <rect class="cls-115" x="386.29" y="421.04" width="11" height="1.54"/>
+    <rect class="cls-81" x="400.17" y="421.04" width="11" height="1.54"/>
+    <rect class="cls-144" x="414.17" y="421.04" width="11" height="1.54"/>
+    <rect class="cls-197" x="428.17" y="421.04" width="11" height="1.54"/>
+    <rect class="cls-199" x="386.29" y="424.48" width="11" height="1.55"/>
+    <rect class="cls-4" x="400.17" y="424.48" width="11" height="1.55"/>
+    <rect class="cls-215" x="414.17" y="424.48" width="11" height="1.55"/>
+    <rect class="cls-62" x="428.17" y="424.48" width="11" height="1.55"/>
+    <polygon points="413.02 426.55 413.02 380.21 412.33 378.4 412.33 426.55 413.02 426.55"/>
+    <polygon points="427.18 426.55 427.18 380.21 426.5 378.4 426.5 426.55 427.18 426.55"/>
+    <g>
+      <polygon class="cls-112" points="399 426.62 399 380.28 398.32 378.47 398.32 426.62 399 426.62"/>
+      <polygon class="cls-112" points="412.71 426.62 412.71 380.28 412.03 378.47 412.03 426.62 412.71 426.62"/>
+      <polygon class="cls-112" points="426.88 426.62 426.88 380.28 426.19 378.47 426.19 426.62 426.88 426.62"/>
+    </g>
+  </g>
+  <path class="cls-104" d="M384.51,323.26h20.94c1.46,0,2.64,1.18,2.64,2.64v10.55c0,1.46-1.18,2.64-2.64,2.64h-20.94c-1.46,0-2.64-1.18-2.64-2.64v-10.55c0-1.46,1.18-2.64,2.64-2.64Z"/>
+  <path class="cls-114" d="M419.01,323.26h20.94c1.46,0,2.64,1.18,2.64,2.64v10.55c0,1.46-1.18,2.64-2.64,2.64h-20.94c-1.46,0-2.64-1.18-2.64-2.64v-10.55c0-1.46,1.18-2.64,2.64-2.64Z"/>
+  <g>
+    <g>
+      <path class="cls-11" d="M368.53,350.48v-42.07s-.4-1-1.61-1.61l-1.81-.2v-5.42s7.63-.2,7.63,6.63v42.67h-4.22Z"/>
+      <path class="cls-39" d="M366.92,305.33s2.94.15,2.94,3.16v40.82"/>
+    </g>
+    <g>
+      <rect class="cls-27" x="367.73" y="351.35" width="6.23" height="1.61"/>
+      <rect class="cls-13" x="366.32" y="353.7" width="9.04" height="8.84"/>
+    </g>
+  </g>
+  <g>
+    <g>
+      <rect class="cls-43" x="450.02" y="363.19" width="9.64" height="38.86"/>
+      <rect x="457.44" y="364" width="1.2" height="37.23"/>
+    </g>
+    <g>
+      <g>
+        <path class="cls-33" d="M457.02,350.33v-42.07s.4-1,1.61-1.61l1.81-.2v-5.42s-7.63-.2-7.63,6.63v42.67s4.22,0,4.22,0Z"/>
+        <path class="cls-39" d="M458.64,305.18s-2.94.15-2.94,3.16v40.82"/>
+      </g>
+      <g>
+        <rect class="cls-22" x="451.6" y="351.2" width="6.23" height="1.61"/>
+        <rect class="cls-15" x="450.2" y="353.55" width="9.04" height="8.84"/>
+      </g>
+    </g>
+  </g>
+  <path class="cls-67" d="M384.12,435.2c-.37.29-1.24-.7-1.71-.54-.78.47-.93,1.4-.47,2.17.15.15.78.15,1.24,0,.62-.31.47-1.09.47-1.71"/>
+  <path class="cls-67" d="M376.98,432.17c-.9-.9-2.17.78-3.26,1.25-.31,0-1.24.31-.78.62.16.31,1.09.31,1.4,0,.62-.77,1.71-.62,2.48-1.24.15-.16.31-.47.15-.62Z"/>
+  <rect class="cls-16" x="353.54" y="342.47" width="8.43" height="16.02"/>
+  <rect class="cls-121" x="411.48" y="342.92" width=".9" height="20.94"/>
+  <g>
+    <path class="cls-31" d="M409.15,362.68l-.11,13.43.66.22v2.41s.11.44.99.44h2.74l.66-.44v-2.41l.66-.22v-13.43s-2.41-1.1-5.59,0Z"/>
+    <line class="cls-25" x1="410.25" y1="362.84" x2="410.25" y2="375.56"/>
+    <line class="cls-25" x1="411.89" y1="362.84" x2="411.89" y2="375.56"/>
+    <line class="cls-25" x1="413.54" y1="362.84" x2="413.54" y2="375.56"/>
+    <path class="cls-50" d="M411.97,371.08c2.03,0,3.67-1.64,3.67-3.67s-1.65-3.67-3.67-3.67-3.67,1.64-3.67,3.67,1.65,3.67,3.67,3.67Z"/>
+    <path class="cls-69" d="M411.89,364.35c-1.71,0-3.1,1.39-3.1,3.1s1.39,3.1,3.1,3.1,3.1-1.39,3.1-3.1-1.39-3.1-3.1-3.1"/>
+    <g>
+      <path class="cls-112" d="M410.8,367.02v-1.54h.51v.62l.95-.62h.67l-1.02.64,1.07.9h-.67l-.76-.67-.24.15v.52h-.51Z"/>
+      <path class="cls-112" d="M410.17,367.62h.55l.4,1.13.34-1.13h.55l.35,1.12.42-1.12h.52l-.7,1.54h-.5l-.37-1.2-.38,1.2h-.48l-.7-1.54Z"/>
+    </g>
+    <path class="cls-112" d="M409.59,376.33s1.54,1.2,4.5,0"/>
+  </g>
+  <g>
+    <path class="cls-76" d="M377.58,417.65c.69,0,1.26-.39,1.26-.88v-7.04c0-.48-.56-.88-1.26-.88h-20.66c-.69,0-1.26.4-1.26.88v7.04c0,.49.56.88,1.26.88h20.66Z"/>
+    <line class="cls-76" x1="366.73" y1="417.62" x2="366.73" y2="409.99"/>
+  </g>
+  <g>
+    <path class="cls-76" d="M470.06,417.65c.69,0,1.26-.39,1.26-.88v-7.04c0-.48-.56-.88-1.26-.88h-20.66c-.69,0-1.26.4-1.26.88v7.04c0,.49.56.88,1.26.88h20.66Z"/>
+    <line class="cls-76" x1="459.21" y1="417.62" x2="459.21" y2="409.99"/>
+  </g>
+  <path class="cls-120" d="M368.33,448.21c.24,0,.43-.19.43-.43v-4.57c0-.24-.19-.42-.43-.42h-8.79c-.24,0-.43.19-.43.42v4.57c0,.24.19.43.43.43h8.79Z"/>
+  <path class="cls-120" d="M467.14,448.21c.24,0,.43-.19.43-.43v-4.57c0-.24-.19-.42-.43-.42h-8.78c-.24,0-.43.19-.43.42v4.57c0,.24.19.43.43.43h8.78Z"/>
+  <rect class="cls-16" x="463.4" y="342.47" width="8.44" height="16.02"/>
+  <rect class="cls-112" x="363.09" y="389.4" width=".38" height="12.01"/>
+  <rect class="cls-112" x="360.18" y="384.74" width=".28" height="2.67"/>
+  <g>
+    <rect class="cls-10" x="460.89" y="388.49" width="11.45" height="13.65"/>
+    <rect class="cls-53" x="463.9" y="384.33" width="5.22" height="3.41"/>
+    <path class="cls-40" d="M466.31,383.73h5.02v-1.2s-2.01-1.21-5.02-1.41c-3.01.2-5.02,1.41-5.02,1.41v1.2h5.02Z"/>
+    <rect x="467.7" y="384.73" width=".75" height="2.56"/>
+    <rect x="470.37" y="389.26" width="1.05" height="12.11"/>
+  </g>
+  <line class="cls-72" x1="360.98" y1="343.25" x2="360.98" y2="357.7"/>
+  <line class="cls-72" x1="464.4" y1="343.35" x2="464.4" y2="357.61"/>
+  <line class="cls-72" x1="351.08" y1="431.53" x2="351.08" y2="449.73"/>
+  <line class="cls-72" x1="473.63" y1="431.53" x2="473.63" y2="449.73"/>
+  <path class="cls-79" d="M774.75,409.02h58.74l-.6-52.41-7.53.3v-19.28s-1.51-2.71-2.71-3.31c-1.21-.6-7.53-.6-8.43-2.41-.9-1.81-3.92-10.85-3.92-10.85,0,0-1.2-1.51-3.31-1.51h-32.23s-30.12,0-32.23,0-3.31,1.51-3.31,1.51c0,0-3.01,9.04-3.92,10.84-.9,1.81-7.23,1.81-8.43,2.41-1.21.6-2.71,3.31-2.71,3.31v19.28l-7.53-.3-.6,52.41h58.74Z"/>
+  <path class="cls-77" d="M774.75,433.72h61.75s.6-26.31,0-28.11c-.6-1.8-1.61-1.61-1.61-1.61h-23.4c-1.61,0-2.21-1-2.21-1,0,0-.2-19.28,0-25.91,0,0-.4-7.43-1.61-8.64-1.21-1.2-1.8-26.31-1.8-26.31,0,0,.6-1.01-1.81-1.01s-29.32-.2-29.32-.2c0,0-26.91.2-29.32.2s-1.81,1.01-1.81,1.01c0,0-.6,25.1-1.81,26.31-1.2,1.21-1.6,8.64-1.6,8.64.2,6.63,0,25.91,0,25.91,0,0-.6,1-2.21,1h-23.39s-1-.2-1.61,1.61c-.6,1.81,0,28.11,0,28.11h61.75Z"/>
+  <path class="cls-32" d="M774.58,365.64l29.08,5.42s2.11,1.51,2.41,3.01c.3,1.51,0,56.33,0,56.33h-62.66s-.3-54.82,0-56.33c.3-1.51,2.41-3.02,2.41-3.02l29.08-5.42"/>
+  <path class="cls-195" d="M773.66,342.95h-27.41c-.24,0-.43.19-.43.43v19.83c0,.24.19.43.43.43h27.33"/>
+  <path class="cls-228" d="M774.28,363.64h28.96c.23,0,.43-.19.43-.43v-19.83c0-.24-.19-.43-.43-.43h-28.96"/>
+  <path class="cls-12" d="M746.72,380.2v-5.58s0-.7,3.49-1.4c3.49-.7,20.48-3.96,20.48-3.96"/>
+  <path class="cls-12" d="M802.34,380.19v-5.58s0-.7-3.49-1.4c-3.49-.7-21.18-3.96-21.18-3.96"/>
+  <path class="cls-2" d="M746.56,323.26h20.94c1.46,0,2.64,1.18,2.64,2.64v10.55c0,1.46-1.18,2.64-2.64,2.64h-20.94c-1.46,0-2.64-1.18-2.64-2.64v-10.55c0-1.46,1.18-2.64,2.64-2.64Z"/>
+  <path class="cls-180" d="M781.06,323.26h20.94c1.46,0,2.64,1.18,2.64,2.64v10.55c0,1.46-1.18,2.64-2.64,2.64h-20.94c-1.46,0-2.64-1.18-2.64-2.64v-10.55c0-1.46,1.18-2.64,2.64-2.64Z"/>
+  <path class="cls-67" d="M746.17,435.2c-.36.29-1.24-.7-1.71-.54-.77.47-.93,1.4-.46,2.17.15.15.78.15,1.24,0,.62-.31.46-1.09.46-1.71"/>
+  <path class="cls-67" d="M739.04,432.17c-.9-.9-2.17.78-3.26,1.25-.31,0-1.24.31-.77.62.16.31,1.09.31,1.4,0,.62-.77,1.71-.62,2.48-1.24.15-.16.31-.47.15-.62Z"/>
+  <path class="cls-80" d="M808.55,319.69s-1.86-13.03-4.03-13.96c-2.17-.93-27.62-.62-27.62-.62h-4.66s-25.44-.31-27.62.62c-2.17.93-4.03,13.96-4.03,13.96"/>
+  <rect class="cls-121" x="773.54" y="342.92" width=".9" height="20.94"/>
+  <g>
+    <path class="cls-226" d="M366.02,518.6c0,6.64.98,9.96,4.01,13.58h-24.3c3.29-2.82,3.83-4.63,3.83-13.38v-40.33c0-8.75-.53-10.56-3.83-13.38h22.61c9.7,0,13.71.91,17.62,4.23,3.74,3.02,6.06,8.45,6.06,14.08,0,12.47-8.46,20.22-22.17,20.22-1.69,0-2.14,0-3.29-.3,6.5-3.62,8.81-7.74,8.81-15.39,0-8.15-2.76-11.87-9.35-12.77v43.45Z"/>
+    <path class="cls-226" d="M464.04,498.49c0,20.42-14.07,35-33.74,35s-33.03-14.28-33.03-34.8,14.15-34.91,34.1-34.91,32.67,13.58,32.67,34.7ZM414.63,495.77c0,7.95,2.85,17.7,6.41,22.03,2.67,3.42,6.5,5.23,10.59,5.23,8.9,0,15.04-8.55,15.04-21.12,0-16.39-6.85-27.86-16.65-27.86-9.08,0-15.4,8.95-15.4,21.73Z"/>
+    <path class="cls-226" d="M490.37,465.09c14.07,0,18.69,1,24.48,5.13,8.37,5.93,13.26,16.5,13.26,28.67,0,13.38-6.32,25.25-16.2,30.18-5.16,2.61-8.37,3.12-20.39,3.12h-21.46c3.29-2.82,3.83-4.63,3.83-13.38v-40.03c0-9.05-.54-10.86-3.83-13.68h20.3ZM490.37,520.92c1.96.7,3.21.91,5.16.91,5.61,0,8.81-1.71,11.39-6.14,2.58-4.32,3.83-9.86,3.83-16.7,0-14.38-5.79-23.84-14.69-23.84-1.69,0-3.38.2-5.7.8v44.96Z"/>
+    <path class="cls-226" d="M534.07,532.19c3.29-2.82,3.83-4.63,3.83-13.38v-40.33c0-8.75-.53-10.56-3.83-13.38h24.12c-3.29,2.82-3.83,4.63-3.83,13.38v40.33c0,8.75.54,10.56,3.83,13.38h-24.12Z"/>
+    <path class="cls-226" d="M630.83,498.49c0,20.42-14.07,35-33.74,35s-33.03-14.28-33.03-34.8,14.15-34.91,34.1-34.91,32.67,13.58,32.67,34.7ZM581.42,495.77c0,7.95,2.85,17.7,6.41,22.03,2.67,3.42,6.5,5.23,10.59,5.23,8.9,0,15.04-8.55,15.04-21.12,0-16.39-6.86-27.86-16.65-27.86-9.08,0-15.4,8.95-15.4,21.73Z"/>
+    <path class="cls-226" d="M689.57,530.98c-5.88,1.81-10.95,2.52-17.98,2.52-9.79,0-16.11-2.01-22.43-7.24-7.65-6.24-12.37-16.7-12.37-27.26,0-21.42,13.71-35.2,35.08-35.2,4.54,0,9.17.4,13.53,1.31l.71,14.18c-5.25-3.62-9.79-5.23-15.04-5.23-10.33,0-16.02,8.15-16.02,22.83,0,16.4,7.21,26.05,19.58,26.05,5.96,0,11.04-1.81,19.5-6.74l-4.54,14.79Z"/>
+    <path class="cls-226" d="M763.81,498.49c0,20.42-14.07,35-33.74,35s-33.03-14.28-33.03-34.8,14.15-34.91,34.09-34.91,32.67,13.58,32.67,34.7ZM714.4,495.77c0,7.95,2.85,17.7,6.41,22.03,2.67,3.42,6.5,5.23,10.59,5.23,8.9,0,15.04-8.55,15.04-21.12,0-16.39-6.86-27.86-16.65-27.86-9.08,0-15.4,8.95-15.4,21.73Z"/>
+    <path class="cls-226" d="M818.46,465.09h21.63c-2.85,3.22-3.29,4.12-3.29,7.04,0,1.41.18,4.53.53,7.54l3.92,38.02c.8,8.25,1.78,10.96,4.81,14.48h-23.77c1.96-2.62,2.85-5.03,2.85-7.75,0-.41,0-.91-.09-1.81-.09-1.31-.18-2.21-.18-2.52l-3.2-31.28-11.75,44.56c-2.49-.7-5.16-2.21-8.63-4.73-3.03-2.31-4.01-4.02-6.59-11.57l-9.53-28.27-2.67,29.97c-.27,2.71-.36,4.13-.36,5.23,0,3.52,1.25,6.04,3.92,8.15h-17.72c3.21-3.62,3.74-5.23,4.54-13.38l4.09-39.13c.27-2.42.45-4.43.45-5.33,0-3.62-1.16-6.54-3.56-9.25h20.83l13.35,39.33,10.42-39.33Z"/>
+  </g>
+  <path class="cls-66" d="M363.83,469.6h3.02c8.73,0,12.34.82,15.86,3.8,3.36,2.72,4.32,7.6,3.82,12.67"/>
+  <path class="cls-66" d="M490.51,469.96c12.66,0,16.45,1.03,21.66,4.75,3.77,2.67,6.5,7.14,8.54,11.55"/>
+  <path class="cls-66" d="M541.87,469.49h8.23c-1.21,1.65-.38,3.91-.38,11.79v4.07"/>
+  <path class="cls-66" d="M428.71,468.44c.57-.03,1.14-.04,1.72-.04,13.09,0,23.41,8.83,25.78,18.05"/>
+  <path class="cls-66" d="M594.8,468.44c.57-.03,1.14-.04,1.72-.04,13.09,0,23.41,8.83,25.78,18.05"/>
+  <path class="cls-66" d="M728.77,468.44c.57-.03,1.14-.04,1.72-.04,13.09,0,23.41,8.83,25.78,18.05"/>
+  <path class="cls-66" d="M662.31,470.14c1.9-.28,4.65-1.18,6.72-1.18,4.08,0,8,.11,11.92.92l.37.8"/>
+  <path class="cls-66" d="M781.97,470.51h8.01l5.65,16.64"/>
+  <path class="cls-66" d="M823.87,470.51h6.75l1.38,16.64"/>
+  <g>
+    <polygon points="761.01 427.32 761.01 379.74 760.31 377.88 760.31 427.32 761.01 427.32"/>
+    <rect class="cls-61" x="747.65" y="382.81" width="11.29" height="1.59"/>
+    <rect class="cls-134" x="761.9" y="382.81" width="11.29" height="1.59"/>
+    <rect class="cls-211" x="776.28" y="382.81" width="11.29" height="1.59"/>
+    <rect class="cls-150" x="790.66" y="382.81" width="11.29" height="1.59"/>
+    <rect class="cls-90" x="747.65" y="386.35" width="11.29" height="1.59"/>
+    <rect class="cls-200" x="761.9" y="386.35" width="11.29" height="1.59"/>
+    <rect class="cls-177" x="776.28" y="386.35" width="11.29" height="1.59"/>
+    <rect class="cls-133" x="790.66" y="386.35" width="11.29" height="1.59"/>
+    <rect class="cls-207" x="747.65" y="389.88" width="11.29" height="1.59"/>
+    <rect class="cls-231" x="761.9" y="389.88" width="11.29" height="1.59"/>
+    <rect class="cls-182" x="776.28" y="389.88" width="11.29" height="1.59"/>
+    <rect class="cls-163" x="790.66" y="389.88" width="11.29" height="1.59"/>
+    <rect class="cls-208" x="747.65" y="393.41" width="11.29" height="1.59"/>
+    <rect class="cls-151" x="761.9" y="393.41" width="11.29" height="1.59"/>
+    <rect class="cls-217" x="776.28" y="393.41" width="11.29" height="1.59"/>
+    <rect class="cls-227" x="790.66" y="393.41" width="11.29" height="1.59"/>
+    <rect class="cls-160" x="747.65" y="396.94" width="11.29" height="1.59"/>
+    <rect class="cls-224" x="761.9" y="396.94" width="11.29" height="1.59"/>
+    <rect class="cls-58" x="776.28" y="396.94" width="11.29" height="1.59"/>
+    <rect class="cls-83" x="790.66" y="396.94" width="11.29" height="1.59"/>
+    <rect class="cls-132" x="747.65" y="400.47" width="11.29" height="1.59"/>
+    <rect class="cls-8" x="761.9" y="400.47" width="11.29" height="1.59"/>
+    <rect class="cls-85" x="776.28" y="400.47" width="11.29" height="1.59"/>
+    <rect class="cls-153" x="790.66" y="400.47" width="11.29" height="1.59"/>
+    <rect class="cls-127" x="747.65" y="404" width="11.29" height="1.59"/>
+    <rect class="cls-64" x="761.9" y="404" width="11.29" height="1.59"/>
+    <rect class="cls-98" x="776.28" y="404" width="11.29" height="1.59"/>
+    <rect class="cls-131" x="790.66" y="404" width="11.29" height="1.59"/>
+    <rect class="cls-212" x="747.65" y="407.54" width="11.29" height="1.59"/>
+    <rect class="cls-124" x="761.9" y="407.54" width="11.29" height="1.59"/>
+    <rect class="cls-94" x="776.28" y="407.54" width="11.29" height="1.59"/>
+    <rect class="cls-178" x="790.66" y="407.54" width="11.29" height="1.59"/>
+    <rect class="cls-97" x="747.65" y="411.07" width="11.29" height="1.59"/>
+    <rect class="cls-59" x="761.9" y="411.07" width="11.29" height="1.59"/>
+    <rect class="cls-92" x="776.28" y="411.07" width="11.29" height="1.59"/>
+    <rect class="cls-192" x="790.66" y="411.07" width="11.29" height="1.59"/>
+    <rect class="cls-191" x="747.65" y="414.6" width="11.29" height="1.59"/>
+    <rect class="cls-56" x="761.9" y="414.6" width="11.29" height="1.59"/>
+    <rect class="cls-57" x="776.28" y="414.6" width="11.29" height="1.59"/>
+    <rect class="cls-158" x="790.66" y="414.6" width="11.29" height="1.59"/>
+    <rect class="cls-87" x="747.65" y="418.13" width="11.29" height="1.59"/>
+    <rect class="cls-82" x="761.9" y="418.13" width="11.29" height="1.59"/>
+    <rect class="cls-196" x="776.28" y="418.13" width="11.29" height="1.59"/>
+    <rect class="cls-7" x="790.66" y="418.13" width="11.29" height="1.59"/>
+    <rect class="cls-221" x="747.65" y="421.66" width="11.29" height="1.58"/>
+    <rect class="cls-126" x="761.9" y="421.66" width="11.29" height="1.58"/>
+    <rect class="cls-223" x="776.28" y="421.66" width="11.29" height="1.58"/>
+    <rect class="cls-89" x="790.66" y="421.66" width="11.29" height="1.58"/>
+    <rect class="cls-222" x="747.65" y="425.19" width="11.29" height="1.59"/>
+    <rect class="cls-128" x="761.9" y="425.19" width="11.29" height="1.59"/>
+    <rect class="cls-155" x="776.28" y="425.19" width="11.29" height="1.59"/>
+    <rect class="cls-219" x="790.66" y="425.19" width="11.29" height="1.59"/>
+    <polygon points="775.09 427.32 775.09 379.74 774.39 377.88 774.39 427.32 775.09 427.32"/>
+    <polygon points="789.64 427.32 789.64 379.74 788.93 377.88 788.93 427.32 789.64 427.32"/>
+    <g>
+      <polygon class="cls-112" points="760.7 427.39 760.7 379.82 760 377.95 760 427.39 760.7 427.39"/>
+      <polygon class="cls-112" points="774.78 427.39 774.78 379.82 774.08 377.95 774.08 427.39 774.78 427.39"/>
+      <polygon class="cls-112" points="789.33 427.39 789.33 379.82 788.62 377.95 788.62 427.39 789.33 427.39"/>
+    </g>
+  </g>
+  <g>
+    <path class="cls-38" d="M589.37,322.15l-.16,19.64.96.32v3.53s.16.64,1.44.64h4.01l.96-.64v-3.53l.96-.32v-19.64s-3.53-1.6-8.18,0Z"/>
+    <line class="cls-21" x1="590.97" y1="322.39" x2="590.97" y2="340.99"/>
+    <line class="cls-21" x1="593.37" y1="322.39" x2="593.37" y2="340.99"/>
+    <line class="cls-21" x1="595.78" y1="322.39" x2="595.78" y2="340.99"/>
+    <path class="cls-46" d="M593.49,334.44c2.97,0,5.37-2.41,5.37-5.37s-2.4-5.37-5.37-5.37-5.37,2.41-5.37,5.37,2.4,5.37,5.37,5.37Z"/>
+    <path class="cls-71" d="M593.37,324.59c-2.5,0-4.53,2.03-4.53,4.53s2.03,4.53,4.53,4.53,4.54-2.03,4.54-4.53-2.03-4.53-4.54-4.53"/>
+    <g>
+      <path class="cls-112" d="M591.78,328.5v-2.25h.75v.91l1.39-.91h.97l-1.49.93,1.57,1.32h-.97l-1.11-.98-.35.22v.76h-.75Z"/>
+      <path class="cls-112" d="M590.86,329.38h.81l.58,1.65.5-1.65h.81l.52,1.63.61-1.63h.76l-1.02,2.25h-.74l-.54-1.76-.56,1.76h-.7l-1.02-2.25Z"/>
+    </g>
+    <path class="cls-112" d="M590.01,342.11s2.24,1.76,6.57,0"/>
+  </g>
+  <polygon class="cls-173" points="774.78 433.18 837.38 433.18 837.38 453.47 774.78 453.47 712.18 453.47 712.18 433.18 774.78 433.18"/>
+  <path class="cls-120" d="M730.42,451.08c.24,0,.43-.19.43-.43v-4.57c0-.24-.19-.42-.43-.42h-8.79c-.24,0-.43.19-.43.42v4.57c0,.24.19.43.43.43h8.79Z"/>
+  <path class="cls-120" d="M829.23,451.08c.24,0,.43-.19.43-.43v-4.57c0-.24-.19-.42-.43-.42h-8.78c-.24,0-.43.19-.43.42v4.57c0,.24.19.43.43.43h8.78Z"/>
+  <line class="cls-72" x1="835.34" y1="434.22" x2="835.34" y2="452.43"/>
+  <g>
+    <path class="cls-76" d="M738.37,417.65c.69,0,1.26-.39,1.26-.88v-7.04c0-.48-.56-.88-1.26-.88h-20.66c-.69,0-1.26.4-1.26.88v7.04c0,.49.56.88,1.26.88h20.66Z"/>
+    <line class="cls-76" x1="727.52" y1="417.62" x2="727.52" y2="409.99"/>
+  </g>
+  <g>
+    <path class="cls-76" d="M831.51,417.65c.69,0,1.26-.39,1.26-.88v-7.04c0-.48-.56-.88-1.26-.88h-20.66c-.69,0-1.26.4-1.26.88v7.04c0,.49.56.88,1.26.88h20.66Z"/>
+    <line class="cls-76" x1="820.65" y1="417.62" x2="820.65" y2="409.99"/>
+  </g>
+  <g>
+    <path class="cls-54" d="M771.21,362.68l-.11,13.43.66.22v2.41s.11.44.99.44h2.74l.66-.44v-2.41l.66-.22v-13.43s-2.41-1.1-5.59,0Z"/>
+    <line class="cls-25" x1="772.3" y1="362.84" x2="772.3" y2="375.56"/>
+    <line class="cls-25" x1="773.95" y1="362.84" x2="773.95" y2="375.56"/>
+    <line class="cls-25" x1="775.59" y1="362.84" x2="775.59" y2="375.56"/>
+    <path class="cls-50" d="M774.03,371.08c2.03,0,3.68-1.64,3.68-3.67s-1.64-3.67-3.68-3.67-3.67,1.64-3.67,3.67,1.64,3.67,3.67,3.67Z"/>
+    <path class="cls-69" d="M773.95,364.35c-1.71,0-3.1,1.39-3.1,3.1s1.39,3.1,3.1,3.1,3.1-1.39,3.1-3.1-1.39-3.1-3.1-3.1"/>
+    <g>
+      <path class="cls-112" d="M772.85,367.02v-1.54h.51v.62l.95-.62h.67l-1.02.64,1.07.9h-.67l-.76-.67-.24.15v.52h-.51Z"/>
+      <path class="cls-112" d="M772.23,367.62h.55l.39,1.13.34-1.13h.55l.35,1.12.42-1.12h.52l-.7,1.54h-.5l-.37-1.2-.38,1.2h-.48l-.7-1.54Z"/>
+    </g>
+    <path class="cls-112" d="M771.65,376.33s1.54,1.2,4.49,0"/>
+  </g>
+  <g>
+    <rect class="cls-37" x="728.36" y="363.01" width="9.64" height="38.86"/>
+    <rect x="729.38" y="363.82" width="1.2" height="37.23"/>
+  </g>
+  <g>
+    <rect class="cls-49" x="715.57" y="388.22" width="11.45" height="13.65"/>
+    <rect class="cls-36" x="718.58" y="384.07" width="5.22" height="3.41"/>
+    <path class="cls-19" d="M720.99,383.46h5.02v-1.2s-2.01-1.21-5.02-1.41c-3.01.2-5.02,1.41-5.02,1.41v1.2h5.02Z"/>
+    <rect x="719.14" y="384.47" width=".75" height="2.56"/>
+    <rect x="716.84" y="388.97" width="1.05" height="12.11"/>
+  </g>
+  <g>
+    <g>
+      <path class="cls-17" d="M731,350.15v-42.07s-.4-1-1.61-1.61l-1.81-.2v-5.42s7.63-.2,7.63,6.63v42.67h-4.22Z"/>
+      <path class="cls-39" d="M729.38,305s2.94.15,2.94,3.16v40.82"/>
+    </g>
+    <g>
+      <rect class="cls-51" x="730.19" y="351.02" width="6.23" height="1.61"/>
+      <rect class="cls-28" x="728.79" y="353.38" width="9.04" height="8.84"/>
+    </g>
+  </g>
+  <g>
+    <g>
+      <rect class="cls-30" x="812.48" y="362.86" width="9.64" height="38.86"/>
+      <rect x="819.9" y="363.67" width="1.2" height="37.23"/>
+    </g>
+    <g>
+      <g>
+        <path class="cls-42" d="M819.49,350v-42.07s.4-1,1.61-1.61l1.81-.2v-5.42s-7.63-.2-7.63,6.63,0,42.67,0,42.67h4.22Z"/>
+        <path class="cls-39" d="M821.1,304.85s-2.94.15-2.94,3.16,0,40.82,0,40.82"/>
+      </g>
+      <g>
+        <rect class="cls-44" x="814.07" y="350.87" width="6.23" height="1.61"/>
+        <rect class="cls-14" x="812.66" y="353.23" width="9.04" height="8.84"/>
+      </g>
+    </g>
+  </g>
+  <rect class="cls-16" x="716" y="342.14" width="8.43" height="16.02"/>
+  <rect class="cls-16" x="825.05" y="342.14" width="8.44" height="16.02"/>
+  <rect class="cls-112" x="725.56" y="389.07" width=".38" height="12.01"/>
+  <rect class="cls-112" x="722.65" y="384.41" width=".28" height="2.67"/>
+  <g>
+    <rect class="cls-24" x="823.35" y="388.16" width="11.45" height="13.65"/>
+    <rect class="cls-47" x="826.37" y="384" width="5.22" height="3.41"/>
+    <path class="cls-52" d="M828.78,383.4h5.02v-1.2s-2.01-1.21-5.02-1.41c-3.01.2-5.02,1.41-5.02,1.41v1.2h5.02Z"/>
+    <rect x="830.17" y="384.41" width=".75" height="2.56"/>
+    <rect x="832.84" y="388.93" width="1.05" height="12.11"/>
+  </g>
+  <line class="cls-72" x1="723.45" y1="342.93" x2="723.45" y2="357.38"/>
+  <line class="cls-72" x1="826.05" y1="343.02" x2="826.05" y2="357.28"/>
+</svg>
