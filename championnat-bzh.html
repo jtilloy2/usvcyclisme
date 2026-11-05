@@ -1,104 +1,263 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta property="og:title" content="Championnat de Bretagne de Cyclo-Cross 2026 - US Vern">
-  <meta property="og:description" content="5 et 6 Décembre 2026 à Vern-sur-Seiche. L'élite du cyclo-cross breton.">
-  
-  <!-- L'URL absolue vers ton image d'affiche -->
-  <meta property="og:image" content="https://jtilloy2.github.io/usvcyclisme/affiche/cyclo-cross.jpg">
-  
-  <!-- L'URL de ta page -->
-  <meta property="og:url" content="https://jtilloy2.github.io/usvcyclisme/championnat-bzh.html">
-  <meta property="og:type" content="website">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Championnat de Bretagne de Cyclo-Cross 2026. L'événement sportif incontournable à Vern-sur-Seiche.">
-  <title>BZH CX 2026 - L'Élite du Cyclo-Cross</title>
+  <meta name="description" content="Championnat de Bretagne de Cyclo-Cross 2026 les 5 et 6 décembre à Vern-sur-Seiche. Programme officiel, billetterie, tracé 2,7 km et plans d'accès.">
+  <meta property="og:title" content="Championnat de Bretagne de Cyclo-Cross 2026 - US Vern">
+  <meta property="og:description" content="5 et 6 Décembre 2026 à Vern-sur-Seiche. L'élite du cyclo-cross breton.">
+  <meta property="og:image" content="https://jtilloy2.github.io/usvcyclisme/affiche/cyclo-cross.jpg">
+  <meta property="og:url" content="https://usverncyclisme.fr/championnat-bzh.html">
+  <meta property="og:type" content="website">
+
+  <title>BZH CX 2026 - Championnat de Bretagne de Cyclo-Cross | US Vern</title>
   <link rel="icon" type="image/png" href="logo/logo.webp">
+  
+  <!-- Google Fonts : Montserrat & Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 & FontAwesome (uniquement pour les logos réseaux sociaux) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   
   <style>
-    /* =========================================
-       THÈME PRO "LA MAISON PREMIUM" - BZH CX
-       ========================================= */
     :root {
-      --bg-darkest: #0a0a0a;          /* Noir pur et profond */
-      --bg-surface: #121212;          /* Gris très foncé pour les cartes */
-      --text-main: #ffffff;           /* Blanc éclatant */
-      --text-muted: #a1a1aa;          /* Gris clair pour la lecture */
-      --usv-bordeaux: #9e1b1b;        /* Rouge USV */
+      --bg-darkest: #0a0a0a;
+      --bg-surface: #121212;
+      --bg-surface-2: #18181b;
+      --text-main: #ffffff;
+      --text-muted: #a1a1aa;
+      --usv-bordeaux: #9e1b1b;
       --usv-bordeaux-dark: #7a1414;   
       --glass-border: rgba(255, 255, 255, 0.08); 
     }
     
-    body { background-color: var(--bg-darkest); color: var(--text-main); font-family: 'Open Sans', sans-serif; overflow-x: hidden; scroll-behavior: smooth; }
-    
-    h1, h2, h3, h4, h5, .title-font { font-family: 'Montserrat', sans-serif; text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px; }
-    .text-usv { color: var(--usv-bordeaux) !important; }
-    
-    /* Cartes Pro et nettes */
-    .pro-card { background: var(--bg-surface); border: 1px solid var(--glass-border); border-radius: 8px; transition: all 0.3s ease; }
-    .pro-card:hover { transform: translateY(-3px); border-color: rgba(158, 27, 27, 0.4); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-    
-    /* Boutons dynamiques */
-    .btn-action { background-color: var(--usv-bordeaux); color: #ffffff !important; font-weight: 700; border: none; border-radius: 4px; padding: 14px 30px; letter-spacing: 1px; text-transform: uppercase; transition: all 0.3s ease; }
-    .btn-action:hover { background-color: var(--usv-bordeaux-dark); transform: translateY(-2px); box-shadow: 0 6px 15px rgba(158, 27, 27, 0.4); }
-    
-    .btn-outline-light { border-radius: 4px !important; font-weight: 700; text-transform: uppercase; padding: 14px 30px; letter-spacing: 1px; border: 2px solid #fff; }
-    .btn-outline-light:hover { background-color: #fff; color: #000; }
-
-    .nav-social-icon { color: #ffffff; font-size: 1.3rem; transition: color 0.3s; margin-left: 15px; }
-    .nav-social-icon:hover { color: var(--usv-bordeaux); }
-
-    /* Fond de l'en-tête (Hero) */
-    .hero-bzh { background: linear-gradient(to bottom, rgba(5, 5, 5, 0.6) 0%, var(--bg-darkest) 100%), url('affiche/cyclo-cross.jpg') center/cover fixed no-repeat; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
-    
-    /* =========================================
-       CARTE MINIATURE (SANS ROGNAGE) 
-       ========================================= */
-    .map-preview { position: relative; border-radius: 8px; overflow: hidden; border: 1px solid var(--glass-border); cursor: pointer; background: #fff; display: block; }
-    .map-preview img { width: 100%; height: auto; display: block; transition: transform 0.4s ease; filter: contrast(1.1); }
-    .map-preview:hover img { transform: scale(1.03); filter: brightness(0.8) contrast(1.1); }
-    .map-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; }
-    .map-preview:hover .map-overlay { opacity: 1; }
-    
-    /* MODALE CARTE (CARTE EN GRAND + POINTS ROUGES) */
-    .map-modal-container { position: relative; width: 100%; border-radius: 8px; overflow: hidden; background: #fff; border: 1px solid #333; }
-    .map-modal-container img { width: 100%; height: auto; display: block; }
-    .hotspot { position: absolute; width: 26px; height: 26px; background: var(--usv-bordeaux); border-radius: 50%; border: 3px solid #fff; transform: translate(-50%, -50%); cursor: pointer; z-index: 2; transition: transform 0.2s; box-shadow: 0 4px 8px rgba(0,0,0,0.6); }
-    .hotspot:hover { transform: translate(-50%, -50%) scale(1.2); }
-    .hotspot::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: var(--usv-bordeaux); border-radius: 50%; opacity: 0.5; animation: ripple 2s infinite ease-out; z-index: -1; pointer-events: none; }
-    @keyframes ripple { 0% { transform: scale(0.5); opacity: 0.8; } 100% { transform: scale(2.5); opacity: 0; } }
-    .hotspot-info { position: absolute; bottom: 130%; left: 50%; transform: translateX(-50%) translateY(10px); background: #111; border: 1px solid #444; border-radius: 4px; padding: 6px 14px; font-size: 0.85rem; font-weight: bold; color: #fff; white-space: nowrap; opacity: 0; pointer-events: none; transition: all 0.2s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.8); }
-    .hotspot:hover .hotspot-info { opacity: 1; transform: translateX(-50%) translateY(0); }
-
-    /* =========================================
-       INSTAGRAM MOBILE CAROUSEL 
-       ========================================= */
-    .social-mobile-scroll { display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 20px; padding-bottom: 20px; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: var(--usv-bordeaux) transparent; }
-    .social-mobile-scroll::-webkit-scrollbar { height: 6px; }
-    .social-mobile-scroll::-webkit-scrollbar-thumb { background: var(--usv-bordeaux); border-radius: 10px; }
-    .social-post { flex: 0 0 85%; position: relative; border-radius: 8px; overflow: hidden; aspect-ratio: 1/1; cursor: pointer; border: 1px solid var(--glass-border); }
-    .social-post img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-    .social-overlay { position: absolute; inset: 0; background: rgba(158, 27, 27, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; }
-    .social-post:hover img { transform: scale(1.05); }
-    .social-post:hover .social-overlay { opacity: 1; }
-    .social-overlay i { color: #ffffff; font-size: 2.5rem; }
-    
-    @media (min-width: 768px) {
-      .social-mobile-scroll { display: grid; grid-template-columns: repeat(3, 1fr); overflow-x: visible; }
-      .social-post { flex: auto; width: 100%; }
+    body {
+      background-color: var(--bg-darkest);
+      color: var(--text-main);
+      font-family: 'Open Sans', sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
     }
 
-    .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s cubic-bezier(0.5, 0, 0, 1); }
-    .reveal.active { opacity: 1; transform: translateY(0); }
-    .delay-1 { transition-delay: 0.1s; } .delay-2 { transition-delay: 0.2s; }
+    section[id] { scroll-margin-top: 80px; }
     
+    h1, h2, h3, h4, h5, .title-font {
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+    
+    .text-usv { color: var(--usv-bordeaux) !important; }
     p { line-height: 1.7; color: var(--text-muted); }
+    
+    /* Cartes sobres */
+    .pro-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--glass-border);
+      border-radius: 8px;
+      transition: border-color 0.25s ease;
+    }
+    .pro-card:hover {
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+    
+    /* Boutons */
+    .btn-action {
+      background-color: var(--usv-bordeaux);
+      color: #ffffff !important;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      border: none;
+      border-radius: 4px;
+      padding: 13px 28px;
+      font-size: 0.88rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-action:hover {
+      background-color: var(--usv-bordeaux-dark);
+      transform: translateY(-1px);
+    }
+    
+    .btn-outline-light {
+      border-radius: 4px !important;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      padding: 12px 26px;
+      letter-spacing: 1px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #ffffff;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-outline-light:hover {
+      background-color: #ffffff;
+      color: #000000 !important;
+      border-color: #ffffff;
+    }
 
-   /* =========================================
-       CARROUSEL PARTENAIRES INFINI
+    .nav-link-custom {
+      color: #ffffff;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+    .nav-link-custom:hover { color: var(--usv-bordeaux); }
+
+    .nav-social-icon {
+      color: #ffffff;
+      font-size: 1.2rem;
+      transition: color 0.25s;
+      margin-left: 14px;
+    }
+    .nav-social-icon:hover { color: var(--usv-bordeaux); }
+
+    /* Hero */
+    .hero-bzh {
+      background: linear-gradient(to bottom, rgba(5, 5, 5, 0.6) 0%, var(--bg-darkest) 100%), url('affiche/cyclo-cross.jpg') center/cover fixed no-repeat;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* =========================================
+       PROGRAMME HORAIRE PRO & ÉPURÉ
+       ========================================= */
+    .program-panel {
+      background: var(--bg-surface);
+      border: 1px solid var(--glass-border);
+      border-radius: 8px;
+      padding: 32px;
+      height: 100%;
+    }
+    .program-day-header {
+      border-bottom: 2px solid var(--usv-bordeaux);
+      padding-bottom: 14px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .program-day-sub {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+    }
+    .program-item {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      align-items: baseline;
+    }
+    .program-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .program-hour {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: var(--usv-bordeaux);
+    }
+    .program-race-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+    .program-race-meta {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* =========================================
+       PLANS OFFICIELS (CIRCUIT & ACCÈS)
+       ========================================= */
+    .plan-card-wrapper {
+      background: var(--bg-surface);
+      border: 1px solid var(--glass-border);
+      border-radius: 8px;
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.25s ease;
+    }
+    .plan-card-wrapper:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .map-preview {
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--glass-border);
+      cursor: pointer;
+      background: #ffffff;
+      display: block;
+    }
+    .map-preview img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+    .map-preview:hover img {
+      transform: scale(1.015);
+      filter: brightness(0.9);
+    }
+    .map-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .map-preview:hover .map-overlay { opacity: 1; }
+
+    .circuit-points-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 20px;
+      padding: 0;
+      margin: 0 0 24px 0;
+      list-style: none;
+    }
+    .circuit-points-list li {
+      font-size: 0.92rem;
+      color: #e4e4e7;
+      font-weight: 600;
+      padding-left: 12px;
+      border-left: 2px solid var(--usv-bordeaux);
+    }
+
+    /* =========================================
+       PARTENAIRES : CARROUSEL + CATÉGORIES PROPRES
        ========================================= */
     .partners-carousel-container {
       overflow: hidden;
@@ -106,8 +265,6 @@
       position: relative;
       padding: 15px 0;
     }
-    
-    /* Effet de fondu noir sur les bords (un peu plus fin) */
     .partners-carousel-container::before,
     .partners-carousel-container::after {
       content: "";
@@ -116,6 +273,7 @@
       width: 60px;
       height: 100%;
       z-index: 2;
+      pointer-events: none;
     }
     .partners-carousel-container::before {
       left: 0;
@@ -125,87 +283,153 @@
       right: 0;
       background: linear-gradient(to left, var(--bg-darkest) 0%, transparent 100%);
     }
-    
     .partners-carousel-track {
       display: flex;
-      gap: 25px; /* Un peu moins d'espace mort entre les boîtes */
+      gap: 20px;
       width: max-content;
-      /* Animation sur 25 secondes (tu peux modifier ce chiffre) */
-      animation: scroll-partners 25s linear infinite;
+      animation: scroll-partners 36s linear infinite;
     }
-    
-    /* C'est ICI que ça met en pause le défilement au survol ! */
     .partners-carousel-track:hover {
       animation-play-state: paused;
     }
-    
     @keyframes scroll-partners {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
 
-    /* =========================================
-       BOÎTES ET LOGOS PARTENAIRES
-       ========================================= */
     .partner-logo-box { 
       background: #ffffff; 
-      border-radius: 8px; 
-      padding: 15px; /* Marges réduites = moins de vide ! */
+      border-radius: 6px; 
+      padding: 12px 16px;
       display: flex; 
       align-items: center; 
       justify-content: center; 
-      height: 90px; /* Boîte légèrement moins haute */
-      width: 210px; /* Boîte moins large, ajustée aux logos */
+      height: 86px;
+      width: 195px;
       flex-shrink: 0;
-      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-      /* Filtre noir et blanc supprimé : plein de couleurs ! */
+      transition: transform 0.25s ease; 
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
     }
-    
     .partner-logo-box:hover { 
-      /* Effet de zoom (scale) combiné à un léger soulèvement (translateY) */
-      transform: scale(1.08) translateY(-3px); 
-      /* Léger halo rouge USV en dessous au survol pour rester dans le thème */
-      box-shadow: 0 12px 20px rgba(158, 27, 27, 0.25); 
-      z-index: 10;
+      transform: translateY(-2px); 
     }
-    
     .partner-logo-box img { 
-      max-height: 60px; /* Le logo prend le maximum de place en hauteur */
+      max-height: 58px;
       max-width: 100%; 
-      object-fit: contain; /* Empêche le logo de se déformer */
+      object-fit: contain;
+    }
+    .partner-fallback-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 0.82rem;
+      color: #111111;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 1.25;
+    }
+
+    /* Panneau déroulant classé par catégorie (style épuré) */
+    .partners-Collapse-panel {
+      background: var(--bg-surface);
+      border: 1px solid var(--glass-border);
+      border-radius: 8px;
+      padding: 32px;
+      text-align: left;
+    }
+    .partner-cat-group {
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .partner-cat-group:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+    .partner-cat-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      display: block;
+    }
+    .partner-cat-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+      gap: 14px;
+    }
+    .partner-cat-row .partner-logo-box {
+      width: 100%;
+      height: 80px;
     }
 
     /* =========================================
-       CORRECTIONS SPÉCIALES MOBILE (TÉLÉPHONE)
+       INSTAGRAM CAROUSEL 
        ========================================= */
-    @media (max-width: 768px) {
-      /* 1. Rend les points rouges de la carte beaucoup plus petits */
-      .hotspot { width: 14px; height: 14px; border-width: 2px; }
-      .hotspot-info { font-size: 0.7rem; padding: 4px 8px; }
+    .social-mobile-scroll {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 20px;
+      padding-bottom: 20px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: var(--usv-bordeaux) transparent;
+    }
+    .social-mobile-scroll::-webkit-scrollbar { height: 6px; }
+    .social-mobile-scroll::-webkit-scrollbar-thumb { background: var(--usv-bordeaux); border-radius: 10px; }
+    .social-post {
+      flex: 0 0 85%;
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+      cursor: pointer;
+      border: 1px solid var(--glass-border);
+    }
+    .social-post img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .social-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(158, 27, 27, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .social-post:hover img { transform: scale(1.04); }
+    .social-post:hover .social-overlay { opacity: 1; }
+    .social-overlay i { color: #ffffff; font-size: 2.2rem; }
+    
+    @media (min-width: 768px) {
+      .social-mobile-scroll { display: grid; grid-template-columns: repeat(3, 1fr); overflow-x: visible; }
+      .social-post { flex: auto; width: 100%; }
+    }
 
-      /* 2. Transforme le carrousel en mode "Glisser avec le doigt" (Swipe) */
-      .partners-carousel-container { 
-        overflow-x: auto; 
-        -webkit-overflow-scrolling: touch; 
-        scrollbar-width: none; /* Cache la barre de défilement disgracieuse */
+    .reveal { opacity: 0; transform: translateY(16px); transition: all 0.5s ease-out; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 768px) {
+      .partners-carousel-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
       }
       .partners-carousel-container::-webkit-scrollbar { display: none; }
-      
-      .partners-carousel-track { 
-        animation: none; /* Stoppe l'animation automatique qui bloque le doigt */
-        gap: 15px; 
-        padding: 0 15px; 
+      .partners-carousel-track {
+        animation: none;
+        gap: 12px;
+        padding: 0 15px;
       }
-      
-      /* Enlève le dégradé noir sur les bords qui empêchait de toucher/glisser l'écran */
       .partners-carousel-container::before, 
-      .partners-carousel-container::after { 
-        display: none; 
-      }
-      
-      /* Réduit un peu les boîtes des partenaires pour qu'on devine qu'il y en a d'autres à côté */
-      .partner-logo-box { width: 160px; height: 75px; padding: 10px; }
+      .partners-carousel-container::after { display: none; }
+      .partner-logo-box { width: 155px; height: 76px; padding: 10px; }
+      .circuit-points-list { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -219,11 +443,17 @@
         <span class="ms-3 fs-6 title-font text-white d-none d-md-block" style="letter-spacing: 2px;">US VERN CYCLISME</span>
       </a>
       <div class="d-flex align-items-center">
-        <a href="#infos" class="text-white text-decoration-none fw-bold me-4 d-none d-lg-block" style="font-size: 0.9rem; text-transform: uppercase;">Infos Pratiques</a>
+        <a href="#programme" class="nav-link-custom me-4 d-none d-lg-block">Programme</a>
+        <a href="#circuit" class="nav-link-custom me-4 d-none d-lg-block">Circuit</a>
+        <a href="#infos" class="nav-link-custom me-4 d-none d-lg-block">Billetterie & Accès</a>
+        <a href="#partenaires" onclick="openPartnersFromNav()" class="nav-link-custom me-3 d-none d-lg-block">Partenaires</a>
+        
         <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" class="nav-social-icon"><i class="fa-brands fa-instagram"></i></a>
         <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="nav-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.linkedin.com/in/us-vern-cyclisme-270074350/" target="_blank" class="nav-social-icon me-4"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="partenaires-bzh.html" class="btn btn-outline-light ms-2" style="font-size: 0.75rem; padding: 8px 12px; white-space: nowrap;"><i class="fa-solid fa-briefcase me-1"></i><span class="d-none d-sm-inline"> Espace</span> Partenaires</a>
+        <a href="https://www.linkedin.com/in/us-vern-cyclisme-270074350/" target="_blank" class="nav-social-icon me-3"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="partenaires-bzh.html" class="btn btn-outline-light ms-2" style="font-size: 0.75rem; padding: 8px 14px; white-space: nowrap;">
+          Espace Partenaires
+        </a>
       </div>
     </div>
   </nav>
@@ -236,61 +466,121 @@
       <h2 class="display-5 text-white title-font mb-4">Cyclo-Cross 2026</h2>
       <p class="fs-5 mb-5 text-white" style="font-weight: 600; letter-spacing: 1px;">5 & 6 Décembre 2026 <span class="mx-2 text-usv">•</span> Vern-sur-Seiche</p>
       <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
-        <button class="btn btn-action" data-bs-toggle="modal" data-bs-target="#videoModal"><i class="fa-solid fa-play me-2"></i> Voir le teaser</button>
+        <button class="btn btn-action" data-bs-toggle="modal" data-bs-target="#videoModal">Voir le teaser</button>
         <a href="#infos" class="btn btn-outline-light">Billetterie & Accès</a>
       </div>
     </div>
   </section>
 
-  <!-- PRESENTATION ET CHIFFRES -->
+  <!-- PRÉSENTATION ET CHIFFRES -->
   <section class="container py-5 my-5">
     <div class="row align-items-center g-5">
-      <div class="col-lg-6 reveal delay-1">
+      <div class="col-lg-6 reveal">
         <h3 class="display-6 title-font text-white mb-4">L'élite du<br><span class="text-usv">Cyclo-Cross Breton</span></h3>
-        <p class="fs-5">Les 5 et 6 décembre 2026, l'US Vern Cyclisme accueille le Championnat de Bretagne. Un week-end de sport de haut niveau réunissant les meilleurs spécialistes régionaux sur un tracé exigeant.</p>
-        <p class="fs-5">Plus qu'une compétition, c'est un grand rassemblement populaire pensé pour les athlètes, le public et les acteurs économiques du territoire.</p>
+        <p class="fs-5">Les 5 et 6 décembre 2026, l'US Vern Cyclisme accueille le Championnat de Bretagne sur le site de la Vallée de la Seiche. Un week-end de sport de haut niveau réunissant les meilleurs spécialistes régionaux sur un tracé exigeant.</p>
+        <p class="fs-5">Plus qu'une compétition, c'est un grand rassemblement populaire pensé pour les athlètes, le public et les partenaires du territoire.</p>
       </div>
-      <div class="col-lg-6 reveal delay-2">
+      <div class="col-lg-6 reveal">
         <div class="pro-card p-5" style="border-left: 4px solid var(--usv-bordeaux);">
           <h4 class="title-font text-white mb-4 fs-4">L'événement en chiffres</h4>
           <ul class="list-unstyled mb-0 fs-5">
-            <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-flag-checkered text-usv me-4 fs-4"></i> <div><strong class="text-white">6 courses</strong> réparties sur 2 jours.</div></li>
-            <li class="mb-4 d-flex align-items-center"><i class="fa-solid fa-medal text-usv me-4 fs-4"></i> <div><span class="text-white fw-bold">14 Titres</span> décernés (de U15 à Élite)</div></li>
-            <li class="mb-4 d-flex align-items-center"><i class="fa-solid fa-person-biking text-usv me-4 fs-4"></i> <div><span class="text-white fw-bold">300 Coureurs</span> attendus</div></li>
-            <li class="d-flex align-items-center"><i class="fa-solid fa-users text-usv me-4 fs-4"></i> <div><span class="text-white fw-bold">3 000 Spectateurs</span> sur le week-end</div></li>
+            <li class="mb-3"><strong class="text-white">6 courses</strong> <span class="text-muted">réparties sur 2 jours</span></li>
+            <li class="mb-3"><strong class="text-white">14 titres</strong> <span class="text-muted">décernés (de U15 à Élite & Masters)</span></li>
+            <li class="mb-3"><strong class="text-white">300 coureurs</strong> <span class="text-muted">attendus</span></li>
+            <li><strong class="text-white">3 000 spectateurs</strong> <span class="text-muted">sur le week-end</span></li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BÉNÉVOLES -->
-  <section class="container py-5 mb-5 reveal">
-    <div class="pro-card p-5 text-center" style="background: linear-gradient(135deg, rgba(158, 27, 27, 0.08), transparent); border-color: rgba(158, 27, 27, 0.3);">
-      <h3 class="title-font text-white mb-3"><i class="fa-solid fa-users-gear text-usv me-3"></i>Vivez la course de l'intérieur</h3>
-      <p class="mb-4 mx-auto fs-5" style="max-width: 700px;">Un événement d'une telle ampleur repose sur l'engagement de son équipe. Sécurité, logistique, accueil : l'US Vern Cyclisme recherche des bénévoles pour encadrer cette fête du sport breton.</p>
-      <button class="btn btn-action" data-bs-toggle="modal" data-bs-target="#benevoleModal">Rejoindre l'organisation</button>
+  <!-- =========================================================
+       PROGRAMME OFFICIEL DES COURSES (DESIGN PRO & ÉPURÉ)
+       ========================================================= -->
+  <section id="programme" class="container py-5 my-5 reveal">
+    <div class="text-center mb-5">
+      <h3 class="title-font text-white display-6 mb-2">Programme des Courses</h3>
+      <p class="mx-auto" style="max-width: 650px;">Horaires officiels du week-end. Appel des coureurs 15 minutes avant chaque départ.</p>
     </div>
-  </section>
 
-  <!-- CIRCUIT : APERÇU + MODALE (PARFAIT POUR MOBILE/ORDI) -->
-  <section class="py-5 my-5" style="background-color: #0f1115; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
-    <div class="container py-5 reveal">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-5">
-          <h3 class="title-font text-white mb-4">Le tracé officiel</h3>
-          <p class="fs-5 mb-4">Un parcours de 2.8km, conçu pour le spectacle. Avec ses obstacles: escaliers, dévers, planches..., notre circuit panoramique plonge les spectateurs dans l'ambiance.</p>
-          <div class="d-flex flex-column gap-3 mb-4">
-            <div class="text-white fw-bold"><i class="fa-solid fa-mountain text-usv me-3"></i> Dévers & Escaliers</div>
-            <div class="text-white fw-bold"><i class="fa-solid fa-beer-mug-empty text-usv me-3"></i> Village VIP & Restauration</div>
+    <div class="row g-4 align-items-stretch">
+      <!-- SAMEDI 5 DÉCEMBRE -->
+      <div class="col-lg-5">
+        <div class="program-panel">
+          <div class="program-day-header">
+            <h4 class="title-font text-white fs-4 mb-0">Samedi 5 Décembre</h4>
+            <span class="program-day-sub">Entrée gratuite</span>
           </div>
-          <p class="small" style="color: #888;"><i class="fa-solid fa-circle-info me-2"></i>Cliquez sur la carte pour l'agrandir et explorer les points clés du circuit.</p>
+
+          <div class="program-item">
+            <div class="program-hour">14h00</div>
+            <div>
+              <div class="program-race-title">Championnats de Bretagne Masters</div>
+              <div class="program-race-meta">
+                Masters Hommes M1-M4 (50 min)<br>
+                14h02 : Masters Hommes M5-M8 (40 min)<br>
+                14h04 : Masters Femmes (30 min)
+              </div>
+            </div>
+          </div>
+
+          <div class="program-item">
+            <div class="program-hour">15h00</div>
+            <div>
+              <div class="program-race-title">Relais Mixte des Clubs</div>
+              <div class="program-race-meta">
+                Équipes de 4 coureurs par club (U15/U17, U19, Féminine et Senior/U23) — 1 tour complet par relayeur.
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-7">
-          <div class="map-preview" data-bs-toggle="modal" data-bs-target="#circuitModal">
-            <img src="photo/plan.png" alt="Aperçu du plan du circuit">
-            <div class="map-overlay">
-              <span class="btn btn-outline-light"><i class="fa-solid fa-magnifying-glass-plus me-2"></i>Agrandir le plan interactif</span>
+      </div>
+
+      <!-- DIMANCHE 6 DÉCEMBRE -->
+      <div class="col-lg-7">
+        <div class="program-panel">
+          <div class="program-day-header">
+            <h4 class="title-font text-white fs-4 mb-0">Dimanche 6 Décembre</h4>
+            <span class="program-day-sub">Toutes catégories</span>
+          </div>
+
+          <div class="program-item">
+            <div class="program-hour">11h00</div>
+            <div>
+              <div class="program-race-title">U15 Hommes & U15 Femmes</div>
+              <div class="program-race-meta">Durée : 20 minutes (départ U15 Femmes décalé de 2 min)</div>
+            </div>
+          </div>
+
+          <div class="program-item">
+            <div class="program-hour">11h45</div>
+            <div>
+              <div class="program-race-title">U17 Hommes</div>
+              <div class="program-race-meta">Durée : 30 minutes</div>
+            </div>
+          </div>
+
+          <div class="program-item">
+            <div class="program-hour">13h15</div>
+            <div>
+              <div class="program-race-title">Femmes 17 ans et + & U17 Femmes</div>
+              <div class="program-race-meta">Durée : 40 min (Femmes 17+) et 30 min (U17 Femmes, départ décalé de 2 min)</div>
+            </div>
+          </div>
+
+          <div class="program-item">
+            <div class="program-hour">14h00</div>
+            <div>
+              <div class="program-race-title">U19 Hommes</div>
+              <div class="program-race-meta">Durée : 40 minutes</div>
+            </div>
+          </div>
+
+          <div class="program-item">
+            <div class="program-hour">15h15</div>
+            <div>
+              <div class="program-race-title">Élites, Open & Access Hommes</div>
+              <div class="program-race-meta">Durée : 60 min (Élites/Open) et 40 min (Access, départ décalé de 30 sec)</div>
             </div>
           </div>
         </div>
@@ -298,45 +588,92 @@
     </div>
   </section>
 
-  <!-- NOS PARTENAIRES -->
-  <section class="py-5 my-5">
-    <div class="container text-center reveal">
-      <h3 class="title-font text-white mb-5">Nos Partenaires Officiels</h3>
-      
-      <!-- CONTENEUR DU CARROUSEL INFINI -->
-      <div class="partners-carousel-container mb-5">
-        <div class="partners-carousel-track">
-          
-          <!-- ================= BOURCLE 1 ================= -->
-          <div class="partner-logo-box"><img src="logo/Logoleclerc.webp" alt="E.Leclerc"></div>
-          <div class="partner-logo-box"><img src="logo/logoharmonie.webp" alt="Harmonie Mutuelle"></div>
-          <div class="partner-logo-box"><img src="logo/logoCITEC.webp" alt="Citec"></div>
-          <div class="partner-logo-box"><img src="logo/logocentury21.webp" alt="Century 21"></div>
-          <div class="partner-logo-box"><img src="logo/logothermo2.webp" alt="thermo2"></div>
-          <div class="partner-logo-box"><img src="logo/logoFerreHotel.webp" alt="FerreHotel"></div>
+  <!-- BÉNÉVOLES (LIEN DOODLE) -->
+  <section class="container py-4 mb-5 reveal">
+    <div class="pro-card p-5 text-center" style="background: linear-gradient(135deg, rgba(158, 27, 27, 0.08), transparent); border-color: rgba(158, 27, 27, 0.3);">
+      <h3 class="title-font text-white mb-3">Vivez la course de l'intérieur</h3>
+      <p class="mb-4 mx-auto fs-5" style="max-width: 700px;">Un événement d'une telle ampleur repose sur l'engagement de son équipe. Sécurité, logistique, accueil : l'US Vern Cyclisme recherche des bénévoles pour encadrer cette fête du sport breton.</p>
+      <a id="doodleBenevoleLink" href="https://doodle.com/group-poll/participate/erpRX5kb/vote" target="_blank" rel="noopener" class="btn btn-action">Rejoindre l'organisation</a>
+    </div>
+  </section>
 
-          <!-- ================= BOURCLE 2 (COPIE EXACTE) ================= -->
-          <div class="partner-logo-box"><img src="logo/Logoleclerc.webp" alt="E.Leclerc"></div>
-          <div class="partner-logo-box"><img src="logo/logoharmonie.webp" alt="Harmonie Mutuelle"></div>
-          <div class="partner-logo-box"><img src="logo/logoCITEC.webp" alt="Citec"></div>
-          <div class="partner-logo-box"><img src="logo/logocentury21.webp" alt="Century 21"></div>
-          <div class="partner-logo-box"><img src="https://thermo2.fr/" alt="thermo2"></div>
-          <div class="partner-logo-box"><img src="https://via.placeholder.com/150x55/ffffff/000000?text=Sponsor+Test+2" alt="FerreHotel"></div>
+  <!-- =========================================================
+       CIRCUIT 2,7 KM DÉTAILLÉ OFFICIEL
+       ========================================================= -->
+  <section id="circuit" class="py-5 my-5" style="background-color: #0f1115; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+    <div class="container py-5 reveal">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <h3 class="title-font text-white display-6 mb-3">Le Tracé Officiel <span class="text-usv">2,7 km</span></h3>
+          <p class="fs-5 mb-4">Un parcours sélectif conçu pour le spectacle autour du plan d'eau et de la Vallée de la Seiche, intégrant toutes les zones techniques et d'accueil du public.</p>
           
+          <ul class="circuit-points-list">
+            <li>Escaliers, Planches & Bac à sable</li>
+            <li>Poste Dépannage & Lavage</li>
+            <li>Buvettes & Restauration</li>
+            <li>Village Partenaires & Podium</li>
+          </ul>
+
+          <p class="small mb-4" style="color: #888;">Cliquez sur la carte pour l'afficher en plein écran.</p>
+          
+          <div class="d-flex flex-wrap gap-2">
+            <button type="button" class="btn btn-action" onclick="openPlanModal('photo/plan-circuit-2-7km.jpg', 'Circuit 2,7 km détaillé')">
+              Agrandir le plan
+            </button>
+            <a href="photo/plan-circuit-2-7km.jpg" download="Plan-Circuit-2.7km-BZH2026.jpg" class="btn btn-outline-light">
+              Télécharger
+            </a>
+          </div>
         </div>
-      </div>
 
-      <div class="mt-2">
-        <a href="partenaires-bzh.html" class="text-white text-decoration-none border-bottom pb-1" style="border-color: var(--usv-bordeaux) !important; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s;">Espace Entreprises & Partenariats <i class="fa-solid fa-arrow-right ms-2 text-usv"></i></a>
+        <div class="col-lg-7">
+          <div class="map-preview" onclick="openPlanModal('photo/plan-circuit-2-7km.jpg', 'Circuit 2,7 km détaillé')">
+            <img src="photo/plan-circuit-2-7km.jpg" alt="Circuit 2.7km détaillé" onerror="this.onerror=null; this.src='photo/plan.png';">
+            <div class="map-overlay">
+              <span class="btn btn-outline-light">Agrandir le plan</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SOCIAL WALL INSTAGRAM (CARROUSEL SCROLLABLE SUR MOBILE) -->
+  <!-- =========================================================
+       NOS PARTENAIRES (CARROUSEL + MENU DÉROULANT PAR CATÉGORIES)
+       ========================================================= -->
+  <section id="partenaires" class="py-5 my-5">
+    <div class="container text-center reveal">
+      <h3 class="title-font text-white display-6 mb-2">Nos Partenaires</h3>
+      <p class="mb-4 mx-auto" style="max-width: 680px;">Merci aux institutions et aux entreprises qui soutiennent l'US Vern Cyclisme et le Championnat de Bretagne 2026.</p>
+
+      <!-- BANDEAU DÉFILANT INFINI -->
+      <div class="partners-carousel-container mb-4">
+        <div class="partners-carousel-track" id="partnersCarouselTrack"></div>
+      </div>
+
+      <!-- BOUTONS : VOIR TOUS LES PARTENAIRES (DÉROULANT) + ESPACE ENTREPRISES -->
+      <div class="d-flex justify-content-center align-items-center flex-wrap gap-3 mt-3">
+        <button id="btnTogglePartners" class="btn btn-outline-light" type="button" data-bs-toggle="collapse" data-bs-target="#allPartnersCollapse" aria-expanded="false">
+          Voir tous les partenaires
+        </button>
+
+        <a href="partenaires-bzh.html" class="btn btn-action">
+          Devenir Partenaire (Club des 20)
+        </a>
+      </div>
+
+      <!-- LISTE DÉROULANTE CLASSÉE PAR CATÉGORIES (INSTITUTIONNELS / OFFICIELS / CLUB / TECHNIQUES) -->
+      <div class="collapse mt-4" id="allPartnersCollapse">
+        <div class="partners-Collapse-panel" id="partnersCategorizedContainer"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL WALL INSTAGRAM -->
   <section class="container py-5 my-5 reveal">
     <div class="mb-5 border-bottom border-secondary pb-3 d-flex justify-content-between align-items-end">
-      <h3 class="title-font text-white fs-4 mb-0"><i class="fa-brands fa-instagram text-usv me-3"></i>Suivez la préparation</h3>
-      <span class="d-md-none small text-muted"><i class="fa-solid fa-arrows-left-right me-1"></i> Glisser pour voir</span>
+      <h3 class="title-font text-white fs-4 mb-0">Suivez la préparation sur Instagram</h3>
+      <span class="d-md-none small text-muted">Glisser pour voir</span>
     </div>
     
     <div class="social-mobile-scroll">
@@ -355,61 +692,85 @@
     </div>
   </section>
 
-  <!-- INFOS PRATIQUES & ACCÈS -->
+  <!-- =========================================================
+       BILLETTERIE & PLANS D'ACCÈS DÉFINITIFS
+       ========================================================= -->
   <section id="infos" class="py-5 mt-5" style="background-color: #0f1115; border-top: 1px solid var(--glass-border);">
     <div class="container py-5 reveal">
       
       <div class="mb-5 text-center">
-        <h3 class="title-font text-white display-6">Billetterie & Accès</h3>
+        <h3 class="title-font text-white display-6">Billetterie & Plans d'Accès</h3>
       </div>
 
-      <!-- ==========================================
-           DÉBUT : BOUTON BILLETTERIE (AFFINÉ)
-           ========================================== -->
+      <!-- BILLETTERIE ASSOCONNECT + TARIF PUBLIC JUSTE EN DESSOUS -->
       <div class="row mb-5 justify-content-center">
-        <div class="col-lg-7">
-          <div class="pro-card p-4 text-center" style="border-top: 3px solid var(--usv-bordeaux);">
-            <h5 class="text-white title-font mb-3"><i class="fa-solid fa-ticket text-usv me-2"></i>Billetterie Officielle</h5>
-            <p class="fs-6 mb-4 text-muted">Réservez dès maintenant vos places pour le Championnat de Bretagne. Paiement 100% sécurisé.</p>
+        <div class="col-lg-8">
+          <div class="pro-card p-4 p-md-5 text-center" style="border-top: 3px solid var(--usv-bordeaux);">
+            <h4 class="text-white title-font mb-2">Billetterie Officielle</h4>
+            <p class="fs-6 mb-4 text-muted">Réservez dès maintenant vos places en ligne pour le Championnat de Bretagne. Paiement 100 % sécurisé.</p>
             
-            <!-- Le bouton taille standard -->
-            <button class="btn btn-action" data-bs-toggle="modal" data-bs-target="#billetterieModal">
+            <button class="btn btn-action mb-4" data-bs-toggle="modal" data-bs-target="#billetterieModal">
               Accéder à la billetterie
             </button>
-            
+
+            <div class="pt-3 border-top border-secondary text-muted small">
+              <strong class="text-white">Tarifs public :</strong> Samedi 5 décembre : Entrée gratuite &nbsp;•&nbsp; Dimanche 6 décembre : <strong class="text-white">7 €</strong> (Gratuit pour les moins de 12 ans)
+            </div>
           </div>
         </div>
       </div>
-      <!-- ==========================================
-           FIN : BOUTON BILLETTERIE (AFFINÉ)
-           ========================================== -->
 
-      <!-- RANGÉE PARKING ET CARTE (On a retiré la petite carte billetterie) -->
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-5">
-          <div class="pro-card p-4 mb-4" style="border-left: 4px solid var(--usv-bordeaux);">
-            <h5 class="text-white title-font fs-5 mb-2"><i class="fa-solid fa-square-parking text-white me-2"></i> Parking Coureur</h5>
-            <p class="mb-0">Stationnement sur l'enrobé du Collège. Accès direct et goudronné au circuit pour faciliter la logistique.</p>
-          </div>
-          <div class="pro-card p-4">
-            <h5 class="text-white title-font fs-5 mb-2"><i class="fa-solid fa-square-parking text-white me-2"></i> Parking Visiteurs</h5>
-            <p class="mb-0">Stationnement dédié (Herbe). Un fléchage sera mis en place à l'entrée de la commune.</p>
-          </div>
-        </div>
+      <!-- LES 2 PLANS D'ACCÈS OFFICIELS (SANS ICÔNES NI BADGES SUPERFLUS) -->
+      <div class="row g-4 align-items-stretch">
         
-       <!-- CARTE GOOGLE (Stade de vélo - Vue Satellite) AVEC CONSENTEMENT -->
-        <div class="col-lg-7">
-          <div id="maps-consent-container" class="pro-card p-0 overflow-hidden text-center d-flex flex-column justify-content-center align-items-center" style="height: 420px; border-color: #333; background-color: #111;">
-            <i class="fa-solid fa-map-location-dot fs-1 mb-3 text-usv"></i>
-            <p class="text-muted small px-4">Pour afficher la carte interactive, vous devez accepter le chargement de Google Maps, ce qui implique le dépôt de traceurs (cookies).</p>
-            <button onclick="loadGoogleMaps()" class="btn btn-outline-light mt-2 btn-sm">Accepter et voir la carte</button>
+        <!-- PLAN ACCÈS SPECTATEURS ET OFFICIELS -->
+        <div class="col-lg-6">
+          <div class="plan-card-wrapper p-4" style="border-top: 3px solid var(--usv-bordeaux);">
+            <h4 class="text-white title-font fs-5 mb-2">Plan Accès Spectateurs & Officiels</h4>
+            <p class="small mb-3">
+              Itinéraires fléchés depuis la D173 (Route d'Angers) vers les <strong>Parkings Spectateurs P1 à P4</strong> et le <strong>Parking Officiels (P*)</strong>.
+            </p>
+            
+            <div class="map-preview mb-3 mt-auto" onclick="openPlanModal('photo/plan-acces-spectateurs.jpg', 'Plan Accès Spectateurs et Officiels')">
+              <img src="photo/plan-acces-spectateurs.jpg" alt="Plan Accès Spectateurs et Officiels - Parkings P1 à P4 et P*">
+              <div class="map-overlay">
+                <span class="btn btn-outline-light btn-sm">Agrandir le plan</span>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center pt-2">
+              <span class="small text-muted">Parkings P1 à P4 & P*</span>
+              <a href="photo/plan-acces-spectateurs.jpg" download="Plan-Acces-Spectateurs-Officiels-BZH2026.jpg" class="btn btn-outline-light py-1 px-3" style="font-size: 0.75rem;">
+                Télécharger
+              </a>
+            </div>
           </div>
-          <script>
-            function loadGoogleMaps() {
-              document.getElementById('maps-consent-container').outerHTML = '<div class="pro-card p-0 overflow-hidden" style="height: 420px; border-color: #333;"><iframe src="https://maps.google.com/maps?q=Stade+de+v%C3%A9lo,+Vern-sur-Seiche&t=h&z=17&ie=UTF8&output=embed" title="Plan d\'accès - Stade de vélo Vern-sur-Seiche" width="100%" height="100%" style="border:0; filter: contrast(1.1) brightness(0.9);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>';
-            }
-          </script>
         </div>
+
+        <!-- PLAN ACCÈS COUREURS -->
+        <div class="col-lg-6">
+          <div class="plan-card-wrapper p-4" style="border-top: 3px solid #0057b8;">
+            <h4 class="text-white title-font fs-5 mb-2">Plan Accès Coureurs & Permanence</h4>
+            <p class="small mb-3">
+              Accès dédiés aux compétiteurs et équipes (secteur Collège Théodore Monod) : <strong>Parkings Coureurs P1 à P3</strong>, <strong>Camping-Cars</strong>, <strong>Dossards</strong> et <strong>Contrôle Anti-Dopage</strong>.
+            </p>
+            
+            <div class="map-preview mb-3 mt-auto" onclick="openPlanModal('photo/plan-acces-coureurs.jpg', 'Plan Accès Coureurs & Permanence')">
+              <img src="photo/plan-acces-coureurs.jpg" alt="Plan Accès Coureurs - Parkings P1 à P3 et Permanences">
+              <div class="map-overlay">
+                <span class="btn btn-outline-light btn-sm">Agrandir le plan</span>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center pt-2">
+              <span class="small text-muted">Parkings P1 à P3 Coureurs, Dossards & CAD</span>
+              <a href="photo/plan-acces-coureurs.jpg" download="Plan-Acces-Coureurs-BZH2026.jpg" class="btn btn-outline-light py-1 px-3" style="font-size: 0.75rem;">
+                Télécharger
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -422,7 +783,7 @@
         <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="nav-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="https://www.linkedin.com/in/us-vern-cyclisme-270074350/" target="_blank" class="nav-social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
-      <p class="mb-0 small text-muted">&copy; 2026 Championnat BZH Cyclo-Cross<br>Organisation : <a href="index.html" class="text-white text-decoration-none fw-bold">US Vern Cyclisme</a><br>
+      <p class="mb-0 small text-muted">&copy; 2026 Championnat de Bretagne de Cyclo-Cross<br>Organisation : <a href="index.html" class="text-white text-decoration-none fw-bold">US Vern Cyclisme</a><br>
         <a href="mentionslegales.html" class="text-muted text-decoration-underline mt-2 d-inline-block me-3">Mentions Légales</a>
         <a href="politique-confidentialite.html" class="text-muted text-decoration-underline mt-2 d-inline-block">Politique de Confidentialité</a>
       </p>
@@ -430,21 +791,37 @@
   </footer>
 
   <!-- ========================================================
-       MODALES (Toutes regroupées à la fin pour éviter les bugs) 
+       MODALES
        ======================================================== -->
+
+  <!-- MODAL : VISIONNEUSE PLEIN ÉCRAN DES 3 PLANS OFFICIELS -->
+  <div class="modal fade" id="planZoomModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" style="max-width: 1200px;">
+      <div class="modal-content" style="background: var(--bg-darkest); border: 1px solid var(--glass-border); border-radius: 10px; overflow: hidden;">
+        <div class="modal-header border-bottom-0 pb-2 pt-3 px-4">
+          <h5 class="modal-title fw-bold text-white title-font fs-5" id="planZoomModalTitle">Plan Officiel</h5>
+          <div class="d-flex align-items-center gap-2">
+            <a id="planZoomDownloadBtn" href="photo/plan-circuit-2-7km.jpg" download class="btn btn-sm btn-outline-light py-1 px-3" style="font-size: 0.75rem;">
+              Télécharger
+            </a>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+          </div>
+        </div>
+        <div class="modal-body p-3 text-center" style="background: #ffffff;">
+          <img id="planZoomModalImg" src="photo/plan-circuit-2-7km.jpg" alt="Plan officiel agrandi" class="img-fluid rounded" style="max-height: 82vh; width: auto;">
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- MODAL : BILLETTERIE ASSOCONNECT -->
   <div class="modal fade" id="billetterieModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl" style="max-width: 1140px;">
-      <div class="modal-content" style="background: #ffffff; border-radius: 12px; overflow: hidden; border: 2px solid var(--usv-bordeaux);">
-        
-        <!-- En-tête sombre pour rappeler ton site -->
+      <div class="modal-content" style="background: #ffffff; border-radius: 10px; overflow: hidden; border: 2px solid var(--usv-bordeaux);">
         <div class="modal-header border-bottom-0 pb-3 pt-3 px-4" style="background: var(--bg-darkest);">
-          <h5 class="modal-title fw-bold text-white title-font fs-5"><i class="fa-solid fa-lock text-usv me-2"></i> Réservation sécurisée</h5>
+          <h5 class="modal-title fw-bold text-white title-font fs-5">Billetterie Officielle</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
         </div>
-        
-        <!-- Corps de la modale avec l'Iframe blanche -->
         <div class="modal-body p-0 text-center" style="height: 80vh; overflow-y: auto;">
           <iframe id="iframe_assoconnect_public" 
                   src="https://us-vern-cyclisme-6554a7a96f529.assoconnect.com/collect/description/742611-p-championnat-de-bretagne-de-cyclo-cross-2026-billetterie?iframe=1" 
@@ -454,7 +831,6 @@
                   scrolling="auto">
           </iframe>
         </div>
-        
       </div>
     </div>
   </div>
@@ -473,53 +849,128 @@
     </div>
   </div>
 
-  <!-- MODAL : CARTE INTERACTIVE EN GRAND -->
-  <div class="modal fade" id="circuitModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-      <div class="modal-content" style="background: var(--bg-darkest); border: 1px solid var(--glass-border); border-radius: 12px; overflow: hidden;">
-        <div class="modal-header border-bottom-0 pb-0 pt-3 px-4">
-          <h5 class="modal-title fw-bold text-white title-font fs-5">Plan interactif du circuit</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body p-4 text-center">
-          <div class="map-modal-container mx-auto" style="max-width: 1000px;">
-            <img src="photo/plan.png" alt="Plan détaillé du Circuit">
-            <div class="hotspot" style="top: 76.5%; left: 26%;"><span class="hotspot-info">Secteur Planches</span></div>
-            <div class="hotspot" style="top: 40%; left: 42%;"><span class="hotspot-info">Bac à sable massif</span></div>
-            <div class="hotspot" style="top: 38%; left: 50%;"><span class="hotspot-info">Escaliers Nord</span></div>
-            <div class="hotspot" style="top: 90%; left: 55%;"><span class="hotspot-info">Village VIP & Partenaires</span></div>
-            <div class="hotspot" style="top: 68%; left: 47%;"><span class="hotspot-info">Escaliers Sud</span></div>
-            <div class="hotspot" style="top: 86.1%; left: 38%;"><span class="hotspot-info">Buvette</span></div>
-            <div class="hotspot" style="top: 68%; left: 85%;"><span class="hotspot-info">Départ</span></div>
-            <div class="hotspot" style="top: 79%; left: 20.459%;"><span class="hotspot-info">Arrivée</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL : BÉNÉVOLES -->
-  <div class="modal fade" id="benevoleModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content" style="background: #111; border: 1px solid var(--glass-border); border-radius: 12px; overflow: hidden;">
-        <div class="modal-header border-bottom-0 pb-0 pt-4 px-4">
-          <h5 class="modal-title fw-bold text-white title-font fs-5"><i class="fa-solid fa-clipboard-user text-usv me-3"></i> Formulaire d'inscription</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body p-0 mt-3">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfiAcFGsxYX64ltpWNIqxcl5PN_r1U8CLdYcC71p9BLW0IvbA/viewform?embedded=true" title="Formulaire d'inscription bénévole" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
+    /* =========================================================
+       LIEN DOODLE BÉNÉVOLES (Remplace l'URL ci-dessous par ton lien Doodle)
+       ========================================================= */
+    const DOODLE_BENEVOLES_URL = "https://doodle.com/group-poll/participate/erpRX5kb/vote";
+
+    /* =========================================================
+       LISTE OFFICIELLE DES PARTENAIRES PAR CATÉGORIES (AVEC NEWLOC)
+       ========================================================= */
+    const PARTNER_CATEGORIES = [
+      {
+        title: "Partenaires Institutionnels",
+        items: [
+          { name: "Ville de Vern-sur-Seiche", logo: "logo/Vern-sur-Seiche_logo.png" },
+          { name: "Ille & Vilaine (Le Département)", logo: "logo/logoille-et-vilaine.png" },
+          { name: "Comité de Bretagne Cyclisme", logo: "logo/logocomitebretagne.png" }
+        ]
+      },
+      {
+        title: "Partenaires Officiels",
+        items: [
+          { name: "SARL Auguste & Pascal Maloeuvre", logo: "logo/sarl-maloeuvre.svg" },
+          { name: "Belo Velo", logo: "logo/belo-velo.png" },
+          { name: "Kotan", logo: "logo/KOTAN.png" },
+          { name: "Maxi Velo", logo: "logo/maxi-velo.jpeg" },
+          { name: "CM Plomberie", logo: "logo/cm-plomberie.webp" }
+        ]
+      },
+      {
+        title: "Partenaires Club",
+        items: [
+          { name: "E.Leclerc Vern / Val d'Orson", logo: "logo/Logoleclerc.webp" },
+          { name: "CITEC (Groupe STEAP Stailor)", logo: "logo/logoCITEC.webp" },
+          { name: "Harmonie Mutuelle", logo: "logo/logoharmonie.webp" },
+          { name: "Century 21 Dréano Immobilier", logo: "logo/logocentury21.webp" },
+          { name: "Decathlon", logo: "logo/logodecathlon.webp" }
+        ]
+      },
+      {
+        title: "Partenaires Techniques",
+        items: [
+          { name: "Podiocom", logo: "logo/podiocom.svg" },
+          { name: "Grimaud", logo: "logo/grimaud.webp" },
+          { name: "Newloc", logo: "logo/newloc.png" },
+          { name: "Noret", logo: "logo/noret.png" }
+        ]
+      }
+    ];
+
+    function createPartnerCardHTML(partner) {
+      const safeName = partner.name.replace(/"/g, '&quot;');
+      return `
+        <div class="partner-logo-box" title="${safeName}">
+          <img src="${partner.logo}" alt="${safeName}" 
+               onerror="this.outerHTML='<span class=\\'partner-fallback-text\\'>${safeName}</span>'">
+        </div>
+      `;
+    }
+
+    function renderPartners() {
+      // 1. Carrousel infini
+      const allPartners = PARTNER_CATEGORIES.flatMap(cat => cat.items);
+      const carouselHTML = allPartners.map(createPartnerCardHTML).join('');
+      const carouselTrack = document.getElementById('partnersCarouselTrack');
+      if (carouselTrack) {
+        carouselTrack.innerHTML = carouselHTML + carouselHTML;
+      }
+
+      // 2. Liste déroulante par catégories
+      const catContainer = document.getElementById('partnersCategorizedContainer');
+      if (catContainer) {
+        catContainer.innerHTML = PARTNER_CATEGORIES.map(cat => `
+          <div class="partner-cat-group">
+            <span class="partner-cat-label">${cat.title}</span>
+            <div class="partner-cat-row">
+              ${cat.items.map(createPartnerCardHTML).join('')}
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    function openPartnersFromNav() {
+      const collapseEl = document.getElementById('allPartnersCollapse');
+      if (collapseEl) {
+        const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseEl, { toggle: false });
+        bsCollapse.show();
+      }
+    }
+
+    function openPlanModal(imgSrc, titleText) {
+      const modalImg = document.getElementById('planZoomModalImg');
+      const modalTitle = document.getElementById('planZoomModalTitle');
+      const downloadBtn = document.getElementById('planZoomDownloadBtn');
+
+      if (modalImg && modalTitle) {
+        modalImg.src = imgSrc;
+        modalTitle.textContent = titleText;
+        if (downloadBtn) downloadBtn.href = imgSrc;
+        const modal = new bootstrap.Modal(document.getElementById('planZoomModal'));
+        modal.show();
+      }
+    }
+
     document.addEventListener("DOMContentLoaded", function() {
+      renderPartners();
+
+      // Applique le lien Doodle
+      const doodleBtn = document.getElementById('doodleBenevoleLink');
+      if (doodleBtn && DOODLE_BENEVOLES_URL) {
+        doodleBtn.href = DOODLE_BENEVOLES_URL;
+      }
+
+      if (window.location.hash === "#partenaires") {
+        openPartnersFromNav();
+      }
+
       // Animation au défilement
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
-      }, { threshold: 0.15 });
+      }, { threshold: 0.12 });
       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
       // Gestion de la vidéo Teaser
