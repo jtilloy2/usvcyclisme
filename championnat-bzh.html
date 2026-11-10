@@ -15,7 +15,7 @@
   
   <!-- Google Fonts : Montserrat & Open Sans -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Bootstrap 5 & FontAwesome (uniquement pour les logos réseaux sociaux) -->
+  <!-- Bootstrap 5 & FontAwesome -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   
@@ -103,6 +103,30 @@
       border-color: #ffffff;
     }
 
+    /* Bouton GPS Waze sobre */
+    .btn-waze {
+      background-color: var(--bg-surface-2);
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 4px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 6px 14px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .btn-waze:hover {
+      background-color: var(--usv-bordeaux);
+      border-color: var(--usv-bordeaux);
+      color: #ffffff !important;
+    }
+
     .nav-link-custom {
       color: #ffffff;
       text-decoration: none;
@@ -130,6 +154,46 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 100px 0 60px;
+    }
+
+    /* =========================================
+       COMPTE À REBOURS SOBRE & PRO
+       ========================================= */
+    .countdown-wrapper {
+      display: inline-flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 2rem;
+      flex-wrap: nowrap;
+    }
+    .countdown-item {
+      background: rgba(18, 18, 18, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-top: 2px solid var(--usv-bordeaux);
+      border-radius: 6px;
+      min-width: 78px;
+      padding: 10px 12px;
+      text-align: center;
+    }
+    .countdown-value {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.65rem;
+      color: #ffffff;
+      line-height: 1.1;
+      display: block;
+    }
+    .countdown-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      display: block;
     }
 
     /* =========================================
@@ -257,7 +321,7 @@
     }
 
     /* =========================================
-       PARTENAIRES : CARROUSEL + CATÉGORIES PROPRES
+       PARTENAIRES : CARROUSEL ACTIF PC + MOBILE
        ========================================= */
     .partners-carousel-container {
       overflow: hidden;
@@ -287,7 +351,7 @@
       display: flex;
       gap: 20px;
       width: max-content;
-      animation: scroll-partners 36s linear infinite;
+      animation: scroll-partners 34s linear infinite;
     }
     .partners-carousel-track:hover {
       animation-play-state: paused;
@@ -329,7 +393,7 @@
       line-height: 1.25;
     }
 
-    /* Panneau déroulant classé par catégorie (style épuré) */
+    /* Panneau déroulant classé par catégorie */
     .partners-Collapse-panel {
       background: var(--bg-surface);
       border: 1px solid var(--glass-border);
@@ -414,58 +478,135 @@
     .reveal { opacity: 0; transform: translateY(16px); transition: all 0.5s ease-out; }
     .reveal.active { opacity: 1; transform: translateY(0); }
 
-    @media (max-width: 768px) {
-      .partners-carousel-container {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
+    /* =========================================
+       RESPONSIVE TABLETTE & MOBILE
+       ========================================= */
+    @media (max-width: 991.98px) {
+      .hero-bzh {
+        background-attachment: scroll;
       }
-      .partners-carousel-container::-webkit-scrollbar { display: none; }
-      .partners-carousel-track {
-        animation: none;
-        gap: 12px;
-        padding: 0 15px;
+      .mobile-nav-drawer {
+        background: #121212;
+        border-top: 1px solid var(--glass-border);
+        margin-top: 12px;
+        padding: 16px;
+        border-radius: 8px;
       }
-      .partners-carousel-container::before, 
-      .partners-carousel-container::after { display: none; }
-      .partner-logo-box { width: 155px; height: 76px; padding: 10px; }
+    }
+
+    @media (max-width: 767.98px) {
+      .hero-bzh h1.display-3 { font-size: 2.1rem; }
+      .hero-bzh h2.display-5 { font-size: 1.45rem; }
+      .countdown-wrapper { gap: 8px; }
+      .countdown-item { min-width: 66px; padding: 8px 8px; }
+      .countdown-value { font-size: 1.35rem; }
+      .countdown-label { font-size: 0.6rem; }
+
+      .program-panel { padding: 20px 18px; }
+      .program-item { grid-template-columns: 60px 1fr; gap: 10px; }
       .circuit-points-list { grid-template-columns: 1fr; }
+
+      .partners-carousel-container::before,
+      .partners-carousel-container::after {
+        width: 25px;
+      }
+      .partners-carousel-track {
+        gap: 12px;
+        animation: scroll-partners 28s linear infinite;
+      }
+      .partner-logo-box {
+        width: 150px;
+        height: 72px;
+        padding: 10px 12px;
+      }
+      .partner-logo-box img { max-height: 48px; }
+
+      .partners-Collapse-panel { padding: 20px 16px; }
+      .partner-cat-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .partner-cat-row .partner-logo-box {
+        height: 70px;
+      }
+    }
+
+    @media print {
+      .navbar { position: static !important; }
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .collapse { display: block !important; height: auto !important; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar fixed-top" style="background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding: 12px 0;">
-    <div class="container d-flex justify-content-between align-items-center">
+  <!-- NAVBAR RESPONSIVE (PC + MENU MOBILE/TABLETTE) -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding: 12px 0;">
+    <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="logo/logo.webp" alt="Logo USV" height="40" class="bg-white rounded p-1">
-        <span class="ms-3 fs-6 title-font text-white d-none d-md-block" style="letter-spacing: 2px;">US VERN CYCLISME</span>
+        <span class="ms-2 ms-sm-3 fs-6 title-font text-white" style="letter-spacing: 1.5px;">US VERN CYCLISME</span>
       </a>
-      <div class="d-flex align-items-center">
-        <a href="#programme" class="nav-link-custom me-4 d-none d-lg-block">Programme</a>
-        <a href="#circuit" class="nav-link-custom me-4 d-none d-lg-block">Circuit</a>
-        <a href="#infos" class="nav-link-custom me-4 d-none d-lg-block">Billetterie & Accès</a>
-        <a href="#partenaires" onclick="openPartnersFromNav()" class="nav-link-custom me-3 d-none d-lg-block">Partenaires</a>
-        
-        <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" class="nav-social-icon"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="nav-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.linkedin.com/in/us-vern-cyclisme-270074350/" target="_blank" class="nav-social-icon me-3"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="partenaires-bzh.html" class="btn btn-outline-light ms-2" style="font-size: 0.75rem; padding: 8px 14px; white-space: nowrap;">
-          Espace Partenaires
+
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+        <a href="partenaires-bzh.html" class="btn btn-outline-light" style="font-size: 0.7rem; padding: 6px 10px; white-space: nowrap;">
+          Partenaires
         </a>
+        <button class="navbar-toggler border-0 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavbarBzh" aria-controls="mobileNavbarBzh" aria-expanded="false" aria-label="Menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse justify-content-end" id="mobileNavbarBzh">
+        <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 gap-lg-0 mobile-nav-drawer p-lg-0 mt-lg-0 bg-transparent border-0">
+          <a href="#programme" class="nav-link-custom me-lg-4">Programme</a>
+          <a href="#circuit" class="nav-link-custom me-lg-4">Circuit</a>
+          <a href="#infos" class="nav-link-custom me-lg-4">Billetterie & Accès</a>
+          <a href="#partenaires" onclick="openPartnersFromNav()" class="nav-link-custom me-lg-3">Partenaires</a>
+          
+          <div class="d-flex align-items-center pt-2 pt-lg-0 border-top border-secondary border-lg-0">
+            <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" class="nav-social-icon ms-0 ms-lg-3"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="nav-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/us-vern-cyclisme-270074350/" target="_blank" class="nav-social-icon me-lg-3"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+
+          <a href="partenaires-bzh.html" class="btn btn-outline-light ms-lg-2 d-none d-lg-inline-block" style="font-size: 0.75rem; padding: 8px 14px; white-space: nowrap;">
+            Espace Partenaires
+          </a>
+        </div>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO AVEC COMPTE À REBOURS -->
   <section class="hero-bzh text-center">
     <div class="container reveal">
       <p class="text-usv fw-bold mb-3 title-font" style="font-size: 0.95rem;">Passion • Dépassement • Partage • Bretagne</p>
       <h1 class="display-3 text-white title-font mb-2">Championnat de Bretagne</h1>
       <h2 class="display-5 text-white title-font mb-4">Cyclo-Cross 2026</h2>
-      <p class="fs-5 mb-5 text-white" style="font-weight: 600; letter-spacing: 1px;">5 & 6 Décembre 2026 <span class="mx-2 text-usv">•</span> Vern-sur-Seiche</p>
-      <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+      <p class="fs-5 mb-4 text-white" style="font-weight: 600; letter-spacing: 1px;">5 & 6 Décembre 2026 <span class="mx-2 text-usv">•</span> Vern-sur-Seiche</p>
+
+      <!-- COMPTE À REBOURS -->
+      <div class="countdown-wrapper" id="bzhCountdown">
+        <div class="countdown-item">
+          <span class="countdown-value" id="cd-days">--</span>
+          <span class="countdown-label">Jours</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="cd-hours">--</span>
+          <span class="countdown-label">Heures</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="cd-mins">--</span>
+          <span class="countdown-label">Min</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="cd-secs">--</span>
+          <span class="countdown-label">Sec</span>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center gap-3 flex-wrap mt-2">
         <button class="btn btn-action" data-bs-toggle="modal" data-bs-target="#videoModal">Voir le teaser</button>
         <a href="#infos" class="btn btn-outline-light">Billetterie & Accès</a>
       </div>
@@ -473,19 +614,19 @@
   </section>
 
   <!-- PRÉSENTATION ET CHIFFRES -->
-  <section class="container py-5 my-5">
-    <div class="row align-items-center g-5">
+  <section class="container py-5 my-4 my-md-5">
+    <div class="row align-items-center g-4 g-lg-5">
       <div class="col-lg-6 reveal">
         <h3 class="display-6 title-font text-white mb-4">L'élite du<br><span class="text-usv">Cyclo-Cross Breton</span></h3>
         <p class="fs-5">Les 5 et 6 décembre 2026, l'US Vern Cyclisme accueille le Championnat de Bretagne sur le site de la Vallée de la Seiche. Un week-end de sport de haut niveau réunissant les meilleurs spécialistes régionaux sur un tracé exigeant.</p>
-        <p class="fs-5">Plus qu'une compétition, c'est un grand rassemblement populaire pensé pour les athlètes, le public et les partenaires du territoire.</p>
+        <p class="fs-5 mb-0">Plus qu'une compétition, c'est un grand rassemblement populaire pensé pour les athlètes, le public et les partenaires du territoire.</p>
       </div>
       <div class="col-lg-6 reveal">
-        <div class="pro-card p-5" style="border-left: 4px solid var(--usv-bordeaux);">
+        <div class="pro-card p-4 p-md-5" style="border-left: 4px solid var(--usv-bordeaux);">
           <h4 class="title-font text-white mb-4 fs-4">L'événement en chiffres</h4>
           <ul class="list-unstyled mb-0 fs-5">
             <li class="mb-3"><strong class="text-white">6 courses</strong> <span class="text-muted">réparties sur 2 jours</span></li>
-            <li class="mb-3"><strong class="text-white">14 titres</strong> <span class="text-muted">décernés (de U15 à Élite & Masters)</span></li>
+            <li class="mb-3"><strong class="text-white">14 titres</strong> <span class="text-muted">décernés (de U15 à Élite)</span></li>
             <li class="mb-3"><strong class="text-white">300 coureurs</strong> <span class="text-muted">attendus</span></li>
             <li><strong class="text-white">3 000 spectateurs</strong> <span class="text-muted">sur le week-end</span></li>
           </ul>
@@ -495,9 +636,9 @@
   </section>
 
   <!-- =========================================================
-       PROGRAMME OFFICIEL DES COURSES (DESIGN PRO & ÉPURÉ)
+       PROGRAMME OFFICIEL DES COURSES
        ========================================================= -->
-  <section id="programme" class="container py-5 my-5 reveal">
+  <section id="programme" class="container py-5 my-4 my-md-5 reveal">
     <div class="text-center mb-5">
       <h3 class="title-font text-white display-6 mb-2">Programme des Courses</h3>
       <p class="mx-auto" style="max-width: 650px;">Horaires officiels du week-end. Appel des coureurs 15 minutes avant chaque départ.</p>
@@ -578,7 +719,7 @@
 
   <!-- BÉNÉVOLES (LIEN DOODLE) -->
   <section class="container py-4 mb-5 reveal">
-    <div class="pro-card p-5 text-center" style="background: linear-gradient(135deg, rgba(158, 27, 27, 0.08), transparent); border-color: rgba(158, 27, 27, 0.3);">
+    <div class="pro-card p-4 p-md-5 text-center" style="background: linear-gradient(135deg, rgba(158, 27, 27, 0.08), transparent); border-color: rgba(158, 27, 27, 0.3);">
       <h3 class="title-font text-white mb-3">Vivez la course de l'intérieur</h3>
       <p class="mb-4 mx-auto fs-5" style="max-width: 700px;">Un événement d'une telle ampleur repose sur l'engagement de son équipe. Sécurité, logistique, accueil : l'US Vern Cyclisme recherche des bénévoles pour encadrer cette fête du sport breton.</p>
       <a id="doodleBenevoleLink" href="https://doodle.com/group-poll/participate/erpRX5kb/vote" target="_blank" rel="noopener" class="btn btn-action">Rejoindre l'organisation</a>
@@ -589,8 +730,8 @@
        CIRCUIT 2,7 KM DÉTAILLÉ OFFICIEL
        ========================================================= -->
   <section id="circuit" class="py-5 my-5" style="background-color: #0f1115; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
-    <div class="container py-5 reveal">
-      <div class="row align-items-center g-5">
+    <div class="container py-4 py-md-5 reveal">
+      <div class="row align-items-center g-4 g-lg-5">
         <div class="col-lg-5">
           <h3 class="title-font text-white display-6 mb-3">Le Tracé Officiel <span class="text-usv">2,7 km</span></h3>
           <p class="fs-5 mb-4">Un parcours sélectif conçu pour le spectacle autour du plan d'eau et de la Vallée de la Seiche, intégrant toutes les zones techniques et d'accueil du public.</p>
@@ -627,14 +768,14 @@
   </section>
 
   <!-- =========================================================
-       NOS PARTENAIRES (CARROUSEL + MENU DÉROULANT PAR CATÉGORIES)
+       NOS PARTENAIRES (CARROUSEL PC/MOBILE + MENU DÉROULANT)
        ========================================================= -->
-  <section id="partenaires" class="py-5 my-5">
+  <section id="partenaires" class="py-5 my-4 my-md-5">
     <div class="container text-center reveal">
       <h3 class="title-font text-white display-6 mb-2">Nos Partenaires</h3>
       <p class="mb-4 mx-auto" style="max-width: 680px;">Merci aux institutions et aux entreprises qui soutiennent l'US Vern Cyclisme et le Championnat de Bretagne 2026.</p>
 
-      <!-- BANDEAU DÉFILANT INFINI -->
+      <!-- BANDEAU DÉFILANT INFINI (Défile sur PC, tablette et téléphone) -->
       <div class="partners-carousel-container mb-4">
         <div class="partners-carousel-track" id="partnersCarouselTrack"></div>
       </div>
@@ -650,7 +791,7 @@
         </a>
       </div>
 
-      <!-- LISTE DÉROULANTE CLASSÉE PAR CATÉGORIES (INSTITUTIONNELS / OFFICIELS / CLUB / TECHNIQUES) -->
+      <!-- LISTE DÉROULANTE CLASSÉE PAR CATÉGORIES -->
       <div class="collapse mt-4" id="allPartnersCollapse">
         <div class="partners-Collapse-panel" id="partnersCategorizedContainer"></div>
       </div>
@@ -658,10 +799,10 @@
   </section>
 
   <!-- SOCIAL WALL INSTAGRAM -->
-  <section class="container py-5 my-5 reveal">
-    <div class="mb-5 border-bottom border-secondary pb-3 d-flex justify-content-between align-items-end">
+  <section class="container py-5 my-4 my-md-5 reveal">
+    <div class="mb-4 mb-md-5 border-bottom border-secondary pb-3 d-flex justify-content-between align-items-end">
       <h3 class="title-font text-white fs-4 mb-0">Suivez la préparation sur Instagram</h3>
-      <span class="d-md-none small text-muted">Glisser pour voir</span>
+      <span class="d-md-none small text-muted ms-2 text-nowrap">Glisser</span>
     </div>
     
     <div class="social-mobile-scroll">
@@ -681,10 +822,10 @@
   </section>
 
   <!-- =========================================================
-       BILLETTERIE & PLANS D'ACCÈS DÉFINITIFS
+       BILLETTERIE & PLANS D'ACCÈS DÉFINITIFS + BOUTONS GPS WAZE
        ========================================================= -->
   <section id="infos" class="py-5 mt-5" style="background-color: #0f1115; border-top: 1px solid var(--glass-border);">
-    <div class="container py-5 reveal">
+    <div class="container py-4 py-md-5 reveal">
       
       <div class="mb-5 text-center">
         <h3 class="title-font text-white display-6">Billetterie & Plans d'Accès</h3>
@@ -708,12 +849,12 @@
         </div>
       </div>
 
-      <!-- LES 2 PLANS D'ACCÈS OFFICIELS (SANS ICÔNES NI BADGES SUPERFLUS) -->
+      <!-- LES 2 PLANS D'ACCÈS OFFICIELS AVEC BOUTON GPS WAZE -->
       <div class="row g-4 align-items-stretch">
         
         <!-- PLAN ACCÈS SPECTATEURS ET OFFICIELS -->
         <div class="col-lg-6">
-          <div class="plan-card-wrapper p-4" style="border-top: 3px solid var(--usv-bordeaux);">
+          <div class="plan-card-wrapper p-3 p-md-4" style="border-top: 3px solid var(--usv-bordeaux);">
             <h4 class="text-white title-font fs-5 mb-2">Plan Accès Spectateurs & Officiels</h4>
             <p class="small mb-3">
               Itinéraires fléchés depuis la D173 (Route d'Angers) vers les <strong>Parkings Spectateurs P1 à P4</strong> et le <strong>Parking Officiels (P*)</strong>.
@@ -726,18 +867,23 @@
               </div>
             </div>
 
-            <div class="d-flex justify-content-between align-items-center pt-2">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 pt-2">
               <span class="small text-muted">Parkings P1 à P4 & P*</span>
-              <a href="photo/plan-acces-spectateurs.jpg" download="Plan-Acces-Spectateurs-Officiels-BZH2026.jpg" class="btn btn-outline-light py-1 px-3" style="font-size: 0.75rem;">
-                Télécharger
-              </a>
+              <div class="d-flex align-items-center gap-2">
+                <a href="https://waze.com/ul?ll=48.035778,-1.598153&navigate=yes" target="_blank" rel="noopener" class="btn-waze">
+                  <i class="fa-brands fa-waze"></i> GPS Waze
+                </a>
+                <a href="photo/plan-acces-spectateurs.jpg" download="Plan-Acces-Spectateurs-Officiels-BZH2026.jpg" class="btn btn-outline-light py-1 px-3" style="font-size: 0.75rem;">
+                  Télécharger
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- PLAN ACCÈS COUREURS -->
         <div class="col-lg-6">
-          <div class="plan-card-wrapper p-4" style="border-top: 3px solid #0057b8;">
+          <div class="plan-card-wrapper p-3 p-md-4" style="border-top: 3px solid #0057b8;">
             <h4 class="text-white title-font fs-5 mb-2">Plan Accès Coureurs & Permanence</h4>
             <p class="small mb-3">
               Accès dédiés aux compétiteurs et équipes (secteur Collège Théodore Monod) : <strong>Parkings Coureurs P1 à P3</strong>, <strong>Camping-Cars</strong>, <strong>Dossards</strong> et <strong>Contrôle Anti-Dopage</strong>.
@@ -750,11 +896,16 @@
               </div>
             </div>
 
-            <div class="d-flex justify-content-between align-items-center pt-2">
-              <span class="small text-muted">Parkings P1 à P3 Coureurs, Dossards & CAD</span>
-              <a href="photo/plan-acces-coureurs.jpg" download="Plan-Acces-Coureurs-BZH2026.jpg" class="btn btn-outline-light py-1 px-3" style="font-size: 0.75rem;">
-                Télécharger
-              </a>
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 pt-2">
+              <span class="small text-muted">Parkings P1 à P3 Coureurs & Dossards</span>
+              <div class="d-flex align-items-center gap-2">
+                <a href="https://waze.com/ul?ll=48.042800,-1.609288&navigate=yes" target="_blank" rel="noopener" class="btn-waze">
+                  <i class="fa-brands fa-waze"></i> GPS Waze
+                </a>
+                <a href="photo/plan-acces-coureurs.jpg" download="Plan-Acces-Coureurs-BZH2026.jpg" class="btn btn-outline-light py-1 px-3" style="font-size: 0.75rem;">
+                  Télécharger
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -767,7 +918,7 @@
   <footer class="text-center p-5" style="background-color: #000000; border-top: 1px solid rgba(255,255,255,0.05);">
     <div class="container">
       <div class="d-flex justify-content-center mb-4 gap-3">
-        <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" class="nav-social-icon"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" class="nav-social-icon ms-0"><i class="fa-brands fa-instagram"></i></a>
         <a href="https://www.facebook.com/usverncyclisme35" target="_blank" class="nav-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="https://www.linkedin.com/in/us-vern-cyclisme-270074350/" target="_blank" class="nav-social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
@@ -795,7 +946,7 @@
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
           </div>
         </div>
-        <div class="modal-body p-3 text-center" style="background: #ffffff;">
+        <div class="modal-body p-2 p-md-3 text-center" style="background: #ffffff;">
           <img id="planZoomModalImg" src="photo/plan-circuit-2-7km.jpg" alt="Plan officiel agrandi" class="img-fluid rounded" style="max-height: 82vh; width: auto;">
         </div>
       </div>
@@ -839,14 +990,43 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    /* =========================================================
-       LIEN DOODLE BÉNÉVOLES (Remplace l'URL ci-dessous par ton lien Doodle)
-       ========================================================= */
     const DOODLE_BENEVOLES_URL = "https://doodle.com/group-poll/participate/erpRX5kb/vote";
 
     /* =========================================================
-       LISTE OFFICIELLE DES PARTENAIRES PAR CATÉGORIES (AVEC NEWLOC)
+       COMPTE À REBOURS (5 DÉCEMBRE 2026)
        ========================================================= */
+    function initCountdown() {
+      const targetDate = new Date("2026-12-05T09:00:00+01:00").getTime();
+      const daysEl = document.getElementById("cd-days");
+      const hoursEl = document.getElementById("cd-hours");
+      const minsEl = document.getElementById("cd-mins");
+      const secsEl = document.getElementById("cd-secs");
+      if (!daysEl) return;
+
+      function updateTimer() {
+        const now = new Date().getTime();
+        const diff = targetDate - now;
+
+        if (diff <= 0) {
+          document.getElementById("bzhCountdown").innerHTML = '<span class="badge bg-danger px-3 py-2 fs-6 title-font">Événement en cours</span>';
+          return;
+        }
+
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+        daysEl.textContent = String(d).padStart(2, "0");
+        hoursEl.textContent = String(h).padStart(2, "0");
+        minsEl.textContent = String(m).padStart(2, "0");
+        secsEl.textContent = String(s).padStart(2, "0");
+      }
+
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    }
+
     const PARTNER_CATEGORIES = [
       {
         title: "Partenaires Institutionnels",
@@ -864,6 +1044,7 @@
           { name: "Kotan", logo: "logo/KOTAN.png" },
           { name: "Maxi Velo", logo: "logo/maxi-velo.jpeg" },
           { name: "CM Plomberie", logo: "logo/cm-plomberie.webp" },
+          { name: "Ferré Hôtels", logo: "logo/logoFerreHotel.webp" },
           { name: "Le Télégramme", logo: "logo/Logo_du_Télégramme.jpg" }
         ]
       },
@@ -876,6 +1057,9 @@
           { name: "Century 21 Dréano Immobilier", logo: "logo/logocentury21.webp" },
           { name: "Decathlon", logo: "logo/logodecathlon.webp" },
           { name: "M.B.Cycles", logo: "logo/logoMBCycles.jpeg" },
+          { name: "THERMO2", logo: "logo/logothermo2.webp" },
+          { name: "BH Dépannage", logo: "logo/logoBHDEPANNAGE.png" },
+          { name: "CréditMutuel", logo: "logo/Logo_Crédit_Mutuel_de_Bretagne_CMB.svg" },
           { name: "PIZZA Chantepie", logo: "logo/pizza-chantepie.jpg" }
         ]
       },
@@ -901,7 +1085,6 @@
     }
 
     function renderPartners() {
-      // 1. Carrousel infini
       const allPartners = PARTNER_CATEGORIES.flatMap(cat => cat.items);
       const carouselHTML = allPartners.map(createPartnerCardHTML).join('');
       const carouselTrack = document.getElementById('partnersCarouselTrack');
@@ -909,7 +1092,6 @@
         carouselTrack.innerHTML = carouselHTML + carouselHTML;
       }
 
-      // 2. Liste déroulante par catégories
       const catContainer = document.getElementById('partnersCategorizedContainer');
       if (catContainer) {
         catContainer.innerHTML = PARTNER_CATEGORIES.map(cat => `
@@ -946,9 +1128,9 @@
     }
 
     document.addEventListener("DOMContentLoaded", function() {
+      initCountdown();
       renderPartners();
 
-      // Applique le lien Doodle
       const doodleBtn = document.getElementById('doodleBenevoleLink');
       if (doodleBtn && DOODLE_BENEVOLES_URL) {
         doodleBtn.href = DOODLE_BENEVOLES_URL;
@@ -958,13 +1140,20 @@
         openPartnersFromNav();
       }
 
-      // Animation au défilement
+      document.querySelectorAll('#mobileNavbarBzh a.nav-link-custom').forEach(link => {
+        link.addEventListener('click', () => {
+          const navCollapse = document.getElementById('mobileNavbarBzh');
+          if (navCollapse && navCollapse.classList.contains('show')) {
+            bootstrap.Collapse.getInstance(navCollapse).hide();
+          }
+        });
+      });
+
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
       }, { threshold: 0.12 });
       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-      // Gestion de la vidéo Teaser
       const videoModal = document.getElementById('videoModal');
       const teaserVideo = document.getElementById('teaserVideo');
       if (videoModal && teaserVideo) {

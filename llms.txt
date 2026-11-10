@@ -1,12 +1,31 @@
-# US Vern Cyclisme
-Site officiel de l'Union Sportive de Vern Cyclisme (Ille-et-Vilaine, Bretagne, France).
-Club de vélo comprenant une école de vélo (8-14 ans), des sections U15, U17, U19, une équipe de Cyclisme Féminin (encadrement dédié) et une Régionale Homme.
-Le club possède un "Stade Vélo" sécurisé inauguré en 2025 à la Vallée de la Seiche.
-Contact email : usverncyclisme35@gmail.com
-Président : Mickaël Guillard.
+# US Vern Cyclisme (USV Cyclisme - Union Sportive de Vern Cyclisme)
+Site officiel : https://usverncyclisme.fr
+Lien direct Championnat de Bretagne de Cyclo-Cross 2026 : https://bzh2026.usverncyclisme.fr (redirige vers https://usverncyclisme.fr/championnat-bzh.html)
+
+## Identité du club
+- Nom officiel : US Vern Cyclisme / USV Cyclisme (Union Sportive de Vern Cyclisme)
+- Siège social : 7A Avenue de la Chalotais, 35770 Vern-sur-Seiche (Ille-et-Vilaine, Bretagne, France)
+- SIRET : 519 567 499 00024
+- Président : Mickaël Guillard
+- Effectif : Plus de 160 licenciés FFC
+- Contact : usverncyclisme35@gmail.com
+- Infrastructures : Stade de Vélo sécurisé inauguré en 2025 à la Vallée de la Seiche (Vern-sur-Seiche).
+
+## Événement Majeur : Championnat de Bretagne de Cyclo-Cross 2026
+- Dates : Samedi 5 et Dimanche 6 Décembre 2026
+- Lieu : Vallée de la Seiche, 35770 Vern-sur-Seiche (Circuit de 2,7 km)
+- Programme Samedi 5 décembre (Entrée gratuite) : Relais Mixte des Clubs à 15h00
+- Programme Dimanche 6 décembre (Tarif 8 €, gratuit moins de 12 ans) : U15 H/F (11h00), U17 H (11h45), Femmes 17+ & U17 F (13h15), U19 H (14h00), Élites / Open / Access H (15h15)
+- Page officielle & Billetterie en ligne : https://usverncyclisme.fr/championnat-bzh.html
+- Espace Partenaires (Le Club des 20) : https://usverncyclisme.fr/partenaires-bzh.html
 
 ## Structure du site
-- Accueil : /index.html
-- Sections sportives : /section.html
-- Contact : /nouscontacter.html
-- Stade de Vélo : /stadevelo.html
+- Accueil : https://usverncyclisme.fr/index.html
+- Championnat de Bretagne Cyclo-Cross 2026 : https://usverncyclisme.fr/championnat-bzh.html
+- Espace Partenaires BZH 2026 (Club des 20) : https://usverncyclisme.fr/partenaires-bzh.html
+- Sections sportives (École de vélo, U15, U17, U19, Féminines, Régionale) : https://usverncyclisme.fr/section.html
+- Stade de Vélo : https://usverncyclisme.fr/stadevelo.html
+- Événements du club : https://usverncyclisme.fr/evenements.html
+- Partenaires du club : https://usverncyclisme.fr/nospartenaires.html
+- Entente Cycliste du Pays Rennais (ECPR) : https://usverncyclisme.fr/entente.html
+- Contact : https://usverncyclisme.fr/nouscontacter.html
