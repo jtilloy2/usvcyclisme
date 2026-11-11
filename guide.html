@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Guide Spectateurs Officiel - Championnat de Bretagne de Cyclo-Cross 2026 à Vern-sur-Seiche. Direct vidéo, plan 2,7 km, buvettes, toilettes, horaires et parkings GPS.">
+  <meta property="og:title" content="Guide Spectateurs - Championnat de Bretagne de Cyclo-Cross 2026 | US Vern">
+  <meta property="og:description" content="5 et 6 Décembre 2026 à Vern-sur-Seiche. Plan interactif, direct YouTube, horaires et accès GPS.">
+  <meta property="og:image" content="https://jtilloy2.github.io/usvcyclisme/affiche/cyclo-cross.jpg">
+  <meta property="og:type" content="website">
+
+  <title>Guide Spectateurs - BZH CX 2026 | US Vern Cyclisme</title>
+  <link rel="icon" type="image/png" href="logo/logo.webp">
+
+  <!-- Google Fonts : Montserrat & Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 & FontAwesome 6 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    /* =========================================
+       CHARTE GRAPHIQUE "MAISON PREMIUM" (NATIVE APP)
+       ========================================= */
+    :root {
+      --bg-darkest: #0a0a0a;
+      --bg-surface: #121212;
+      --bg-surface-2: #18181b;
+      --text-main: #ffffff;
+      --text-muted: #a1a1aa;
+      --usv-bordeaux: #9e1b1b;
+      --usv-bordeaux-dark: #7a1414;
+      --usv-blue: #0057b8;
+      --usv-gold: #d4af37;
+      --glass-border: rgba(255, 255, 255, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    html, body {
+      background-color: var(--bg-darkest) !important;
+      color: var(--text-main) !important;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      margin: 0;
+    }
+
+    body {
+      padding-bottom: 84px;
+    }
+
+    section[id] {
+      scroll-margin-top: 74px;
+    }
+
+    h1, h2, h3, h4, h5, .title-font {
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin: 0;
+    }
+
+    .text-usv { color: var(--usv-bordeaux) !important; }
+    .text-gold { color: var(--usv-gold) !important; }
+    p { color: var(--text-muted); margin-bottom: 0; }
+
+    .guide-container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* =========================================
+       CARTES & BOUTONS (STYLE NATIF iOS/ANDROID)
+       ========================================= */
+    .pro-card {
+      background-color: var(--bg-surface) !important;
+      border: 1px solid var(--glass-border);
+      border-radius: 10px;
+      padding: 22px;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    }
+
+    @media (max-width: 576px) {
+      .pro-card {
+        padding: 16px 14px;
+        margin-bottom: 14px;
+      }
+    }
+
+    .section-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: var(--usv-bordeaux);
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .btn-action {
+      background-color: var(--usv-bordeaux) !important;
+      color: #ffffff !important;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      border: none;
+      border-radius: 6px;
+      padding: 11px 20px;
+      font-size: 0.82rem;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+    .btn-action:hover, .btn-action:active {
+      background-color: var(--usv-bordeaux-dark) !important;
+      color: #ffffff !important;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline-custom {
+      background-color: transparent;
+      border-radius: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      padding: 9px 15px;
+      letter-spacing: 0.5px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff !important;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+    .btn-outline-custom:hover, .btn-outline-custom:active, .btn-outline-custom.active {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+      border-color: #ffffff !important;
+    }
+
+    /* =========================================
+       1. NAVBAR SUPÉRIEURE + RÉSEAUX SOCIAUX
+       ========================================= */
+    .navbar-guide {
+      background: rgba(10, 10, 10, 0.94) !important;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 11px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1030;
+    }
+
+    .social-icon-link {
+      width: 34px;
+      height: 34px;
+      border-radius: 6px;
+      background-color: var(--bg-surface-2);
+      border: 1px solid var(--glass-border);
+      color: #ffffff !important;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .social-icon-link:hover, .social-icon-link:active {
+      background-color: var(--usv-bordeaux);
+      border-color: var(--usv-bordeaux);
+      color: #ffffff !important;
+    }
+
+    /* =========================================
+       2. BANNIÈRE DIRECT YOUTUBE LIVE
+       ========================================= */
+    .live-banner {
+      background: linear-gradient(135deg, rgba(158, 27, 27, 0.16) 0%, var(--bg-surface) 100%) !important;
+      border: 1px solid rgba(158, 27, 27, 0.4);
+      border-left: 4px solid var(--usv-bordeaux);
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin-top: 16px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .live-badge-minimal {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 0.7rem;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #f87171;
+      margin-bottom: 2px;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #ef4444;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 8px #ef4444;
+      animation: pulseRed 1.4s infinite;
+    }
+
+    @keyframes pulseRed {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.35; transform: scale(1.35); }
+    }
+
+    /* =========================================
+       3. TUILE D'ACCÈS RAPIDE (WC & BUVETTES SÉPARÉS)
+       ========================================= */
+    .quick-access-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    @media (min-width: 768px) {
+      .quick-access-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .quick-tile {
+      background-color: var(--bg-surface) !important;
+      border: 1px solid var(--glass-border);
+      border-left: 3px solid var(--usv-bordeaux);
+      border-radius: 8px;
+      padding: 13px 14px;
+      text-decoration: none;
+      color: #ffffff !important;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .quick-tile.tile-blue { border-left-color: var(--usv-blue); }
+    .quick-tile.tile-gold { border-left-color: var(--usv-gold); }
+
+    .quick-tile:hover, .quick-tile:active {
+      background-color: var(--bg-surface-2) !important;
+      border-color: rgba(255, 255, 255, 0.28);
+      transform: translateY(-1px);
+    }
+
+    .quick-tile-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      line-height: 1.2;
+      display: block;
+    }
+
+    .quick-tile-sub {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      display: block;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .quick-tile-icon {
+      color: var(--usv-bordeaux);
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+    .quick-tile.tile-blue .quick-tile-icon { color: #38bdf8; }
+    .quick-tile.tile-gold .quick-tile-icon { color: var(--usv-gold); }
+
+    /* =========================================
+       4. CARTE INTERACTIVE & CALIBRAGE EXACT DES PINS
+       ========================================= */
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .filter-bar::-webkit-scrollbar { display: none; }
+
+    .filter-btn {
+      background-color: var(--bg-surface-2) !important;
+      color: var(--text-muted) !important;
+      border: 1px solid var(--glass-border);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background-color: var(--usv-bordeaux) !important;
+      color: #ffffff !important;
+      border-color: var(--usv-bordeaux);
+    }
+
+    .map-frame {
+      position: relative;
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: #ffffff;
+      touch-action: pan-x pan-y;
+    }
+
+    .map-zoom-container {
+      position: relative;
+      width: 100%;
+      transform-origin: center center;
+      transition: transform 0.2s ease-out;
+    }
+
+    .map-zoom-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    /* Pastilles calibrées exactement sur le diamètre des cercles du plan */
+    .map-pin {
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.68rem;
+      color: #ffffff;
+      cursor: pointer;
+      z-index: 10;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.65);
+      transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    @media (max-width: 576px) {
+      .map-pin {
+        width: 22px;
+        height: 22px;
+        font-size: 0.6rem;
+        border-width: 1.5px;
+      }
+    }
+
+    .map-pin:hover, .map-pin.selected {
+      transform: translate(-50%, -50%) scale(1.38);
+      z-index: 22;
+      box-shadow: 0 0 0 3px var(--usv-gold), 0 4px 12px rgba(0, 0, 0, 0.9);
+    }
+
+    .pin-wc { background-color: var(--usv-blue) !important; }
+    .pin-buvette { background-color: var(--usv-bordeaux) !important; }
+    .pin-sport { background-color: #18181b !important; }
+    .pin-gate {
+      background-color: var(--usv-gold) !important;
+      color: #0a0a0a !important;
+      border-color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 0.64rem;
+    }
+
+    .map-Side-controls {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      z-index: 25;
+    }
+
+    .map-ctrl-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 6px;
+      background: rgba(10, 10, 10, 0.88) !important;
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .map-ctrl-btn:hover, .map-ctrl-btn:active {
+      background: var(--usv-bordeaux) !important;
+    }
+
+    .btn-fullscreen-map {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(10, 10, 10, 0.88) !important;
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      z-index: 25;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-fullscreen-map:hover {
+      background: var(--usv-bordeaux) !important;
+      border-color: var(--usv-bordeaux);
+    }
+
+    /* Tiroir d'info sous la carte avec lien GPS discret */
+    .map-info-bar {
+      background-color: var(--bg-surface-2) !important;
+      border: 1px solid var(--glass-border);
+      border-left: 3px solid var(--usv-bordeaux);
+      border-radius: 6px;
+      padding: 13px 15px;
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .pin-gps-link {
+      color: #ffffff !important;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      border-bottom: 1px solid var(--usv-gold);
+      padding-bottom: 2px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s ease;
+    }
+    .pin-gps-link:hover {
+      color: var(--usv-gold) !important;
+    }
+
+    /* =========================================
+       5. PROGRAMME HORAIRE
+       ========================================= */
+    .program-day-header {
+      border-bottom: 2px solid var(--usv-bordeaux);
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .program-day-sub {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--usv-gold);
+    }
+    .program-item {
+      display: grid;
+      grid-template-columns: 66px 1fr;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      align-items: baseline;
+    }
+    .program-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .program-hour {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--usv-bordeaux);
+    }
+    .program-race-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .program-race-meta {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* =========================================
+       6. ENGAGÉS (DESIGN MINIMALISTE)
+       ========================================= */
+    .search-minimal {
+      width: 100%;
+      background-color: var(--bg-surface-2) !important;
+      border: 1px solid var(--glass-border);
+      border-radius: 6px;
+      color: #ffffff !important;
+      padding: 11px 14px;
+      font-size: 0.9rem;
+    }
+    .search-minimal:focus {
+      outline: none;
+      border-color: var(--usv-bordeaux);
+    }
+
+    .engaged-preview-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 14px;
+      background-color: var(--bg-surface-2) !important;
+      border: 1px solid var(--glass-border);
+      border-left: 3px solid var(--usv-bordeaux);
+      border-radius: 6px;
+      margin-bottom: 8px;
+      gap: 12px;
+    }
+
+    .bib-tag {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: var(--usv-gold);
+      min-width: 36px;
+    }
+
+    /* =========================================
+       7. PARKINGS GPS (WAZE & GOOGLE MAPS UNIQUEMENT)
+       ========================================= */
+    .parking-row {
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .parking-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .btn-gps-minimal {
+      background-color: var(--bg-surface-2) !important;
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 9px 14px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .btn-gps-minimal.waze-btn {
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+    .btn-gps-minimal:hover, .btn-gps-minimal:active {
+      background-color: var(--usv-bordeaux) !important;
+      border-color: var(--usv-bordeaux);
+      color: #ffffff !important;
+    }
+
+    /* =========================================
+       8. CARROUSEL PARTENAIRES
+       ========================================= */
+    .partners-carousel-container {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      padding: 10px 0;
+    }
+    .partners-carousel-container::before,
+    .partners-carousel-container::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 40px;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .partners-carousel-container::before {
+      left: 0;
+      background: linear-gradient(to right, var(--bg-surface) 0%, transparent 100%);
+    }
+    .partners-carousel-container::after {
+      right: 0;
+      background: linear-gradient(to left, var(--bg-surface) 0%, transparent 100%);
+    }
+    .partners-carousel-track {
+      display: flex;
+      gap: 14px;
+      width: max-content;
+      animation: scroll-partners 34s linear infinite;
+    }
+    .partners-carousel-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes scroll-partners {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .partner-logo-box {
+      background: #ffffff !important;
+      border-radius: 6px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 74px;
+      width: 165px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+    }
+    .partner-logo-box img {
+      max-height: 48px;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .partner-fallback-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 0.76rem;
+      color: #111111 !important;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    .partner-cat-group {
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      text-align: left;
+    }
+    .partner-cat-group:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+    .partner-cat-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--usv-gold);
+      margin-bottom: 10px;
+      display: block;
+    }
+    .partner-cat-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 10px;
+    }
+    .partner-cat-row .partner-logo-box {
+      width: 100%;
+      height: 66px;
+    }
+
+    /* =========================================
+       9. BARRE DE NAVIGATION BASSE NATIVE
+       ========================================= */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(10, 10, 10, 0.96) !important;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
+      z-index: 1030;
+    }
+
+    .bottom-nav-item {
+      color: var(--text-muted) !important;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      padding: 6px 2px;
+      transition: color 0.2s ease;
+    }
+
+    .bottom-nav-item i {
+      font-size: 1.08rem;
+    }
+
+    .bottom-nav-item.active {
+      color: #ffffff !important;
+    }
+    .bottom-nav-item.active i {
+      color: var(--usv-bordeaux) !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR SUPÉRIEURE (SANS BILLETTERIE, AVEC RÉSEAUX SOCIAUX) -->
+  <nav class="navbar-guide">
+    <div class="guide-container d-flex justify-content-between align-items-center">
+      <a class="d-flex align-items-center text-decoration-none" href="championnat-bzh.html">
+        <img src="logo/logo.webp" alt="Logo USV" height="36" class="bg-white rounded p-1" onerror="this.style.display='none'">
+        <div class="ms-2 ms-sm-3">
+          <span class="title-font text-white d-block" style="font-size: 0.88rem; letter-spacing: 1px;">BZH CYCLO-CROSS 2026</span>
+          <span class="text-gold title-font d-block" style="font-size: 0.66rem; letter-spacing: 1.2px;">GUIDE SPECTATEURS JOUR J</span>
+        </div>
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" rel="noopener" class="social-icon-link" title="Instagram US Vern">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/usverncyclisme35" target="_blank" rel="noopener" class="social-icon-link" title="Facebook US Vern">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="championnat-bzh.html" class="btn-outline-custom py-1 px-2" title="Site de l'événement">
+          <i class="fa-solid fa-house"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="guide-container">
+
+    <!-- 1. BANNIÈRE DIRECT YOUTUBE LIVE -->
+    <section id="section-live" class="live-banner">
+      <div>
+        <span class="live-badge-minimal"><span class="live-dot"></span> En direct du circuit</span>
+        <h1 class="title-font text-white" style="font-size: 1.02rem;">Diffusion Vidéo YouTube Live</h1>
+      </div>
+      <button type="button" class="btn-action" onclick="openYoutubeLive()">
+        <i class="fa-brands fa-youtube"></i> Regarder le Direct
+      </button>
+    </section>
+
+    <!-- 2. RACCOURCIS TERRAIN (BUVETTES ET TOILETTES SÉPARÉES) -->
+    <div class="quick-access-grid">
+      <a href="#section-plan" onclick="focusCategory('food')" class="quick-tile">
+        <div>
+          <span class="quick-tile-label">Buvettes & Repas</span>
+          <span class="quick-tile-sub">Centre & Arrivée Sud</span>
+        </div>
+        <i class="fa-solid fa-utensils quick-tile-icon"></i>
+      </a>
+
+      <a href="#section-plan" onclick="focusCategory('wc')" class="quick-tile tile-blue">
+        <div>
+          <span class="quick-tile-label">Toilettes (WC)</span>
+          <span class="quick-tile-sub">Base Kayak (Entrées 3 & 5)</span>
+        </div>
+        <i class="fa-solid fa-restroom quick-tile-icon"></i>
+      </a>
+
+      <a href="#section-programme" class="quick-tile tile-gold">
+        <div>
+          <span class="quick-tile-label">Horaires Courses</span>
+          <span class="quick-tile-sub">Programme Samedi & Dim.</span>
+        </div>
+        <i class="fa-regular fa-clock quick-tile-icon"></i>
+      </a>
+
+      <a href="#section-parkings" class="quick-tile">
+        <div>
+          <span class="quick-tile-label">Retrouver ma voiture</span>
+          <span class="quick-tile-sub">Guidage Waze & Maps</span>
+        </div>
+        <i class="fa-solid fa-car-side quick-tile-icon"></i>
+      </a>
+    </div>
+
+    <!-- =========================================================
+         3. PLAN DU CIRCUIT 2,7 KM (ALIGNEMENT GÉOMÉTRIQUE EXACT)
+         ========================================================= -->
+    <section id="section-plan" class="pro-card nav-Observed">
+      <div class="d-flex justify-content-between align-items-end flex-wrap gap-2 mb-3">
+        <div>
+          <span class="section-eyebrow">Vallée de la Seiche</span>
+          <h2 class="title-font text-white fs-5">Plan Interactif <span class="text-usv">2,7 km</span></h2>
+        </div>
+        <button type="button" class="btn-outline-custom py-1 px-3" onclick="openFullMapModal()">
+          <i class="fa-solid fa-expand"></i> Plein écran
+        </button>
+      </div>
+
+      <!-- FILTRES DU PLAN -->
+      <div class="filter-bar" id="mapFilterBar">
+        <button type="button" class="filter-btn active" onclick="focusCategory('all', this)">Tout voir</button>
+        <button type="button" class="filter-btn" onclick="focusCategory('food', this)">Buvettes & Restauration</button>
+        <button type="button" class="filter-btn" onclick="focusCategory('wc', this)">Toilettes (WC)</button>
+        <button type="button" class="filter-btn" onclick="focusCategory('gate', this)">5 Entrées</button>
+        <button type="button" class="filter-btn" onclick="focusCategory('sport', this)">Zones Sportives</button>
+      </div>
+
+      <!-- CARTE AVEC REPÈRES CALIBRÉS SUR CHAQUE CERCLE DE L'IMAGE -->
+      <div class="map-frame" id="mapViewport">
+        <button type="button" class="btn-fullscreen-map" onclick="openFullMapModal()">
+          <i class="fa-solid fa-magnifying-glass-plus"></i> Agrandir
+        </button>
+
+        <div class="map-zoom-container" id="mapZoomLayer">
+          <img src="photo/plan-circuit-2-7km.jpg" alt="Plan officiel du circuit 2,7 km" id="circuitMapImg" onerror="this.onerror=null;this.src='photo/plan.png';">
+
+          <!-- WC BASE KAYAK (Centre exact du cercle WC : left 21.45%, top 21.25%) -->
+          <div class="map-pin pin-wc" data-cat="wc" data-pin="wc_kayak" style="top: 21.25%; left: 21.45%;" onclick="selectPin('wc_kayak', this)" title="Toilettes WC Kayak">
+            <i class="fa-solid fa-restroom"></i>
+          </div>
+
+          <!-- BUVETTE CENTRALE & GRANDE BUVETTE / RESTAURATION SUD -->
+          <div class="map-pin pin-buvette" data-cat="food" data-pin="buvette_centrale" style="top: 36.60%; left: 50.25%;" onclick="selectPin('buvette_centrale', this)" title="Buvette Centrale">
+            <i class="fa-solid fa-beer-mug-empty"></i>
+          </div>
+          <div class="map-pin pin-buvette" data-cat="food" data-pin="buvette_sud" style="top: 60.65%; left: 35.35%;" onclick="selectPin('buvette_sud', this)" title="Grande Buvette Sud">
+            <i class="fa-solid fa-beer-mug-empty"></i>
+          </div>
+          <div class="map-pin pin-buvette" data-cat="food" data-pin="restauration_sud" style="top: 62.35%; left: 38.05%;" onclick="selectPin('restauration_sud', this)" title="Restauration Chaude Sud">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+
+          <!-- POINTS CLÉS SPORTIFS (Centres géométriques exacts des pictogrammes) -->
+          <div class="map-pin pin-sport" data-cat="sport" data-pin="village" style="top: 37.45%; left: 24.85%;" onclick="selectPin('village', this)" title="Village Partenaires">
+            <i class="fa-solid fa-tent"></i>
+          </div>
+          <div class="map-pin pin-sport" data-cat="sport" data-pin="podium" style="top: 46.60%; left: 25.35%;" onclick="selectPin('podium', this)" title="Podium Protocolaire">
+            <i class="fa-solid fa-medal"></i>
+          </div>
+          <div class="map-pin pin-sport" data-cat="sport" data-pin="arrivee" style="top: 50.25%; left: 26.35%;" onclick="selectPin('arrivee', this)" title="Ligne d'Arrivée">
+            <i class="fa-solid fa-flag-checkered"></i>
+          </div>
+          <div class="map-pin pin-sport" data-cat="sport" data-pin="planches" style="top: 52.80%; left: 34.25%;" onclick="selectPin('planches', this)" title="Les Planches">
+            <i class="fa-solid fa-grip-lines"></i>
+          </div>
+          <div class="map-pin pin-sport" data-cat="sport" data-pin="escaliers_sud" style="top: 52.65%; left: 52.95%;" onclick="selectPin('escaliers_sud', this)" title="Escaliers Sud">
+            <i class="fa-solid fa-stairs"></i>
+          </div>
+          <div class="map-pin pin-sport" data-cat="sport" data-pin="lavage" style="top: 64.45%; left: 45.85%;" onclick="selectPin('lavage', this)" title="Poste de Lavage">
+            <i class="fa-solid fa-faucet-drip"></i>
+          </div>
+          <div class="map-pin pin-sport" data-cat="sport" data-pin="depannage" style="top: 72.75%; left: 47.05%;" onclick="selectPin('depannage', this)" title="Poste de Dépannage">
+            <i class="fa-solid fa-wrench"></i>
+          </div>
+          <div class="map-pin pin-sport" data-cat="sport" data-pin="bac_sable" style="top: 36.85%; left: 62.50%;" onclick="selectPin('bac_sable', this)" title="Bac à Sable">
+            <i class="fa-solid fa-mound"></i>
+          </div>
+          <div class="map-pin pin-sport" data-cat="sport" data-pin="escaliers_nord" style="top: 27.55%; left: 66.35%;" onclick="selectPin('escaliers_nord', this)" title="Escaliers Nord">
+            <i class="fa-solid fa-stairs"></i>
+          </div>
+          <div class="map-pin pin-sport" data-cat="sport" data-pin="depart" style="top: 83.75%; left: 83.50%;" onclick="selectPin('depart', this)" title="Ligne de Départ">
+            <i class="fa-solid fa-play"></i>
+          </div>
+
+          <!-- LES 5 ENTRÉES PIÉTONNES (Positionnées sur les allées d'accès exactes) -->
+          <div class="map-pin pin-gate" data-cat="gate" data-pin="e1" style="top: 90.00%; left: 85.00%;" onclick="selectPin('e1', this)">E1</div>
+          <div class="map-pin pin-gate" data-cat="gate" data-pin="e2" style="top: 11.20%; left: 76.20%;" onclick="selectPin('e2', this)">E2</div>
+          <div class="map-pin pin-gate" data-cat="gate" data-pin="e3" style="top: 27.50%; left: 26.80%;" onclick="selectPin('e3', this)">E3</div>
+          <div class="map-pin pin-gate" data-cat="gate" data-pin="e4" style="top: 79.50%; left: 37.80%;" onclick="selectPin('e4', this)">E4</div>
+          <div class="map-pin pin-gate" data-cat="gate" data-pin="e5" style="top: 19.20%; left: 41.80%;" onclick="selectPin('e5', this)">E5</div>
+        </div>
+
+        <div class="map-Side-controls">
+          <button type="button" class="map-ctrl-btn" onclick="zoomMap(0.4)" aria-label="Zoomer"><i class="fa-solid fa-plus"></i></button>
+          <button type="button" class="map-ctrl-btn" onclick="zoomMap(-0.4)" aria-label="Dézoomer"><i class="fa-solid fa-minus"></i></button>
+          <button type="button" class="map-ctrl-btn" onclick="resetZoom()" aria-label="Réinitialiser"><i class="fa-solid fa-rotate-left"></i></button>
+        </div>
+      </div>
+
+      <!-- BULLE D'INFORMATION SOUS LA CARTE AVEC LIEN GPS DISCRET -->
+      <div class="map-info-bar" id="mapInfoDrawer">
+        <div style="flex: 1; min-width: 210px;">
+          <strong class="title-font text-white d-block" id="pinTitle" style="font-size: 0.86rem;">
+            Touchez un repère sur le plan
+          </strong>
+          <span class="small text-muted d-block mt-1" id="pinDesc">
+            Sélectionnez une pastille (Buvettes, Toilettes, Entrées, Obstacles) pour afficher les détails.
+          </span>
+        </div>
+        <a id="pinGpsBtn" href="#" target="_blank" rel="noopener" class="pin-gps-link d-none">
+          <i class="fa-solid fa-location-arrow text-gold"></i> Y aller (GPS)
+        </a>
+      </div>
+
+      <!-- BASCULE ENTRE LES 3 PLANS OFFICIELS -->
+      <div class="d-flex flex-wrap gap-2 mt-3 pt-3" style="border-top: 1px solid rgba(255,255,255,0.06);">
+        <button type="button" class="btn-outline-custom active flex-grow-1" onclick="switchMapSource('photo/plan-circuit-2-7km.jpg', 'photo/plan.png', 'Circuit 2,7 km détaillé', true, this)">
+          Circuit 2,7 km
+        </button>
+        <button type="button" class="btn-outline-custom flex-grow-1" onclick="switchMapSource('photo/plan-acces-spectateurs.jpg', 'photo/plan-spectateurs.jpg', 'Plan Accès Spectateurs', false, this)">
+          Plan Parkings Spectateurs
+        </button>
+        <button type="button" class="btn-outline-custom flex-grow-1" onclick="switchMapSource('photo/plan-acces-coureurs.jpg', 'photo/plan-coureurs.jpg', 'Plan Accès Coureurs', false, this)">
+          Plan Parkings Coureurs
+        </button>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. PROGRAMME & HORAIRES OFFICIELS (SANS MENTIONS BILLETTERIE)
+         ========================================================= -->
+    <section id="section-programme" class="pro-card nav-Observed">
+      <div class="mb-3">
+        <span class="section-eyebrow">Compétition FFC</span>
+        <h2 class="title-font text-white fs-5">Programme & Horaires</h2>
+      </div>
+
+      <div class="row g-3">
+        <!-- SAMEDI 5 DÉCEMBRE -->
+        <div class="col-lg-5">
+          <div class="p-3 rounded h-100" style="background-color: var(--bg-surface-2); border: 1px solid var(--glass-border);">
+            <div class="program-day-header">
+              <h3 class="title-font text-white fs-6">Samedi 5 Décembre</h3>
+              <span class="program-day-sub">Journée d'ouverture</span>
+            </div>
+
+            <div class="program-item">
+              <div class="program-hour">15h00</div>
+              <div>
+                <div class="program-race-title">Relais Mixte des Clubs</div>
+                <div class="program-race-meta">
+                  Équipes de 4 coureurs par club (U15/U17, U19, Féminine et Senior/U23) — 1 tour complet par relayeur.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIMANCHE 6 DÉCEMBRE -->
+        <div class="col-lg-7">
+          <div class="p-3 rounded h-100" style="background-color: var(--bg-surface-2); border: 1px solid var(--glass-border);">
+            <div class="program-day-header">
+              <h3 class="title-font text-white fs-6">Dimanche 6 Décembre</h3>
+              <span class="program-day-sub">14 Titres Régionaux</span>
+            </div>
+
+            <div class="program-item">
+              <div class="program-hour">11h00</div>
+              <div>
+                <div class="program-race-title">U15 Hommes & U15 Femmes</div>
+                <div class="program-race-meta">Durée : 20 minutes (départ U15 Femmes décalé de 2 min)</div>
+              </div>
+            </div>
+
+            <div class="program-item">
+              <div class="program-hour">11h45</div>
+              <div>
+                <div class="program-race-title">U17 Hommes</div>
+                <div class="program-race-meta">Durée : 30 minutes</div>
+              </div>
+            </div>
+
+            <div class="program-item">
+              <div class="program-hour">13h15</div>
+              <div>
+                <div class="program-race-title">Femmes 17 ans et + & U17 Femmes</div>
+                <div class="program-race-meta">Durée : 40 min (Femmes 17+) et 30 min (U17 Femmes, départ décalé de 2 min)</div>
+              </div>
+            </div>
+
+            <div class="program-item">
+              <div class="program-hour">14h00</div>
+              <div>
+                <div class="program-race-title">U19 Hommes</div>
+                <div class="program-race-meta">Durée : 40 minutes</div>
+              </div>
+            </div>
+
+            <div class="program-item">
+              <div class="program-hour">15h15</div>
+              <div>
+                <div class="program-race-title">Élites, Open & Access Hommes</div>
+                <div class="program-race-meta">Durée : 60 min (Élites/Open) et 40 min (Access, départ décalé de 30 sec)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. LISTE DES ENGAGÉS (EXEMPLES GÉNÉRIQUES ÉPURÉS)
+         ========================================================= -->
+    <section id="section-engages" class="pro-card nav-Observed">
+      <div class="d-flex justify-content-between align-items-end flex-wrap gap-2 mb-3">
+        <div>
+          <span class="section-eyebrow">Dossards & Catégories</span>
+          <h2 class="title-font text-white fs-5">Liste des Engagés</h2>
+        </div>
+        <span class="small text-gold fw-bold">Publication FFC à venir</span>
+      </div>
+
+      <div class="p-3 rounded mb-3" style="background-color: var(--bg-surface-2); border: 1px solid var(--glass-border);">
+        <strong class="title-font text-white d-block" style="font-size: 0.84rem;">Liste officielle des engagés à venir</strong>
+        <span class="small text-muted">Les listes d'engagés et numéros de dossards seront disponibles dès la clôture officielle des engagements par le Comité de Bretagne FFC.</span>
+      </div>
+
+      <div class="mb-3">
+        <input type="search" id="riderSearchInput" class="search-minimal" placeholder="Rechercher un coureur, un club ou un numéro de dossard..." oninput="filterRiders()">
+      </div>
+
+      <div id="ridersListContainer"></div>
+    </section>
+
+    <!-- =========================================================
+         6. PARKINGS GPS & RETOUR VOITURE (WAZE & GOOGLE MAPS)
+         ========================================================= -->
+    <section id="section-parkings" class="pro-card nav-Observed">
+      <div class="d-flex justify-content-between align-items-end flex-wrap gap-2 mb-3">
+        <div>
+          <span class="section-eyebrow">Stationnement & Guidage</span>
+          <h2 class="title-font text-white fs-5">Retrouver ma voiture</h2>
+        </div>
+        <div class="d-flex gap-2">
+          <button type="button" class="btn-outline-custom active py-1 px-3" id="btnTabSpect" onclick="switchParkingGroup('spect')">Spectateurs (P1-P4)</button>
+          <button type="button" class="btn-outline-custom py-1 px-3" id="btnTabCour" onclick="switchParkingGroup('cour')">Coureurs & Dossards</button>
+        </div>
+      </div>
+
+      <!-- GROUPE SPECTATEURS -->
+      <div id="group-spect">
+        <div class="parking-row">
+          <div>
+            <strong class="title-font text-white d-block" style="font-size: 0.9rem;">P1 Spectateurs — Pharmacie Bleue (Nord-Est)</strong>
+            <span class="small text-muted">Avenue de la Chalotais • Accès circuit par l'<strong>Entrée 2 (600 m)</strong></span>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="https://waze.com/ul?ll=48.044386,-1.606597&navigate=yes" target="_blank" rel="noopener" class="btn-gps-minimal waze-btn"><i class="fa-brands fa-waze text-info"></i> Waze</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=48.044386,-1.606597&travelmode=driving" target="_blank" rel="noopener" class="btn-gps-minimal"><i class="fa-brands fa-google"></i> Google Maps</a>
+          </div>
+        </div>
+
+        <div class="parking-row">
+          <div>
+            <strong class="title-font text-white d-block" style="font-size: 0.9rem;">P2 Spectateurs — 6 rue du Champ Brulon (Sud-Est)</strong>
+            <span class="small text-muted">Zone Champ Brulon • Accès circuit par l'<strong>Entrée 1 Départ (370 m)</strong></span>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="https://waze.com/ul?ll=48.035778,-1.598153&navigate=yes" target="_blank" rel="noopener" class="btn-gps-minimal waze-btn"><i class="fa-brands fa-waze text-info"></i> Waze</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=48.035778,-1.598153&travelmode=driving" target="_blank" rel="noopener" class="btn-gps-minimal"><i class="fa-brands fa-google"></i> Google Maps</a>
+          </div>
+        </div>
+
+        <div class="parking-row">
+          <div>
+            <strong class="title-font text-white d-block" style="font-size: 0.9rem;">P3 Spectateurs — Complexe Champ Brulon (Sud-Est)</strong>
+            <span class="small text-muted">Près du Centre de Secours • Accès circuit par l'<strong>Entrée 1 Départ (450 m)</strong></span>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="https://waze.com/ul?ll=48.035187,-1.597151&navigate=yes" target="_blank" rel="noopener" class="btn-gps-minimal waze-btn"><i class="fa-brands fa-waze text-info"></i> Waze</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=48.035187,-1.597151&travelmode=driving" target="_blank" rel="noopener" class="btn-gps-minimal"><i class="fa-brands fa-google"></i> Google Maps</a>
+          </div>
+        </div>
+
+        <div class="parking-row">
+          <div>
+            <strong class="title-font text-white d-block" style="font-size: 0.9rem;">P4 Spectateurs — Le long de la route (Sud-Est)</strong>
+            <span class="small text-muted">Stationnement linéaire • Accès circuit par l'<strong>Entrée 1 Départ (215 m)</strong></span>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="https://waze.com/ul?ll=48.034373,-1.601223&navigate=yes" target="_blank" rel="noopener" class="btn-gps-minimal waze-btn"><i class="fa-brands fa-waze text-info"></i> Waze</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=48.034373,-1.601223&travelmode=driving" target="_blank" rel="noopener" class="btn-gps-minimal"><i class="fa-brands fa-google"></i> Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- GROUPE COUREURS & DOSSARDS -->
+      <div id="group-cour" class="d-none">
+        <div class="parking-row">
+          <div>
+            <strong class="title-font text-white d-block" style="font-size: 0.9rem;">Permanence Dossards & Vestiaires — Salle de la Seiche</strong>
+            <span class="small text-muted">À côté du Collège Théodore Monod • <strong>425 m de l'Entrée 5</strong></span>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="https://waze.com/ul?ll=48.042393,-1.608110&navigate=yes" target="_blank" rel="noopener" class="btn-gps-minimal waze-btn"><i class="fa-brands fa-waze text-info"></i> Waze</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=48.042393,-1.608110&travelmode=driving" target="_blank" rel="noopener" class="btn-gps-minimal"><i class="fa-brands fa-google"></i> Google Maps</a>
+          </div>
+        </div>
+
+        <div class="parking-row">
+          <div>
+            <strong class="title-font text-white d-block" style="font-size: 0.9rem;">P1 Coureurs — Terrain Stabilisé / Foot</strong>
+            <span class="small text-muted">Derrière le Collège • Accès circuit par les <strong>Entrées 3 et 5</strong></span>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="https://waze.com/ul?ll=48.043841,-1.611412&navigate=yes" target="_blank" rel="noopener" class="btn-gps-minimal waze-btn"><i class="fa-brands fa-waze text-info"></i> Waze</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=48.043841,-1.611412&travelmode=driving" target="_blank" rel="noopener" class="btn-gps-minimal"><i class="fa-brands fa-google"></i> Google Maps</a>
+          </div>
+        </div>
+
+        <div class="parking-row">
+          <div>
+            <strong class="title-font text-white d-block" style="font-size: 0.9rem;">P2 Coureurs — Champ & Camping-Cars (Près Base Kayak)</strong>
+            <span class="small text-muted">Au plus près du poste technique • <strong>315 m de l'Entrée 3</strong></span>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="https://waze.com/ul?ll=48.040930,-1.609420&navigate=yes" target="_blank" rel="noopener" class="btn-gps-minimal waze-btn"><i class="fa-brands fa-waze text-info"></i> Waze</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=48.040930,-1.609420&travelmode=driving" target="_blank" rel="noopener" class="btn-gps-minimal"><i class="fa-brands fa-google"></i> Google Maps</a>
+          </div>
+        </div>
+
+        <div class="parking-row">
+          <div>
+            <strong class="title-font text-white d-block" style="font-size: 0.9rem;">P3 Coureurs — Parking Collège Théodore Monod</strong>
+            <span class="small text-muted">Devant la Salle des Dossards • <strong>495 m de l'Entrée 5</strong></span>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="https://waze.com/ul?ll=48.042800,-1.609288&navigate=yes" target="_blank" rel="noopener" class="btn-gps-minimal waze-btn"><i class="fa-brands fa-waze text-info"></i> Waze</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=48.042800,-1.609288&travelmode=driving" target="_blank" rel="noopener" class="btn-gps-minimal"><i class="fa-brands fa-google"></i> Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. PARTENAIRES OFFICIELS (CARROUSEL DÉFILANT INFINI)
+         ========================================================= -->
+    <section id="partenaires" class="pro-card text-center">
+      <span class="section-eyebrow">Soutiens Officiels</span>
+      <h2 class="title-font text-white fs-5 mb-2">Nos Partenaires</h2>
+      <p class="small mb-3 mx-auto" style="max-width: 600px;">Merci aux institutions et aux entreprises qui soutiennent l'US Vern Cyclisme et le Championnat de Bretagne 2026.</p>
+
+      <!-- BANDEAU DÉFILANT INFINI -->
+      <div class="partners-carousel-container mb-3">
+        <div class="partners-carousel-track" id="partnersCarouselTrack"></div>
+      </div>
+
+      <div class="d-flex justify-content-center align-items-center flex-wrap gap-2 mt-2">
+        <button class="btn-outline-custom" type="button" data-bs-toggle="collapse" data-bs-target="#allPartnersCollapse" aria-expanded="false">
+          Voir tous les partenaires
+        </button>
+        <a href="partenaires-bzh.html" class="btn-action">
+          Le Club des 20
+        </a>
+      </div>
+
+      <div class="collapse mt-4" id="allPartnersCollapse">
+        <div class="pt-3" style="border-top: 1px solid var(--glass-border);" id="partnersCategorizedContainer"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-4 px-3" style="background-color: #000000; border-top: 1px solid rgba(255,255,255,0.06);">
+    <div class="d-flex justify-content-center gap-3 mb-3">
+      <a href="https://www.instagram.com/usvern.cyclisme" target="_blank" rel="noopener" class="social-icon-link" title="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/usverncyclisme35" target="_blank" rel="noopener" class="social-icon-link" title="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/us-vern-cyclisme-270074350/" target="_blank" rel="noopener" class="social-icon-link" title="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+    </div>
+    <p class="mb-0 small text-muted">&copy; 2026 Championnat de Bretagne de Cyclo-Cross — <a href="championnat-bzh.html" class="text-white text-decoration-none fw-bold">US Vern Cyclisme</a></p>
+  </footer>
+
+  <!-- BARRE DE NAVIGATION MOBILE BASSE ÉPURÉE -->
+  <nav class="bottom-nav" id="bottomAppNav">
+    <a href="#section-live" data-target="section-live" class="bottom-nav-item">
+      <i class="fa-brands fa-youtube"></i>
+      <span>Direct</span>
+    </a>
+    <a href="#section-plan" data-target="section-plan" class="bottom-nav-item active">
+      <i class="fa-solid fa-map"></i>
+      <span>Plan</span>
+    </a>
+    <a href="#section-programme" data-target="section-programme" class="bottom-nav-item">
+      <i class="fa-regular fa-clock"></i>
+      <span>Horaires</span>
+    </a>
+    <a href="#section-engages" data-target="section-engages" class="bottom-nav-item">
+      <i class="fa-solid fa-list-ol"></i>
+      <span>Engagés</span>
+    </a>
+    <a href="#section-parkings" data-target="section-parkings" class="bottom-nav-item">
+      <i class="fa-solid fa-car-side"></i>
+      <span>Parkings</span>
+    </a>
+  </nav>
+
+  <!-- ========================================================
+       MODALES (PLEIN ÉCRAN CARTE ZOOMABLE & YOUTUBE LIVE)
+       ======================================================== -->
+
+  <!-- MODAL 1 : VISIONNEUSE PLEIN ÉCRAN DU PLAN AVEC ZOOM -->
+  <div class="modal fade" id="planZoomModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-xl" style="max-width: 1200px;">
+      <div class="modal-content" style="background: var(--bg-darkest); border: 1px solid var(--glass-border); border-radius: 8px; overflow: hidden;">
+        <div class="modal-header border-bottom-0 py-2 px-3" style="background: #050505;">
+          <h5 class="modal-title fw-bold text-white title-font" style="font-size: 0.9rem;" id="planZoomModalTitle">Circuit 2,7 km détaillé</h5>
+          <div class="d-flex align-items-center gap-2">
+            <button type="button" class="btn-outline-custom py-1 px-2" onclick="zoomModalImg(-0.35)" title="Dézoomer"><i class="fa-solid fa-minus"></i></button>
+            <button type="button" class="btn-outline-custom py-1 px-2" onclick="resetModalImg()" title="100%">100%</button>
+            <button type="button" class="btn-outline-custom py-1 px-2" onclick="zoomModalImg(0.35)" title="Zoomer"><i class="fa-solid fa-plus"></i></button>
+            <a id="planZoomDownloadBtn" href="photo/plan-circuit-2-7km.jpg" download class="btn-outline-custom py-1 px-2" title="Télécharger">
+              <i class="fa-solid fa-download"></i>
+            </a>
+            <button type="button" class="btn-close btn-close-white ms-1" data-bs-dismiss="modal" aria-label="Fermer"></button>
+          </div>
+        </div>
+        <div class="modal-body p-0 text-center d-flex align-items-center justify-content-center" style="background: #ffffff; overflow: auto; min-height: 78vh;">
+          <img id="planZoomModalImg" src="photo/plan-circuit-2-7km.jpg" alt="Plan officiel plein écran" style="width: 100%; height: auto; transform-origin: top left; transition: width 0.2s ease;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2 : DIRECT YOUTUBE LIVE -->
+  <div class="modal fade" id="youtubeLiveModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="background: var(--bg-surface); border: 1px solid var(--glass-border); border-radius: 8px; overflow: hidden;">
+        <div class="modal-header border-bottom-0 py-3 px-4" style="background: var(--bg-darkest);">
+          <h5 class="modal-title fw-bold text-white title-font d-flex align-items-center gap-2" style="font-size: 0.9rem;">
+            <span class="live-dot"></span> Direct Vidéo — Championnat de Bretagne 2026
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body p-0 bg-black">
+          <div class="ratio ratio-16x9">
+            <iframe id="youtubeLiveIframe" src="" title="YouTube Live BZH 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="modal-footer border-top-0 py-2 px-4 justify-content-between" style="background: var(--bg-darkest);">
+          <span class="small text-muted">Diffusion officielle US Vern Cyclisme</span>
+          <a id="youtubeExternalBtn" href="https://youtube.com/..." target="_blank" rel="noopener" class="btn-action py-2 px-3" style="font-size: 0.75rem;">
+            <i class="fa-brands fa-youtube"></i> Ouvrir sur YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    /* =========================================================
+       1. CONFIGURATION YOUTUBE LIVE (À COMPLÉTER LE JOUR J)
+       ========================================================= */
+    const YOUTUBE_LIVE_URL = "https://youtube.com/...";
+    const YOUTUBE_VIDEO_ID = ""; // Ex: "dQw4w9WgXcQ" si intégration directe souhaitée
+
+    function openYoutubeLive() {
+      const extBtn = document.getElementById('youtubeExternalBtn');
+      if (extBtn) extBtn.href = YOUTUBE_LIVE_URL;
+
+      const iframe = document.getElementById('youtubeLiveIframe');
+      if (YOUTUBE_VIDEO_ID && YOUTUBE_VIDEO_ID.trim() !== "") {
+        iframe.src = `https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID.trim()}?autoplay=1&rel=0`;
+      } else {
+        iframe.srcdoc = `
+          <body style="margin:0;background:#0a0a0a;color:#fff;font-family:'Montserrat',sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;text-align:center;padding:24px;">
+            <div style="font-size:36px;color:#9e1b1b;margin-bottom:12px;">▶</div>
+            <h3 style="margin:0 0 8px 0;text-transform:uppercase;font-size:16px;letter-spacing:1px;">Direct Vidéo BZH Cyclo-Cross 2026</h3>
+            <p style="margin:0 0 20px 0;color:#a1a1aa;font-family:sans-serif;font-size:14px;max-width:420px;">Accédez à la diffusion en direct du circuit de la Vallée de la Seiche sur notre chaîne YouTube.</p>
+            <a href="${YOUTUBE_LIVE_URL}" target="_blank" style="background:#9e1b1b;color:#fff;text-decoration:none;padding:12px 26px;border-radius:6px;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:1px;">Regarder sur YouTube</a>
+          </body>`;
+      }
+      const modal = new bootstrap.Modal(document.getElementById('youtubeLiveModal'));
+      modal.show();
+    }
+
+    const ytModalEl = document.getElementById('youtubeLiveModal');
+    if (ytModalEl) {
+      ytModalEl.addEventListener('hide.bs.modal', () => {
+        const iframe = document.getElementById('youtubeLiveIframe');
+        if (iframe) { iframe.src = ""; iframe.removeAttribute("srcdoc"); }
+      });
+    }
+
+    /* =========================================================
+       2. DONNÉES PRÉCISES DE TOUS LES REPÈRES CALIBRÉS SUR LE PLAN
+       ========================================================= */
+    const PIN_DATA = {
+      wc_kayak: {
+        title: "Toilettes Publiques (WC & PMR) — Base Kayak",
+        desc: "Situées au bâtiment de la Base Kayak (à 345 m de l'Entrée 3 et 375 m de l'Entrée 5). Sortie et retour libres avec votre bracelet.",
+        gps: "48.040983,-1.610333"
+      },
+      buvette_centrale: {
+        title: "Buvette Centrale (Cœur du Circuit)",
+        desc: "Située au centre du parcours (à 115 m de l'Entrée 5) : boissons chaudes, rafraîchissements et vue panoramique sur les boucles.",
+        gps: "48.037826,-1.605763"
+      },
+      buvette_sud: {
+        title: "Grande Buvette Sud (Près de l'Arrivée)",
+        desc: "Boissons fraîches, café, chocolat chaud et rafraîchissements au niveau de l'allée d'arrivée. CB sans contact et espèces.",
+        gps: "48.036850,-1.607100"
+      },
+      restauration_sud: {
+        title: "Restauration Chaude Sud",
+        desc: "Galettes-saucisses, frites chaudes, sandwichs et crêpes juste à côté de la Grande Buvette Sud. CB sans contact et espèces.",
+        gps: "48.036850,-1.607100"
+      },
+      village: {
+        title: "Village Partenaires",
+        desc: "Espace stands et animations de nos partenaires officiels au bord de l'étang, près de l'Entrée 3.",
+        gps: "48.037900,-1.607900"
+      },
+      podium: {
+        title: "Podium Protocolaire",
+        desc: "Remise officielle des maillots de Champions de Bretagne FFC à l'issue des épreuves.",
+        gps: "48.037600,-1.607700"
+      },
+      arrivee: {
+        title: "Ligne d'Arrivée",
+        desc: "Sprint final sur la grande allée longeant l'étang de la Seiche (à 110 m de l'Entrée 3).",
+        gps: "48.037392,-1.607483"
+      },
+      planches: {
+        title: "Les Planches",
+        desc: "Double obstacle des planches au cœur du parcours : saut à vélo ou franchissement à pied.",
+        gps: null
+      },
+      escaliers_sud: {
+        title: "Escaliers Sud",
+        desc: "Portage technique en montée au centre du circuit.",
+        gps: null
+      },
+      lavage: {
+        title: "Poste de Lavage Haute Pression",
+        desc: "Zone de nettoyage vélos attenante au poste de dépannage double.",
+        gps: null
+      },
+      depannage: {
+        title: "Poste de Dépannage Double",
+        desc: "Zone technique officielle réservée aux mécaniciens et coureurs accrédités.",
+        gps: null
+      },
+      bac_sable: {
+        title: "Bac à Sable",
+        desc: "Passage technique dans le sable avant l'enchaînement vers la boucle Nord.",
+        gps: null
+      },
+      escaliers_nord: {
+        title: "Escaliers Nord",
+        desc: "Montée d'escaliers spectaculaire avec vélo sur l'épaule.",
+        gps: null
+      },
+      depart: {
+        title: "Ligne de Départ & Zone d'Appel",
+        desc: "Grille de départ officielle située à 50 m de l'Entrée 1 (Sud-Est).",
+        gps: "48.036020,-1.603748"
+      },
+      e1: {
+        title: "Entrée 1 (Sud-Est) — Parkings P2, P3 & P4",
+        desc: "Accès direct à la ligne de Départ (50 m). Reliée aux Parkings Spectateurs P4 (215 m), P2 (370 m) et P3 Champ Brulon (450 m).",
+        gps: "48.035803,-1.603150"
+      },
+      e2: {
+        title: "Entrée 2 (Nord-Est) — Parking P1 Pharmacie Bleue",
+        desc: "Accès piéton principal depuis le Parking Spectateurs P1 Pharmacie Bleue (600 m).",
+        gps: "48.039217,-1.604083"
+      },
+      e3: {
+        title: "Entrée 3 (Nord-Ouest) — Étang & Base Kayak",
+        desc: "Accès situé à 110 m de l'Arrivée, 315 m du P2 Coureurs et 345 m des Toilettes (Base Kayak).",
+        gps: "48.038203,-1.608274"
+      },
+      e4: {
+        title: "Entrée 4 (Sud) — Accès Sud",
+        desc: "Située au Sud du circuit (à 215 m de l'Arrivée).",
+        gps: "48.035486,-1.606926"
+      },
+      e5: {
+        title: "Entrée 5 (Nord) — Collège Théodore Monod",
+        desc: "Accès direct vers la Buvette Centrale (115 m), les Toilettes Kayak (375 m) et la Salle des Dossards (425 m).",
+        gps: "48.038710,-1.606584"
+      }
+    };
+
+    /* =========================================================
+       3. GESTION DE LA CARTE & MODALE PLEIN ÉCRAN ZOOMABLE
+       ========================================================= */
+    let currentZoom = 1;
+    let startDist = 0;
+    let currentMapSrc = "photo/plan-circuit-2-7km.jpg";
+    let currentMapTitle = "Circuit 2,7 km détaillé";
+    const zoomLayer = document.getElementById('mapZoomLayer');
+    const mapViewport = document.getElementById('mapViewport');
+
+    function zoomMap(step) {
+      currentZoom = Math.min(Math.max(1, currentZoom + step), 3.0);
+      zoomLayer.style.transform = `scale(${currentZoom})`;
+    }
+
+    function resetZoom() {
+      currentZoom = 1;
+      zoomLayer.style.transform = 'scale(1)';
+    }
+
+    function switchMapSource(primarySrc, fallbackSrc, titleText, showPins, btnEl) {
+      if (btnEl) {
+        btnEl.parentElement.querySelectorAll('.btn-outline-custom').forEach(b => b.classList.remove('active'));
+        btnEl.classList.add('active');
+      }
+      currentMapSrc = primarySrc;
+      currentMapTitle = titleText;
+      const img = document.getElementById('circuitMapImg');
+      img.onerror = function() {
+        this.onerror = null;
+        this.src = fallbackSrc;
+        currentMapSrc = fallbackSrc;
+      };
+      img.src = primarySrc;
+      resetZoom();
+      document.querySelectorAll('.map-pin').forEach(p => {
+        p.style.display = showPins ? 'flex' : 'none';
+      });
+      if (!showPins) {
+        updateDrawer(titleText, "Touchez « Agrandir » en haut à droite de l'image pour ouvrir ce plan en plein écran.", null);
+      } else {
+        updateDrawer("Touchez un repère sur le plan", "Sélectionnez une pastille (Buvettes, Toilettes, Entrées, Obstacles) pour afficher les détails.", null);
+      }
+    }
+
+    // Visionneuse plein écran avec zoom
+    let modalZoomWidth = 100;
+    function openFullMapModal() {
+      const modalImg = document.getElementById('planZoomModalImg');
+      const modalTitle = document.getElementById('planZoomModalTitle');
+      const downloadBtn = document.getElementById('planZoomDownloadBtn');
+      modalZoomWidth = 100;
+      if (modalImg) {
+        modalImg.style.width = "100%";
+        modalImg.src = currentMapSrc;
+      }
+      if (modalTitle) modalTitle.textContent = currentMapTitle;
+      if (downloadBtn) downloadBtn.href = currentMapSrc;
+      const modal = new bootstrap.Modal(document.getElementById('planZoomModal'));
+      modal.show();
+    }
+
+    function zoomModalImg(step) {
+      modalZoomWidth = Math.min(Math.max(100, Math.round(modalZoomWidth + step * 100)), 300);
+      const modalImg = document.getElementById('planZoomModalImg');
+      if (modalImg) modalImg.style.width = modalZoomWidth + "%";
+    }
+
+    function resetModalImg() {
+      modalZoomWidth = 100;
+      const modalImg = document.getElementById('planZoomModalImg');
+      if (modalImg) modalImg.style.width = "100%";
+    }
+
+    mapViewport.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 2) {
+        startDist = Math.hypot(
+          e.touches[0].pageX - e.touches[1].pageX,
+          e.touches[0].pageY - e.touches[1].pageY
+        );
+      }
+    }, { passive: true });
+
+    mapViewport.addEventListener('touchmove', (e) => {
+      if (e.touches.length === 2 && startDist > 0) {
+        const newDist = Math.hypot(
+          e.touches[0].pageX - e.touches[1].pageX,
+          e.touches[0].pageY - e.touches[1].pageY
+        );
+        const scaleChange = (newDist - startDist) * 0.006;
+        currentZoom = Math.min(Math.max(1, currentZoom + scaleChange), 3.0);
+        zoomLayer.style.transform = `scale(${currentZoom})`;
+        startDist = newDist;
+      }
+    }, { passive: true });
+
+    function updateDrawer(title, desc, gpsCoords) {
+      document.getElementById('pinTitle').textContent = title;
+      document.getElementById('pinDesc').textContent = desc;
+      const gpsBtn = document.getElementById('pinGpsBtn');
+      if (gpsCoords) {
+        gpsBtn.href = `https://www.google.com/maps/dir/?api=1&destination=${gpsCoords}&travelmode=walking`;
+        gpsBtn.classList.remove('d-none');
+      } else {
+        gpsBtn.classList.add('d-none');
+      }
+    }
+
+    function selectPin(key, pinEl) {
+      const item = PIN_DATA[key];
+      if (!item) return;
+      document.querySelectorAll('.map-pin').forEach(p => p.classList.remove('selected'));
+      if (pinEl) pinEl.classList.add('selected');
+      updateDrawer(item.title, item.desc, item.gps);
+    }
+
+    function focusCategory(cat, btnEl) {
+      const filterBtns = document.querySelectorAll('#mapFilterBar .filter-btn');
+      filterBtns.forEach(b => b.classList.remove('active'));
+      if (btnEl) {
+        btnEl.classList.add('active');
+      } else {
+        const matchBtn = [...filterBtns].find(b => b.getAttribute('onclick')?.includes(`'${cat}'`));
+        if (matchBtn) matchBtn.classList.add('active');
+      }
+
+      document.querySelectorAll('.map-pin').forEach(pin => {
+        if (cat === 'all' || pin.getAttribute('data-cat') === cat) {
+          pin.style.opacity = '1';
+          pin.style.pointerEvents = 'auto';
+        } else {
+          pin.style.opacity = '0.16';
+          pin.style.pointerEvents = 'none';
+        }
+      });
+
+      if (cat === 'wc') {
+        selectPin('wc_kayak', document.querySelector('[data-pin="wc_kayak"]'));
+      } else if (cat === 'food') {
+        document.querySelectorAll('.map-pin').forEach(p => p.classList.remove('selected'));
+        updateDrawer(
+          "Buvettes & Restauration Chaude",
+          "Buvette Centrale (au cœur du circuit) et Grande Buvette + Restauration chaude au Sud (près de l'arrivée). Touchez l'une des pastilles bordeaux pour voir le détail.",
+          "48.037826,-1.605763"
+        );
+      } else if (cat === 'gate') {
+        document.querySelectorAll('.map-pin').forEach(p => p.classList.remove('selected'));
+        updateDrawer(
+          "Les 5 Entrées du Circuit",
+          "E1 : Départ / Parkings P2-P3-P4 • E2 : Parking P1 Pharmacie Bleue • E3 & E5 : Base Kayak, Collège & WC • E4 : Accès Sud.",
+          null
+        );
+      } else if (cat === 'sport') {
+        selectPin('podium', document.querySelector('[data-pin="podium"]'));
+      } else {
+        document.querySelectorAll('.map-pin').forEach(p => p.classList.remove('selected'));
+        updateDrawer("Touchez un repère sur le plan", "Sélectionnez une pastille (Buvettes, Toilettes, Entrées, Obstacles) pour afficher les détails.", null);
+      }
+    }
+
+    /* =========================================================
+       4. LISTE DES ENGAGÉS (APERÇU ÉPURÉ DE 2 EXEMPLES GÉNÉRIQUES)
+       ========================================================= */
+    const previewRiders = [
+      { bib: 1, name: "Coureur Engagé (Exemple d'affichage)", club: "US Vern Cyclisme", cat: "Élite & Open H" },
+      { bib: 21, name: "Coureuse Engagée (Exemple d'affichage)", club: "Club Comité de Bretagne FFC", cat: "Femmes 17+" }
+    ];
+
+    function filterRiders() {
+      const query = (document.getElementById('riderSearchInput').value || '').toLowerCase().trim();
+      const container = document.getElementById('ridersListContainer');
+      const filtered = previewRiders.filter(r =>
+        !query ||
+        r.name.toLowerCase().includes(query) ||
+        r.club.toLowerCase().includes(query) ||
+        String(r.bib).includes(query) ||
+        r.cat.toLowerCase().includes(query)
+      );
+
+      if (filtered.length === 0) {
+        container.innerHTML = `<p class="small text-muted py-2">Aucun résultat. La liste complète officielle sera intégrée dès la clôture des engagements FFC.</p>`;
+        return;
+      }
+
+      container.innerHTML = filtered.map(r => `
+        <div class="engaged-preview-row">
+          <div class="d-flex align-items-center gap-3">
+            <span class="bib-tag">#${r.bib}</span>
+            <div>
+              <strong class="text-white d-block" style="font-size: 0.9rem;">${r.name}</strong>
+              <span class="small text-muted">${r.club}</span>
+            </div>
+          </div>
+          <span class="btn-outline-custom py-1 px-2" style="font-size: 0.68rem; pointer-events: none;">${r.cat}</span>
+        </div>
+      `).join('');
+    }
+
+    /* =========================================================
+       5. BASCULE PARKINGS SPECTATEURS / COUREURS
+       ========================================================= */
+    function switchParkingGroup(group) {
+      const isSpect = (group === 'spect');
+      document.getElementById('btnTabSpect').classList.toggle('active', isSpect);
+      document.getElementById('btnTabCour').classList.toggle('active', !isSpect);
+      document.getElementById('group-spect').classList.toggle('d-none', !isSpect);
+      document.getElementById('group-cour').classList.toggle('d-none', isSpect);
+    }
+
+    /* =========================================================
+       6. CARROUSEL PARTENAIRES (IDENTIQUE À CHAMPIONNAT-BZH.HTML)
+       ========================================================= */
+    const PARTNER_CATEGORIES = [
+      {
+        title: "Partenaires Institutionnels",
+        items: [
+          { name: "Ville de Vern-sur-Seiche", logo: "logo/Vern-sur-Seiche_logo.png" },
+          { name: "Ille & Vilaine (Le Département)", logo: "logo/logoille-et-vilaine.png" },
+          { name: "Comité de Bretagne Cyclisme", logo: "logo/logocomitebretagne.png" }
+        ]
+      },
+      {
+        title: "Partenaires Officiels",
+        items: [
+          { name: "SARL Auguste & Pascal Maloeuvre", logo: "logo/sarl-maloeuvre.svg" },
+          { name: "Belo Velo", logo: "logo/belo-velo.png" },
+          { name: "Kotan", logo: "logo/KOTAN.png" },
+          { name: "Maxi Velo", logo: "logo/maxi-velo.jpeg" },
+          { name: "CM Plomberie", logo: "logo/cm-plomberie.webp" },
+          { name: "Ferré Hôtels", logo: "logo/logoFerreHotel.webp" },
+          { name: "BH Dépannage", logo: "logo/logoBHDEPANNAGE.png" },
+          { name: "Le Télégramme", logo: "logo/Logo_du_Télégramme.jpg" }
+        ]
+      },
+      {
+        title: "Partenaires Club",
+        items: [
+          { name: "E.Leclerc Vern / Val d'Orson", logo: "logo/Logoleclerc.webp" },
+          { name: "CITEC (Groupe STEAP Stailor)", logo: "logo/logoCITEC.webp" },
+          { name: "Harmonie Mutuelle", logo: "logo/logoharmonie.webp" },
+          { name: "Century 21 Dréano Immobilier", logo: "logo/logocentury21.webp" },
+          { name: "Decathlon", logo: "logo/logodecathlon.webp" },
+          { name: "M.B.Cycles", logo: "logo/logoMBCycles.jpeg" },
+          { name: "THERMO2", logo: "logo/logothermo2.webp" },
+          { name: "Crédit Mutuel de Bretagne", logo: "logo/Logo_Crédit_Mutuel_de_Bretagne_CMB.svg" },
+          { name: "PIZZA Chantepie", logo: "logo/pizza-chantepie.jpg" }
+        ]
+      },
+      {
+        title: "Partenaires Techniques",
+        items: [
+          { name: "Podiocom", logo: "logo/podiocom.svg" },
+          { name: "Grimaud", logo: "logo/grimaud.webp" },
+          { name: "Newloc", logo: "logo/newloc.png" },
+          { name: "Noret", logo: "logo/noret.png" }
+        ]
+      }
+    ];
+
+    function createPartnerCardHTML(partner) {
+      const safeName = partner.name.replace(/"/g, '&quot;');
+      return `
+        <div class="partner-logo-box" title="${safeName}">
+          <img src="${partner.logo}" alt="${safeName}"
+               onerror="this.outerHTML='<span class=\\'partner-fallback-text\\'>${safeName}</span>'">
+        </div>
+      `;
+    }
+
+    function renderPartners() {
+      const allPartners = PARTNER_CATEGORIES.flatMap(cat => cat.items);
+      const carouselHTML = allPartners.map(createPartnerCardHTML).join('');
+      const carouselTrack = document.getElementById('partnersCarouselTrack');
+      if (carouselTrack) {
+        carouselTrack.innerHTML = carouselHTML + carouselHTML;
+      }
+
+      const catContainer = document.getElementById('partnersCategorizedContainer');
+      if (catContainer) {
+        catContainer.innerHTML = PARTNER_CATEGORIES.map(cat => `
+          <div class="partner-cat-group">
+            <span class="partner-cat-label">${cat.title}</span>
+            <div class="partner-cat-row">
+              ${cat.items.map(createPartnerCardHTML).join('')}
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    /* =========================================================
+       7. SCROLL SPY NAVIGATION BASSE
+       ========================================================= */
+    const navLinks = document.querySelectorAll('#bottomAppNav .bottom-nav-item[data-target]');
+    const sections = document.querySelectorAll('.nav-Observed, #section-live');
+
+    function updateActiveNavOnScroll() {
+      const scrollPos = window.scrollY + 160;
+      let currentId = 'section-plan';
+      sections.forEach(sec => {
+        if (sec.offsetTop <= scrollPos) currentId = sec.getAttribute('id');
+      });
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('data-target') === currentId);
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveNavOnScroll, { passive: true });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      filterRiders();
+      renderPartners();
+      updateActiveNavOnScroll();
+    });
+  </script>
+</body>
+</html>
