@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kit Signalétique Officiel – Championnat de Bretagne Cyclo-Cross 2026</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style id="pageStyle">@page { size: A4 portrait; margin: 0; }</style>
+
+  <style>
+    :root {
+      /* CHARTE GRAPHIQUE OFFICIELLE US VERN / COMITÉ DE BRETAGNE */
+      --bordeaux: #9e1b1b;
+      --bordeaux-dark: #7a1414;
+      --bleu-marine: #002855;
+      --bleu-fonce: #003366;
+      --bleu-primaire: #0057b8;
+      --gris-perle: #f4f6f9;
+      --gris-cadre: #e2e8f0;
+      --noir: #0f172a;
+      --blanc: #ffffff;
+      
+      /* ACCENT OR CHAMPAGNE SUBTIL (SIGNALÉTIQUE OFFICIELLE & VIP UNIQUEMENT) */
+      --or-champagne: #d4af37;
+      --or-champagne-light: #fef9e7;
+      --or-champagne-border: #b8972e;
+
+      /* COULEURS FONCTIONNELLES PAR COULOIR */
+      --file-qr:   #0057b8;   /* Billets en ligne & invitations */
+      --file-cb:   #002855;   /* Carte bancaire */
+      --file-cash: #9e1b1b;   /* Caisse espèces */
+      --file-fast: #1e293b;   /* Accès direct accrédités / bracelets */
+    }
+
+    * { box-sizing: border-box; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { margin: 0; font-family: 'Open Sans', sans-serif; background: #1e293b; color: #1e293b; }
+    h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
+
+    /* ================= BARRE D'ÉDITION NON IMPRIMÉE ================= */
+    .admin-toolbar {
+      background: #0f172a; color: #fff; padding: 12px 25px; position: sticky; top: 0; z-index: 9999;
+      box-shadow: 0 4px 15px rgba(0,0,0,.5); border-bottom: 3px solid var(--bordeaux);
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
+    }
+    .admin-toolbar h2 { margin: 0; font-size: 1.05rem; color: #fff; display: flex; align-items: center; gap: 10px; }
+    .admin-toolbar h2 i { color: var(--or-champagne); }
+    .admin-controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; }
+    .admin-group { display: flex; flex-direction: column; font-size: .74rem; color: #cbd5e1; }
+    .admin-group input[type="text"], .admin-group select {
+      padding: 6px 10px; border-radius: 6px; border: 1px solid #475569; background: #1e293b; color: #fff; font-weight: bold; margin-top: 3px;
+    }
+    .admin-group.check { flex-direction: row; align-items: center; gap: 6px; padding-bottom: 8px; cursor: pointer; color: #fff; }
+    .status { font-size: .78rem; font-weight: 700; padding: 6px 12px; border-radius: 6px; max-width: 360px; }
+    .status.ok  { background: #14532d; color: #bbf7d0; border: 1px solid #22c55e; }
+    .status.bad { background: #7f1d1d; color: #fecaca; border: 1px solid #ef4444; }
+    .btn-print {
+      background: var(--bordeaux); color: #fff; border: 1px solid rgba(255,255,255,.3); padding: 9px 18px; border-radius: 50px;
+      font-family: 'Montserrat', sans-serif; font-weight: 800; cursor: pointer; font-size: .9rem; transition: .2s;
+    }
+    .btn-print:hover { background: #b91c1c; transform: scale(1.02); }
+
+    /* ================= STRUCTURE DE PAGE ================= */
+    .page-poster {
+      width: 210mm; height: 296mm; margin: 25px auto; padding: 9mm 11mm 8mm; background: #fff;
+      display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: 3mm;
+      position: relative; overflow: hidden; border: 1px solid #cbd5e1; box-shadow: 0 10px 30px rgba(0,0,0,.4);
+    }
+    
+    /* Repères discrets de perforation (Rilsans) */
+    .rilsan-hole {
+      position: absolute; width: 5.5mm; height: 5.5mm; border-radius: 50%;
+      border: 1px dashed #94a3b8; background: rgba(255,255,255,.9);
+      display: grid; place-items: center; pointer-events: none; z-index: 20;
+    }
+    .rilsan-hole::after {
+      content: ""; width: 1.5mm; height: 1.5mm; background: #cbd5e1; border-radius: 50%;
+    }
+    .rilsan-hole.tl { top: 3.5mm; left: 3.5mm; }
+    .rilsan-hole.tr { top: 3.5mm; right: 3.5mm; }
+    .rilsan-hole.bl { bottom: 3.5mm; left: 3.5mm; }
+    .rilsan-hole.br { bottom: 3.5mm; right: 3.5mm; }
+    .rilsan-hole.ml { top: calc(50% - 9mm); left: 3.5mm; }
+    .rilsan-hole.mr { top: calc(50% - 9mm); right: 3.5mm; }
+    .rilsan-hole.ml2 { top: calc(50% + 5mm); left: 3.5mm; }
+    .rilsan-hole.mr2 { top: calc(50% + 5mm); right: 3.5mm; }
+
+    body.fmt-a3 .page-poster { zoom: 1.4142; }
+    .page-poster.is-hidden { display: none !important; }
+    .page-poster.overflow-warning { outline: 6px solid #ef4444; }
+    .poster-tag-admin {
+      position: absolute; top: 5mm; right: 11mm; background: #f1f5f9; color: #475569; font-size: .66rem;
+      font-weight: 700; padding: 2px 8px; border-radius: 4px; z-index: 5; border: 1px solid #cbd5e1;
+    }
+
+    /* EN-TÊTE OFFICIEL */
+    .poster-header {
+      display: flex; align-items: center; justify-content: space-between; gap: 5mm;
+      border-bottom: 2.5px solid var(--bordeaux); padding: 1mm 0 2.5mm;
+    }
+    .poster-header img.club-logo { height: 16mm; width: auto; object-fit: contain; }
+    .poster-header-text { text-align: right; flex-grow: 1; }
+    .event-title {
+      font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 15.5pt;
+      color: var(--bleu-marine); text-transform: uppercase; margin: 0; line-height: 1.1;
+    }
+    .event-sub {
+      font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 11pt;
+      color: var(--bordeaux); text-transform: uppercase; margin: 2px 0 0;
+    }
+
+    /* CORPS DE L'AFFICHE */
+    .poster-body {
+      min-height: 0; overflow: hidden;
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+      justify-content: center; justify-content: safe center;
+      gap: 3mm; border-radius: 6mm; padding: 6mm; position: relative;
+    }
+    .poster-body > * { zoom: var(--fit, 1); }
+
+    /* THÈMES DE COULEURS */
+    .theme-qr      { background: var(--file-qr); color: #fff; }
+    .theme-cb      { background: var(--file-cb); color: #fff; }
+    .theme-cash    { background: var(--file-cash); color: #fff; }
+    .theme-fast    { background: var(--file-fast); color: #fff; }
+    .theme-club    { background: var(--bordeaux); color: #fff; }
+    .theme-dark    { background: var(--bleu-marine); color: #fff; border: 3px solid var(--or-champagne); }
+    .theme-light   { background: var(--gris-perle); color: var(--bleu-marine); border: 3px solid var(--bleu-marine); }
+    .theme-digital { background: linear-gradient(135deg, var(--bleu-marine) 0%, var(--bleu-primaire) 100%); color: #fff; }
+
+    /* BADGE DE FILE */
+    .lane-badge {
+      display: inline-flex; align-items: center; gap: 3.5mm; background: rgba(0,0,0,.25); border: 2px solid #fff; color: #fff;
+      font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 18pt; padding: 2mm 7mm 2mm 2.5mm;
+      border-radius: 50px; text-transform: uppercase; letter-spacing: .5px; line-height: 1.1;
+    }
+    .lane-badge:not(:has(.lane-num)) { padding-left: 7mm; }
+    .lane-num {
+      display: inline-flex; align-items: center; justify-content: center; width: 13.5mm; height: 13.5mm; border-radius: 50%;
+      background: #fff; color: var(--bleu-marine); font-size: 22pt; line-height: 1; font-weight: 900;
+    }
+    .badge-champagne {
+      background: var(--or-champagne-light); color: #5c4308; border-color: var(--or-champagne-border);
+    }
+    .badge-champagne .lane-num { background: #5c4308; color: #fff; }
+
+    .giant-icon { font-size: 58pt; line-height: 1; }
+    .giant-title { font-weight: 900; font-size: 28pt; line-height: 1.05; text-transform: uppercase; margin: 0; text-wrap: balance; }
+    .giant-title .kw  { display: block; font-size: var(--kw, 54pt); line-height: 1; }
+    .giant-title .sub { display: block; font-size: 21pt; font-weight: 800; margin-top: 2mm; }
+
+    /* PILULE DE PRIX ÉPURÉE & ULTRA-LISIBLE */
+    .price-pill {
+      background: #fff; color: var(--bordeaux); font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 34pt;
+      padding: 2mm 14mm; border-radius: 50px; display: inline-block; border: 3.5px solid var(--bordeaux);
+      box-shadow: 0 6px 16px rgba(0,0,0,.2); line-height: 1.1;
+    }
+    .price-pill .dyn-price, .price-pill .dyn-price-online { font-size: 1.25em; line-height: 1; }
+    
+    .free-note {
+      font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 13pt; margin: 0; padding: 1.5mm 8mm; border-radius: 50px;
+      background: #fff; color: var(--bleu-marine); border: 2px solid var(--bleu-marine); display: inline-flex; align-items: center; gap: 8px;
+    }
+    .free-note:empty { display: none; }
+
+    .instructions-box {
+      background: #fff; color: #1e293b; width: 100%; padding: 4mm 5mm; border-radius: 5mm; font-size: 15.5pt; font-weight: 700; line-height: 1.25;
+      box-shadow: 0 4px 14px rgba(0,0,0,.12); border: 1px solid var(--gris-cadre);
+    }
+    .box-title { margin: 0 0 2mm; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 17pt; line-height: 1.15; text-transform: uppercase; }
+    .info-list { list-style: none; margin: 0; padding: 0; text-align: left; }
+    .info-list li { display: flex; gap: 3.5mm; align-items: flex-start; margin: 1.6mm 0; }
+    .info-list li i { color: var(--bordeaux); width: 8.5mm; text-align: center; margin-top: 1mm; flex-shrink: 0; }
+    .info-list.small { font-size: 13.5pt; }
+
+    .direction-arrow { font-size: 36pt; color: #fff; line-height: 1; }
+    .icon-row { display: flex; gap: 8mm; align-items: center; justify-content: center; }
+    .icon-row .plus { font-size: 38pt; font-weight: 900; }
+
+    /* QR CODE BLOCK */
+    .qr-wrapper {
+      background: #fff; color: var(--bleu-marine); padding: 4mm; border-radius: 5mm;
+      border: 3.5px dashed var(--bordeaux); display: inline-block; box-shadow: 0 6px 18px rgba(0,0,0,.15);
+    }
+    .qr-wrapper img { width: 60mm; height: 60mm; display: block; margin: 0 auto; }
+    .qr-wrapper img.qr-error { outline: 4px solid #ef4444; }
+    .qr-url { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 10.5pt; color: var(--bleu-marine); margin: 1.5mm 0 0; word-break: break-all; }
+
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; width: 100%; }
+    .step-card { background: #fff; color: #1e293b; padding: 3mm; border-radius: 4mm; border-top: 4px solid var(--bordeaux); font-size: 12.5pt; font-weight: 800; line-height: 1.15; }
+    .step-card small { display: block; font-weight: 600; color: #475569; font-size: 11pt; margin-top: 1mm; }
+    .step-number { background: var(--bleu-marine); color: #fff; width: 8.5mm; height: 8.5mm; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 13pt; margin-bottom: 1mm; }
+
+    .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5mm; width: 100%; text-align: left; }
+    .feature-item { background: #fff; border-left: 5px solid var(--bordeaux); padding: 3mm; border-radius: 3mm; display: flex; align-items: center; gap: 3.5mm; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+    .feature-item i { font-size: 20pt; color: var(--bleu-marine); min-width: 10mm; text-align: center; }
+    .feature-item strong { display: block; font-family: 'Montserrat', sans-serif; font-size: 11.5pt; color: var(--bleu-marine); text-transform: uppercase; line-height: 1.1; }
+    .feature-item span { font-size: 10pt; color: #475569; font-weight: 600; line-height: 1.2; display: block; margin-top: 1mm; }
+
+    /* CARTES DUO (PRÉ-ORIENTATION) */
+    .duo-banner { background: var(--bleu-marine); color: #fff; padding: 3mm 8mm; border-radius: 50px; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 16pt; line-height: 1.15; text-transform: uppercase; letter-spacing: .5px; }
+    .phone-card { width: 100%; display: flex; align-items: center; gap: 5mm; background: var(--bleu-primaire); color: #fff; border-radius: 6mm; padding: 4mm 5mm; text-align: left; border: 2px solid #fff; box-shadow: 0 4px 14px rgba(0,0,0,.2); }
+    .phone-qr { background: #fff; padding: 2.5mm; border-radius: 4mm; flex: 0 0 auto; }
+    .phone-qr img { width: 42mm; height: 42mm; display: block; }
+    .tag-gold { display: inline-block; background: #fff; color: var(--bleu-marine); font: 900 11.5pt 'Montserrat', sans-serif; padding: 1mm 4mm; border-radius: 20px; text-transform: uppercase; margin-bottom: 2mm; }
+    .phone-text h2 { margin: 0 0 1.5mm; font-size: 24pt; line-height: 1.05; text-transform: uppercase; }
+    .phone-text h2 .dyn-price-online { color: #fff; font-size: 1.25em; text-decoration: underline; }
+    .phone-text p { margin: 0; font-size: 14pt; font-weight: 700; line-height: 1.2; }
+
+    .duo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; width: 100%; }
+    .duo-card { color: #fff; padding: 4.5mm; border-radius: 6mm; display: flex; flex-direction: column; justify-content: space-between; gap: 2.5mm; text-align: left; }
+    .duo-card.navy { background: var(--bleu-marine); border: 2px solid rgba(255,255,255,.2); }
+    .duo-card.red  { background: var(--bordeaux); border: 2px solid rgba(255,255,255,.2); }
+    .duo-card .tag { display: inline-block; font-weight: 900; padding: 3px 10px; border-radius: 20px; font-size: 10pt; text-transform: uppercase; background: rgba(255,255,255,.2); }
+    .duo-card h2 { font-size: 20pt; margin: 2mm 0 2mm; line-height: 1.05; text-transform: uppercase; }
+    .big-arrow { font-size: 36pt; color: #fff; line-height: 1; align-self: center; }
+    .lane-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2mm; font-size: 13pt; font-weight: 800; line-height: 1.15; }
+    .lane-li { display: flex; align-items: center; gap: 2.5mm; background: rgba(0,0,0,.25); border: 1.5px solid #fff; border-radius: 3mm; padding: 1.8mm 3mm; color: #fff; }
+
+    /* RÈGLES ENTRÉE 4 */
+    .rules { width: 100%; display: flex; flex-direction: column; gap: 2.2mm; }
+    .rule { display: flex; align-items: center; gap: 4mm; background: #fff; color: #1e293b; border-radius: 4mm; padding: 2mm 4mm 2mm 2.5mm; text-align: left; font-weight: 700; font-size: 15.5pt; line-height: 1.2; border: 1px solid var(--gris-cadre); }
+    .rule .ico { flex: 0 0 14mm; height: 14mm; border-radius: 3mm; background: var(--c, var(--bleu-marine)); color: #fff; display: grid; place-items: center; font-size: 18pt; }
+    .rule b { display: block; font-family: 'Montserrat', sans-serif; font-weight: 900; text-transform: uppercase; color: var(--c, var(--bleu-marine)); font-size: 13.5pt; }
+    .stop-band { background: #b91c1c; color: #fff; padding: 3mm 7mm; border-radius: 4mm; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 19pt; border: 2px solid #fff; text-transform: uppercase; }
+
+    /* PANNEAUX D'ENTRÉE */
+    .entry-number { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 165pt; line-height: .86; color: #fff; text-shadow: 0 6px 20px rgba(0,0,0,.25); }
+    .entry-tag { background: #fff; color: var(--bordeaux); font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 15pt; padding: 1.5mm 6mm; border-radius: 50px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 6px; }
+    .entry-near { font-size: 14.5pt; font-weight: 700; margin: 0; line-height: 1.25; }
+
+    /* DEMI-PANNEAUX */
+    .signs { padding: 4mm; }
+    .split-sign-container { display: flex; flex-direction: column; gap: 3mm; width: 100%; height: 100%; }
+    .half-sign { flex: 1; border-radius: 6mm; padding: 5mm 6mm; display: flex; align-items: center; justify-content: space-between; gap: 5mm; color: #fff; border: 2.5px solid #fff; box-shadow: 0 4px 12px rgba(0,0,0,.15); }
+    .half-sign.navy { background: var(--bleu-marine); }
+    .half-sign.bordeaux { background: var(--bordeaux); }
+    .half-sign.green { background: #047857; }
+    .half-sign.dark { background: #0f172a; border-color: rgba(255,255,255,.3); }
+    .half-sign.champagne { background: #2a210c; border-color: var(--or-champagne); }
+    .half-sign-left { text-align: left; flex: 1; }
+    .badge-mini { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,.2); color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 10pt; padding: 1mm 4mm; border-radius: 20px; text-transform: uppercase; margin-bottom: 2mm; border: 1px solid rgba(255,255,255,.3); }
+    .badge-mini.or { background: var(--or-champagne); color: #000; border: none; }
+    .half-sign-left h2 { font-weight: 900; font-size: 26pt; margin: 0 0 1.5mm; line-height: 1.05; text-transform: uppercase; }
+    .half-sign-left p { margin: 0; font-size: 14.5pt; font-weight: 700; line-height: 1.25; }
+    .half-sign-arrow { width: 28mm; height: 28mm; border-radius: 50%; background: #fff; color: var(--bleu-marine); display: flex; align-items: center; justify-content: center; font-size: 40pt; flex-shrink: 0; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,.2); }
+    .half-sign-arrow.danger { background: #ef4444; color: #fff; cursor: default; }
+    .cut-line { border-top: 2px dashed #94a3b8; font-size: 8pt; color: #64748b; font-weight: 700; text-align: center; padding-top: 1mm; min-height: 1mm; }
+
+    /* FICHES INTERNES */
+    .vol-body { align-items: stretch !important; text-align: left !important; justify-content: flex-start !important; gap: 2.5mm; padding: 5mm !important; }
+    .vol-body h1 { margin: 0; font-size: 17pt; color: var(--bordeaux); text-transform: uppercase; }
+    .vol-table { width: 100%; border-collapse: collapse; font-size: 9pt; background: #fff; }
+    .vol-table th { background: var(--bleu-marine); color: #fff; padding: 1.6mm; text-align: left; font-family: 'Montserrat', sans-serif; font-size: 8pt; }
+    .vol-table td { border: 1px solid #cbd5e1; padding: 1.6mm; font-weight: 600; color: #1e293b; }
+    .vol-table tr.total td { background: #f1f5f9; font-weight: 800; }
+    .vol-table td.warn { color: #b91c1c; font-weight: 800; }
+    .vol-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5mm; }
+    .vol-card { background: #fff; border-radius: 3mm; padding: 3mm; color: #1e293b; font-size: 9pt; font-weight: 600; border: 1px solid var(--gris-cadre); }
+    .vol-card h3 { margin: 0 0 1.5mm; font-size: 10pt; color: var(--bleu-marine); text-transform: uppercase; }
+    .vol-card ol, .vol-card ul { margin: 0; padding-left: 4mm; }
+    .vol-card ul.plain { list-style: none; padding-left: 0; }
+    .vol-card li { margin: .8mm 0; }
+    .blank { display: inline-block; min-width: 35mm; border-bottom: 1.5px solid #333; }
+    .legend { font-size: 8pt; color: #64748b; font-weight: 600; margin: 0; }
+
+    .schema-block { background: #fff; border-radius: 3mm; padding: 2.5mm 3.5mm; color: #1e293b; border-left: 5px solid var(--bordeaux); border: 1px solid var(--gris-cadre); }
+    .schema-block h3 { margin: 0 0 1.5mm; font-size: 10.5pt; color: var(--bleu-marine); text-transform: uppercase; }
+    .schema-block h3 span { color: var(--bordeaux); margin-left: 2.5mm; }
+    .schema { display: flex; height: 13mm; border: 2px solid #0f172a; border-radius: 2mm; overflow: hidden; background: #fff; }
+    .seg { display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 8pt; line-height: 1.1; text-align: center; border-right: 2px solid #fff; padding: 0 1mm; }
+    .seg:last-child { border-right: 0; }
+    .seg small { font-weight: 700; font-size: 7pt; }
+    .seg.qr { background: var(--file-qr); } .seg.cb { background: var(--file-cb); } .seg.cash { background: var(--file-cash); } .seg.fast { background: var(--file-fast); }
+    .seg.qrcb { background: linear-gradient(90deg, var(--file-qr), var(--file-cb)); }
+    .seg.cbcash { background: linear-gradient(90deg, var(--file-cb), var(--file-cash)); }
+    .schema-sides { display: flex; justify-content: space-between; font-size: 7.5pt; font-weight: 700; color: #64748b; margin-top: .8mm; }
+    .schema-block .meta { margin: 1.2mm 0 0; font-size: 8.5pt; font-weight: 700; }
+    .schema-block .meta span { margin-right: 4mm; white-space: nowrap; }
+    .schema-block .meta .warn { color: #b91c1c; }
+    .schema-block .note { margin: .8mm 0 0; font-size: 8.5pt; font-weight: 600; color: #334155; }
+    .schema-block ul { margin: .8mm 0 0; padding-left: 4.5mm; font-size: 8.5pt; font-weight: 600; }
+
+    /* ================= PIED DE PAGE & PARTENAIRES HAUT DE GAMME ================= */
+    .poster-footer { border-top: 1.5px solid #cbd5e1; padding-top: 1.8mm; text-align: center; }
+    .poster-footer small { font-size: 9.5pt; font-weight: 800; color: #334155; display: block; text-transform: uppercase; line-height: 1.2; }
+    .inst-line { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 7pt; color: var(--bleu-marine); margin-top: 1mm; text-transform: uppercase; letter-spacing: .5px; }
+    .partners { margin-top: 1.2mm; }
+    .partners-label { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 6.8pt; color: var(--bleu-marine); text-transform: uppercase; letter-spacing: .5px; }
+    .partners-bar { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1.5mm 3.5mm; margin-top: 1.2mm; }
+    .partner-logo { height: 7.5mm; max-width: 22mm; object-fit: contain; }
+    .partner-pill { background: #f8fafc; border: 1px solid #cbd5e1; color: #1e293b; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 6.5pt; padding: 2px 6px; border-radius: 3px; text-transform: uppercase; }
+    .partner-pill.inst { background: var(--bleu-marine); color: #fff; border-color: var(--bleu-marine); }
+    
+    /* Visibilité intelligente des partenaires selon le mode choisi */
+    body.partners-none .partners,
+    body.partners-none .inst-line { display: none !important; }
+    body.partners-smart .page-poster[data-partners="none"] .partners,
+    body.partners-smart .page-poster[data-partners="none"] .inst-line { display: none !important; }
+
+    body.no-online .online-only { display: none !important; }
+    body.is-editing .editable { outline: 2px dashed #0284c7; outline-offset: 2px; cursor: text; }
+
+    /* ================= IMPRESSION ================= */
+    @media print {
+      html, body { background: #fff; }
+      .no-print { display: none !important; }
+      .editable { outline: none !important; }
+      .page-poster {
+        margin: 0; border: none; box-shadow: none; outline: none !important;
+        height: 296mm; break-after: page; page-break-after: always; break-inside: avoid; page-break-inside: avoid;
+      }
+      .page-poster.is-last { break-after: auto; page-break-after: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= BARRE DE CONFIGURATION (NON IMPRIMÉE) ================= -->
+  <div class="admin-toolbar no-print" id="toolbar">
+    <div>
+      <h2><i class="fa-solid fa-sliders"></i> Signalétique Officielle BZH 2026 — 28 Affiches</h2>
+      <small style="color:#94a3b8;">Impression : <b>Marges = Aucune</b> · <b>Échelle 100 %</b> · <b>Graphiques d'arrière-plan coché</b> · En-têtes/pieds navigateur désactivés.</small>
+    </div>
+
+    <div class="admin-controls">
+      <div class="admin-group"><label>Tarif sur place</label>
+        <input type="text" id="inputPriceDay" value="8 €" style="width:68px;" oninput="updatePosters()"></div>
+      <div class="admin-group"><label>Tarif en ligne</label>
+        <input type="text" id="inputPriceOnline" value="8 €" style="width:68px;" oninput="updatePosters()"></div>
+      <label class="admin-group check"><input type="checkbox" id="chkOnline" checked onchange="applyFilter()"> Achat en ligne Jour J</label>
+      <div class="admin-group"><label>Date affichée</label>
+        <input type="text" id="inputDate" value="5 & 6 Décembre 2026" style="width:150px;" oninput="updatePosters()"></div>
+      <div class="admin-group"><label>Mention gratuité</label>
+        <input type="text" id="inputNote" value="Gratuit pour les moins de 12 ans" style="width:200px;" oninput="updatePosters()"></div>
+      <div class="admin-group"><label>Lieu Permanence & Antidopage</label>
+        <input type="text" id="inputLocPerm" value="Salle de sport de la Seiche (près Collège Théodore Monod)" style="width:230px;" oninput="updatePosters()"></div>
+      <div class="admin-group"><label>Lieu Secrétariat & Presse</label>
+        <input type="text" id="inputLocPresse" value="Salle de sport de la Seiche (Secrétariat / Presse)" style="width:220px;" oninput="updatePosters()"></div>
+      <div class="admin-group"><label>Distances Salle de Sport (E5 / E3)</label>
+        <input type="text" id="inputDistPerm" value="425 m de l'Entrée 5 • 465 m de l'Entrée 3" style="width:200px;" oninput="updatePosters()"></div>
+      <div class="admin-group"><label>Distances WC Kayak (E3 / E5)</label>
+        <input type="text" id="inputDistKayak" value="345 m de l'Entrée 3 • 375 m de l'Entrée 5" style="width:200px;" oninput="updatePosters()"></div>
+      <div class="admin-group"><label>Accès Ambulance / Secours (GPS)</label>
+        <input type="text" id="inputGpsSecours" value="Le Poncel (48.035561, -1.602810)" style="width:220px;" oninput="updatePosters()"></div>
+      <div class="admin-group"><label>Lien QR Billetterie en ligne</label>
+        <input type="text" id="inputUrlTicket" value="https://bzh2026.usverncyclisme.fr/championnat-bzh.html#infos" style="width:210px;" oninput="updatePosters()"></div>
+      <div class="admin-group"><label>Lien QR Portail Spectateurs</label>
+        <input type="text" id="inputUrlPortal" value="https://bzh2026.usverncyclisme.fr/guide.html" style="width:200px;" oninput="updatePosters()"></div>
+      <div class="admin-group"><label>Imprimer…</label>
+        <select id="selEntry" onchange="applyFilter()">
+          <option value="all">Tout le kit complet (28 pages)</option>
+          <option value="1">Entrée 1 – Sud-Est (Départ)</option>
+          <option value="2">Entrée 2 – Nord-Est (4 voies)</option>
+          <option value="3">Entrée 3 – Nord-Ouest (Étang / Kayak)</option>
+          <option value="4">Entrée 4 – Sud (Officiels & Organisation)</option>
+          <option value="5">Entrée 5 – Nord (Collège)</option>
+          <option value="plan">Plan Circuit 2,7 km (Page 23)</option>
+          <option value="vol">Fiches bénévoles & schémas (Pages 15-16)</option>
+          <option value="caisse">Chevalets de caisse 8 € (Page 28)</option>
+        </select></div>
+      <div class="admin-group"><label>Format</label>
+        <select id="selFormat" onchange="applyFormat()"><option value="A4">A4</option><option value="A3">A3</option></select></div>
+      <div class="admin-group"><label>Répartition partenaires</label>
+        <select id="selPartners" onchange="applyPartners()">
+          <option value="smart" selected>Répartition intelligente (Affiches 9, 18-22, 26)</option>
+          <option value="all">Afficher aussi sur les entrées</option>
+          <option value="none">Masquer tous les logos</option>
+        </select></div>
+      <label class="admin-group check"><input type="checkbox" id="chkEdit" onchange="applyEdit()"> Édition au clic</label>
+      <div id="statusBox" class="status ok">Vérification en cours…</div>
+      <button class="btn-print" onclick="window.print()"><i class="fa-solid fa-print"></i> Imprimer en PDF</button>
+    </div>
+  </div>
+
+  <!-- ========== AFFICHE 1 : FILE 1 – QR CODE (COUPE-FILE) ========== -->
+  <section class="page-poster" data-entries="1 2" data-partners="none">
+    <span class="poster-tag-admin no-print">Affiche 1/28 — Entrées 1 & 2 (File 1 QR Code)</span>
+    <header class="poster-header"></header>
+    <div class="poster-body theme-qr">
+      <div class="lane-badge">File <span class="lane-num lane-id" data-lane="qr">1</span> Coupe-file</div>
+      <i class="fa-solid fa-qrcode giant-icon"></i>
+      <h1 class="giant-title"><span class="kw" style="--kw:66pt">QR CODE</span><span class="sub">Billets en ligne & invitations</span></h1>
+      <div class="instructions-box">
+        <p class="box-title" style="color:var(--file-qr);"><i class="fa-solid fa-mobile-screen-button"></i> Préparez votre justificatif</p>
+        <ul class="info-list">
+          <li><i class="fa-solid fa-sun"></i><span>Sur smartphone : luminosité d'écran <strong>à 100 %</strong></span></li>
+          <li><i class="fa-solid fa-envelope-open-text"></i><span><strong>Invitations Partenaires / Élus :</strong> scan du QR code direct ici</span></li>
+          <li><i class="fa-solid fa-ticket"></i><span><strong>1 scan = 1 bracelet</strong> posé au poignet (accès libre tout le week-end)</span></li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-circle-arrow-down direction-arrow"></i>
+    </div>
+    <footer class="poster-footer"><small>Préparez votre billet avant d'arriver au guichet</small></footer>
+  </section>
+
+  <!-- ========== AFFICHE 2 : FILE 2 – CARTE BANCAIRE ========== -->
+  <section class="page-poster" data-entries="1 2" data-partners="none">
+    <span class="poster-tag-admin no-print">Affiche 2/28 — Entrées 1 & 2 (File 2 Carte Bancaire)</span>
+    <header class="poster-header"></header>
+    <div class="poster-body theme-cb">
+      <div class="lane-badge">File <span class="lane-num lane-id" data-lane="cb">2</span> Paiement rapide</div>
+      <i class="fa-solid fa-credit-card giant-icon"></i>
+      <h1 class="giant-title"><span class="kw" style="--kw:58pt">CARTE<br>BANCAIRE</span><span class="sub">Achat de billet sur place</span></h1>
+      <div class="price-pill">TARIF : <span class="dyn-price">8 €</span></div>
+      <div class="instructions-box">
+        <p class="box-title" style="color:var(--bleu-marine);"><i class="fa-solid fa-wifi"></i> Sans contact accepté</p>
+        <ul class="info-list">
+          <li><i class="fa-solid fa-credit-card" style="color:var(--bleu-marine);"></i><span>Carte bancaire, <strong>Apple Pay & Google Pay</strong></span></li>
+          <li><i class="fa-solid fa-ticket" style="color:var(--bleu-marine);"></i><span>Pose immédiate de votre bracelet spectateur</span></li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-circle-arrow-down direction-arrow"></i>
+    </div>
+    <footer class="poster-footer"><small>Paiement par carte uniquement à ce guichet — aucun rendu de monnaie</small></footer>
+  </section>
+
+  <!-- ========== AFFICHE 3 : FILE 3 – CAISSE ESPÈCES ========== -->
+  <section class="page-poster" data-entries="1 2 3 5" data-partners="none">
+    <span class="poster-tag-admin no-print">Affiche 3/28 — Entrées 1, 2, 3 & 5 (File 3 Espèces)</span>
+    <header class="poster-header"></header>
+    <div class="poster-body theme-cash">
+      <div class="lane-badge">File <span class="lane-num lane-id" data-lane="cash">3</span> Caisse espèces</div>
+      <i class="fa-solid fa-coins giant-icon"></i>
+      <h1 class="giant-title"><span class="kw" style="--kw:64pt">ESPÈCES</span><span class="sub">Achat de billet sur place</span></h1>
+      <div class="price-pill">TARIF : <span class="dyn-price">8 €</span></div>
+      <div class="instructions-box">
+        <p class="box-title" style="color:var(--bordeaux);"><i class="fa-solid fa-hand-holding-dollar"></i> Merci de faire l'appoint</p>
+        <ul class="info-list">
+          <li><i class="fa-solid fa-coins" style="color:var(--bordeaux);"></i><span>Préparez : <strong class="dyn-price">8 €</strong> par personne</span></li>
+          <li><i class="fa-solid fa-credit-card" style="color:var(--bleu-marine);"></i><span>Paiement par carte ? <strong>File 2 – CB</strong></span></li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-circle-arrow-down direction-arrow"></i>
+    </div>
+    <footer class="poster-footer"><small>Caisse physique officielle — remise d'un bracelet d'accès</small></footer>
+  </section>
+
+  <!-- ========== AFFICHE 4 : FILE 4 – ACCÈS DIRECT ACCRÉDITÉS & COUREURS ========== -->
+  <section class="page-poster" data-entries="1 2 3 4 5" data-partners="none">
+    <span class="poster-tag-admin no-print">Affiche 4/28 — Toutes entrées (File 4 Accès Rapide)</span>
+    <header class="poster-header"></header>
+    <div class="poster-body theme-fast">
+      <div class="lane-badge badge-champagne">File <span class="lane-num lane-id" data-lane="fast">4</span> Accès direct</div>
+      <i class="fa-solid fa-person-biking giant-icon" style="color:var(--or-champagne);"></i>
+      <h1 class="giant-title"><span class="kw" style="--kw:48pt">ACCÈS DIRECT</span><span class="sub">Coureurs, Bracelets & Accréditations</span></h1>
+      <p class="free-note dyn-note"><i class="fa-solid fa-circle-check"></i> <span>Gratuit pour les moins de 12 ans</span></p>
+      <div class="instructions-box">
+        <p class="box-title" style="color:var(--bleu-marine);font-size:15pt;"><i class="fa-solid fa-id-badge"></i> Contrôle visuel rapide</p>
+        <ul class="info-list small">
+          <li><i class="fa-solid fa-hand"></i><span><strong>Spectateurs déjà contrôlés :</strong> levez simplement le poignet</span></li>
+          <li><i class="fa-solid fa-id-badge"></i><span><strong>Officiels, Presse, Médical, Organisation :</strong> badge visible</span></li>
+          <li><i class="fa-solid fa-person-biking"></i><span><strong>Coureurs en compétition :</strong> accès direct avec vélo</span></li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-circle-arrow-down direction-arrow"></i>
+    </div>
+    <footer class="poster-footer"><small>Invitations avec QR code : merci de vous diriger vers la File 1 pour retrait du bracelet</small></footer>
+  </section>
+
+  <!-- ========== AFFICHE 5 : GUICHET MIXTE DIGITAL (ENTRÉES 3 & 5) ========== -->
+  <section class="page-poster" data-entries="3 5" data-partners="none">
+    <span class="poster-tag-admin no-print">Affiche 5/28 — Entrées 3 & 5 (Guichet mixte QR + CB)</span>
+    <header class="poster-header"></header>
+    <div class="poster-body theme-digital">
+      <div class="lane-badge">Guichet Express • Sans Espèces</div>
+      <div class="icon-row"><i class="fa-solid fa-qrcode giant-icon"></i><span class="plus">+</span><i class="fa-solid fa-credit-card giant-icon"></i></div>
+      <h1 class="giant-title" style="font-size:30pt;">Billet en ligne (QR)<br>& Carte Bancaire</h1>
+      <div class="price-pill">CB : <span class="dyn-price">8 €</span></div>
+      <div class="instructions-box">
+        <ul class="info-list">
+          <li><i class="fa-solid fa-mobile-screen-button" style="color:var(--file-qr);"></i><span><strong>Déjà un billet / invitation :</strong> scannez votre écran (luminosité 100 %)</span></li>
+          <li><i class="fa-solid fa-credit-card" style="color:var(--file-cb);"></i><span><strong>Achat sur place :</strong> carte bancaire sans contact (8 €)</span></li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-circle-arrow-down direction-arrow"></i>
+    </div>
+    <footer class="poster-footer"><small>Paiement en espèces : merci de vous diriger vers la caisse espèces attenante</small></footer>
+  </section>
+
+  <!-- ========== AFFICHE 6 : PRÉ-ORIENTATION AVANT LES FILES ========== -->
+  <section class="page-poster" data-entries="1 2" data-partners="none" data-sub="Pré-Orientation • Choisissez votre file">
+    <span class="poster-tag-admin no-print">Affiche 6/28 — Panneau de pré-orientation (15 m avant les caisses)</span>
+    <header class="poster-header"></header>
+    <div class="poster-body theme-light" style="justify-content:space-around;">
+      <div class="duo-banner"><i class="fa-solid fa-signs-post me-2"></i> Accès Circuit — Choisissez votre voie</div>
+
+      <div class="phone-card online-only">
+        <div class="phone-qr"><img class="qr-img qr-ticket-img" src="https://api.qrserver.com/v1/create-qr-code/?size=600x600&ecc=M&margin=10&data=https%3A%2F%2Fbzh2026.usverncyclisme.fr%2Fchampionnat-bzh.html%23infos" alt="QR Code Billetterie" onload="checkOverflow()" onerror="this.classList.add('qr-error');checkOverflow()"></div>
+        <div class="phone-text">
+          <span class="tag-gold"><i class="fa-solid fa-bolt me-1"></i> Coupe-file immédiat</span>
+          <h2>Billet en ligne<br><span class="dyn-price-online">8 €</span> en 30 secondes</h2>
+          <p>Scannez • Payez sur smartphone • Passez directement par la <b>File 1</b> à gauche</p>
+        </div>
+      </div>
+
+      <div class="duo-grid">
+        <div class="duo-card navy">
+          <div>
+            <span class="tag"><i class="fa-solid fa-arrow-left me-1"></i> Couloir de Gauche</span>
+            <h2>Files Rapides<br>Sans Attente</h2>
+            <ul class="lane-list">
+              <li class="lane-li"><i class="fa-solid fa-qrcode"></i><span>File 1 : Billets en ligne & invitations</span></li>
+              <li class="lane-li"><i class="fa-solid fa-person-biking"></i><span>File 4 : Accrédités, coureurs & bracelets</span></li>
+            </ul>
+          </div>
+          <i class="fa-solid fa-arrow-up-long big-arrow"></i>
+        </div>
+        <div class="duo-card red">
+          <div>
+            <span class="tag"><i class="fa-solid fa-arrow-right me-1"></i> Couloir de Droite</span>
+            <h2>Achat Sur Place<br>(<span class="dyn-price">8 €</span>)</h2>
+            <ul class="lane-list">
+              <li class="lane-li"><i class="fa-solid fa-credit-card"></i><span>File 2 : Carte bancaire sans contact</span></li>
+              <li class="lane-li"><i class="fa-solid fa-coins"></i><span>File 3 : Caisse espèces (appoint demandé)</span></li>
+            </ul>
+          </div>
+          <i class="fa-solid fa-arrow-up big-arrow" style="transform:rotate(35deg);"></i>
+        </div>
+      </div>
+    </div>
+    <footer class="poster-footer"><small>Merci de respecter les couloirs balisés pour fluidifier l'accès au circuit</small></footer>
+  </section>
+
+  <!-- ========== AFFICHE 7 : ENTRÉE 4 – OFFICIELS & ORGANISATION ========== -->
+  <section class="page-poster" data-entries="4" data-partners="none" data-sub="Entrée 4 (Sud) • Accès Officiels &amp; Organisation">
+    <span class="poster-tag-admin no-print">Affiche 7/28 — Entrée 4 (Accès filtrant organisation & officiels)</span>
+    <header class="poster-header"></header>
+    <div class="poster-body theme-dark">
+      <div class="lane-badge badge-champagne"><i class="fa-solid fa-id-badge me-2"></i> Accès Réservé Organisation</div>
+      <div class="icon-row">
+        <i class="fa-solid fa-shield-halved giant-icon" style="color:var(--or-champagne);"></i>
+        <i class="fa-solid fa-id-badge giant-icon" style="color:#fff;"></i>
+      </div>
+      <div class="stop-band"><i class="fa-solid fa-ban me-2"></i> Aucun paiement en espèces à cette entrée</div>
+      <div class="rules">
+        <div class="rule" style="--c:var(--bleu-marine);"><span class="ico"><i class="fa-solid fa-id-badge"></i></span>
+          <div><b>Officiels, Presse & Arbitres FFC</b>Accès direct sur présentation de l'accréditation ou listing</div></div>
+        <div class="rule" style="--c:var(--bordeaux);"><span class="ico"><i class="fa-solid fa-square-parking"></i></span>
+          <div><b>Véhicules Accrédités & Parking P*</b>Accès filtré réservé aux détenteurs du laissez-passer officiel</div></div>
+        <div class="rule" style="--c:var(--bleu-primaire);"><span class="ico"><i class="fa-solid fa-qrcode"></i></span>
+          <div><b>Spectateurs & Partenaires</b>Dépannage uniquement par <strong>Carte Bancaire (<span class="dyn-price">8 €</span>)</strong> ou scan QR Code<br><small style="color:#64748b;">Pour régler en espèces : merci de rejoindre l'Entrée 1 ou l'Entrée 3</small></div></div>
+      </div>
+    </div>
+    <footer class="poster-footer"><small>Zone technique et organisation — US Vern Cyclisme</small></footer>
+  </section>
+
+  <!-- ========== AFFICHE 8 : COUPE-FILE EXPRESS MOBILE ========== -->
+  <section class="page-poster" data-entries="1 2 3 4 5" data-partners="none" data-needs="online" data-sub="Billetterie Express Mobile">
+    <span class="poster-tag-admin no-print">Affiche 8/28 — Coupe-file express dans les files d'attente</span>
+    <header class="poster-header"></header>
+    <div class="poster-body theme-qr">
+      <div class="lane-badge"><i class="fa-solid fa-bolt me-2"></i> Gagnez du temps</div>
+      <h1 class="giant-title"><span class="kw" style="--kw:52pt">ÉVITEZ<br>L'ATTENTE</span></h1>
+      <div class="price-pill"><span class="dyn-price-online">8 €</span> en 30 secondes</div>
+      <div class="qr-wrapper">
+        <img class="qr-img qr-ticket-img" src="https://api.qrserver.com/v1/create-qr-code/?size=600x600&ecc=M&margin=10&data=https%3A%2F%2Fbzh2026.usverncyclisme.fr%2Fchampionnat-bzh.html%23infos" alt="QR Code Billetterie" style="width:72mm;height:72mm;" onload="checkOverflow()" onerror="this.classList.add('qr-error');checkOverflow()">
+        <p class="qr-url dyn-url-ticket">bzh2026.usverncyclisme.fr/championnat-bzh.html#infos</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card"><div class="step-number">1</div><div>SCANNEZ</div><small>Avec votre smartphone</small></div>
+        <div class="step-card"><div class="step-number">2</div><div>RÉGLEZ</div><small>Paiement sécurisé en ligne</small></div>
+        <div class="step-card" style="border-top-color:var(--bleu-primaire);"><div class="step-number" style="background:var(--bleu-primaire);">3</div><div style="color:var(--bleu-marine);">ENTREZ !</div><small>Directement par la File 1</small></div>
+      </div>
+    </div>
+    <footer class="poster-footer"><small>Plateforme 100 % sécurisée — votre billet s'affiche instantanément à l'écran</small></footer>
+  </section>
+
+  <!-- ========== AFFICHE 9 : PORTAIL SPECTATEURS OFFICIEL ========== -->
+  <section class="page-poster" data-entries="1 2 3 4 5 kayak" data-partners="officiels" data-sub="Le Guide Officiel dans votre poche">
+    <span class="poster-tag-admin no-print">Affiche 9/28 — Portail spectateurs, plan & horaires officiels</span>
+    <header class="poster-header"></header>
+    <div class="poster-body theme-light" style="padding:5mm;">
+      <div class="duo-banner"><i class="fa-solid fa-mobile-screen-button me-2"></i> Guide Officiel des Spectateurs</div>
+      <h1 class="giant-title" style="font-size:24pt;color:var(--bordeaux);">Plan interactif, horaires & engagés</h1>
+      <div class="qr-wrapper" style="border-color:var(--bleu-marine);">
+        <img class="qr-img qr-portal-img" src="https://api.qrserver.com/v1/create-qr-code/?size=600x600&ecc=M&margin=10&data=https%3A%2F%2Fbzh2026.usverncyclisme.fr%2Fguide.html" alt="QR Code Guide Spectateurs" style="width:55mm;height:55mm;" onload="checkOverflow()" onerror="this.classList.add('qr-error');checkOverflow()">
+        <p class="qr-url dyn-url-portal">bzh2026.usverncyclisme.fr/guide.html</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item"><i class="fa-solid fa-map-location-dot"></i><div><strong>Plan du parcours 2,7 km</strong><span>Ligne de départ, arrivée, bac à sable, escaliers et planches</span></div></div>
+        <div class="feature-item"><i class="fa-solid fa-stopwatch"></i><div><strong>Horaires officiels FFC</strong><span>Samedi dès 14h00 • Dimanche courses de 11h00 à 15h15 (Élites)</span></div></div>
+        <div class="feature-item"><i class="fa-solid fa-restroom"></i><div><strong style="color:var(--bordeaux);">Sanitaires & Toilettes</strong><span>Base nautique Kayak (<span class="dyn-dist-kayak"></span>)</span></div></div>
+        <div class="feature-item"><i class="fa-solid fa-utensils"></i><div><strong>Buvettes & Restauration</strong><span>Buvette centrale & restauration chaude au Sud près de l'arrivée</span></div></div>
+      </div>
+    </div>
+    <footer class="poster-footer"><small>Une question ? Rapprochez-vous d'un bénévole de l'US Vern Cyclisme</small></footer>
+  </section>
+
+  <!-- AFFICHES 10 à 28 GÉNÉRÉES PAR LE SCRIPT JS -->
+  <div id="generatedPosters"></div>
+
+  <script>
+    const $ = id => document.getElementById(id);
+
+    const LANE_IDS = { qr: "1", cb: "2", cash: "3", fast: "4" };
+    const VOLANTS = 2;
+    const TOTAL_PAGES = 28;
+
+    /* =========================================================
+       LISTE OFFICIELLE DES PARTENAIRES PAR CATÉGORIES
+       ========================================================= */
+    const PARTNERS = {
+      institutionnels: [
+        { name: "Ville de Vern-sur-Seiche", logo: "logo/Vern-sur-Seiche_logo.png", inst: true },
+        { name: "Ille & Vilaine", logo: "logo/logoille-et-vilaine.png", inst: true },
+        { name: "Comité de Bretagne Cyclisme", logo: "logo/logocomitebretagne.png", inst: true }
+      ],
+      officiels: [
+        { name: "SARL Auguste & Pascal Maloeuvre", logo: "logo/sarl-maloeuvre.svg" },
+        { name: "Belo Velo", logo: "logo/belo-velo.png" },
+        { name: "Kotan", logo: "logo/KOTAN.png" },
+        { name: "Maxi Velo", logo: "logo/maxi-velo.jpeg" },
+        { name: "CM Plomberie", logo: "logo/cm-plomberie.webp" },
+        { name: "Ferré Hôtels", logo: "logo/logoFerreHotel.webp" },
+        { name: "Le Télégramme", logo: "logo/Logo_du_Télégramme.jpg" },
+        { name: "BH Dépannage", logo: "logo/logoBHDEPANNAGE.png" }
+      ],
+      club: [
+        { name: "E.Leclerc Vern", logo: "logo/Logoleclerc.webp" },
+        { name: "CITEC", logo: "logo/logoCITEC.webp" },
+        { name: "Harmonie Mutuelle", logo: "logo/logoharmonie.webp" },
+        { name: "Century 21", logo: "logo/logocentury21.webp" },
+        { name: "Decathlon", logo: "logo/logodecathlon.webp" },
+        { name: "M.B.Cycles", logo: "logo/logoMBCycles.jpeg" },
+        { name: "THERMO2", logo: "logo/logothermo2.webp" },
+        { name: "Crédit Mutuel", logo: "logo/Logo_Crédit_Mutuel_de_Bretagne_CMB.svg" },
+        { name: "PIZZA Chantepie", logo: "logo/pizza-chantepie.jpg" }
+      ],
+      techniques: [
+        { name: "Podiocom", logo: "logo/podiocom.svg" },
+        { name: "Grimaud", logo: "logo/grimaud.webp" },
+        { name: "Newloc", logo: "logo/newloc.png" },
+        { name: "Noret", logo: "logo/noret.png" }
+      ]
+    };
+    const DEFAULT_SUB = 'US Vern Cyclisme • <span class="dyn-date">5 & 6 Décembre 2026</span>';
+
+    /* =========================================================
+       DONNÉES CONFIGURATION DES 5 ENTRÉES
+       ========================================================= */
+    const L = LANE_IDS;
+    const ENTRANCES = [
+      { n:1, dir:"SUD-EST", width:"7,50 m", lanes:4, vol:6, tables:3, bar:5, net:"51,3 / 0,86", netWarn:true, cash:true,
+        near:"Ligne de Départ (50 m) • Parkings Spectateurs P4 (215 m), P2 (370 m) & P3 (450 m)",
+        lines:[["fa-qrcode",`File ${L.qr} : Billets en ligne & invitations QR Code`],["fa-credit-card",`File ${L.cb} : Achat par Carte Bancaire (8 €)`],["fa-coins",`File ${L.cash} : Achat en Espèces (8 €)`],["fa-person-biking",`File ${L.fast} : Coureurs, Accrédités & porteurs de bracelet`]],
+        segs:[{k:"cash",t:"F3 ESPÈCES",w:"2,00 m",f:2.0},{k:"cb",t:"F2 CB",w:"1,85 m",f:1.85},{k:"qr",t:"F1 QR CODE",w:"1,85 m",f:1.85},{k:"fast",t:"F4 RAPIDE",w:"1,80 m",f:1.8}],
+        sides:["← gauche (panneau 30 / bloc béton)","droite (accotement herbeux) →"],
+        note:"Implantation en amont de la grille de départ. Capte les flux des Parkings Spectateurs P2, P3 et P4.",
+        roles:["File 3 Espèces (2,00 m) : 1 caissier + 1 poseur de bracelet","File 2 Carte Bancaire (1,85 m) : 1 encaisseur TPE + 1 poseur de bracelet","File 1 QR Code (1,85 m) : 1 scanneur + 1 poseur (surveillance File 4 Rapide)"] },
+      { n:2, dir:"NORD-EST", width:"4,30 m", lanes:3, vol:6, tables:2, bar:4, net:"28,8 / 12,6", netWarn:false, cash:true,
+        near:"Parking Spectateurs P1 Pharmacie Bleue (600 m) • Arrivée (325 m)",
+        lines:[["fa-road",`Bitume (gauche) : File ${L.qr} (QR Code) & File ${L.fast} (Accrédités / Bracelets)`],["fa-credit-card","Herbe (droite) : Guichet Carte Bancaire (8 €)"],["fa-coins","Herbe (droite) : Guichet Espèces (8 €)"]],
+        segs:[{k:"fast",t:"F4 RAPIDE",w:"1,10 m",f:1.1},{k:"qr",t:"F1 QR CODE",w:"1,20 m",f:1.2},{k:"cbcash",t:"F2 CB + F3 ESPÈCES",w:"2,00 m",f:2.0}],
+        sides:["← gauche : bitume (grillage D173)","droite : bande herbeuse (fossé) →"],
+        note:"Laisser impérativement le couloir bitumé libre pour l'accès rapide et les urgences.",
+        roles:["Bitume (Files 1 & 4) : 1 scanneur QR + 1 contrôleur visuel / bracelets","Herbe Guichet CB : 1 encaisseur TPE + 1 poseur de bracelet","Herbe Guichet Espèces : 1 caissier espèces + 1 poseur de bracelet"] },
+      { n:3, dir:"NORD-OUEST", width:"4,85 m", lanes:3, vol:5, tables:2, bar:4, net:"90,5 / 5,77", netWarn:false, cash:true,
+        near:"Ligne d'Arrivée (110 m) • Sanitaires Kayak (345 m) • Parkings Coureurs P1-P2-P3",
+        lines:[["fa-person-biking",`File ${L.fast} : Coureurs avec vélos, accès sanitaires & badges`],["fa-qrcode","Guichet digital : QR Code en ligne & Carte Bancaire"],["fa-coins","Caisse espèces dédiée (8 €)"]],
+        segs:[{k:"cash",t:"ESPÈCES",w:"1,40 m",f:1.4},{k:"qrcb",t:"QR + CB",w:"1,45 m",f:1.45},{k:"fast",t:"COULOIR VÉLOS",w:"2,00 m",f:2.0}],
+        sides:["← gauche : côté haie / terre","droite : côté berge étang (sécurisée) →"],
+        note:"Accès principal pour les équipes et coureurs arrivant des parkings du collège et de la base nautique.",
+        roles:["Guichet Espèces : 1 caissier + 1 poseur de bracelet","Guichet Digital Mixte : 1 bénévole TPE/Scan + 1 poseur","Couloir vélos & sanitaires : 1 contrôleur accréditations/licences"] },
+      { n:4, dir:"SUD", width:"5,15 m", lanes:2, vol:2, tables:1, bar:2, net:"150 / 7,74", netWarn:false, cash:false,
+        tag:'<i class="fa-solid fa-shield-halved me-1"></i> Organisation & Officiels',
+        near:"Parking Officiels P* • Ligne d'Arrivée (215 m) • Grille de Départ (245 m)",
+        lines:[["fa-id-badge","Officiels, Arbitres, Presse, Médical : accès direct sur accréditation"],["fa-qrcode","Invitations partenaires : scan QR code et remise du bracelet"],["fa-credit-card","Dépannage public sans billet : Carte Bancaire uniquement (8 €)"],["fa-ban","Aucun paiement en espèces accepté à cette entrée"]],
+        segs:[{k:"fast",t:"ACCÈS DIRECT OFFICIELS & VÉHICULES",w:"3,00 m",f:3.0},{k:"qrcb",t:"TABLE DÉPANNAGE CB / QR",w:"2,15 m",f:2.15}],
+        sides:["← gauche : allée centrale roulante","droite : zone sous-bois →"],
+        note:"Accès de filtrage officiel 100 % dématérialisé. Aucune manipulation d'espèces sur ce poste.",
+        roles:["Couloir Principal : 1 contrôleur accréditations FFC & filtrage véhicules P*","Table de secours : 1 bénévole équipé TPE smartphone Tap-to-Pay & Scan QR"] },
+      { n:5, dir:"NORD", width:"4,50 m", lanes:3, vol:5, tables:2, bar:3, net:"104 / 4,07", netWarn:false, cash:true,
+        near:"Ligne d'Arrivée (160 m) • Sanitaires Kayak (375 m) • Salle de Sport (425 m)",
+        lines:[["fa-coins","Caisse espèces (8 €)"],["fa-qrcode","Guichet digital : QR Code en ligne & Carte Bancaire"],["fa-person-biking",`File ${L.fast} : Coureurs, badges & accès sanitaires`]],
+        segs:[{k:"cash",t:"ESPÈCES",w:"1,25 m",f:1.25},{k:"qrcb",t:"QR + CB",w:"1,25 m",f:1.25},{k:"fast",t:"COULOIR VÉLOS",w:"2,00 m",f:2.0}],
+        sides:["← gauche : zone herbeuse","droite : butte de terre naturelle →"],
+        note:"Accès piéton direct depuis le parking du collège et la permanence des dossards.",
+        roles:["Guichet Espèces : 1 caissier + 1 poseur de bracelet","Guichet Digital : 1 scanneur/TPE + 1 poseur","Couloir vélos : 1 contrôleur technique FFC"] }
+    ];
+
+    const ARROW_STEPS = [0, 45, 90, 135, 180, -135, -90, -45];
+    function cycleArrow(el) {
+      const cur = +el.dataset.rot || 0;
+      let i = ARROW_STEPS.indexOf(cur); if (i === -1) i = 0;
+      const next = ARROW_STEPS[(i + 1) % ARROW_STEPS.length];
+      el.dataset.rot = next;
+      (el.querySelector("i") || el).style.transform = `rotate(${next}deg)`;
+    }
+
+    /* =========================================================
+       GÉNÉRATION DYNAMIQUE DES AFFICHES 10 À 28
+       ========================================================= */
+    function buildGenerated() {
+      let html = "", idx = 10;
+      const ARROW = (icon = "fa-arrow-up") => `<div class="half-sign-arrow" onclick="cycleArrow(this)" data-rot="0" title="Cliquer pour pivoter la flèche"><i class="fa-solid ${icon}" style="display:inline-block"></i></div>`;
+      const half = ({ cls, badge, h2, p, edit = true, arrow = ARROW(), style = "" }) =>
+        `<div class="half-sign ${cls}" style="${style}"><div class="half-sign-left${edit ? " editable" : ""}"><span class="badge-mini">${badge}</span><h2>${h2}</h2><p>${p}</p></div>${arrow}</div>`;
+      const CUT = t => `<div class="cut-line"><span class="no-print"><i class="fa-solid fa-scissors me-1"></i> ${t}</span></div>`;
+      const signPage = o => `
+      <section class="page-poster" data-entries="${o.entries}" data-partners="${o.partners || 'none'}" data-sub="${o.sub}">
+        <span class="poster-tag-admin no-print">Affiche ${idx++}/${TOTAL_PAGES} — ${o.tag}</span>
+        <header class="poster-header"></header>
+        <div class="poster-body theme-light signs"><div class="split-sign-container">${o.top}${CUT(o.cut || "Ligne de coupe — clic sur la flèche pour l'orienter")}${o.bottom}</div></div>
+        <footer class="poster-footer"><small>${o.foot || "Signalétique directionnelle officielle — US Vern Cyclisme"}</small></footer>
+      </section>`;
+
+      // 10–14 : PANNEAUX DES 5 ENTRÉES
+      ENTRANCES.forEach(e => {
+        const items = e.lines.map(l => `<li><i class="fa-solid ${l[0]}"></i><span>${l[1]}</span></li>`).join("");
+        html += `
+        <section class="page-poster" data-entries="${e.n}" data-partners="none">
+          <span class="poster-tag-admin no-print">Affiche ${idx++}/${TOTAL_PAGES} — Panneau Entrée ${e.n}</span>
+          <header class="poster-header"></header>
+          <div class="poster-body theme-club">
+            <div class="lane-badge">Vous êtes à l'entrée</div>
+            <div class="entry-number">${e.n}</div>
+            <h1 class="giant-title"><span class="kw" style="--kw:48pt">${e.dir}</span></h1>
+            ${e.tag ? `<div class="entry-tag">${e.tag}</div>` : ""}
+            <p class="entry-near">${e.near}</p>
+            <div class="instructions-box">
+              <p class="box-title" style="color:var(--bleu-marine);font-size:15pt;"><i class="fa-solid fa-door-open me-2"></i> ${e.cash ? "Espèces, Carte Bancaire & QR Code acceptés" : "Accès dématérialisé : Carte Bancaire & QR Code uniquement"}</p>
+              <ul class="info-list small">${items}</ul>
+            </div>
+          </div>
+          <footer class="poster-footer"><small>Merci de respecter les consignes des bénévoles et les voies d'accès</small></footer>
+        </section>`;
+      });
+
+      const sum = k => ENTRANCES.reduce((s, e) => s + e[k], 0);
+
+      // 15 : MÉMO LOGISTIQUE BÉNÉVOLES
+      const rows = ENTRANCES.map(e => `<tr><td><strong>Entrée ${e.n}</strong></td><td>${e.dir}</td><td>${e.width}</td><td>${e.lanes}</td><td>${e.vol}</td>
+        <td>${e.tables} / ${e.bar}</td><td>${e.cash ? "Oui" : "Non"}</td><td class="${e.netWarn ? "warn" : ""}">${e.net} Mbps</td></tr>`).join("");
+      html += `
+      <section class="page-poster" data-entries="vol" data-partners="none" data-sub="Fiche Bénévoles • Organisation des Entrées &amp; Billetterie">
+        <span class="poster-tag-admin no-print">Affiche ${idx++}/${TOTAL_PAGES} — Fiche logistique bénévoles</span>
+        <header class="poster-header"></header>
+        <div class="poster-body theme-light vol-body">
+          <h1>Affectation des postes — ${sum("vol")} en poste + ${VOLANTS} volants (${sum("vol") + VOLANTS} bénévoles)</h1>
+          <table class="vol-table">
+            <thead><tr><th>Poste</th><th>Secteur</th><th>Largeur</th><th>Files</th><th>Bénév.</th><th>Tables / Barr.</th><th>Espèces</th><th>Débit 4G/5G</th></tr></thead>
+            <tbody>${rows}<tr class="total"><td colspan="3">TOTAL ÉVÉNEMENT</td><td>${sum("lanes")} files</td><td>${sum("vol")} (+${VOLANTS})</td><td>${sum("tables")} / ${sum("bar")}</td><td>4 caisses</td><td></td></tr></tbody>
+          </table>
+          <p class="legend"><i class="fa-solid fa-triangle-exclamation text-danger me-1"></i> Entrée 1 : débit montant modéré. Privilégier les terminaux 4G/5G sur le réseau Orange.</p>
+          <div class="vol-cols">
+            <div class="vol-card">
+              <h3>Consignes d'Accueil & Accréditations</h3>
+              <ol>
+                <li><strong>1 contrôle validé = 1 bracelet posé au poignet</strong> avant de laisser pénétrer sur le site.</li>
+                <li><strong>Coureurs engagés :</strong> entrée gratuite pour le coureur + son accompagnateur accrédité.</li>
+                <li><strong>Gratuités officielles :</strong> Arbitres FFC, Élus comités, Presse accréditée, Équipe médicale et secours.</li>
+                <li><strong>Sorties temporaires :</strong> libres dans les deux sens sur simple présentation du bracelet au poignet.</li>
+                <li><strong>Entrée 4 (Sud) :</strong> réservée exclusivement aux officiels, accrédités et dépannage CB.</li>
+              </ol>
+            </div>
+            <div class="vol-card">
+              <h3>Check-list Matériel de Caisse</h3>
+              <ul class="plain">
+                <li><i class="fa-regular fa-square me-2"></i> Panneaux de signalétique fixés par colliers Rilsan</li>
+                <li><i class="fa-regular fa-square me-2"></i> Terminaux smartphones et TPE chargés avec batterie de secours</li>
+                <li><i class="fa-regular fa-square me-2"></i> Fonds de caisse vérifiés (pièces de 2 € et billets d'appoint)</li>
+                <li><i class="fa-regular fa-square me-2"></i> Rouleaux de bracelets numérotés et ciseaux de secours</li>
+                <li><i class="fa-regular fa-square me-2"></i> Listings papier d'émargement officiel FFC</li>
+                <li><i class="fa-regular fa-square me-2"></i> Gilets de haute visibilité US Vern Cyclisme</li>
+              </ul>
+            </div>
+          </div>
+          <div class="vol-card">
+            <h3>Contacts d'Urgence & Coordonnées GPS</h3>
+            <p style="margin:1mm 0;"><strong>Portail Ambulance & Secours (DPS) :</strong> Le Poncel (48.035561, -1.602810)</p>
+            <p style="margin:1mm 0;"><strong>Parking Officiels (P*) :</strong> Chemin Près le Grand Pré (48.035486, -1.606926)</p>
+            <p style="margin:1mm 0;"><strong>Permanence Antidopage & Dossards :</strong> Salle de sport de la Seiche (48.042393, -1.608110)</p>
+          </div>
+        </div>
+        <footer class="poster-footer"><small>Document interne d'organisation — Ne pas afficher au grand public</small></footer>
+      </section>`;
+
+      // 16 : SCHÉMAS D'IMPLANTATION TECHNIQUE
+      const blocks = ENTRANCES.map(e => {
+        const segs = e.segs.map(s => `<div class="seg ${s.k}" style="flex:${s.f}">${s.t}${s.w ? `<small>${s.w}</small>` : ""}</div>`).join("");
+        return `
+        <div class="schema-block" data-entry="${e.n}">
+          <h3>Entrée ${e.n} — ${e.dir} <span>${e.width}</span></h3>
+          <div class="schema">${segs}</div>
+          <div class="schema-sides"><span>${e.sides[0]}</span><span>${e.sides[1]}</span></div>
+          <p class="meta">
+            <span><i class="fa-solid fa-users me-1"></i> ${e.vol} bénévoles</span>
+            <span><i class="fa-solid fa-table me-1"></i> ${e.tables} table(s)</span>
+            <span><i class="fa-solid fa-road-barrier me-1"></i> ${e.bar} barrières</span>
+            <span class="${e.netWarn ? "warn" : ""}"><i class="fa-solid fa-wifi me-1"></i> ${e.net} Mbps</span>
+          </p>
+          <p class="note">${e.note}</p>
+        </div>`;
+      }).join("");
+      html += `
+      <section class="page-poster" data-entries="1 2 3 4 5 vol" data-partners="none" data-sub="Schémas d'Implantation Technique">
+        <span class="poster-tag-admin no-print">Affiche ${idx++}/${TOTAL_PAGES} — Schémas techniques d'implantation</span>
+        <header class="poster-header"></header>
+        <div class="poster-body theme-light vol-body">
+          <h1>Disposition des couloirs de filtrage par entrée</h1>
+          <p class="legend">Vue face au circuit (dos à l'extérieur). Largeurs exactes mesurées sur site.</p>
+          ${blocks}
+        </div>
+        <footer class="poster-footer"><small>Document technique interne — US Vern Cyclisme</small></footer>
+      </section>`;
+
+      // 17 : BASE NAUTIQUE KAYAK – SANITAIRES PUBLICS
+      html += `
+      <section class="page-poster" data-entries="3 5 kayak" data-partners="none" data-sub="Base Nautique Kayak • Sanitaires Publics">
+        <span class="poster-tag-admin no-print">Affiche ${idx++}/${TOTAL_PAGES} — Sanitaires Base Kayak</span>
+        <header class="poster-header"></header>
+        <div class="poster-body theme-cb">
+          <div class="lane-badge"><i class="fa-solid fa-location-dot me-2"></i> Base Nautique de la Seiche</div>
+          <i class="fa-solid fa-restroom giant-icon"></i>
+          <h1 class="giant-title"><span class="kw" style="--kw:60pt">TOILETTES</span><span class="sub">Sanitaires publics & accès adapté</span></h1>
+          <div class="instructions-box editable">
+            <p class="box-title" style="color:var(--bleu-marine);"><i class="fa-solid fa-route me-2"></i> Accès rapide via les Entrées 3 & 5</p>
+            <p style="margin:0 0 2mm;font-size:18pt;font-weight:900;color:var(--bordeaux);text-align:center;"><i class="fa-solid fa-person-walking me-2"></i> <span class="dyn-dist-kayak"></span></p>
+            <ul class="info-list small">
+              <li><i class="fa-solid fa-circle-info"></i><span>Bâtiment officiel de la base de kayak en contrebas du collège</span></li>
+              <li><i class="fa-solid fa-hand"></i><span><strong>Gardez votre bracelet :</strong> sortie et retour libres sur le circuit</span></li>
+            </ul>
+          </div>
+          <div class="direction-arrow" onclick="cycleArrow(this)" data-rot="0" title="Cliquer pour pivoter la flèche" style="cursor:pointer;"><i class="fa-solid fa-circle-arrow-up" style="display:inline-block;"></i></div>
+        </div>
+        <footer class="poster-footer"><small>Merci de veiller à la propreté et au respect des installations nautiques</small></footer>
+      </section>`;
+
+      // 18 : LOCAL ANTIDOPAGE (AFFICHE TECHNIQUE -> PARTENAIRES TECHNIQUES)
+      html += `
+      <section class="page-poster" data-entries="3 5 kayak" data-partners="techniques" data-sub="Réglementation FFC • Contrôle Médical">
+        <span class="poster-tag-admin no-print">Affiche ${idx++}/${TOTAL_PAGES} — Contrôle Antidopage FFC</span>
+        <header class="poster-header"></header>
+        <div class="poster-body theme-club">
+          <div class="lane-badge"><i class="fa-solid fa-kit-medical me-2"></i> Protocole Officiel FFC</div>
+          <i class="fa-solid fa-flask-vial giant-icon"></i>
+          <h1 class="giant-title"><span class="kw" style="--kw:48pt">CONTRÔLE</span><span class="kw" style="--kw:48pt">ANTIDOPAGE</span></h1>
+          <div class="instructions-box editable">
+            <p class="box-title" style="color:var(--bordeaux);"><i class="fa-solid fa-location-dot me-2"></i> <span class="dyn-loc-perm"></span></p>
+            <ul class="info-list small">
+              <li><i class="fa-solid fa-route"></i><span><strong>Accès depuis le circuit :</strong> <span class="dyn-dist-perm"></span> (via Entrées 3 et 5)</span></li>
+              <li><i class="fa-solid fa-user-shield"></i><span><strong>Coureurs convoqués :</strong> présentation obligatoire avec chaperon officiel</span></li>
+              <li><i class="fa-solid fa-lock"></i><span><strong>Zone strictement réservée :</strong> accès interdit au public</span></li>
+            </ul>
+          </div>
+          <div class="direction-arrow" onclick="cycleArrow(this)" data-rot="0" title="Cliquer pour pivoter la flèche" style="cursor:pointer;"><i class="fa-solid fa-circle-arrow-up" style="display:inline-block;"></i></div>
+        </div>
+        <footer class="poster-footer"><small>Comité de Bretagne & Fédération Française de Cyclisme</small></footer>
+      </section>`;
+
+      // 19 : DIRECTIONNELS SITE 1/4 (PARTENAIRES CLUB)
+      html += signPage({ entries:"3 5 kayak", partners:"club", sub:"Fléchage Directionnel • 1/4", tag:"2 panneaux : Sanitaires + Vestiaires coureurs",
+        top: half({ cls:"navy", badge:'<i class="fa-solid fa-restroom me-1"></i> Base Nautique', h2:'Sanitaires & Toilettes', p:'<span class="dyn-dist-kayak"></span> • Sortie et retour libres avec bracelet' }),
+        bottom: half({ cls:"green", badge:'<i class="fa-solid fa-person-biking me-1"></i> Espace Compétiteurs', h2:'Vestiaires & Douches', p:'<span class="dyn-loc-perm"></span><br><span class="dyn-dist-perm"></span>' }) });
+
+      // 20 : DIRECTIONNELS SITE 2/4 (PARTENAIRES CLUB)
+      html += signPage({ entries:"3 5 kayak", partners:"club", sub:"Fléchage Directionnel • 2/4", tag:"2 panneaux : Permanence dossards + Poste de secours",
+        top: half({ cls:"bordeaux", badge:'<i class="fa-solid fa-clipboard-check me-1"></i> Administratif FFC', h2:'Permanence & Dossards', p:'<span class="dyn-loc-perm"></span><br><span class="dyn-dist-perm"></span>' }),
+        bottom: half({ cls:"dark", badge:'<i class="fa-solid fa-truck-medical me-1"></i> Premiers Soins', h2:'Poste de Secours (DPS)', p:'Service médical d\'urgence • Accès ambulance prioritaire Le Poncel', edit:false }) });
+
+      // 21 : DIRECTIONNELS SITE 3/4 (PARTENAIRES CLUB)
+      html += signPage({ entries:"3 4 kayak", partners:"club", sub:"Fléchage Directionnel • 3/4", tag:"2 panneaux : Espace Partenaires + Restauration Officiels",
+        top: half({ cls:"champagne", badge:'<i class="fa-solid fa-award me-1"></i> Club des 20', h2:'<span style="color:var(--or-champagne);font-size:32pt;">Espace Partenaires</span>', p:'Accueil des invités officiels & partenaires du Comité de Bretagne', edit:false }),
+        bottom: half({ cls:"navy", badge:'<i class="fa-solid fa-utensils me-1"></i> Organisation', h2:'Restauration Bénévoles', p:'Espace réservé aux arbitres FFC et bénévoles accrédités', edit:false }) });
+
+      // 22 : DIRECTIONNELS SITE 4/4 (PARTENAIRES CLUB)
+      html += signPage({ entries:"1 3 4 kayak", partners:"club", sub:"Fléchage Directionnel • 4/4", tag:"2 panneaux : Poste de dépannage + Zone d'appel", foot:"Réglementation Technique FFC — Championnat de Bretagne 2026",
+        top: half({ cls:"bordeaux", badge:'<i class="fa-solid fa-wrench me-1"></i> Zone Technique', h2:'Dépannage & Lavage', p:'Poste double • Accès strictement réservé aux mécaniciens accrédités', edit:false }),
+        bottom: half({ cls:"green", badge:'<i class="fa-solid fa-flag-checkered me-1"></i> Ligne de Départ', h2:'Zone d\'Appel & Relais', p:'Rassemblement des engagés 15 min avant le départ officiel', edit:false }) });
+
+      // 23 : AFFICHE D'ACCUEIL OFFICIELLE & PLAN DU CIRCUIT 2,7 KM
+      html += `
+      <section class="page-poster" data-entries="1 2 3 4 5 kayak plan vol" data-partners="none" data-sub="Plan Officiel du Circuit 2,75 km &amp; Distances">
+        <span class="poster-tag-admin no-print">Affiche ${idx++}/${TOTAL_PAGES} — Affiche d'accueil & Plan officiel 2,7 km</span>
+        <header class="poster-header"></header>
+        <div class="poster-body theme-light vol-body" style="justify-content:space-between;padding:4mm !important;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--bleu-marine);padding-bottom:1.5mm;">
+            <div>
+              <h1 style="color:var(--bleu-marine);margin:0;font-size:16pt;"><i class="fa-solid fa-map-location-dot text-danger me-2"></i>Plan Officiel du Circuit & Points Clés</h1>
+              <p class="legend" style="margin:0;">Tracé sélectif de 2,75 km — Vallée de la Seiche, Vern-sur-Seiche</p>
+            </div>
+            <span style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:10pt;background:var(--bordeaux);color:#fff;padding:2px 8px;border-radius:4px;">ÉDITION 2026</span>
+          </div>
+          
+          <div style="width:100%;height:130mm;background:#fff;border:2px solid var(--bleu-marine);border-radius:4mm;overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.08);position:relative;">
+            <img src="photo/plan-circuit-2-7km.jpg" alt="Plan du circuit 2,7 km" style="width:100%;height:100%;object-fit:contain;" onerror="this.onerror=null;this.src='photo/plan.png';">
+          </div>
+
+          <div class="vol-card" style="padding:2.5mm;border:1.5px solid var(--bleu-marine);">
+            <h3 style="font-size:9.5pt;margin-bottom:1mm;color:var(--bleu-marine);"><i class="fa-solid fa-person-walking text-danger me-2"></i>Distances réelles de marche depuis chaque entrée</h3>
+            <table class="vol-table" id="distMatrixTable" style="font-size:8.5pt;">
+              <thead>
+                <tr>
+                  <th>Point d'Accès</th>
+                  <th>Sanitaires Kayak</th>
+                  <th>Salle de Sport</th>
+                  <th>Ligne d'Arrivée</th>
+                  <th>Grille de Départ</th>
+                  <th>Parking Spectateurs le plus proche</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Entrée 1 (Sud-Est)</strong></td><td>785 m</td><td>820 m</td><td>367 m</td><td><strong>50 m</strong></td><td>P4 Long de route (214 m) • P2 Champ Brulon (370 m)</td></tr>
+                <tr><td><strong>Entrée 2 (Nord-Est)</strong></td><td>504 m</td><td>463 m</td><td>324 m</td><td>356 m</td><td>P1 Pharmacie Bleue (600 m)</td></tr>
+                <tr><td><strong>Entrée 3 (Nord-Ouest)</strong></td><td><strong>345 m</strong></td><td>466 m</td><td><strong>110 m</strong></td><td>415 m</td><td>P2 Coureurs (315 m) • Camping-cars</td></tr>
+                <tr><td><strong>Entrée 4 (Sud)</strong></td><td>662 m</td><td>773 m</td><td>216 m</td><td>244 m</td><td>P* Officiels (100 m)</td></tr>
+                <tr><td><strong>Entrée 5 (Nord)</strong></td><td><strong>375 m</strong></td><td><strong>425 m</strong></td><td>161 m</td><td>366 m</td><td>P3 Collège Monod (495 m) • P2 Coureurs (325 m)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <footer class="poster-footer"><small>Championnat de Bretagne de Cyclo-Cross 2026 — US Vern Cyclisme</small></footer>
+      </section>`;
+
+      // 24 : SAMEDI GRATUIT
+      html += `
+      <section class="page-poster" data-entries="1 2 3 4 5 parking" data-partners="none" data-sub="Samedi 5 Décembre 2026 • Accès Libre &amp; Gratuit">
+        <span class="poster-tag-admin no-print">Affiche 24/28 — Programme Samedi 5 Décembre (Gratuit)</span>
+        <header class="poster-header"></header>
+        <div class="poster-body theme-qr">
+          <div class="lane-badge"><i class="fa-solid fa-calendar-check me-2"></i> Samedi 5 Décembre • Vern-sur-Seiche</div>
+          <i class="fa-solid fa-door-open giant-icon"></i>
+          <h1 class="giant-title"><span class="kw" style="--kw:52pt">ENTRÉE<br>GRATUITE</span><span class="sub">Accès libre pour tous sans billet ni bracelet</span></h1>
+          <div class="instructions-box editable">
+            <p class="box-title" style="color:var(--bleu-marine);"><i class="fa-solid fa-flag-checkered me-2"></i> Épreuves au programme du samedi</p>
+            <ul class="info-list">
+              <li><i class="fa-solid fa-medal"></i><span><strong>14h00 :</strong> Championnat de Bretagne Masters (Hommes & Femmes)</span></li>
+              <li><i class="fa-solid fa-people-group"></i><span><strong>16h00 :</strong> Championnat de Bretagne de Relais Mixte des Clubs</span></li>
+            </ul>
+          </div>
+          <div class="phone-card online-only" style="background:#fff;color:var(--bleu-marine);border-color:var(--bleu-marine);">
+            <div class="phone-qr" style="border:2px solid var(--bleu-marine);"><img class="qr-img qr-ticket-img" src="https://api.qrserver.com/v1/create-qr-code/?size=600x600&ecc=M&margin=10&data=https%3A%2F%2Fbzh2026.usverncyclisme.fr%2Fchampionnat-bzh.html%23infos" alt="QR Code Billetterie" style="width:34mm;height:34mm;" onload="checkOverflow()" onerror="this.classList.add('qr-error');checkOverflow()"></div>
+            <div class="phone-text"><h2 style="font-size:18pt;color:var(--bordeaux);">Dimanche : <span class="dyn-price-online" style="color:var(--bordeaux);">8 €</span></h2><p style="color:#1e293b;">Réservez dès maintenant votre billet coupe-file pour le dimanche</p></div>
+          </div>
+        </div>
+        <footer class="poster-footer"><small>Merci de respecter le rubalisage et les zones de circulation piétonne</small></footer>
+      </section>`;
+
+      // 25 : PARKINGS ROUTIERS 1/2
+      html += signPage({ entries:"1 2 3 5 parking", sub:"Signalétique Routière • Parkings 1/2", tag:"2 panneaux : Parkings Publics + Parkings Coureurs", cut:"Ligne de coupe — préciser le parking et orienter la flèche", foot:"Signalétique routière officielle — US Vern Cyclisme",
+        top: half({ cls:"bordeaux", badge:'<i class="fa-solid fa-square-parking me-1"></i> Grand Public', h2:'Parkings Spectateurs P1 à P4', p:'P1 Pharmacie Bleue (<i class=\'fa-solid fa-arrow-right mx-1\'></i> Entrée 2) • P2, P3 & P4 Champ Brulon (<i class=\'fa-solid fa-arrow-right mx-1\'></i> Entrée 1 Départ)' }),
+        bottom: half({ cls:"navy", badge:'<i class="fa-solid fa-van-shuttle me-1"></i> Équipes & Compétiteurs', h2:'Parkings Coureurs P1 à P3', p:'Collège Monod & Base Nautique • Accès direct Entrées 3 & 5' }) });
+
+      // 26 : PARKINGS ROUTIERS 2/2 (TECHNIQUE -> PARTENAIRES TECHNIQUES)
+      html += signPage({ entries:"1 2 4 parking", partners:"techniques", sub:"Signalétique Routière • Parkings 2/2", tag:"2 panneaux : Parking Officiels P* + Alerte Parking Complet", cut:"Ligne de coupe — à déployer selon les instructions PC Sécurité", foot:"Signalétique routière officielle — US Vern Cyclisme",
+        top: half({ cls:"dark", badge:'<i class="fa-solid fa-id-badge me-1"></i> Accès Réservé', h2:'Parking Officiels P*', p:'Arbitres FFC, Presse accréditée & Organisation • <strong>Entrée 4 Sud</strong>' }),
+        bottom: half({ cls:"bordeaux", style:"background:#b91c1c;border-color:#fff;", badge:'<i class="fa-solid fa-triangle-exclamation me-1"></i> Information Stationnement', h2:'Parking Complet', p:'Veuillez suivre le fléchage vers le parking de délestage suivant' }) });
+
+      // 27 : SÉCURITÉ & SECOURS
+      html += signPage({ entries:"1 3 4 parking kayak", sub:"Sécurité Préfecture &amp; Réglementation FFC", tag:"2 panneaux : Accès Secours Ambulance + Traversée Contrôlée", foot:"Dispositif Prévisionnel de Secours — US Vern Cyclisme", cut:"Ligne de coupe",
+        top: half({ cls:"dark", style:"border:3.5px solid #ef4444;", badge:'<i class="fa-solid fa-truck-medical me-1"></i> Urgences & Sécurité Civile', h2:'<span style="color:#f87171;">Accès Secours & Ambulance</span>', p:'Portail Le Poncel — Stationnement et encombrement strictement interdits', arrow:'<div class="half-sign-arrow danger"><i class="fa-solid fa-ban"></i></div>' }),
+        bottom: half({ cls:"navy", badge:'<i class="fa-solid fa-person-walking-arrow-right me-1"></i> Sécurité du Parcours', h2:'Passage Spectateurs Contrôlé', p:'Traversez exclusivement au signal des signaleurs • Arrêt interdit sur la piste', arrow:ARROW("fa-arrows-left-right") }) });
+
+      // 28 : CHEVALETS DE CAISSE (TARIF 8 € & CALCUL DU RENDU DE MONNAIE)
+      html += `
+      <section class="page-poster" data-entries="1 2 3 5 caisse vol" data-partners="none" data-sub="Chevalet de Caisse • Tarif 8 € &amp; Rendu Monnaie">
+        <span class="poster-tag-admin no-print">Affiche 28/28 — Chevalet caisse : affichage tarif public + aide caissier</span>
+        <header class="poster-header"></header>
+        <div class="poster-body theme-light signs">
+          <div class="split-sign-container">
+            <div class="half-sign bordeaux">
+              <div class="half-sign-left editable">
+                <span class="badge-mini"><i class="fa-solid fa-ticket me-1"></i> Billetterie Jour J</span>
+                <h2 style="font-size:28pt;">Tarif Unique : <span class="dyn-price">8 €</span></h2>
+                <p>1 entrée = 1 bracelet posé au poignet<br><span class="dyn-note">Gratuit pour les moins de 12 ans</span></p>
+              </div>
+              <div class="half-sign-arrow" style="width:36mm;height:36mm;font-size:30pt;font-family:'Montserrat',sans-serif;font-weight:900;cursor:default;background:#fff;color:var(--bordeaux);"><span class="dyn-price">8 €</span></div>
+            </div>
+            ${CUT("Plier au centre pour positionner en chevalet sur la table")}
+            <div class="vol-card" style="flex:1;border:2px solid var(--bleu-marine);display:flex;flex-direction:column;justify-content:space-between;">
+              <h3 style="font-size:11pt;color:var(--bleu-marine);"><i class="fa-solid fa-calculator text-danger me-2"></i>Aide-mémoire caissier — Rendu de monnaie instantané (Base 8 €)</h3>
+              <div id="changeTable"></div>
+              <p class="legend"><i class='fa-solid fa-lightbulb text-danger me-1'></i> <strong>Astuce caissier :</strong> Demandez systématiquement l'appoint en pièces de 2 € ou billet de 10 € pour accélérer la file.</p>
+            </div>
+          </div>
+        </div>
+        <footer class="poster-footer"><small>Outil comptable et logistique — US Vern Cyclisme</small></footer>
+      </section>`;
+
+      $("generatedPosters").innerHTML = html;
+    }
+
+    /* =========================================================
+       INITIALISATION DES EN-TÊTES, FOOTERS & PARTENAIRES
+       ========================================================= */
+    function initHeaders() {
+      document.querySelectorAll(".page-poster").forEach(p => {
+        const h = p.querySelector(".poster-header"); if (!h) return;
+        h.innerHTML = `<img src="logo/logo.webp" alt="US Vern Cyclisme" class="club-logo" onerror="this.style.display='none'">
+          <div class="poster-header-text">
+            <p class="event-title">Championnat de Bretagne Cyclo-Cross</p>
+            <p class="event-sub">${p.dataset.sub || DEFAULT_SUB}</p>
+          </div>`;
+        const isSplit = !!p.querySelector(".split-sign-container");
+        const holes = ['tl', 'tr', 'bl', 'br'].concat(isSplit ? ['ml', 'mr', 'ml2', 'mr2'] : []);
+        holes.forEach(pos => {
+          const d = document.createElement("span");
+          d.className = "rilsan-hole " + pos;
+          d.title = "Perforation pour collier Rilsan";
+          p.appendChild(d);
+        });
+      });
+    }
+
+    const EXT_TRY = [".svg", ".webp", ".png", ".jpg", ".jpeg"];
+    function partnerFallback(img, isInst) {
+      const base = img.dataset.base || img.getAttribute("src").replace(/\.[a-zA-Z0-9]+$/, "");
+      img.dataset.base = base;
+      const tried = +(img.dataset.tried || 0);
+      if (tried < EXT_TRY.length) {
+        img.dataset.tried = tried + 1;
+        img.src = base + EXT_TRY[tried];
+        return;
+      }
+      const s = document.createElement("span");
+      s.className = "partner-pill" + (isInst ? " inst" : "");
+      s.textContent = img.alt;
+      img.replaceWith(s);
+    }
+
+    function renderLogoList(items) {
+      return items.map(p => `<img class="partner-logo" src="${p.logo}" alt="${p.name}" onerror="partnerFallback(this, ${!!p.inst})">`).join("");
+    }
+
+    function initFooters() {
+      const CONFIG_FOOTER = {
+        officiels: {
+          label: "Avec le soutien de nos Partenaires Officiels & Institutionnels",
+          items: [...PARTNERS.officiels, ...PARTNERS.institutionnels]
+        },
+        club: {
+          label: "Avec le soutien de nos Partenaires Club",
+          items: PARTNERS.club
+        },
+        techniques: {
+          label: "Avec le soutien de nos Partenaires Techniques",
+          items: PARTNERS.techniques
+        }
+      };
+
+      document.querySelectorAll(".page-poster").forEach(p => {
+        const f = p.querySelector(".poster-footer");
+        if (!f) return;
+        const cat = p.dataset.partners || "none";
+        const group = CONFIG_FOOTER[cat] || CONFIG_FOOTER.officiels;
+        const html = `<div class="inst-line">Comité de Bretagne de Cyclisme • Région Bretagne • Département d'Ille-et-Vilaine • Ville de Vern-sur-Seiche</div>
+          <div class="partners"><div class="partners-label">${group.label}</div><div class="partners-bar">${renderLogoList(group.items)}</div></div>`;
+        f.insertAdjacentHTML("beforeend", html);
+      });
+    }
+
+    function fillLaneIds() {
+      document.querySelectorAll(".lane-id").forEach(el => el.textContent = LANE_IDS[el.dataset.lane] || "1");
+    }
+
+    /* =========================================================
+       CALCUL DYNAMIQUE DU RENDU DE MONNAIE (BASE 8 €)
+       ========================================================= */
+    const parseCents = s => { const m = String(s).replace(",", ".").match(/\d+(\.\d+)?/); return m ? Math.round(parseFloat(m[0]) * 100) : 800; };
+    const eur = c => { const v = c / 100; return (Number.isInteger(v) ? String(v) : v.toFixed(2).replace(".", ",")) + " €"; };
+    const DENOMS = [2000, 1000, 500, 200, 100];
+    function breakdown(c) {
+      const out = [];
+      DENOMS.forEach(d => { const n = Math.floor(c / d); c -= n * d; if (n) out.push((n > 1 ? n + "×" : "") + eur(d)); });
+      return out.join(" + ");
+    }
+    function buildChangeTable(priceStr) {
+      const el = $("changeTable"); if (!el) return;
+      const unit = parseCents(priceStr), given = [1000, 2000, 5000];
+      const cell = (tot, g) => tot > g ? "—" : (g === tot ? "<strong>Compte juste</strong>" : `<strong>Rendre ${eur(g - tot)}</strong><br><small style="color:#64748b;">${breakdown(g - tot)}</small>`);
+      const rows = [1, 2, 3, 4, 5].map(n => {
+        const tot = n * unit;
+        return `<tr><td><strong>${n} pers.</strong></td><td style="color:var(--bordeaux);font-weight:900;font-size:11.5pt;">${eur(tot)}</td>${given.map(g => `<td>${cell(tot, g)}</td>`).join("")}</tr>`;
+      }).join("");
+      el.innerHTML = `<table class="vol-table" style="font-size:9pt;text-align:center;">
+        <thead><tr><th>Billets</th><th>Total dû</th><th>Donne 10 €</th><th>Donne 20 €</th><th>Donne 50 €</th></tr></thead>
+        <tbody>${rows}</tbody></table>`;
+    }
+
+    function updatePosters() {
+      const v = (id, def) => { const el = $(id); return (el && el.value ? el.value.trim() : "") || def; };
+      const price = v("inputPriceDay", "8 €"), priceOn = v("inputPriceOnline", "8 €"), noteVal = v("inputNote", "");
+      const urlTicket = v("inputUrlTicket", "https://bzh2026.usverncyclisme.fr/championnat-bzh.html#infos");
+      const urlPortal = v("inputUrlPortal", "https://bzh2026.usverncyclisme.fr/guide.html");
+
+      const safeSet = (sel, val) => document.querySelectorAll(sel).forEach(el => {
+        const ed = el.closest(".editable");
+        if (ed && ed.dataset.userEdited === "1") return;
+        el.textContent = val;
+      });
+      safeSet(".dyn-loc-perm",   v("inputLocPerm",   "Salle de sport de la Seiche"));
+      safeSet(".dyn-loc-presse", v("inputLocPresse", "Salle de sport de la Seiche"));
+      safeSet(".dyn-dist-perm",  v("inputDistPerm",  "425 m de l'Entrée 5 • 465 m de l'Entrée 3"));
+      safeSet(".dyn-dist-kayak", v("inputDistKayak", "345 m de l'Entrée 3 • 375 m de l'Entrée 5"));
+      safeSet(".dyn-gps-secours",v("inputGpsSecours","Le Poncel (48.035561, -1.602810)"));
+      safeSet(".dyn-price", price);
+      safeSet(".dyn-price-online", priceOn);
+      safeSet(".dyn-date", $("inputDate").value || "5 & 6 Décembre 2026");
+      safeSet(".dyn-note", noteVal);
+
+      document.querySelectorAll(".qr-ticket-img").forEach(i => { i.classList.remove("qr-error"); i.src = "https://api.qrserver.com/v1/create-qr-code/?size=600x600&ecc=M&margin=10&data=" + encodeURIComponent(urlTicket); });
+      document.querySelectorAll(".qr-portal-img").forEach(i => { i.classList.remove("qr-error"); i.src = "https://api.qrserver.com/v1/create-qr-code/?size=600x600&ecc=M&margin=10&data=" + encodeURIComponent(urlPortal); });
+      const short = u => u.replace(/^https?:\/\//, "");
+      document.querySelectorAll(".dyn-url-ticket").forEach(el => el.textContent = short(urlTicket));
+      document.querySelectorAll(".dyn-url-portal").forEach(el => el.textContent = short(urlPortal));
+
+      buildChangeTable(price);
+      refitAll();
+    }
+
+    function applyFilter() {
+      const e = $("selEntry").value, online = $("chkOnline").checked;
+      document.body.classList.toggle("no-online", !online);
+      let last = null;
+      document.querySelectorAll(".page-poster").forEach(p => {
+        const list = (p.dataset.entries || "").split(" ");
+        let ok = e === "all" || list.includes(e);
+        if (p.dataset.needs === "online" && !online) ok = false;
+        p.classList.toggle("is-hidden", !ok);
+        p.classList.remove("is-last");
+        if (ok) last = p;
+      });
+      if (last) last.classList.add("is-last");
+      refitAll();
+    }
+
+    function applyFormat() {
+      const a3 = $("selFormat").value === "A3";
+      document.body.classList.toggle("fmt-a3", a3);
+      $("pageStyle").textContent = `@page { size: ${a3 ? "A3" : "A4"} portrait; margin: 0; }`;
+      refitAll();
+    }
+
+    function applyEdit() {
+      const on = $("chkEdit").checked;
+      document.body.classList.toggle("is-editing", on);
+      document.querySelectorAll(".editable").forEach(el => { el.setAttribute("contenteditable", on ? "true" : "false"); el.spellcheck = false; });
+    }
+
+    function applyPartners() {
+      document.body.classList.remove("partners-none", "partners-smart");
+      const v = $("selPartners") ? $("selPartners").value : "smart";
+      if (v === "none") document.body.classList.add("partners-none");
+      else if (v === "smart") document.body.classList.add("partners-smart");
+      refitAll();
+    }
+
+    function fitPoster(p) {
+      const b = p.querySelector(".poster-body");
+      if (!b || p.classList.contains("is-hidden")) return;
+      let f = 1; b.style.setProperty("--fit", 1);
+      while (f > 0.58 && (b.scrollHeight > b.clientHeight + 1 || b.scrollWidth > b.clientWidth + 1)) {
+        f = Math.round((f - 0.02) * 100) / 100;
+        b.style.setProperty("--fit", f);
+      }
+    }
+    function doRefit() { document.querySelectorAll(".page-poster").forEach(fitPoster); checkOverflow(); }
+    let rafId;
+    function refitAll() { cancelAnimationFrame(rafId); rafId = requestAnimationFrame(doRefit); }
+
+    function checkOverflow() {
+      const pages = [...document.querySelectorAll(".page-poster:not(.is-hidden)")], bad = [];
+      pages.forEach(p => {
+        const b = p.querySelector(".poster-body");
+        const over = p.scrollHeight > p.clientHeight + 2 || p.scrollWidth > p.clientWidth + 2 ||
+                     (b && (b.scrollHeight > b.clientHeight + 2 || b.scrollWidth > b.clientWidth + 2));
+        p.classList.toggle("overflow-warning", over);
+        if (over) { const t = p.querySelector(".poster-tag-admin"); bad.push(t ? t.textContent.split("—")[0].trim() : "Affiche"); }
+      });
+      const qrs = [...document.querySelectorAll(".page-poster:not(.is-hidden) .qr-img")];
+      const qrPending = qrs.filter(i => !i.complete || i.naturalWidth === 0).length;
+      const box = $("statusBox");
+      box.className = "status " + ((bad.length || qrPending) ? "bad" : "ok");
+      box.textContent = bad.length ? `${pages.length} affiches · Débordement : ${bad.join(", ")}`
+        : qrPending ? `Chargement des QR Codes (${qrs.length - qrPending}/${qrs.length})… Patientez 2 s avant d'imprimer`
+        : `Prêt pour impression (${pages.length} affiches & ${qrs.length} QR codes chargés)`;
+    }
+
+    // INITIALISATION GÉNÉRALE
+    buildGenerated();
+    initHeaders();
+    initFooters();
+    fillLaneIds();
+    applyPartners();
+    updatePosters();
+    applyFilter();
+
+    window.addEventListener("load", refitAll);
+    window.addEventListener("beforeprint", doRefit);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(refitAll);
+  </script>
+</body>
+</html>
